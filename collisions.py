@@ -4,6 +4,29 @@ import mujoco
 import numpy as np
 
 
+def collision_bounds(model, data, geoms):
+    """Exact world AABB of oriented boxes, cylinders and capsules."""
+    centers = data.geom_xpos[geoms]
+    rotations = data.geom_xmat[geoms].reshape(-1, 3, 3)
+    sizes = model.geom_size[geoms]
+    kinds = model.geom_type[geoms]
+    boxes = kinds == mujoco.mjtGeom.mjGEOM_BOX
+    cylinders = kinds == mujoco.mjtGeom.mjGEOM_CYLINDER
+    capsules = kinds == mujoco.mjtGeom.mjGEOM_CAPSULE
+    if not (boxes | cylinders | capsules).all():
+        raise ValueError("Unsupported clearance collision primitive")
+    # The box branch preserves the original componentwise support sum.
+    extents = np.sum(np.abs(rotations) * sizes[:, None, :], axis=2)
+    if cylinders.any():
+        axis = np.abs(rotations[cylinders, :, 2])
+        extents[cylinders] = (sizes[cylinders, 0, None] * np.sqrt(np.maximum(0., 1. - axis**2))
+                              + sizes[cylinders, 1, None] * axis)
+    if capsules.any():
+        extents[capsules] = (sizes[capsules, 0, None]
+                             + sizes[capsules, 1, None] * np.abs(rotations[capsules, :, 2]))
+    return np.min(centers - extents, axis=0), np.max(centers + extents, axis=0)
+
+
 class CollisionTracker:
     FORCE_THRESHOLD_N = 0.1
     TABLE_CLEARANCE_M = 0.001
@@ -25,11 +48,11 @@ class CollisionTracker:
         collidable = (model.geom_contype | model.geom_conaffinity) != 0
         self.target_geoms = np.flatnonzero((model.geom_bodyid == target_body) & collidable)
         self.table_geoms = np.flatnonzero((model.geom_bodyid == table) & collidable)
-        # These workcell assets use box collision pieces, including the table.
-        # Reject other shapes rather than silently using incorrect extents.
+        supported = (mujoco.mjtGeom.mjGEOM_BOX, mujoco.mjtGeom.mjGEOM_CYLINDER,
+                     mujoco.mjtGeom.mjGEOM_CAPSULE)
         for geoms in (self.target_geoms, self.table_geoms):
-            if not len(geoms) or np.any(model.geom_type[geoms] != mujoco.mjtGeom.mjGEOM_BOX):
-                raise ValueError("Table clearance requires box collision geometry")
+            if not len(geoms) or not np.isin(model.geom_type[geoms], supported).all():
+                raise ValueError("Table clearance requires supported collision primitives")
         self.force = np.zeros(6)
         self.reset()
 
@@ -55,16 +78,10 @@ class CollisionTracker:
         return a in self.robot_bodies or b in self.robot_bodies
 
     def _clear_of_table(self) -> bool:
-        # Exact world-Z support extents of every oriented collision box, not
-        # body-origin height or a temporarily empty contact set. A 1 mm gap
-        # (the asset contact-impedance scale) prevents sub-mm support chatter
-        # during rim closure from being mislabeled as lift and recontact.
-        def extents(geoms):
-            rotations = self.data.geom_xmat[geoms].reshape(-1, 3, 3)
-            return np.sum(np.abs(rotations[:, 2, :]) * self.model.geom_size[geoms], axis=1)
-
-        lowest = np.min(self.data.geom_xpos[self.target_geoms, 2] - extents(self.target_geoms))
-        highest = np.max(self.data.geom_xpos[self.table_geoms, 2] + extents(self.table_geoms))
+        # A 1 mm geometric gap prevents sub-mm support chatter from being
+        # mislabeled as lift/recontact, even if contact forces briefly vanish.
+        lowest = collision_bounds(self.model, self.data, self.target_geoms)[0][2]
+        highest = collision_bounds(self.model, self.data, self.table_geoms)[1][2]
         return bool(lowest - highest > self.TABLE_CLEARANCE_M)
 
     def update(self, dt: float, skill=None) -> None:

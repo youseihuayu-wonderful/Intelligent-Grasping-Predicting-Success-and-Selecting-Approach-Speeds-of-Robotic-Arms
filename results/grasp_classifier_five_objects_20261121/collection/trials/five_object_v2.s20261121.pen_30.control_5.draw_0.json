@@ -1,0 +1,214 @@
+{
+  "trial_id": "five_object_v2.s20261121.pen_30.control_5.draw_0",
+  "settings": {
+    "target": "pen",
+    "scale": 1.0,
+    "mass_kg": 0.03,
+    "sliding_friction": 0.8,
+    "x_m": 0.4878057101436403,
+    "y_m": -0.07862485265519578,
+    "yaw_rad": 0.06394237533888503,
+    "opening_m": 0.08,
+    "closing_force_n": 4.0,
+    "close_trigger_m": 0.0,
+    "descent_speed_m_s": 0.2,
+    "bias_x_m": -0.002085554161340014,
+    "bias_y_m": 0.0012479823095598343,
+    "bias_z_m": 0.0015146336996045406
+  },
+  "metadata": {
+    "design": "prospective_classifier_comparison",
+    "protocol_id": "five_object_v2",
+    "condition_id": "five_object_v2.s20261121.pen_30",
+    "split": "train",
+    "control_id": 5,
+    "nuisance_seed": 20262565,
+    "error_observability": "Latent execution uncertainty; excluded from predictive inputs"
+  },
+  "variant_features": {
+    "compiled_pre_mass_override_kg": 0.01632036439588874,
+    "actual_mass_kg": 0.03,
+    "actual_principal_inertia_kg_m2": [
+      4.34174736116509e-05,
+      4.34174736116509e-05,
+      5.356363636363636e-07
+    ],
+    "collision_world_aabb_size_m": [
+      0.14010137368973846,
+      0.020282322086562818,
+      0.01200000000000001
+    ],
+    "collision_world_aabb_min_m": [
+      0.4179446761159948,
+      -0.08844651964103685,
+      0.77
+    ],
+    "collision_world_aabb_max_m": [
+      0.5580460498057332,
+      -0.06816419755447403,
+      0.782
+    ],
+    "object_collision_friction": [
+      [
+        0.8,
+        0.005,
+        0.0001
+      ],
+      [
+        0.8,
+        0.005,
+        0.0001
+      ],
+      [
+        0.8,
+        0.005,
+        0.0001
+      ]
+    ],
+    "object_collision_contact_dimensions": [
+      6,
+      6,
+      6
+    ],
+    "object_collision_solimp": [
+      [
+        0.998,
+        0.998,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.998,
+        0.998,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.998,
+        0.998,
+        0.001,
+        0.5,
+        2.0
+      ]
+    ],
+    "object_collision_solref": [
+      [
+        0.001,
+        1.0
+      ],
+      [
+        0.001,
+        1.0
+      ],
+      [
+        0.001,
+        1.0
+      ]
+    ],
+    "mujoco_enableflags": 16,
+    "object_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8
+    ],
+    "finger_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "grasp_offset_body_m": [
+      -0.002085554161340014,
+      0.0012479823095598343,
+      0.01151463369960454
+    ]
+  },
+  "trial_status": "completed",
+  "success": true,
+  "failure_kind": null,
+  "failure_reason": null,
+  "last_active_phase": "hold",
+  "phase_order": [
+    "idle",
+    "prepare",
+    "approach",
+    "descend",
+    "close",
+    "lift",
+    "hold",
+    "done"
+  ],
+  "phase_first_sim_s": {
+    "idle": null,
+    "prepare": 0.0,
+    "approach": 0.06000000000000005,
+    "descend": 6.175999999999431,
+    "close": 7.6779999999995665,
+    "lift": 7.89799999999964,
+    "hold": 10.71000000000058,
+    "done": 11.710000000000914
+  },
+  "execution_sim_s": 12.710000000001248,
+  "verified_hold_s": 2.000000000000668,
+  "initial_state_fingerprint": "1dcb5b1afeaf38dd051c477fa9cca9daacc901d9fe4f7f7d50c9402bbeb45a7a",
+  "initial_pose": {
+    "name": "pen_object",
+    "position_m": [
+      0.4878038585170289,
+      -0.07862470905632168,
+      0.7199971129227913
+    ],
+    "quaternion_wxyz": [
+      0.9994889635018119,
+      1.4268341768745447e-05,
+      -2.1400074291329587e-05,
+      0.031965781337626786
+    ]
+  },
+  "final_pose": {
+    "name": "pen_object",
+    "position_m": [
+      0.48792903724492515,
+      -0.07746776710775444,
+      0.8699527549899472
+    ],
+    "quaternion_wxyz": [
+      0.9999943710562731,
+      0.0033167289154291866,
+      0.000507083883364435,
+      5.568419558107931e-06
+    ]
+  },
+  "postconditions": {
+    "bilateral_grip": true,
+    "clear_of_table": true,
+    "target_lifted": true,
+    "relative_pose_stable": true,
+    "verified_hold": true
+  },
+  "actual_finger_target_sliding_frictions": [
+    0.8
+  ],
+  "actual_finger_target_contact_dimensions": [
+    6
+  ],
+  "collisions": {
+    "episodes": 0,
+    "duration_s": 0.0,
+    "peak_force_n": 0.0,
+    "pairs": [],
+    "force_threshold_n": 0.1
+  },
+  "warnings": [],
+  "wall_s": 13.734164999914356
+}

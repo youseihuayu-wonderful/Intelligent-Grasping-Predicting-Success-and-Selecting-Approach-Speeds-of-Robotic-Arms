@@ -1,0 +1,24 @@
+<mujoco model="Rigid hollow study tumbler">
+  <compiler angle="radian"/>
+  <default><geom density="2500" condim="6" friction="0.8 0.005 0.0001" solimp="0.998 0.998 0.001" solref="0.001 1" rgba="0.65 0.80 0.90 0.5"/></default>
+  <worldbody><body name="root"><body name="object">
+    <!-- Open top, 4 mm bottom and 3 mm wall; no solid inner collision cylinder. -->
+    <geom name="bottom" type="cylinder" pos="0 0 0.002" size="0.032 0.002"/>
+    <geom name="wall_00" type="box" pos="0.030500000000 0.000000000000 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 0.000000000000"/>
+    <geom name="wall_01" type="box" pos="0.028178325742 0.011671844687 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 0.392699081699"/>
+    <geom name="wall_02" type="box" pos="0.021566756826 0.021566756826 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 0.785398163397"/>
+    <geom name="wall_03" type="box" pos="0.011671844687 0.028178325742 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 1.178097245096"/>
+    <geom name="wall_04" type="box" pos="0.000000000000 0.030500000000 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 1.570796326795"/>
+    <geom name="wall_05" type="box" pos="-0.011671844687 0.028178325742 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 1.963495408494"/>
+    <geom name="wall_06" type="box" pos="-0.021566756826 0.021566756826 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 2.356194490192"/>
+    <geom name="wall_07" type="box" pos="-0.028178325742 0.011671844687 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 2.748893571891"/>
+    <geom name="wall_08" type="box" pos="-0.030500000000 0.000000000000 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 3.141592653590"/>
+    <geom name="wall_09" type="box" pos="-0.028178325742 -0.011671844687 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 3.534291735289"/>
+    <geom name="wall_10" type="box" pos="-0.021566756826 -0.021566756826 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 3.926990816987"/>
+    <geom name="wall_11" type="box" pos="-0.011671844687 -0.028178325742 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 4.319689898686"/>
+    <geom name="wall_12" type="box" pos="-0.000000000000 -0.030500000000 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 4.712388980385"/>
+    <geom name="wall_13" type="box" pos="0.011671844687 -0.028178325742 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 5.105088062083"/>
+    <geom name="wall_14" type="box" pos="0.021566756826 -0.021566756826 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 5.497787143782"/>
+    <geom name="wall_15" type="box" pos="0.028178325742 -0.011671844687 0.047" size="0.0015 0.006365195756 0.043" euler="0 0 5.890486225481"/>
+  </body></body></worldbody>
+</mujoco>

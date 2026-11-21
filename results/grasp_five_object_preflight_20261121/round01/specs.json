@@ -1,0 +1,117 @@
+[
+  [
+    "bowl.nominal",
+    {
+      "target": "bowl",
+      "scale": 1.0,
+      "mass_kg": 0.06,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_nominal",
+      "geometry_revision": 1
+    }
+  ],
+  [
+    "bottle.nominal",
+    {
+      "target": "bottle",
+      "scale": 1.0,
+      "mass_kg": 0.06,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_nominal",
+      "geometry_revision": 1
+    }
+  ],
+  [
+    "spoon.nominal",
+    {
+      "target": "spoon",
+      "scale": 1.0,
+      "mass_kg": 0.025,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_nominal",
+      "geometry_revision": 1
+    }
+  ],
+  [
+    "glass.nominal",
+    {
+      "target": "glass",
+      "scale": 1.0,
+      "mass_kg": 0.08,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_nominal",
+      "geometry_revision": 1
+    }
+  ],
+  [
+    "pen.nominal",
+    {
+      "target": "pen",
+      "scale": 1.0,
+      "mass_kg": 0.01,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_nominal",
+      "geometry_revision": 1
+    }
+  ]
+]

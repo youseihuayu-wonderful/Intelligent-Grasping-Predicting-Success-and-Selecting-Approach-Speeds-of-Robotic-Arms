@@ -1,0 +1,11 @@
+{
+  "attempted": 6,
+  "successes": 1,
+  "failures": 0,
+  "invalid_initial_states": 5,
+  "failure_reasons": {
+    "Grasp requires a target stably supported on the table": 5
+  },
+  "numerical_warning_trials": 0,
+  "unexpected_contact_trials": 0
+}

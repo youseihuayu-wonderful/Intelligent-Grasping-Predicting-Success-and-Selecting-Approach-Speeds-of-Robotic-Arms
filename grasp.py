@@ -133,6 +133,12 @@ class GraspSkill:
             self._storage_observer = BowlStorage(self)
         return self._storage_observer
 
+    def _supports_skill_target(self, name):
+        return self.target.name in SKILLS[name].target_objects
+
+    def _supports_task_target(self, task_kind):
+        return self.target.name in TASKS[task_kind].target_objects
+
     def precondition_error(self, name):
         if not isinstance(name, str) or name not in SKILLS:
             return "Unsupported skill name"
@@ -145,7 +151,7 @@ class GraspSkill:
             return numerical_error
         if self.status == "succeeded" and not all(self.postconditions().values()):
             return "Previous completion no longer matches the physical state; reset before handoff"
-        if self.target.name not in SKILLS[name].target_objects:
+        if not self._supports_skill_target(name):
             return "Skill does not support the selected target"
         storage = self._storage_context()
         if name == "grasp_and_hold":
@@ -217,7 +223,7 @@ class GraspSkill:
             raise ValueError("parameters must be GraspParameters or None")
         if not isinstance(task_kind, str) or task_kind not in TASKS:
             raise ValueError("Unsupported task kind")
-        if self.target.name not in TASKS[task_kind].target_objects:
+        if not self._supports_task_target(task_kind):
             raise ValueError("Task does not support the selected target")
         numerical_error = self.sim.numerical_error()
         if numerical_error is not None:

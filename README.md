@@ -4,9 +4,135 @@
 
 Historical experiment names, GPT model references, and recorded videos are retained for provenance; the rename does not change their results.
 
+## Five-object study: bowl, bottle, spoon, glass and pen
+
+This version expands the supervised grasp study, not the historical drawer/sorting demonstration. Each attempt grasps one selected target using simulator ground truth; it does not add visual recognition, a learned motion policy, or multi-object sorting.
+
+The label remains binary `success` (0/1). Five object families are predictor categories, not a five-class object-recognition target.
+
+**Data:** [Download CSV](https://raw.githubusercontent.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms/main/results/grasp_classifier_five_objects_20261121/dataset.csv) · [Dataset file](results/grasp_classifier_five_objects_20261121/dataset.csv) · [Frozen protocol and parameter changes](results/grasp_classifier_five_objects_20261121/protocol.json) · [Collection summary](results/grasp_classifier_five_objects_20261121/collection/summary.json) · [Model comparison](results/grasp_classifier_five_objects_20261121/comparison.json) · [Fresh physical execution](results/grasp_classifier_five_objects_20261121/execution_comparison.json) · [Verification and limitations](results/grasp_classifier_five_objects_20261121/verification.json)
+
+### What changed from the original batch?
+
+| Factor | Original formal batch | Five-object study |
+| --- | --- | --- |
+| Geometry families | Bowl and bottle | Adds spoon, hollow glass tumbler and pen |
+| Size multipliers | 0.8, 1.0, 1.2 | Unchanged; optional 0.9/1.1 levels are not included |
+| Bowl/bottle mass, kg | 0.06, 0.18, 0.30, 0.45 | Unchanged; optional 0.12/0.24/0.36 levels are not included |
+| Sliding contact friction | 0.20, 0.40, 0.80, 1.20 | Unchanged; optional 0.30/0.60/1.00 levels are not included |
+| Property combinations per family | 19 of 48 actually sampled | All 48 size × mass × friction combinations |
+| Object/state conditions | 48 total | 240 total; 48 per family |
+| Controls per condition | 4 | 8, with reference, higher-force and speed anchors, single-parameter contrasts and joint configurations |
+| Paired latent-error draws | 2 | Unchanged |
+| Planned physical attempts | 384 | 3,840; valid counts and exclusions are reported separately |
+| Contact configuration | Original box-asset setup | MULTICCD enabled for every family; new primitives use six-dimensional contact, legacy bowl/bottle retain three-dimensional contact |
+| Historical training supplementation | Used in the original 550-row dataset | Not used: changed contact settings require an independent new batch |
+
+New objects use these **prescribed simulation masses**, not measured real-object properties:
+
+| Object | Approximate nominal geometry | Mass levels, kg | Grasp profile |
+| --- | --- | --- | --- |
+| Bowl | Existing scanned asset, about 107 × 107 × 51 mm collision bounds | 0.06, 0.18, 0.30, 0.45 | Near-side rim |
+| Bottle | Existing asset, about 43 × 44 × 157 mm collision bounds | 0.06, 0.18, 0.30, 0.45 | Neck |
+| Spoon | Simplified rigid handle and shallow open head, about 150 × 36 × 18 mm | 0.015, 0.025, 0.040, 0.060 | Raised head |
+| Glass | Rigid hollow Ø64 × 90 mm tumbler, 3 mm walls and 4 mm bottom | 0.080, 0.150, 0.250, 0.350 | Upper wall |
+| Pen | Horizontal round barrel/cap and capsule tip, about 140 × 12 × 12 mm | 0.005, 0.010, 0.020, 0.030 | Barrel |
+
+The three new objects are geometric approximations, not scans or validated material models. Glass does not fracture or contain liquid; the pen does not bend or write. Scaling and mass vary independently, so density may vary. Object category also identifies a grasp profile and contact model: category-level differences are not causal evidence about shape alone.
+
+![Actual MuJoCo-rendered new study geometry](results/grasp_five_object_parent_smoke_20261121/new_objects_physical_geometry_visible.png)
+
+### Frozen collection and label rules
+
+- Initial x/y/yaw retain the original bounds: x `[0.475, 0.525]` m, y `[-0.10, -0.06]` m, yaw `[-0.15, 0.15]` radians. Latin-hypercube strata cover each axis within every family/split.
+- Each family assigns 32 conditions to training, eight to validation and eight to test **before labels are observed**. All controls and paired error draws for a condition stay together. Planned rows are 2,560/640/640; the audit determines usable counts.
+- Eight controls are chosen from the original 54 joint possibilities. Every condition includes the original baseline (80 mm opening, 4 N tendon command, zero closure-distance trigger, 0.10 m/s descent), its 8 N counterpart, and all three descent-speed settings. All 54 possibilities appear across each family, but not all are tested at every condition.
+- The two body-frame XYZ errors are paired across controls and excluded from predictors. Initial validity is checked before executing a grasp. Invalid initial states and numerical/infrastructure faults are not failure labels.
+- The acceptance rule is unchanged: bilateral target contact, no table support, at least 0.10 m object lift, relative stability and a continuous two-second observer hold. The observer has a separate timer but shares the controller's physical predicates; it is not an independent sensor.
+- MULTICCD and the new objects' six-dimensional contact enable curved support and rolling/torsional resistance without fixtures. The raw evidence records actual solver flags, contact dimensions, friction, inertia and geometry bounds. These choices are documented in the protocol and must not be silently mixed with old labels.
+- Raw traces are sampled every 20 ms from 2 ms physics; the compressed traces do not record every physics interval. Collision diagnostics are retained separately; accepted grasp labels are not a real-world safety or collision-free guarantee.
+
+The [independent parent preflight](results/grasp_five_object_parent_smoke_20261121/summary.json) executed successful strict holds for all five families. The [initialization check](results/grasp_five_object_parent_smoke_20261121/initialization_check.json) examined all 240 nominal conditions before grasp outcomes. Earlier [development rounds](results/grasp_five_object_preflight_20261121/summary.json), including unsuccessful and invalid prototypes, remain separate from model data.
+
+### Completed five-object run
+
+All 3,840 planned attempts completed and entered the dataset: **1,569 successes and 2,271 failures**, with no exclusions, exact duplicates or MuJoCo numerical-warning attempts. Collection took 3,116.41 wall-clock seconds (51.94 minutes) with 12 concurrent physics workers on the development machine. That is aggregate throughput, not single-attempt latency; mean worker-observed attempt latency was 9.69 seconds.
+
+| Family | Rows | Successes | Failures |
+| --- | ---: | ---: | ---: |
+| Bowl | 768 | 291 | 477 |
+| Bottle | 768 | 265 | 503 |
+| Spoon | 768 | 278 | 490 |
+| Glass | 768 | 312 | 456 |
+| Pen | 768 | 423 | 345 |
+
+| Frozen partition | Rows | Condition groups | Successes | Failures |
+| --- | ---: | ---: | ---: | ---: |
+| Training | 2,560 | 160 | 1,109 | 1,451 |
+| Validation | 640 | 40 | 243 | 397 |
+| Test | 640 | 40 | 217 | 423 |
+
+The primary model was selected by validation log loss, not by the test scores below. Lower log loss/Brier score is better; higher ROC AUC is better.
+
+| Model | Validation log loss | Test log loss | Test Brier score | Test ROC AUC |
+| --- | ---: | ---: | ---: | ---: |
+| Full Logistic Regression | 0.4940 | 0.4695 | 0.1545 | 0.8423 |
+| LASSO → Logistic Regression | 0.4949 | 0.4731 | 0.1550 | 0.8437 |
+| Random Forest | 0.4515 | 0.4153 | 0.1346 | 0.8878 |
+| XGBoost — selected | 0.4067 | 0.4103 | 0.1327 | 0.8880 |
+| Constant training-prevalence predictor | 0.6698 | 0.6589 | 0.2330 | 0.5000 |
+
+LASSO retained 13 of 15 encoded columns at alpha `0.003`; this is model-dependent selection, not proof that excluded physical characteristics have no effect.
+
+Fresh physical evaluation used 40 held-out conditions and two new paired error draws. Identical actions under identical errors were executed once and linked across methods: **194 unique physical executions**, not 400 independent repetitions.
+
+| Method | Successes / 80 | Success rate | Mean successful-attempt sim time, s | Total attempt sim time / successes, s |
+| --- | ---: | ---: | ---: | ---: |
+| Logistic Regression | 42 | 52.50% | 13.79 | 23.59 |
+| LASSO → Logistic Regression | 42 | 52.50% | 13.79 | 23.59 |
+| Random Forest | 42 | 52.50% | 14.09 | 23.91 |
+| XGBoost — selected | 43 | 53.75% | 13.96 | 23.55 |
+| Fixed original baseline | 31 | 38.75% | 13.67 | 30.84 |
+
+For the selected model, the paired success-rate difference was +15 percentage points; a 10,000-replicate, family-stratified condition-group bootstrap gave a descriptive 95% interval of +5 to +25 points. This is conditional evidence from one frozen protocol, not a real-robot guarantee. The pooled time-per-success ratio is not a directly measured closed-loop retry policy.
+
+**No approach-speed improvement is established.** XGBoost chose the 8 N closing command in 39/40 conditions, 0.10 m/s descent in 38 and 0.04 m/s in two; it never chose 0.20 m/s. The gain over the original 4 N baseline does not establish superiority to a simple fixed 8 N rule. Successful-attempt mean time was not lower than the baseline.
+
+Verification included 377 passing tests, physical preflights, all 240 initial-state checks, raw-label/property/split audits, saved-model reloads and a CSV-only training smoke run that evaluated zero test rows. All four saved models produced finite probabilities; saved test predictions and independently recomputed log loss/Brier scores matched. **The run was not warning-free:** linear fitting/prediction emitted NumPy/scikit-learn matrix-multiplication RuntimeWarnings, retained in [the complete run log](results/grasp_classifier_five_objects_20261121/run.log), [CSV smoke log](results/grasp_classifier_five_objects_20261121/csv_only_smoke/run.log) and [model replay stderr](results/grasp_classifier_five_objects_20261121/model_replay_stderr.log). Pure-Python linear probability recomputation agreed within `2.23e-16`; this does not establish the warning cause or certify every optimizer intermediate.
+
+The test results are now public. Later result-informed model changes require a new held-out batch for a fresh confirmatory evaluation.
+
+### Classifiers and reproduction
+
+Inputs remain the same eleven fields: `target` (geometry family, not the label), `scale`, `mass_kg`, `sliding_friction`, `x_m`, `y_m`, `yaw_rad`, `opening_m`, `closing_force_n`, `close_trigger_m`, and `descent_speed_m_s`. With all five categories present, one-hot encoding produces 15 columns. Mass/friction are simulator ground truth; descent speed and force are commands, not measured constant TCP speed or per-finger force.
+
+The four routes remain full-feature L2 Logistic Regression, squared-loss LASSO followed by L2 Logistic Regression, Random Forest and XGBoost. All use shared grouped CV and search budgets; preprocessing and feature selection remain fold-local. Validation log loss selects the primary model before test evaluation. Neither test results nor the later physical recommendation outcomes tune the models.
+
+Run a CSV-only baseline without starting physics or paid services:
+
+```sh
+uv sync --locked
+uv run --locked python run_grasp_classifiers.py \
+  --phase fit-csv --model logistic \
+  --dataset results/grasp_classifier_five_objects_20261121/dataset.csv \
+  --output results/team_logistic_five_objects
+```
+
+To collect a separate batch, fit all routes and execute recommendations physically:
+
+```sh
+uv run --locked python run_grasp_classifiers.py \
+  --output results/grasp_classifier_five_objects_reproduction \
+  --seed 20261121 --workers 3 --model-workers 4 --n-iter 12
+```
+
+Output directories must not already exist. The recorded run uses more physics workers on the development machine; worker count is not a different sampling or label rule. Recorded source/asset hashes are checked before training and physical recommendation execution. This is within-family evaluation on new parameter/state conditions, not unseen-shape or real-robot generalization; adding data does not guarantee a success-rate or speed improvement.
+
 ## Start here: shared simulation data and a basic classifier
 
 The existing labeled data is available now; teammates do not need to run the simulator before starting model development.
+
+This section preserves the historical 550-row, two-object dataset and its original results. The five-object study above is a separate version; historical labels are not rewritten or merged into its changed contact configuration.
 
 - **[Download the CSV](https://raw.githubusercontent.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms/main/results/grasp_classifier_comparison_20261115/dataset.csv)** · [Browse the dataset](results/grasp_classifier_comparison_20261115/dataset.csv)
 - [Frozen partition manifest](results/grasp_classifier_comparison_20261115/split_manifest.json) · [Shared CV folds](results/grasp_classifier_comparison_20261115/cv_manifest.json)
@@ -194,14 +320,17 @@ Each method was evaluated on the same eight held-out conditions with two new pai
 
 ### Reproduce and inspect
 
+The original two-family physical procedure is preserved at [source revision 5770a37](https://github.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms/tree/5770a37). The current collection entry point runs the five-object protocol. To retrain only a baseline on the historical CSV with current code:
+
 ```sh
 uv sync --locked
 uv run --locked python run_grasp_classifiers.py \
-  --output results/grasp_classifier_reproduction \
-  --workers 3 --model-workers 4 --n-iter 12
+  --phase fit-csv --model logistic \
+  --dataset results/grasp_classifier_comparison_20261115/dataset.csv \
+  --output results/historical_table_logistic
 ```
 
-The output directory must not exist. This command collects new physical labels, fits all four searches in parallel, saves the validation-based model choice, evaluates frozen test predictions, and physically executes recommendations against a fixed baseline under fresh paired nuisance draws. Selection compares complete candidate configurations, not speed alone. Predictions are saved before execution; identical action/error trials shared by methods are executed once and explicitly linked rather than treated as independent evidence. The experiment is headless and does not change the existing live-page controls or videos. On macOS, XGBoost additionally needs the native OpenMP runtime (`brew install libomp` if missing).
+The output directory must not exist. This command fits the historical table's training groups and reports validation only; it does not collect labels or re-execute old physics. The archived comparison and physical recommendation records below remain unchanged. On macOS, choosing the XGBoost route additionally requires the native OpenMP runtime (`brew install libomp` if missing).
 
 Key evidence: [protocol](results/grasp_classifier_comparison_20261115/protocol.json), [data audit](results/grasp_classifier_comparison_20261115/data_audit.json), [dataset](results/grasp_classifier_comparison_20261115/dataset.csv), [split manifest](results/grasp_classifier_comparison_20261115/split_manifest.json), [CV folds](results/grasp_classifier_comparison_20261115/cv_manifest.json), [model comparison](results/grasp_classifier_comparison_20261115/comparison.json), [predictions before physical execution](results/grasp_classifier_comparison_20261115/recommendations_before_execution.json), and [physical execution comparison](results/grasp_classifier_comparison_20261115/execution_comparison.json). Models, all search candidates, raw per-trial JSON and compressed physics traces are retained.
 

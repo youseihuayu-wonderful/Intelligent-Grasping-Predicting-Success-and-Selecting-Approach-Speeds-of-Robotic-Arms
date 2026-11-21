@@ -4,9 +4,135 @@
 
 历史实验名称、GPT 模型引用与录像保留原貌以供追溯；改名不改变已有实验结果。
 
+## 五物体数据实验：碗、瓶、勺子、玻璃杯和笔
+
+本版本扩展的是监督学习抓取数据实验，不是历史抽屉／分拣演示。每次试验只抓取一个选定目标，直接读取仿真真值；没有新增视觉识别、学习动作策略或多物体分拣。
+
+预测标签仍为二分类 `success`（0／1）。五类物体是输入类别，不是把任务改成五分类物体识别。
+
+**数据：**[下载 CSV](https://raw.githubusercontent.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms/main/results/grasp_classifier_five_objects_20261121/dataset.csv) · [数据文件](results/grasp_classifier_five_objects_20261121/dataset.csv) · [冻结协议与改动清单](results/grasp_classifier_five_objects_20261121/protocol.json) · [采集汇总](results/grasp_classifier_five_objects_20261121/collection/summary.json) · [模型比较](results/grasp_classifier_five_objects_20261121/comparison.json) · [新扰动下的物理执行](results/grasp_classifier_five_objects_20261121/execution_comparison.json) · [核验与局限](results/grasp_classifier_five_objects_20261121/verification.json)
+
+### 相比上一轮，明确改了哪些？
+
+| 因素 | 上一轮正式批次 | 五物体实验 |
+| --- | --- | --- |
+| 几何类别 | 碗、瓶 | 新增勺子、空心玻璃杯和笔 |
+| 尺寸缩放 | 0.8、1.0、1.2 | 不变；本批不加入候选中间档 0.9／1.1 |
+| 碗／瓶质量，kg | 0.06、0.18、0.30、0.45 | 不变；本批不加入候选中间档 0.12／0.24／0.36 |
+| 接触滑动摩擦 | 0.20、0.40、0.80、1.20 | 不变；本批不加入候选中间档 0.30／0.60／1.00 |
+| 每类物理属性组合 | 实际采到 48 种中的 19 种 | 完整覆盖尺寸×质量×摩擦的 48 种组合 |
+| 物体／状态条件 | 共 48 组 | 共 240 组，每类 48 组 |
+| 每条件控制配置 | 4 种 | 8 种，包含基准、较大闭合力、速度对照、单参数对照和联合配置 |
+| 配对扰动重复 | 2 次 | 不变 |
+| 计划物理尝试数 | 384 次 | 3,840 次；有效数量和剔除记录另行统计 |
+| 接触配置 | 原盒状碰撞资产配置 | 五类均开启 MULTICCD；新物体使用六维接触，原碗／瓶仍为三维接触 |
+| 历史训练数据补充 | 原 550 条建模表使用过 | 本批不使用：接触配置变化后独立采集、独立比较 |
+
+新物体使用以下**预设仿真质量**，不是实物称量值：
+
+| 物体 | 原尺寸近似几何 | 质量档位，kg | 抓取配置 |
+| --- | --- | --- | --- |
+| 碗 | 现有扫描资产，碰撞包围盒约 107×107×51 mm | 0.06、0.18、0.30、0.45 | 近侧碗沿 |
+| 瓶 | 现有资产，碰撞包围盒约 43×44×157 mm | 0.06、0.18、0.30、0.45 | 瓶颈 |
+| 勺子 | 简化刚体柄与开放浅勺头，约 150×36×18 mm | 0.015、0.025、0.040、0.060 | 抬高的勺头 |
+| 玻璃杯 | 刚性空心杯，直径 64、高 90 mm；壁厚 3、底厚 4 mm | 0.080、0.150、0.250、0.350 | 上部杯壁 |
+| 笔 | 水平圆柱笔身／笔帽与胶囊笔尖，约 140×12×12 mm | 0.005、0.010、0.020、0.030 | 笔身 |
+
+三种新物体是几何近似，不是扫描资产或经过实物标定的材料模型。玻璃杯不模拟碎裂或液体，笔不模拟弯曲或书写。尺寸与质量独立设置，意味着密度可以变化。类别同时对应抓取配置和接触模型，因此类别之间的差异不是“形状单独造成影响”的因果证据。
+
+![MuJoCo 实际渲染的新物体几何](results/grasp_five_object_parent_smoke_20261121/new_objects_physical_geometry_visible.png)
+
+### 冻结采集与标签规则
+
+- 初始范围不变：x 为 `[0.475, 0.525]` m，y 为 `[-0.10, -0.06]` m，yaw 为 `[-0.15, 0.15]` 弧度；在每类／每个划分内分层覆盖各坐标轴。
+- 在观察标签前，每类固定分配 32 组训练、8 组验证、8 组测试条件。同一条件的所有配置和配对扰动不跨集合。计划记录数为 2,560／640／640，实际可用数由审计决定。
+- 每条件从原 54 种联合配置中安排 8 种。包含原基准（80 mm 开口、4 N 腱力指令、零距离触发、0.10 m/s 下降）、对应的 8 N 配置，以及全部三档下降速度。每类整体覆盖全部 54 种，但不是每个条件都测试全部配置。
+- 两组物体系 XYZ 误差在控制配置之间配对，不作为预测输入。先检查初始状态再执行抓取；无效初始状态和数值／内部错误不作为失败标签。
+- 验收不变：双侧目标接触、脱离桌面、物体抬升至少 0.10 m、相对稳定，并由观察器连续保持两秒。观察器计时独立，但复用控制器物理判据，不是独立传感器。
+- MULTICCD 与新物体六维接触用于圆形支撑及滚动／扭转阻力，不增加夹持附件或隐藏支架。原始记录保存实际求解器标志、接触维度、摩擦、惯量和几何边界；不能与旧配置标签悄悄混训。
+- 原始轨迹从 2 ms 物理步长中每 20 ms 采样，压缩轨迹不包含每个物理时刻。碰撞诊断另存；抓取通过不等于真实安全或全程零碰撞保证。
+
+[独立集成预检](results/grasp_five_object_parent_smoke_20261121/summary.json)实际执行了五类物体并通过严格保持；[初始状态检查](results/grasp_five_object_parent_smoke_20261121/initialization_check.json)在抓取结果产生前检查了全部 240 组名义条件。[更早的开发轮次](results/grasp_five_object_preflight_20261121/summary.json)保留失败和无效原型，不并入模型数据。
+
+### 本批实际结果
+
+计划的 3,840 次全部完成并进入数据集：**成功 1,569 次、失败 2,271 次**，无剔除、无精确重复、无 MuJoCo 数值警告试验。开发机使用 12 个并发物理工作进程，采集墙钟时间为 3,116.41 秒，即 51.94 分钟。这是并行采集耗时，不是单次延迟；工作进程观察到的平均单次延迟为 9.69 秒。
+
+| 物体 | 记录数 | 成功 | 失败 |
+| --- | ---: | ---: | ---: |
+| 碗 | 768 | 291 | 477 |
+| 瓶 | 768 | 265 | 503 |
+| 勺子 | 768 | 278 | 490 |
+| 玻璃杯 | 768 | 312 | 456 |
+| 笔 | 768 | 423 | 345 |
+
+| 冻结划分 | 记录数 | 条件组数 | 成功 | 失败 |
+| --- | ---: | ---: | ---: | ---: |
+| 训练集 | 2,560 | 160 | 1,109 | 1,451 |
+| 验证集 | 640 | 40 | 243 | 397 |
+| 测试集 | 640 | 40 | 217 | 423 |
+
+主模型按验证集 Log Loss 选定，不按下表测试成绩挑选。Log Loss／Brier 越低越好，ROC AUC 越高越好。
+
+| 模型 | 验证 Log Loss | 测试 Log Loss | 测试 Brier | 测试 ROC AUC |
+| --- | ---: | ---: | ---: | ---: |
+| 全特征 Logistic Regression | 0.4940 | 0.4695 | 0.1545 | 0.8423 |
+| LASSO → Logistic Regression | 0.4949 | 0.4731 | 0.1550 | 0.8437 |
+| Random Forest | 0.4515 | 0.4153 | 0.1346 | 0.8878 |
+| XGBoost——选定主模型 | 0.4067 | 0.4103 | 0.1327 | 0.8880 |
+| 训练集成功比例常数预测器 | 0.6698 | 0.6589 | 0.2330 | 0.5000 |
+
+LASSO 在 alpha 为 `0.003` 时保留了 15 个编码列中的 13 列。这是特定模型下的选择，不证明被排除的物理特征没有影响。
+
+新扰动物理评价包含 40 个留出条件、每条件两次配对扰动。相同动作及误差只执行一次、在方法间关联复用：实际是 **194 次不同的物理执行**，不是 400 次相互独立的重复试验。
+
+| 方法 | 成功次数／80 | 成功率 | 成功尝试平均仿真时间，s | 全部尝试仿真时间／成功数，s |
+| --- | ---: | ---: | ---: | ---: |
+| Logistic Regression | 42 | 52.50% | 13.79 | 23.59 |
+| LASSO → Logistic Regression | 42 | 52.50% | 13.79 | 23.59 |
+| Random Forest | 42 | 52.50% | 14.09 | 23.91 |
+| XGBoost——选定主模型 | 43 | 53.75% | 13.96 | 23.55 |
+| 原固定基准 | 31 | 38.75% | 13.67 | 30.84 |
+
+选定模型相对基准的配对成功率差为 +15 个百分点；按物体类别分层、以条件组为单位重复抽样 10,000 次，得到描述性的 95% 区间 +5 至 +25 个百分点。这是单个冻结协议下的条件性证据，不是真机保证。“全部时间／成功数”是汇总比值，不是实际运行闭环重试策略测得的耗时。
+
+**本批没有证明接近速度提高。** XGBoost 在 40 个条件中有 39 个选择 8 N 闭合指令；38 个选择 0.10 m/s，两个选择 0.04 m/s，没有选择 0.20 m/s。相对原 4 N 基准的增益，不能证明模型优于简单的固定 8 N 规则。成功尝试的平均耗时也没有低于基准。
+
+验证包含 377 项测试通过、逐物体物理预检、全部 240 组初始条件检查、原始标签／属性／分组审计、保存模型重载，以及不评价测试集的 CSV 基础训练冒烟运行。四个保存模型均输出有限概率，保存的测试预测及独立复算的 Log Loss／Brier 一致。**整个运行并非零警告：**线性模型训练／预测产生过 NumPy／scikit-learn 矩阵乘法 RuntimeWarning，完整保存在[主运行日志](results/grasp_classifier_five_objects_20261121/run.log)、[CSV 冒烟日志](results/grasp_classifier_five_objects_20261121/csv_only_smoke/run.log)及[模型重载 stderr](results/grasp_classifier_five_objects_20261121/model_replay_stderr.log)。纯 Python 复算线性模型概率的最大差不超过 `2.23e-16`，但不证明警告根因已解决，也不验证每个优化中间量。
+
+本批测试结果现已公开；之后依据结果修改模型，需要新的留出批次才能进行全新的确认性评价。
+
+### 分类器与复现
+
+输入仍为十一项：`target`（几何类别，不是标签）、`scale`、`mass_kg`、`sliding_friction`、`x_m`、`y_m`、`yaw_rad`、`opening_m`、`closing_force_n`、`close_trigger_m`、`descent_speed_m_s`。五类齐全时，类别编码后共 15 列。质量／摩擦是仿真真值；速度与力是控制设置，不是恒定实测 TCP 速度或每指实测法向力。
+
+四条路线仍为完整特征 L2 Logistic Regression、平方损失 LASSO 后接 L2 Logistic Regression、Random Forest 与 XGBoost。统一分组交叉验证和搜索预算，预处理及特征选择在折内拟合；先按验证集 Log Loss 选定主模型，再评价测试集。后续物理执行结果不用于回头调模型。
+
+只用已有 CSV 运行基础分类器，不启动仿真或付费服务：
+
+```sh
+uv sync --locked
+uv run --locked python run_grasp_classifiers.py \
+  --phase fit-csv --model logistic \
+  --dataset results/grasp_classifier_five_objects_20261121/dataset.csv \
+  --output results/team_logistic_five_objects
+```
+
+重新采集一批数据、训练全部路线并物理执行建议：
+
+```sh
+uv run --locked python run_grasp_classifiers.py \
+  --output results/grasp_classifier_five_objects_reproduction \
+  --seed 20261121 --workers 3 --model-workers 4 --n-iter 12
+```
+
+输出目录必须尚不存在。开发机记录的批次使用更多物理工作进程；进程数不改变采样或标签规则。训练及建议执行前检查记录的代码／资产哈希。本实验评价已知几何类别内的新参数／状态条件，不证明未见形状或真机泛化；数据变多也不保证成功率或速度提高。
+
 ## 从这里开始：共享仿真数据与基础分类器
 
 已有带标签的数据可以直接用于模型开发，同学不需要先运行仿真器。
+
+本节保留历史 550 条、两物体数据集及其原始结果。上方五物体实验是独立版本，不改写历史标签，也不把它们混入已改变接触配置的新批次。
 
 - **[下载 CSV](https://raw.githubusercontent.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms/main/results/grasp_classifier_comparison_20261115/dataset.csv)** · [浏览数据表](results/grasp_classifier_comparison_20261115/dataset.csv)
 - [固定数据划分](results/grasp_classifier_comparison_20261115/split_manifest.json) · [共享交叉验证折](results/grasp_classifier_comparison_20261115/cv_manifest.json)
@@ -194,14 +320,17 @@ uv run --locked python run_grasp_learning.py --output results/grasp_level1_repro
 
 ### 复现与证据
 
+原两物体物理流程保存在[源代码版本 5770a37](https://github.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms/tree/5770a37)。当前采集入口运行五物体协议。若只想用当前代码在历史 CSV 上重新训练基础模型：
+
 ```sh
 uv sync --locked
 uv run --locked python run_grasp_classifiers.py \
-  --output results/grasp_classifier_reproduction \
-  --workers 3 --model-workers 4 --n-iter 12
+  --phase fit-csv --model logistic \
+  --dataset results/grasp_classifier_comparison_20261115/dataset.csv \
+  --output results/historical_table_logistic
 ```
 
-输出目录必须不存在。该命令采集新物理标签、并行训练四条路线、先保存验证集选型，再评估冻结测试集，最后用新的配对误差实际执行模型建议与固定基线。建议选择的是完整控制配置，不只是速度；执行前先保存预测。不同方法若选择相同动作与误差，只运行一次物理试验并明确关联，不冒充独立重复。入口无画面运行，不修改现有实时页面或录像。macOS 的 XGBoost 另需原生 OpenMP（未安装时执行 `brew install libomp`）。
+输出目录必须尚不存在。该命令只在历史表的训练组中拟合，并报告验证集，不采集新标签，也不重新执行旧物理场景。下方归档的模型比较与建议执行记录保持原样。macOS 若选择 XGBoost 路线，另需原生 OpenMP（未安装时执行 `brew install libomp`）。
 
 关键文件：[协议](results/grasp_classifier_comparison_20261115/protocol.json)、[数据审计](results/grasp_classifier_comparison_20261115/data_audit.json)、[数据表](results/grasp_classifier_comparison_20261115/dataset.csv)、[划分清单](results/grasp_classifier_comparison_20261115/split_manifest.json)、[交叉验证分组](results/grasp_classifier_comparison_20261115/cv_manifest.json)、[模型比较](results/grasp_classifier_comparison_20261115/comparison.json)、[执行前预测](results/grasp_classifier_comparison_20261115/recommendations_before_execution.json)、[物理执行比较](results/grasp_classifier_comparison_20261115/execution_comparison.json)。模型、全部调参候选、逐次 JSON 和压缩物理轨迹均保留。
 

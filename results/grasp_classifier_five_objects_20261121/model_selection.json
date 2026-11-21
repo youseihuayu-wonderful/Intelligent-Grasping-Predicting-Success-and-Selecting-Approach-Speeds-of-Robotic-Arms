@@ -1,0 +1,5 @@
+{
+  "selected_model": "xgboost",
+  "criterion": "minimum validation log loss, model-name tie break",
+  "test_used_for_selection": false
+}

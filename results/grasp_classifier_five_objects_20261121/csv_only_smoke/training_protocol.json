@@ -1,0 +1,43 @@
+{
+  "dataset_file": "dataset.csv",
+  "dataset_sha256": "d218aca702d21fcd0bfe55d60b8022939e732a33c5cb81e42cf07f319716064a",
+  "feature_names": [
+    "target",
+    "scale",
+    "mass_kg",
+    "sliding_friction",
+    "x_m",
+    "y_m",
+    "yaw_rad",
+    "opening_m",
+    "closing_force_n",
+    "close_trigger_m",
+    "descent_speed_m_s"
+  ],
+  "label": "success",
+  "seed": 5644,
+  "n_iter_per_search": 12,
+  "cv_folds": 3,
+  "cv_metric": "negative log loss",
+  "partitions": {
+    "train": {
+      "rows": 2560,
+      "groups": 160,
+      "successes": 1109,
+      "failures": 1451
+    },
+    "validation": {
+      "rows": 640,
+      "groups": 40,
+      "successes": 243,
+      "failures": 397
+    },
+    "test": {
+      "rows": 640,
+      "groups": 40,
+      "successes": 217,
+      "failures": 423
+    }
+  },
+  "test_policy": "Test rows are neither fitted nor scored by this command"
+}

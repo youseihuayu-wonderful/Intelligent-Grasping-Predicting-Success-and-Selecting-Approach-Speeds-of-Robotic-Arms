@@ -12,10 +12,11 @@ from unittest.mock import patch
 import joblib
 import numpy as np
 
-from collect_grasp_classifiers import build_protocol
+from collect_grasp_classifiers import build_protocol, sha256_file
 from grasp_classifier_data import FEATURE_NAMES
 from run_grasp_classifiers import (
     _probabilities, _summarize_execution, fit_csv, load_csv_dataset, prepare_data,
+    verify_physics_sources,
 )
 
 
@@ -38,6 +39,25 @@ def fixture_row(trial_id, *, x=0.5, success=True, metadata=None, opening=0.08):
 def write_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value), encoding="utf-8")
+
+
+class PhysicsSourceIntegrityTests(unittest.TestCase):
+    def test_changing_object_geometry_after_collection_rejects_the_batch(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "physics.py"
+            asset = root / "object.xml"
+            source.write_text("collector-v1", encoding="utf-8")
+            asset.write_text('<geom type="box" size="0.01 0.01 0.01"/>', encoding="utf-8")
+            environment = {
+                "physical_collector_sha256": sha256_file(source),
+                "input_sha256": {"object.xml": sha256_file(asset)},
+            }
+            asset.write_text('<geom type="box" size="0.02 0.01 0.01"/>', encoding="utf-8")
+            with patch("run_grasp_classifiers.ROOT", root), \
+                    patch("run_grasp_classifiers.PHYSICS_SOURCE", source):
+                with self.assertRaisesRegex(ValueError, "changed after collection"):
+                    verify_physics_sources(environment)
 
 
 class CSVTrainingTests(unittest.TestCase):
@@ -95,33 +115,158 @@ class CSVTrainingTests(unittest.TestCase):
 
 
 class FrozenProtocolTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.protocol = build_protocol(5644)
+
+    def test_protocol_is_deterministic_namespaced_and_frozen_before_outcomes(self):
+
+        protocol = self.protocol
+        self.assertEqual(protocol, build_protocol(5644))
+        other_seed = build_protocol(5645)
+        self.assertNotEqual(
+            [group["nominal_settings"] for group in protocol["condition_groups"]],
+            [group["nominal_settings"] for group in other_seed["condition_groups"]])
+        self.assertFalse(
+            {group["condition_id"] for group in protocol["condition_groups"]}
+            & {group["condition_id"] for group in other_seed["condition_groups"]})
+        self.assertEqual(len(protocol["condition_groups"]), 240)
+        self.assertEqual(len(protocol["trials"]), 3840)
+        self.assertEqual(protocol["group_split_counts"],
+                         {"train": 160, "validation": 40, "test": 40})
+        self.assertEqual(protocol["planned_split_attempts"],
+                         {"train": 2560, "validation": 640, "test": 640})
+        legacy_ids = {f"{target}_{index:02d}" for target in ("bowl", "bottle")
+                      for index in range(24)}
+        condition_ids = {group["condition_id"] for group in protocol["condition_groups"]}
+        self.assertEqual(len(condition_ids), 240)
+        self.assertFalse(condition_ids & legacy_ids)
+        trial_ids = [spec[0] for spec in protocol["trials"]]
+        self.assertEqual(len(set(trial_ids)), 3840)
+        for _, settings, metadata in protocol["trials"]:
+            self.assertNotIn("success", settings)
+            self.assertNotIn("success", metadata)
+        for seed in (True, -1, 2**32, 1.5, "5644"):
+            with self.subTest(seed=seed), self.assertRaises(ValueError):
+                build_protocol(seed)
+
+    def test_complete_object_specific_property_grids(self):
+        from itertools import product
+
+        protocol = self.protocol
+        expected_masses = {
+            "bowl": (0.06, 0.18, 0.30, 0.45),
+            "bottle": (0.06, 0.18, 0.30, 0.45),
+            "spoon": (0.015, 0.025, 0.040, 0.060),
+            "glass": (0.080, 0.150, 0.250, 0.350),
+            "pen": (0.005, 0.010, 0.020, 0.030),
+        }
+        for target, masses in expected_masses.items():
+            with self.subTest(target=target):
+                groups = [group for group in protocol["condition_groups"]
+                          if group["nominal_settings"]["target"] == target]
+                self.assertEqual(len(groups), 48)
+                actual = [tuple(group["nominal_settings"][key]
+                                for key in ("scale", "mass_kg", "sliding_friction"))
+                          for group in groups]
+                expected = set(product((0.8, 1.0, 1.2), masses, (0.2, 0.4, 0.8, 1.2)))
+                self.assertEqual(set(actual), expected)
+                self.assertEqual(len(actual), len(expected))
+                self.assertEqual(protocol["family_group_split_counts"][target],
+                                 {"train": 32, "validation": 8, "test": 8})
+
+    def test_spatial_yaw_strata_cover_old_bounds_in_every_family_split(self):
+        from collect_grasp_classifiers import POSE_BOUNDS
+
+        groups_by_split = defaultdict(list)
+        for group in self.protocol["condition_groups"]:
+            groups_by_split[group["nominal_settings"]["target"], group["split"]].append(group)
+        for key, groups in groups_by_split.items():
+            for name, (low, high) in POSE_BOUNDS.items():
+                with self.subTest(family_split=key, axis=name):
+                    values = [group["nominal_settings"][name] for group in groups]
+                    self.assertTrue(all(low <= value < high for value in values))
+                    strata = [int((value - low) / (high - low) * len(groups))
+                              for value in values]
+                    self.assertEqual(sorted(strata), list(range(len(groups))))
+
+    def test_controls_are_distinct_have_anchors_speeds_and_all_joint_choices(self):
+        from itertools import product
+        from collect_grasp_classifiers import BASELINE_CONTROL, HIGH_FORCE_CONTROL, CONTROL_LEVELS
+
+        names = tuple(BASELINE_CONTROL)
+        expected_pool = set(product(*CONTROL_LEVELS.values()))
+        coverage = defaultdict(set)
+        for group in self.protocol["condition_groups"]:
+            controls = group["controls"]
+            keys = {tuple(control[name] for name in names) for control in controls}
+            self.assertEqual(len(controls), 8)
+            self.assertEqual(len(keys), 8)
+            self.assertTrue(keys <= expected_pool)
+            self.assertIn(BASELINE_CONTROL, controls)
+            self.assertIn(HIGH_FORCE_CONTROL, controls)
+            self.assertEqual({control["descent_speed_m_s"] for control in controls},
+                             {0.04, 0.10, 0.20})
+            differences = [sum(control[name] != BASELINE_CONTROL[name] for name in names)
+                           for control in controls]
+            self.assertIn(1, differences)
+            self.assertTrue(any(count > 1 for count in differences))
+            coverage[group["nominal_settings"]["target"]].update(keys)
+        self.assertTrue(all(controls == expected_pool for controls in coverage.values()))
+
     def test_all_control_and_nuisance_variants_stay_with_their_object_condition(self):
-        protocol = build_protocol(5644)
+        from grasp_classifier_data import group_ids
+
+        protocol = self.protocol
         groups = defaultdict(list)
+        declared = {group["condition_id"]: group for group in protocol["condition_groups"]}
+        evidence = []
         for _, settings, metadata in protocol["trials"]:
             groups[metadata["condition_id"]].append((settings, metadata))
+            evidence.append({"settings": settings, "metadata": metadata})
         partition_conditions = defaultdict(set)
         nuisance_owners = defaultdict(set)
         for condition, rows in groups.items():
             splits = {metadata["split"] for _, metadata in rows}
             self.assertEqual(len(splits), 1)
+            self.assertEqual(len(rows), 16)
+            self.assertEqual(splits, {declared[condition]["split"]})
             partition_conditions[next(iter(splits))].add(condition)
             per_draw = defaultdict(list)
             for settings, metadata in rows:
                 per_draw[metadata["nuisance_seed"]].append(settings)
                 nuisance_owners[metadata["nuisance_seed"]].add(condition)
+                group = declared[condition]
+                self.assertEqual({key: settings[key] for key in group["nominal_settings"]},
+                                 group["nominal_settings"])
+                self.assertEqual({key: settings[key] for key in group["controls"][0]},
+                                 group["controls"][metadata["control_id"]])
             self.assertEqual(len(per_draw), 2)
+            paired_errors = set()
             for settings in per_draw.values():
                 errors = {tuple(item[f"bias_{axis}_m"] for axis in "xyz") for item in settings}
                 controls = {tuple(item[key] for key in ("opening_m", "closing_force_n",
                                                         "close_trigger_m", "descent_speed_m_s"))
                             for item in settings}
                 self.assertEqual(len(errors), 1)
-                self.assertEqual(len(controls), 4)
+                self.assertEqual(len(controls), 8)
+                error = next(iter(errors))
+                self.assertTrue(all(-0.004 <= value <= 0.004 for value in error))
+                paired_errors.add(error)
+            self.assertEqual(len(paired_errors), 2)
+        self.assertEqual(len(nuisance_owners), 480)
         self.assertTrue(all(len(owners) == 1 for owners in nuisance_owners.values()))
-        self.assertFalse(partition_conditions["train"] & partition_conditions["validation"])
-        self.assertFalse(partition_conditions["train"] & partition_conditions["test"])
-        self.assertFalse(partition_conditions["validation"] & partition_conditions["test"])
+        ids = group_ids(evidence)
+        self.assertEqual(len(set(ids)), 240)
+        partition_ids = defaultdict(set)
+        condition_ids = defaultdict(set)
+        for identifier, row in zip(ids, evidence):
+            partition_ids[row["metadata"]["split"]].add(identifier)
+            condition_ids[row["metadata"]["condition_id"]].add(identifier)
+        self.assertTrue(all(len(identifiers) == 1 for identifiers in condition_ids.values()))
+        for left, right in (("train", "validation"), ("train", "test"), ("validation", "test")):
+            self.assertFalse(partition_conditions[left] & partition_conditions[right])
+            self.assertFalse(partition_ids[left] & partition_ids[right])
 
 
 class PreparedDataTests(unittest.TestCase):
@@ -130,7 +275,7 @@ class PreparedDataTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.output = self.root / "study"
-        self.historical = self.root / "historical.json"
+        self.historical = self.root / "results/grasp_feature_poc_01/screening/trials.json"
         self.legacy = fixture_row("legacy-negative", x=0.46, success=False, metadata={"seed": 42})
         self.prospective = [
             fixture_row(f"new-{split}", x=x, success=split != "test",
@@ -147,34 +292,29 @@ class PreparedDataTests(unittest.TestCase):
                        for row in self.prospective],
         })
 
-    def test_historical_negative_keeps_legacy_metadata_and_enters_training_only(self):
-        with patch("run_grasp_classifiers.HISTORICAL_PATHS", (self.historical,)):
+    def test_old_contact_model_labels_are_not_merged_into_the_new_batch(self):
+        with patch("run_grasp_classifiers.ROOT", self.root):
             rows, _, labels, _, indices, summary = prepare_data(self.output)
-        legacy_index = next(i for i, row in enumerate(rows) if row["trial_id"] == "legacy-negative")
-        self.assertEqual(rows[legacy_index]["metadata"], {"seed": 42})
-        self.assertEqual(labels[legacy_index], 0)
-        self.assertIn(legacy_index, indices["train"])
-        self.assertNotIn(legacy_index, indices["validation"])
-        self.assertNotIn(legacy_index, indices["test"])
-        self.assertEqual(summary["train"]["failures"], 1)
+        self.assertEqual({row["trial_id"] for row in rows},
+                         {row["trial_id"] for row in self.prospective})
+        self.assertEqual(labels[indices["train"]].tolist(), [1])
+        self.assertEqual(summary["train"]["failures"], 0)
         self.assertEqual(json.loads(self.historical.read_text())["rows"], [self.legacy])
 
     def test_same_nominal_condition_cannot_cross_frozen_partitions(self):
         test_row = self.prospective[2]
-        test_row["settings"]["x_m"] = self.legacy["settings"]["x_m"]
+        test_row["settings"]["x_m"] = self.prospective[0]["settings"]["x_m"]
         test_row["settings"]["opening_m"] = 0.04
         self._save_inputs()
-        with patch("run_grasp_classifiers.HISTORICAL_PATHS", (self.historical,)):
-            with self.assertRaisesRegex(ValueError, "crosses partitions"):
-                prepare_data(self.output)
+        with self.assertRaisesRegex(ValueError, "crosses partitions"):
+            prepare_data(self.output)
 
     def test_changed_control_after_protocol_freeze_is_rejected(self):
         altered = deepcopy(self.prospective)
         altered[2]["settings"]["closing_force_n"] = 8.0
         write_json(self.output / "collection/trials.json", {"rows": altered})
-        with patch("run_grasp_classifiers.HISTORICAL_PATHS", (self.historical,)):
-            with self.assertRaisesRegex(ValueError, "frozen protocol"):
-                prepare_data(self.output)
+        with self.assertRaisesRegex(ValueError, "frozen protocol"):
+            prepare_data(self.output)
 
 
 class XGBoostProbabilityIntegrationTests(unittest.TestCase):

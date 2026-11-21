@@ -1,0 +1,15 @@
+test_invalid_or_incomplete_scene_never_contacts_provider (test_sorting_planning.SortingSubscriptionTests.test_invalid_or_incomplete_scene_never_contacts_provider) ... ok
+test_six_object_adapter_uses_real_transport_interface_and_preserves_evidence (test_sorting_planning.SortingSubscriptionTests.test_six_object_adapter_uses_real_transport_interface_and_preserves_evidence) ... ok
+test_subscription_quota_failure_never_switches_to_api_or_retries (test_sorting_planning.SortingSubscriptionTests.test_subscription_quota_failure_never_switches_to_api_or_retries) ... ok
+test_default_and_fast_complete_sequence_remain_stored_after_extra_hold (test_storage.StorageTests.test_default_and_fast_complete_sequence_remain_stored_after_extra_hold) ... ok
+test_external_drawer_disturbance_revokes_success_and_requires_reset (test_storage.StorageTests.test_external_drawer_disturbance_revokes_success_and_requires_reset) ... ok
+test_idle_drawer_truth_distinguishes_full_open_partial_closed_and_moving (test_storage.StorageTests.test_idle_drawer_truth_distinguishes_full_open_partial_closed_and_moving) ... ok
+test_impossible_original_region_fit_is_rejected (test_storage.StorageTests.test_impossible_original_region_fit_is_rejected) ... ok
+test_invalid_task_target_opening_and_closed_drawer_refuse_before_motion (test_storage.StorageTests.test_invalid_task_target_opening_and_closed_drawer_refuse_before_motion) ... ok
+test_only_explicit_floor_and_handle_geometries_are_planned_contacts (test_storage.StorageTests.test_only_explicit_floor_and_handle_geometries_are_planned_contacts) ... ok
+test_reset_cancels_storage_and_clears_contact_and_verification_state (test_storage.StorageTests.test_reset_cancels_storage_and_clears_contact_and_verification_state) ... ok
+
+----------------------------------------------------------------------
+Ran 377 tests in 1328.653s
+
+OK

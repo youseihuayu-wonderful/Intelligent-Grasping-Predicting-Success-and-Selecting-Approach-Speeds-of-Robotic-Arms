@@ -15,6 +15,8 @@ import numpy as np
 from sklearn.metrics import brier_score_loss, log_loss, roc_auc_score
 from sklearn.model_selection import StratifiedGroupKFold
 
+from grasp_study_objects import STUDY_OBJECTS
+
 
 FEATURE_NAMES = (
     "target", "scale", "mass_kg", "sliding_friction", "x_m", "y_m",
@@ -50,9 +52,10 @@ def features_from_row(row: dict) -> dict:
     if not isinstance(row, dict) or not isinstance(row.get("settings"), dict):
         raise ValueError("row.settings must be a dictionary")
     settings = row["settings"]
-    if settings.get("target") not in ("bowl", "bottle"):
-        raise ValueError("settings.target must be bowl or bottle")
-    features = {"target": settings["target"]}
+    target = settings.get("target")
+    if not isinstance(target, str) or target not in STUDY_OBJECTS:
+        raise ValueError(f"settings.target must be one of {', '.join(STUDY_OBJECTS)}")
+    features = {"target": target}
     for name in FEATURE_NAMES[1:]:
         features[name] = _number(settings.get(name), f"settings.{name}")
     if "initial_pose" in row:

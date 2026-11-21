@@ -1,0 +1,243 @@
+{
+  "name": "lasso_logistic",
+  "model_file": "models/lasso_logistic.joblib",
+  "model_sha256": "b20a205cf6d86a5b1330cf8f0013dae14d55bb2da78cae431641ca9c17fb39e3",
+  "fit_wall_s": 0.3029953329823911,
+  "best_params": {
+    "selector__estimator__alpha": 0.003,
+    "classifier__C": 0.03
+  },
+  "best_cv_log_loss": 0.5168499732102011,
+  "validation": {
+    "n_samples": 640,
+    "class_counts": {
+      "0": 397,
+      "1": 243
+    },
+    "decision_threshold": 0.5,
+    "log_loss": 0.4949242035901813,
+    "brier_score": 0.16364652401976307,
+    "balanced_accuracy": 0.7160649314301708,
+    "failure_recall": 0.8765743073047859,
+    "failure_precision": 0.7631578947368421,
+    "roc_auc": 0.8377077049061376,
+    "undefined_reasons": {},
+    "limitations": [
+      "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+    ],
+    "calibration_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "upper_inclusive": false,
+        "count": 210,
+        "mean_predicted_probability": 0.10932383357303539,
+        "observed_success_rate": 0.05714285714285714,
+        "undefined_reason": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "upper_inclusive": false,
+        "count": 180,
+        "mean_predicted_probability": 0.28798274626288334,
+        "observed_success_rate": 0.3388888888888889,
+        "undefined_reason": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "upper_inclusive": false,
+        "count": 122,
+        "mean_predicted_probability": 0.4987813605732473,
+        "observed_success_rate": 0.6065573770491803,
+        "undefined_reason": null
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "upper_inclusive": false,
+        "count": 62,
+        "mean_predicted_probability": 0.7079797153677054,
+        "observed_success_rate": 0.6451612903225806,
+        "undefined_reason": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "upper_inclusive": true,
+        "count": 66,
+        "mean_predicted_probability": 0.8762344148994655,
+        "observed_success_rate": 0.8484848484848485,
+        "undefined_reason": null
+      }
+    ]
+  },
+  "feature_selection": {
+    "selection_method": "squared_loss_lasso",
+    "encoded_feature_names": [
+      "close_trigger_m",
+      "closing_force_n",
+      "descent_speed_m_s",
+      "mass_kg",
+      "opening_m",
+      "scale",
+      "sliding_friction",
+      "target=bottle",
+      "target=bowl",
+      "target=glass",
+      "target=pen",
+      "target=spoon",
+      "x_m",
+      "y_m",
+      "yaw_rad"
+    ],
+    "support_mask": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    "selected_feature_names": [
+      "close_trigger_m",
+      "closing_force_n",
+      "descent_speed_m_s",
+      "mass_kg",
+      "opening_m",
+      "scale",
+      "sliding_friction",
+      "target=bowl",
+      "target=glass",
+      "target=pen",
+      "target=spoon",
+      "x_m",
+      "yaw_rad"
+    ],
+    "n_features_selected": 13,
+    "intercept_only": false,
+    "lasso_alpha": 0.003,
+    "logistic_penalty": "l2",
+    "logistic_C": 0.03
+  },
+  "candidates": [
+    {
+      "parameters": {
+        "selector__estimator__alpha": 1.0,
+        "classifier__C": 3.0
+      },
+      "mean_cv_log_loss": 0.6842250017537325,
+      "std_cv_score": 0.0008369174437915921,
+      "rank": 10
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.003,
+        "classifier__C": 0.03
+      },
+      "mean_cv_log_loss": 0.5168499732102011,
+      "std_cv_score": 0.02087454464711586,
+      "rank": 1
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 3.0
+      },
+      "mean_cv_log_loss": 0.5650485290306192,
+      "std_cv_score": 0.013190994537176062,
+      "rank": 6
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 10.0
+      },
+      "mean_cv_log_loss": 0.5650749748341224,
+      "std_cv_score": 0.013171854401032194,
+      "rank": 7
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 0.1
+      },
+      "mean_cv_log_loss": 0.5642619020070431,
+      "std_cv_score": 0.013816822663934244,
+      "rank": 5
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.03,
+        "classifier__C": 0.001
+      },
+      "mean_cv_log_loss": 0.6144669432298645,
+      "std_cv_score": 0.0031304101754628818,
+      "rank": 9
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 30.0
+      },
+      "mean_cv_log_loss": 0.5650826047337306,
+      "std_cv_score": 0.0131663445528296,
+      "rank": 8
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 0.03
+      },
+      "mean_cv_log_loss": 0.564038287845717,
+      "std_cv_score": 0.01449462388865813,
+      "rank": 4
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.01,
+        "classifier__C": 100.0
+      },
+      "mean_cv_log_loss": 0.5229459141169648,
+      "std_cv_score": 0.030376557542117565,
+      "rank": 3
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.3,
+        "classifier__C": 30.0
+      },
+      "mean_cv_log_loss": 0.6842250017537325,
+      "std_cv_score": 0.0008369174437915921,
+      "rank": 10
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.03,
+        "classifier__C": 10.0
+      },
+      "mean_cv_log_loss": 0.5225632004989277,
+      "std_cv_score": 0.02373265259509241,
+      "rank": 2
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.3,
+        "classifier__C": 0.01
+      },
+      "mean_cv_log_loss": 0.6842250017537325,
+      "std_cv_score": 0.0008369174437915921,
+      "rank": 10
+    }
+  ]
+}

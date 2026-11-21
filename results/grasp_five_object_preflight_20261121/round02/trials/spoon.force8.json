@@ -1,0 +1,187 @@
+{
+  "trial_id": "spoon.force8",
+  "settings": {
+    "target": "spoon",
+    "scale": 1.0,
+    "mass_kg": 0.025,
+    "sliding_friction": 0.8,
+    "x_m": 0.5,
+    "y_m": -0.08,
+    "yaw_rad": 0.0,
+    "bias_x_m": 0.0,
+    "bias_y_m": 0.0,
+    "bias_z_m": 0.0,
+    "opening_m": 0.08,
+    "closing_force_n": 8.0,
+    "close_trigger_m": 0.0,
+    "descent_speed_m_s": 0.1
+  },
+  "metadata": {
+    "design": "preflight_contact_and_retention",
+    "geometry_revision": 1
+  },
+  "variant_features": {
+    "compiled_pre_mass_override_kg": 0.10960560000000003,
+    "actual_mass_kg": 0.025,
+    "actual_principal_inertia_kg_m2": [
+      4.447318302691394e-05,
+      4.264997825874519e-05,
+      2.294244705215829e-06
+    ],
+    "collision_world_aabb_size_m": [
+      0.14999999999999997,
+      0.036000000000000004,
+      0.017547955871509924
+    ],
+    "collision_world_aabb_min_m": [
+      0.425,
+      -0.098,
+      0.76995204412849
+    ],
+    "collision_world_aabb_max_m": [
+      0.575,
+      -0.062,
+      0.7875
+    ],
+    "object_collision_friction": [
+      [
+        0.8,
+        0.005,
+        0.0001
+      ],
+      [
+        0.8,
+        0.005,
+        0.0001
+      ],
+      [
+        0.8,
+        0.005,
+        0.0001
+      ],
+      [
+        0.8,
+        0.005,
+        0.0001
+      ],
+      [
+        0.8,
+        0.005,
+        0.0001
+      ],
+      [
+        0.8,
+        0.005,
+        0.0001
+      ],
+      [
+        0.8,
+        0.005,
+        0.0001
+      ]
+    ],
+    "object_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "finger_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "grasp_offset_body_m": [
+      0.0525,
+      0.0,
+      0.013
+    ]
+  },
+  "trial_status": "completed",
+  "success": true,
+  "failure_kind": null,
+  "failure_reason": null,
+  "last_active_phase": "hold",
+  "phase_order": [
+    "idle",
+    "prepare",
+    "approach",
+    "descend",
+    "close",
+    "lift",
+    "hold",
+    "done"
+  ],
+  "phase_first_sim_s": {
+    "idle": null,
+    "prepare": 0.0,
+    "approach": 0.06000000000000005,
+    "descend": 6.5419999999993905,
+    "close": 9.54200000000019,
+    "lift": 9.69000000000024,
+    "hold": 12.502000000001178,
+    "done": 13.502000000001512
+  },
+  "execution_sim_s": 14.502000000001846,
+  "verified_hold_s": 2.000000000000668,
+  "initial_state_fingerprint": "34ddaaebd818fa4de624740c84257d2184583a754257d5e25894fd2044413726",
+  "initial_pose": {
+    "name": "spoon_object",
+    "position_m": [
+      0.4999802250737766,
+      -0.07999998016594516,
+      0.7202772336382247
+    ],
+    "quaternion_wxyz": [
+      0.9999539494902504,
+      2.3739179706943605e-09,
+      0.009596817117610429,
+      -2.474135956225177e-07
+    ]
+  },
+  "final_pose": {
+    "name": "spoon_object",
+    "position_m": [
+      0.5000790062474447,
+      -0.07796211660758968,
+      0.870452011579018
+    ],
+    "quaternion_wxyz": [
+      0.9998900714715921,
+      0.004524823103356162,
+      0.012862232483941456,
+      0.005825283164540807
+    ]
+  },
+  "postconditions": {
+    "bilateral_grip": true,
+    "clear_of_table": true,
+    "target_lifted": true,
+    "relative_pose_stable": true,
+    "verified_hold": true
+  },
+  "actual_finger_target_sliding_frictions": [
+    0.8
+  ],
+  "collisions": {
+    "episodes": 0,
+    "duration_s": 0.0,
+    "peak_force_n": 0.0,
+    "pairs": [],
+    "force_threshold_n": 0.1
+  },
+  "warnings": [],
+  "wall_s": 8.06268779200036
+}

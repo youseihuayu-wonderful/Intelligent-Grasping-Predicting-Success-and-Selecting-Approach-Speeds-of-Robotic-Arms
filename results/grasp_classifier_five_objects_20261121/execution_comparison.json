@@ -1,0 +1,71 @@
+{
+  "methods": {
+    "logistic": {
+      "attempted": 80,
+      "labelled": 80,
+      "successes": 42,
+      "failures": 38,
+      "success_rate": 0.525,
+      "mean_success_execution_sim_s": 13.787857142858737,
+      "total_attempt_sim_s_per_success": 23.591000000002158,
+      "excluded_statuses": {}
+    },
+    "lasso_logistic": {
+      "attempted": 80,
+      "labelled": 80,
+      "successes": 42,
+      "failures": 38,
+      "success_rate": 0.525,
+      "mean_success_execution_sim_s": 13.787857142858737,
+      "total_attempt_sim_s_per_success": 23.591000000002158,
+      "excluded_statuses": {}
+    },
+    "random_forest": {
+      "attempted": 80,
+      "labelled": 80,
+      "successes": 42,
+      "failures": 38,
+      "success_rate": 0.525,
+      "mean_success_execution_sim_s": 14.086285714287312,
+      "total_attempt_sim_s_per_success": 23.909333333335468,
+      "excluded_statuses": {}
+    },
+    "xgboost": {
+      "attempted": 80,
+      "labelled": 80,
+      "successes": 43,
+      "failures": 37,
+      "success_rate": 0.5375,
+      "mean_success_execution_sim_s": 13.9646976744202,
+      "total_attempt_sim_s_per_success": 23.546465116281286,
+      "excluded_statuses": {}
+    },
+    "fixed_baseline": {
+      "attempted": 80,
+      "labelled": 80,
+      "successes": 31,
+      "failures": 49,
+      "success_rate": 0.3875,
+      "mean_success_execution_sim_s": 13.674193548388667,
+      "total_attempt_sim_s_per_success": 30.839935483873536,
+      "excluded_statuses": {}
+    }
+  },
+  "unique_physical_execution": {
+    "attempted": 194,
+    "labelled": 194,
+    "successes": 88,
+    "failures": 106,
+    "statuses": {
+      "completed": 194
+    },
+    "numerical_warning_trials": 0,
+    "wall_s": 169.37219254206866
+  },
+  "primary_model": "xgboost",
+  "limitations": [
+    "Only 40 held-out object/state conditions and two new draws each",
+    "Method outcomes share matched physics; rows are not independent between methods",
+    "No advantage or safety guarantee follows from a prediction score"
+  ]
+}

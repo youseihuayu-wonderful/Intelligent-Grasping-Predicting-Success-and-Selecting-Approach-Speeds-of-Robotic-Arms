@@ -41,7 +41,10 @@ class SceneCase:
     yaw_rad: float
 
     def __post_init__(self) -> None:
-        if not isinstance(self.target_object, str) or self.target_object not in TARGETS:
+        self._validate(TARGETS)
+
+    def _validate(self, targets) -> None:
+        if not isinstance(self.target_object, str) or self.target_object not in targets:
             raise ValueError("Unknown grasp target")
         if any(not isinstance(value, str) or not value.strip() or len(value) > 100
                for value in (self.case_id, self.position_label)):

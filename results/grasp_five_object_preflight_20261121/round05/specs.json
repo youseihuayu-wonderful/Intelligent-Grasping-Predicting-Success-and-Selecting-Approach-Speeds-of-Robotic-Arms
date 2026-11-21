@@ -1,0 +1,194 @@
+[
+  [
+    "spoon.force4",
+    {
+      "target": "spoon",
+      "scale": 1.0,
+      "mass_kg": 0.025,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_spoon_retention_and_pen_profile",
+      "geometry_revision": 3,
+      "pen_nominal_grasp_z_m": 0.01
+    }
+  ],
+  [
+    "spoon.light_force8",
+    {
+      "target": "spoon",
+      "scale": 1.0,
+      "mass_kg": 0.015,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 8.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_spoon_retention_and_pen_profile",
+      "geometry_revision": 3,
+      "pen_nominal_grasp_z_m": 0.01
+    }
+  ],
+  [
+    "spoon.high_friction",
+    {
+      "target": "spoon",
+      "scale": 1.0,
+      "mass_kg": 0.025,
+      "sliding_friction": 1.2,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 8.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_spoon_retention_and_pen_profile",
+      "geometry_revision": 3,
+      "pen_nominal_grasp_z_m": 0.01
+    }
+  ],
+  [
+    "spoon.scale08_force4",
+    {
+      "target": "spoon",
+      "scale": 0.8,
+      "mass_kg": 0.025,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_spoon_retention_and_pen_profile",
+      "geometry_revision": 3,
+      "pen_nominal_grasp_z_m": 0.01
+    }
+  ],
+  [
+    "spoon.scale12_force8",
+    {
+      "target": "spoon",
+      "scale": 1.2,
+      "mass_kg": 0.025,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 8.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_spoon_retention_and_pen_profile",
+      "geometry_revision": 3,
+      "pen_nominal_grasp_z_m": 0.01
+    }
+  ],
+  [
+    "pen.profile",
+    {
+      "target": "pen",
+      "scale": 1.0,
+      "mass_kg": 0.01,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_spoon_retention_and_pen_profile",
+      "geometry_revision": 3,
+      "pen_nominal_grasp_z_m": 0.01
+    }
+  ],
+  [
+    "pen.small_light",
+    {
+      "target": "pen",
+      "scale": 0.8,
+      "mass_kg": 0.005,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_spoon_retention_and_pen_profile",
+      "geometry_revision": 3,
+      "pen_nominal_grasp_z_m": 0.01
+    }
+  ],
+  [
+    "pen.large_heavy",
+    {
+      "target": "pen",
+      "scale": 1.2,
+      "mass_kg": 0.02,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_spoon_retention_and_pen_profile",
+      "geometry_revision": 3,
+      "pen_nominal_grasp_z_m": 0.01
+    }
+  ]
+]

@@ -1,0 +1,194 @@
+[
+  [
+    "bottle.mass018",
+    {
+      "target": "bottle",
+      "scale": 1.0,
+      "mass_kg": 0.18,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_stiff_contact",
+      "geometry_revision": 2,
+      "new_contact_solimp": [
+        0.998,
+        0.998,
+        0.001
+      ],
+      "new_contact_solref": [
+        0.001,
+        1.0
+      ]
+    }
+  ],
+  [
+    "glass.nominal",
+    {
+      "target": "glass",
+      "scale": 1.0,
+      "mass_kg": 0.08,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_stiff_contact",
+      "geometry_revision": 2,
+      "new_contact_solimp": [
+        0.998,
+        0.998,
+        0.001
+      ],
+      "new_contact_solref": [
+        0.001,
+        1.0
+      ]
+    }
+  ],
+  [
+    "glass.heavy_force8",
+    {
+      "target": "glass",
+      "scale": 1.0,
+      "mass_kg": 0.15,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 8.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_stiff_contact",
+      "geometry_revision": 2,
+      "new_contact_solimp": [
+        0.998,
+        0.998,
+        0.001
+      ],
+      "new_contact_solref": [
+        0.001,
+        1.0
+      ]
+    }
+  ],
+  [
+    "pen.nominal",
+    {
+      "target": "pen",
+      "scale": 1.0,
+      "mass_kg": 0.01,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.0,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_stiff_contact",
+      "geometry_revision": 2,
+      "new_contact_solimp": [
+        0.998,
+        0.998,
+        0.001
+      ],
+      "new_contact_solref": [
+        0.001,
+        1.0
+      ]
+    }
+  ],
+  [
+    "pen.higher_pinch",
+    {
+      "target": "pen",
+      "scale": 1.0,
+      "mass_kg": 0.01,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.003,
+      "opening_m": 0.08,
+      "closing_force_n": 4.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_stiff_contact",
+      "geometry_revision": 2,
+      "new_contact_solimp": [
+        0.998,
+        0.998,
+        0.001
+      ],
+      "new_contact_solref": [
+        0.001,
+        1.0
+      ]
+    }
+  ],
+  [
+    "pen.higher_force8",
+    {
+      "target": "pen",
+      "scale": 1.0,
+      "mass_kg": 0.01,
+      "sliding_friction": 0.8,
+      "x_m": 0.5,
+      "y_m": -0.08,
+      "yaw_rad": 0.0,
+      "bias_x_m": 0.0,
+      "bias_y_m": 0.0,
+      "bias_z_m": 0.003,
+      "opening_m": 0.08,
+      "closing_force_n": 8.0,
+      "close_trigger_m": 0.0,
+      "descent_speed_m_s": 0.1
+    },
+    {
+      "design": "preflight_stiff_contact",
+      "geometry_revision": 2,
+      "new_contact_solimp": [
+        0.998,
+        0.998,
+        0.001
+      ],
+      "new_contact_solref": [
+        0.001,
+        1.0
+      ]
+    }
+  ]
+]

@@ -1,0 +1,317 @@
+{
+  "status": "completed_with_recorded_ml_runtime_warnings",
+  "scope": "Five-object supervised grasping study; development preflights are excluded; not a sorting or drawer UI change.",
+  "command": "env VECLIB_MAXIMUM_THREADS=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run --locked python run_grasp_classifiers.py --output results/grasp_classifier_five_objects_20261121 --seed 20261121 --workers 12 --model-workers 4 --n-iter 12",
+  "command_wall_s": 3295.89,
+  "frozen_protocol_sha256": "724623b603e3ce4f95c5e1ac69e4aa07a6f3cfe4bf1087ac49137b70ceedba27",
+  "matches_protocol_used_for_all_240_pre_outcome_initialization_checks": true,
+  "test_suite": {
+    "command": "uv run --locked python -m unittest discover -s tests -v",
+    "tests_passed": 377,
+    "failures": 0,
+    "reported_wall_s": 1328.653
+  },
+  "independent_physical_smoke": {
+    "evidence": "../grasp_five_object_parent_smoke_20261121/verification.json",
+    "attempts": 6,
+    "strict_successes": 6,
+    "initial_conditions_checked_before_outcomes": 240,
+    "initial_conditions_invalid": 0
+  },
+  "data_verification": {
+    "planned_attempts": 3840,
+    "raw_completed": 3840,
+    "csv_rows": 3840,
+    "raw_settings_and_metadata_match_frozen_protocol": true,
+    "raw_binary_labels_match_csv": true,
+    "positive_labels_have_all_postconditions_and_continuous_2s_observer_hold": true,
+    "positive_labels_lift_at_least_0_10m_from_settled_initial_pose": true,
+    "recorded_mass_inertia_friction_and_contact_dimensions_valid": true,
+    "all_48_size_mass_friction_combinations_per_family_present": true,
+    "condition_groups_do_not_cross_partitions": true,
+    "all_three_cv_folds_use_training_only_and_disjoint_groups": true,
+    "historical_550_row_csv_unchanged": true,
+    "numerical_warning_trials": 0,
+    "families": {
+      "bowl": {
+        "rows": 768,
+        "successes": 291,
+        "failures": 477,
+        "condition_groups": 48,
+        "mass_levels_kg": [
+          0.06,
+          0.18,
+          0.3,
+          0.45
+        ],
+        "size_mass_friction_combinations": 48
+      },
+      "bottle": {
+        "rows": 768,
+        "successes": 265,
+        "failures": 503,
+        "condition_groups": 48,
+        "mass_levels_kg": [
+          0.06,
+          0.18,
+          0.3,
+          0.45
+        ],
+        "size_mass_friction_combinations": 48
+      },
+      "spoon": {
+        "rows": 768,
+        "successes": 278,
+        "failures": 490,
+        "condition_groups": 48,
+        "mass_levels_kg": [
+          0.015,
+          0.025,
+          0.04,
+          0.06
+        ],
+        "size_mass_friction_combinations": 48
+      },
+      "glass": {
+        "rows": 768,
+        "successes": 312,
+        "failures": 456,
+        "condition_groups": 48,
+        "mass_levels_kg": [
+          0.08,
+          0.15,
+          0.25,
+          0.35
+        ],
+        "size_mass_friction_combinations": 48
+      },
+      "pen": {
+        "rows": 768,
+        "successes": 423,
+        "failures": 345,
+        "condition_groups": 48,
+        "mass_levels_kg": [
+          0.005,
+          0.01,
+          0.02,
+          0.03
+        ],
+        "size_mass_friction_combinations": 48
+      }
+    },
+    "failure_kinds": {
+      "unplanned_contact": 1421,
+      "grasp_contact_or_retention": 705,
+      "motion_or_preparation": 145
+    },
+    "failure_phases": {
+      "lift": 958,
+      "hold": 394,
+      "close": 556,
+      "descend": 363
+    },
+    "collection_wall_s": 3116.4065848339815,
+    "runtime_warning_messages": {
+      "divide by zero encountered in matmul": 180,
+      "overflow encountered in matmul": 180,
+      "invalid value encountered in matmul": 180
+    }
+  },
+  "saved_model_replay": {
+    "physical_source_hashes_unchanged": true,
+    "model_selection_uses_validation_only": true,
+    "models": {
+      "logistic": {
+        "saved_model_sha256_matches": true,
+        "all_3840_probabilities_finite_and_in_range": true,
+        "saved_test_prediction_count": 640,
+        "saved_test_predictions_max_abs_replay_error": 0.0,
+        "independently_recomputed_metrics": {
+          "validation": {
+            "log_loss": 0.49400918341243527,
+            "brier_score": 0.16358147344570706
+          },
+          "test": {
+            "log_loss": 0.46950508238953,
+            "brier_score": 0.154468416794729
+          }
+        },
+        "all_search_candidate_scores_finite": true,
+        "pure_python_fsum_logistic_max_probability_error": 2.220446049250313e-16,
+        "max_absolute_transformed_input": 2.205017208279796,
+        "max_absolute_coefficient": 1.137020459324576,
+        "optimizer_iterations": [
+          13
+        ],
+        "optimizer_max_iter": 5000
+      },
+      "lasso_logistic": {
+        "saved_model_sha256_matches": true,
+        "all_3840_probabilities_finite_and_in_range": true,
+        "saved_test_prediction_count": 640,
+        "saved_test_predictions_max_abs_replay_error": 2.220446049250313e-16,
+        "independently_recomputed_metrics": {
+          "validation": {
+            "log_loss": 0.4949242035901812,
+            "brier_score": 0.16364652401976307
+          },
+          "test": {
+            "log_loss": 0.47310829487141853,
+            "brier_score": 0.15503301324024488
+          }
+        },
+        "all_search_candidate_scores_finite": true,
+        "pure_python_fsum_logistic_max_probability_error": 2.220446049250313e-16,
+        "max_absolute_transformed_input": 2.205017208279796,
+        "max_absolute_coefficient": 1.0280181589545365,
+        "optimizer_iterations": [
+          13
+        ],
+        "optimizer_max_iter": 5000
+      },
+      "xgboost": {
+        "saved_model_sha256_matches": true,
+        "all_3840_probabilities_finite_and_in_range": true,
+        "saved_test_prediction_count": 640,
+        "saved_test_predictions_max_abs_replay_error": 0.0,
+        "independently_recomputed_metrics": {
+          "validation": {
+            "log_loss": 0.40667238844973586,
+            "brier_score": 0.1302194524252722
+          },
+          "test": {
+            "log_loss": 0.41027239682207267,
+            "brier_score": 0.1327213972080778
+          }
+        },
+        "all_search_candidate_scores_finite": true
+      },
+      "random_forest": {
+        "saved_model_sha256_matches": true,
+        "all_3840_probabilities_finite_and_in_range": true,
+        "saved_test_prediction_count": 640,
+        "saved_test_predictions_max_abs_replay_error": 0.0,
+        "independently_recomputed_metrics": {
+          "validation": {
+            "log_loss": 0.45145345874845544,
+            "brier_score": 0.1293907163284398
+          },
+          "test": {
+            "log_loss": 0.41533355765404634,
+            "brier_score": 0.1346280218455917
+          }
+        },
+        "all_search_candidate_scores_finite": true
+      }
+    }
+  },
+  "csv_only_entrypoint": {
+    "command": "env VECLIB_MAXIMUM_THREADS=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run --locked python run_grasp_classifiers.py --phase fit-csv --model logistic --dataset results/grasp_classifier_five_objects_20261121/dataset.csv --output results/grasp_classifier_five_objects_20261121/csv_only_smoke --n-iter 12",
+    "exit_code": 0,
+    "test_rows_evaluated": 0,
+    "validation_log_loss": 0.49400918341243527,
+    "runtime_warning_messages": {
+      "divide by zero encountered in matmul": 111,
+      "overflow encountered in matmul": 111,
+      "invalid value encountered in matmul": 111
+    }
+  },
+  "fresh_physical_execution_verification": {
+    "unique_physical_attempts": 194,
+    "method_outcome_rows": 400,
+    "paired_conditions": 40,
+    "fresh_draws_per_condition": 2,
+    "unique_attempt_ids_match_saved_plan": true,
+    "plan_unchanged_when_outcomes_joined": true,
+    "new_nuisance_seeds_disjoint_from_collection": true,
+    "all_executions_completed_without_mujoco_numerical_warnings": true,
+    "all_recommendations_follow_declared_probability_then_speed_then_control_id_rule": true,
+    "all_positive_labels_have_2s_hold_and_postconditions": true,
+    "primary_model": "xgboost",
+    "primary_successes": 43,
+    "fixed_baseline_successes": 31,
+    "success_rate_difference": 0.15,
+    "paired_stratified_group_bootstrap": {
+      "replicates": 10000,
+      "seed": 20261121,
+      "resampling_unit": "condition group; both paired nuisance draws and all methods remain linked; eight groups resampled within each of five families",
+      "percentile_95_interval": [
+        0.05,
+        0.25
+      ],
+      "limitation": "Conditional descriptive uncertainty for these five prescribed family distributions and one frozen protocol; not evidence of real-robot or unseen-family transfer."
+    },
+    "primary_configuration_frequencies_among_40_conditions": {
+      "closing_force_n": {
+        "8.0": 39,
+        "4.0": 1
+      },
+      "descent_speed_m_s": {
+        "0.1": 38,
+        "0.04": 2
+      },
+      "opening_m": {
+        "0.08": 39,
+        "0.04": 1
+      },
+      "close_trigger_m": {
+        "0.0": 40
+      }
+    },
+    "primary_vs_baseline_by_family": {
+      "bowl": {
+        "attempts_each": 16,
+        "primary_successes": 9,
+        "baseline_successes": 5
+      },
+      "bottle": {
+        "attempts_each": 16,
+        "primary_successes": 7,
+        "baseline_successes": 6
+      },
+      "spoon": {
+        "attempts_each": 16,
+        "primary_successes": 8,
+        "baseline_successes": 5
+      },
+      "glass": {
+        "attempts_each": 16,
+        "primary_successes": 7,
+        "baseline_successes": 6
+      },
+      "pen": {
+        "attempts_each": 16,
+        "primary_successes": 12,
+        "baseline_successes": 9
+      }
+    }
+  },
+  "limits": [
+    "Within five prescribed geometry/grasp-profile/contact-model families only; not shape-only causal identification, unseen-family generalization, or real-robot validation.",
+    "New contact settings differ from the legacy batch; all 3840 rows are newly collected and historical labels are not merged.",
+    "Raw traces are sampled at 20ms from 2ms physics. Positive holds are checked by an observer timer sharing controller physical predicates, not independent sensing.",
+    "Linear model fitting and prediction emitted NumPy/scikit-learn matmul RuntimeWarnings. Full logs and replay stderr are preserved, not suppressed. All four saved probability vectors, saved test predictions and metrics were verified; pure-Python linear probability replay agrees within 2.23e-16. This does not certify every optimizer intermediate or establish the cause of the warnings.",
+    "The selected XGBoost policy chooses an 8N closing command in 39/40 conditions and 0.10m/s in 38/40, 0.04m/s in two. It does not demonstrate faster approach motion or superiority to a fixed 8N rule.",
+    "Mean time among successful attempts and the pooled total-attempt-time-per-success ratio are different quantities; the latter is not a directly measured closed-loop retry policy.",
+    "Only 40 held-out conditions and two new draws each; shared actions are executed once and linked across methods. Bootstrap intervals are conditional descriptive uncertainty.",
+    "The now-published test scores cannot remain a fresh confirmatory test for later result-informed model changes."
+  ],
+  "artifact_sha256": {
+    "protocol.json": "724623b603e3ce4f95c5e1ac69e4aa07a6f3cfe4bf1087ac49137b70ceedba27",
+    "environment.json": "9034867a74742c9b6bb03cff1b245962baf76b1bbb6827240a1f53801f40ec5b",
+    "dataset.csv": "d218aca702d21fcd0bfe55d60b8022939e732a33c5cb81e42cf07f319716064a",
+    "collection/trials.json": "d3d61a18f885c4f66ad92a63840743dd1a73c1d0b24e4966b30cf25fd67c5e56",
+    "collection/summary.json": "bead2e020161b64cae7219c022f90e855ce90aec6d03ce42328eef9e0486aaac",
+    "comparison.json": "b9263145440de291a85f5144bf7cac1d4c1126d7c5093da94bb32904f59d1278",
+    "model_selection.json": "950a6c70546e67d21ceea58f48a6a5875026843294ede5b340e8c0d870f76895",
+    "test_predictions.json": "853704020f1c94821aa553d552d1caaa66ba36d0a90672965348eed450a73ac4",
+    "recommendations_before_execution.json": "f8967c5b1d4cd96f44a3f0fab16497af56bfd34c0ca0190b6b1a4b380356fd63",
+    "execution/trials.json": "e1c187dafc0899853bebd002f80e924f6905ec720e5c277918b9ef7864eff671",
+    "recommendations_with_outcomes.json": "e5ca1295cbc67cb37119e0568f0b47af7fc32e1a0019ab2fd886bfc812c9e852",
+    "execution_comparison.json": "d5de84e33a0bbbbb9f68aa43a495ac39e86a57496809a91341f629b8c5cbdf43",
+    "run.log": "c81b6ada14de353ce027090918ff070b1d96b98e7f3d7eac35713a8acf1d33f7",
+    "csv_only_smoke/validation_report.json": "4628196773c837989916307cedae3818d9497f2de68a7dee006ae34ebb661364",
+    "csv_only_smoke/run.log": "ec564bd2040bb0e86801f7973854e815717f56a3faf42547642c86b50607dc57",
+    "model_replay_stderr.log": "f8f90b2ffbc36bb007ecba4bd1b8ee3f75c6417c2e5c8613b9703b622eb2f0fc"
+  }
+}

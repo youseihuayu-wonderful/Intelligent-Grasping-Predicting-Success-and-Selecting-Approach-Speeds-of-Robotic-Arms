@@ -18,10 +18,6 @@ from collect_grasp_classifiers import (
 )
 
 MODEL_NAMES = ("logistic", "lasso_logistic", "random_forest", "xgboost")
-HISTORICAL_PATHS = tuple(
-    ROOT / "results/grasp_feature_poc_01" / phase / "trials.json"
-    for phase in ("screening", "interactions", "followups")
-)
 
 
 def load_json(path):
@@ -66,20 +62,17 @@ def prepare_data(output):
     prospective = load_json(output / "collection/trials.json")["rows"]
     if len(prospective) != len(expected) or {row["trial_id"] for row in prospective} != set(expected):
         raise ValueError("Collected trial IDs do not match the predeclared protocol")
-    rows, sources = [], []
-    for path in (*HISTORICAL_PATHS, output / "collection/trials.json"):
-        historical = path in HISTORICAL_PATHS
-        raw = load_json(path)["rows"]
-        sources.append({"path": str(path), "sha256": sha256_file(path),
-                        "rows": len(raw), "historical_train_only": historical})
-        for original in raw:
-            row = {**original, "metadata": dict(original.get("metadata", {})),
-                   "evidence_source": str(path)}
-            if not historical:
-                spec = expected[row["trial_id"]]
-                if row["settings"] != spec[1] or row["metadata"] != spec[2]:
-                    raise ValueError(f"Trial settings/metadata differ from frozen protocol: {row['trial_id']}")
-            rows.append(row)
+    source = output / "collection/trials.json"
+    sources = [{"path": str(source), "sha256": sha256_file(source),
+                "rows": len(prospective), "historical_train_only": False}]
+    rows = []
+    for original in prospective:
+        row = {**original, "metadata": dict(original.get("metadata", {})),
+               "evidence_source": str(source)}
+        spec = expected[row["trial_id"]]
+        if row["settings"] != spec[1] or row["metadata"] != spec[2]:
+            raise ValueError(f"Trial settings/metadata differ from frozen protocol: {row['trial_id']}")
+        rows.append(row)
     clean, audit = audit_rows(rows)
     features = [features_from_row(row) for row in clean]
     y = np.asarray([int(row["success"]) for row in clean], dtype=int)
@@ -255,6 +248,15 @@ def fit_csv(dataset, output, *, model="logistic", seed=5644, n_iter=12):
     return report
 
 
+def verify_physics_sources(environment):
+    """Reject mixing collected labels with changed controller or object assets."""
+    if sha256_file(PHYSICS_SOURCE) != environment["physical_collector_sha256"]:
+        raise ValueError("Physical collector changed after protocol collection")
+    for name, expected in environment["input_sha256"].items():
+        if sha256_file(ROOT / name) != expected:
+            raise ValueError(f"Physical source or asset changed after collection: {name}")
+
+
 def train(output, *, n_iter=12, model_workers=4):
     from grasp_classifier_data import evaluate_probabilities, make_cv_splits
 
@@ -262,8 +264,7 @@ def train(output, *, n_iter=12, model_workers=4):
     if type(n_iter) is not int or n_iter < 1 or type(model_workers) is not int or model_workers < 1:
         raise ValueError("n_iter and model_workers must be positive integers")
     environment = load_json(output / "environment.json")
-    if sha256_file(PHYSICS_SOURCE) != environment["physical_collector_sha256"]:
-        raise ValueError("Physical collector changed after protocol collection")
+    verify_physics_sources(environment)
     (output / "models").mkdir(exist_ok=False)
     rows, features, y, groups, indices, partition_summary = prepare_data(output)
     seed = load_json(output / "protocol.json")["seed"]
@@ -278,7 +279,9 @@ def train(output, *, n_iter=12, model_workers=4):
     save_json(output / "cv_manifest.json", cv_manifest)
     source_names = ("run_grasp_classifiers.py", "collect_grasp_classifiers.py", "grasp_classifier_data.py",
                     "grasp_classifier_linear.py", "grasp_classifier_forest.py", "grasp_classifier_xgboost.py",
-                    "pyproject.toml", "uv.lock")
+                    "grasp_study_physics.py", "grasp_study_objects.py",
+                    "assets/grasp_study/spoon.xml", "assets/grasp_study/glass.xml",
+                    "assets/grasp_study/pen.xml", "pyproject.toml", "uv.lock")
     save_json(output / "training_protocol.json", {
         "seed": seed, "n_iter_per_search": n_iter, "cv_folds": 3,
         "cv_metric": "negative log loss", "model_selection": "validation log loss",
@@ -364,8 +367,7 @@ def execute_recommendations(output, *, workers=3):
     report = load_json(output / "comparison.json")
     protocol = load_json(output / "protocol.json")
     environment = load_json(output / "environment.json")
-    if sha256_file(PHYSICS_SOURCE) != environment["physical_collector_sha256"]:
-        raise ValueError("Physical collector changed before recommendation execution")
+    verify_physics_sources(environment)
     raw = load_json(output / "collection/trials.json")["rows"]
     models = {}
     for name in MODEL_NAMES:
@@ -440,9 +442,11 @@ def execute_recommendations(output, *, workers=3):
               for item in plan]
     result = {"methods": methods, "unique_physical_execution": summary,
               "primary_model": report["selection"]["selected_model"],
-              "limitations": ["Only eight held-out object/state conditions and two new draws each",
-                              "Method outcomes share matched physics; rows are not independent between methods",
-                              "No advantage or safety guarantee follows from a prediction score"]}
+              "limitations": [
+                  f"Only {sum(group['split'] == 'test' for group in protocol['condition_groups'])} "
+                  "held-out object/state conditions and two new draws each",
+                  "Method outcomes share matched physics; rows are not independent between methods",
+                  "No advantage or safety guarantee follows from a prediction score"]}
     save_json(output / "recommendations_with_outcomes.json", actual)
     save_json(output / "execution_comparison.json", result)
     return result

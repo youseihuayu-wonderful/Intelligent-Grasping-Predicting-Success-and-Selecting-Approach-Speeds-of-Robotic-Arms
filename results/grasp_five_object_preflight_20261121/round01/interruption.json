@@ -1,0 +1,10 @@
+{
+  "attempted_specs": 5,
+  "saved_physics_rows": 3,
+  "saved_successes": 1,
+  "saved_failures": 2,
+  "abort_exception": "ValueError: Table clearance requires box collision geometry",
+  "exception_target": "glass",
+  "pen_outcome": "No row returned; same unsupported primitive construction path. Not a grasp outcome.",
+  "command": ".venv/bin/python results/grasp_five_object_preflight_20261121/run_preflight.py round01 --workers 3"
+}

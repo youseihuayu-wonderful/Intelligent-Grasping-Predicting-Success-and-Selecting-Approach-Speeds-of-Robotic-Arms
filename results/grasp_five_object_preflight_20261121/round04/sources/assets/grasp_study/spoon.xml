@@ -1,0 +1,15 @@
+<mujoco model="Rigid study spoon">
+  <compiler angle="radian"/>
+  <default><geom density="7800" condim="6" friction="0.8 0.005 0.0001" rgba="0.65 0.68 0.72 1"/></default>
+  <worldbody><body name="root"><body name="object">
+    <!-- 150 mm overall. The handle rests on the table; the head is raised by its curved neck. -->
+    <geom name="handle" type="box" pos="-0.025 0 0.002" size="0.050 0.006 0.002"/>
+    <geom name="neck" type="box" pos="0.026 0 0.006" size="0.014 0.006 0.002" euler="0 -0.30 0"/>
+    <!-- Open concavity: bottom and four raised sides, not a solid head. -->
+    <geom name="head_bottom" type="box" pos="0.0525 0 0.010" size="0.0205 0.014 0.0015"/>
+    <geom name="head_near_wall" type="box" pos="0.0525 -0.016 0.013" size="0.0205 0.002 0.0045"/>
+    <geom name="head_far_wall" type="box" pos="0.0525 0.016 0.013" size="0.0205 0.002 0.0045"/>
+    <geom name="head_tip_wall" type="box" pos="0.0735 0 0.013" size="0.0015 0.014 0.0045"/>
+    <geom name="head_neck_wall" type="box" pos="0.0335 0 0.013" size="0.0015 0.014 0.0045"/>
+  </body></body></worldbody>
+</mujoco>

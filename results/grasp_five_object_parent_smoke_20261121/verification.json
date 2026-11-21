@@ -1,0 +1,75 @@
+{
+  "scope": "Development and acceptance evidence only; none of these rows enter the formal model dataset.",
+  "full_regression_command": "uv run --locked python -m unittest discover -s tests -v",
+  "full_regression_tests_passed": 377,
+  "independent_parent_preflight": {
+    "summary": {
+      "attempted": 6,
+      "labelled": 6,
+      "successes": 6,
+      "failures": 0,
+      "statuses": {
+        "completed": 6
+      },
+      "numerical_warning_trials": 0,
+      "wall_s": 19.644061540951952
+    },
+    "outcomes": [
+      {
+        "target": "bowl",
+        "mass_kg": 0.06,
+        "success": true,
+        "hold_s": 2.000000000000668,
+        "phase": "hold",
+        "failure": null
+      },
+      {
+        "target": "bottle",
+        "mass_kg": 0.18,
+        "success": true,
+        "hold_s": 2.000000000000668,
+        "phase": "hold",
+        "failure": null
+      },
+      {
+        "target": "spoon",
+        "mass_kg": 0.025,
+        "success": true,
+        "hold_s": 2.000000000000668,
+        "phase": "hold",
+        "failure": null
+      },
+      {
+        "target": "spoon",
+        "mass_kg": 0.04,
+        "success": true,
+        "hold_s": 2.000000000000668,
+        "phase": "hold",
+        "failure": null
+      },
+      {
+        "target": "glass",
+        "mass_kg": 0.15,
+        "success": true,
+        "hold_s": 2.000000000000668,
+        "phase": "hold",
+        "failure": null
+      },
+      {
+        "target": "pen",
+        "mass_kg": 0.01,
+        "success": true,
+        "hold_s": 2.000000000000668,
+        "phase": "hold",
+        "failure": null
+      }
+    ]
+  },
+  "all_240_initial_conditions_valid_before_grasp_outcomes": true,
+  "formal_protocol_sha256": "724623b603e3ce4f95c5e1ac69e4aa07a6f3cfe4bf1087ac49137b70ceedba27",
+  "nominal_initialization_record": "initialization_check.json",
+  "actual_rendered_geometry": "new_objects_physical_geometry_visible.png",
+  "render_visibility_fix": "New primitive geoms use visible group 1; earlier blank geometry previews were rendered with collision group 0 hidden. Visibility was confirmed after the asset fix; dynamics parameters were unchanged.",
+  "label_rule": "Unchanged bilateral contact, clearance, >=0.10m lift and continuous independent-timer 2s hold; observer predicates are shared with the controller.",
+  "data_isolation": "Formal new-batch-only training, validation and test; old550 and all tuning/preflight trials remain separate."
+}

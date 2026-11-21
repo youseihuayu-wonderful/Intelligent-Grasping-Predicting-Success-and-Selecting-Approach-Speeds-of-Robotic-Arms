@@ -32,6 +32,28 @@ def trial(identifier="unit", *, success=True, **settings):
 
 
 class ObservableFeatureTests(unittest.TestCase):
+    def test_study_categories_remain_one_categorical_field_in_eleven_features(self):
+        for target in ("bowl", "bottle", "spoon", "glass", "pen"):
+            with self.subTest(target=target):
+                row = trial(target=target)
+                features = features_from_row(row)
+                self.assertEqual(features["target"], target)
+                self.assertEqual(tuple(features), FEATURE_NAMES)
+                self.assertEqual(len(features), 11)
+                clean, audit = audit_rows([row])
+                self.assertEqual(len(clean), 1)
+                self.assertEqual(audit["included_count"], 1)
+
+    def test_unknown_or_malformed_categories_are_rejected_not_encoded(self):
+        for target in ("cup", "tumbler", "Spoon", "", None, True, 1, [], {}):
+            with self.subTest(target=target):
+                row = trial(target=target)
+                with self.assertRaisesRegex(ValueError, "settings.target"):
+                    features_from_row(row)
+                clean, audit = audit_rows([row])
+                self.assertEqual(clean, [])
+                self.assertIn("invalid_physical_inputs", audit["row_records"][0]["reasons"])
+
     def test_preexecution_and_completed_features_agree_without_outcome_or_latent_bias(self):
         row = trial()
         preexecution = {key: deepcopy(row[key]) for key in ("settings", "initial_pose")}

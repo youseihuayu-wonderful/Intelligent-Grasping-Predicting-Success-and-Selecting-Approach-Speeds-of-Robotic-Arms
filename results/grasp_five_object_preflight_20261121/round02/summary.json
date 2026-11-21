@@ -1,0 +1,12 @@
+{
+  "attempted": 9,
+  "successes": 3,
+  "failures": 1,
+  "invalid_initial_states": 5,
+  "failure_reasons": {
+    "夹爪未建立稳定的双侧接触": 1,
+    "Grasp requires a target stably supported on the table": 5
+  },
+  "numerical_warning_trials": 0,
+  "unexpected_contact_trials": 0
+}

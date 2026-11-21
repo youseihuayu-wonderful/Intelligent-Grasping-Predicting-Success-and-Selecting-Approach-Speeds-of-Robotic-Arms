@@ -1,0 +1,12 @@
+{
+  "attempted": 11,
+  "successes": 9,
+  "failures": 2,
+  "invalid_initial_states": 0,
+  "failure_reasons": {
+    "Spoon掉落、滑移或未达到要求的离桌高度": 1,
+    "夹爪未建立稳定的双侧接触": 1
+  },
+  "numerical_warning_trials": 0,
+  "unexpected_contact_trials": 2
+}
