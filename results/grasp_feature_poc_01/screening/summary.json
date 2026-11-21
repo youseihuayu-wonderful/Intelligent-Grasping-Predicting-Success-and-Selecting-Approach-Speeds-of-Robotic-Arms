@@ -1,0 +1,20 @@
+{
+  "attempted": 58,
+  "labelled": 58,
+  "successes": 43,
+  "failures": 15,
+  "invalid_initial_states": 0,
+  "failure_kinds": {
+    "unplanned_contact": 3,
+    "grasp_contact_or_retention": 12
+  },
+  "failure_reasons": {
+    "抬升过程中失去双侧夹持接触": 3,
+    "Physical postconditions lost after completion": 1,
+    "酒瓶掉落、滑移或未达到要求的离桌高度": 6,
+    "夹爪未建立稳定的双侧接触": 5
+  },
+  "numerical_warning_trials": 0,
+  "unexpected_contact_trials": 3,
+  "wall_s": 43.58665137500793
+}

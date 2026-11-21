@@ -1,0 +1,1345 @@
+{
+  "phase": "screening",
+  "trials": [
+    [
+      "bowl.reference",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "reference"
+      }
+    ],
+    [
+      "bowl.mass_kg_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.02,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "mass_kg"
+      }
+    ],
+    [
+      "bowl.mass_kg_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "mass_kg"
+      }
+    ],
+    [
+      "bowl.mass_kg_2",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "mass_kg"
+      }
+    ],
+    [
+      "bowl.sliding_friction_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.05,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "sliding_friction"
+      }
+    ],
+    [
+      "bowl.sliding_friction_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.2,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "sliding_friction"
+      }
+    ],
+    [
+      "bowl.sliding_friction_2",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 1.2,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "sliding_friction"
+      }
+    ],
+    [
+      "bowl.scale_0",
+      {
+        "target": "bowl",
+        "scale": 0.7,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "scale"
+      }
+    ],
+    [
+      "bowl.scale_1",
+      {
+        "target": "bowl",
+        "scale": 1.3,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "scale"
+      }
+    ],
+    [
+      "bowl.x_m_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.45,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "x_m"
+      }
+    ],
+    [
+      "bowl.x_m_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.55,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "x_m"
+      }
+    ],
+    [
+      "bowl.y_m_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.13,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "y_m"
+      }
+    ],
+    [
+      "bowl.y_m_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.03,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "y_m"
+      }
+    ],
+    [
+      "bowl.yaw_rad_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": -0.2,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "yaw_rad"
+      }
+    ],
+    [
+      "bowl.yaw_rad_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.2,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "yaw_rad"
+      }
+    ],
+    [
+      "bowl.bias_x_m_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.012,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_x_m"
+      }
+    ],
+    [
+      "bowl.bias_x_m_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.012,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_x_m"
+      }
+    ],
+    [
+      "bowl.bias_y_m_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": -0.012,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_y_m"
+      }
+    ],
+    [
+      "bowl.bias_y_m_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.012,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_y_m"
+      }
+    ],
+    [
+      "bowl.bias_z_m_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": -0.015,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_z_m"
+      }
+    ],
+    [
+      "bowl.bias_z_m_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.015,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_z_m"
+      }
+    ],
+    [
+      "bowl.opening_m_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.02,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "opening_m"
+      }
+    ],
+    [
+      "bowl.opening_m_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "opening_m"
+      }
+    ],
+    [
+      "bowl.closing_force_n_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 2.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "closing_force_n"
+      }
+    ],
+    [
+      "bowl.closing_force_n_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "closing_force_n"
+      }
+    ],
+    [
+      "bowl.close_trigger_m_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.004,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "close_trigger_m"
+      }
+    ],
+    [
+      "bowl.close_trigger_m_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.02,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "close_trigger_m"
+      }
+    ],
+    [
+      "bowl.descent_speed_m_s_0",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "descent_speed_m_s"
+      }
+    ],
+    [
+      "bowl.descent_speed_m_s_1",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.2
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "descent_speed_m_s"
+      }
+    ],
+    [
+      "bottle.reference",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "reference"
+      }
+    ],
+    [
+      "bottle.mass_kg_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.02,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "mass_kg"
+      }
+    ],
+    [
+      "bottle.mass_kg_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "mass_kg"
+      }
+    ],
+    [
+      "bottle.mass_kg_2",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "mass_kg"
+      }
+    ],
+    [
+      "bottle.sliding_friction_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.05,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "sliding_friction"
+      }
+    ],
+    [
+      "bottle.sliding_friction_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.2,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "sliding_friction"
+      }
+    ],
+    [
+      "bottle.sliding_friction_2",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 1.2,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "sliding_friction"
+      }
+    ],
+    [
+      "bottle.scale_0",
+      {
+        "target": "bottle",
+        "scale": 0.7,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "scale"
+      }
+    ],
+    [
+      "bottle.scale_1",
+      {
+        "target": "bottle",
+        "scale": 1.3,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "scale"
+      }
+    ],
+    [
+      "bottle.x_m_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.45,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "x_m"
+      }
+    ],
+    [
+      "bottle.x_m_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.55,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "x_m"
+      }
+    ],
+    [
+      "bottle.y_m_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.13,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "y_m"
+      }
+    ],
+    [
+      "bottle.y_m_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.03,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "y_m"
+      }
+    ],
+    [
+      "bottle.yaw_rad_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": -0.2,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "yaw_rad"
+      }
+    ],
+    [
+      "bottle.yaw_rad_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.2,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "yaw_rad"
+      }
+    ],
+    [
+      "bottle.bias_x_m_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.012,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_x_m"
+      }
+    ],
+    [
+      "bottle.bias_x_m_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.012,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_x_m"
+      }
+    ],
+    [
+      "bottle.bias_y_m_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": -0.012,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_y_m"
+      }
+    ],
+    [
+      "bottle.bias_y_m_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.012,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_y_m"
+      }
+    ],
+    [
+      "bottle.bias_z_m_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": -0.015,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_z_m"
+      }
+    ],
+    [
+      "bottle.bias_z_m_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.015,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "bias_z_m"
+      }
+    ],
+    [
+      "bottle.opening_m_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.02,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "opening_m"
+      }
+    ],
+    [
+      "bottle.opening_m_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "opening_m"
+      }
+    ],
+    [
+      "bottle.closing_force_n_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 2.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "closing_force_n"
+      }
+    ],
+    [
+      "bottle.closing_force_n_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "closing_force_n"
+      }
+    ],
+    [
+      "bottle.close_trigger_m_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.004,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "close_trigger_m"
+      }
+    ],
+    [
+      "bottle.close_trigger_m_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.02,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "close_trigger_m"
+      }
+    ],
+    [
+      "bottle.descent_speed_m_s_0",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "descent_speed_m_s"
+      }
+    ],
+    [
+      "bottle.descent_speed_m_s_1",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.2
+      },
+      {
+        "design": "one_factor_at_a_time",
+        "factor": "descent_speed_m_s"
+      }
+    ]
+  ],
+  "physical_setup": "Existing Panda/table/assets; both targets use common world position; rack/cabinet moved outside workspace; non-target object relocated; sizes compiled before simulation",
+  "fixed_contact_settings": "Object and fingertip sliding friction equal specified mu; torsional 0.005 and rolling 0.0001. Table friction unchanged. Closing force is total tendon command, NOT measured per-finger normal force.",
+  "mass_size_separation": "Object mass held at specified absolute mass across scale changes; inertia preserves compiled uniform-density shape at that mass. Grasp offset scales with object geometry.",
+  "label_rule": "Actual bilateral grip, table clearance, lift >=0.10 m and relative-position stability, held continuously for two simulation seconds; invalid preconditions unlabelled; numerical errors abort",
+  "statistical_scope": "Exploratory screening, not independent evaluation or calibrated success probabilities. Two geometry families with rim/neck-specific grasp profiles, NOT isolated semantic-category effects.",
+  "source_sha256": "b38099f61959c3ad397cb51b9de269c6de0608f384aa346cdfca876add0f1ee6"
+}

@@ -1,0 +1,190 @@
+{
+  "trial_id": "bowl_18.control_0.draw_1",
+  "settings": {
+    "target": "bowl",
+    "scale": 1.2,
+    "mass_kg": 0.3,
+    "sliding_friction": 0.8,
+    "x_m": 0.48722337550917116,
+    "y_m": -0.0728242187943626,
+    "yaw_rad": -0.008912509558110127,
+    "opening_m": 0.08,
+    "closing_force_n": 4.0,
+    "close_trigger_m": 0.0,
+    "descent_speed_m_s": 0.1,
+    "bias_x_m": -0.001874317120566908,
+    "bias_y_m": 0.000990969663446013,
+    "bias_z_m": -0.003729159770731433
+  },
+  "metadata": {
+    "design": "prospective_classifier_comparison",
+    "condition_id": "bowl_18",
+    "split": "train",
+    "control_id": 0,
+    "nuisance_seed": 6681,
+    "error_observability": "Latent execution uncertainty; excluded from predictive inputs"
+  },
+  "variant_features": {
+    "compiled_pre_mass_override_kg": 0.07931482271179283,
+    "actual_mass_kg": 0.3,
+    "actual_principal_inertia_kg_m2": [
+      0.0005169971970899304,
+      0.00031969891143213884,
+      0.00031621857912750485
+    ],
+    "collision_world_aabb_size_m": [
+      0.12860097545809845,
+      0.12848970670926604,
+      0.06065031422818534
+    ],
+    "object_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "finger_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "grasp_offset_body_m": [
+      -0.001874317120566908,
+      -0.055409030336553984,
+      0.04667084022926857
+    ]
+  },
+  "trial_status": "completed",
+  "success": false,
+  "failure_kind": "unplanned_contact",
+  "failure_reason": "抬升过程中失去双侧夹持接触",
+  "last_active_phase": "lift",
+  "phase_order": [
+    "idle",
+    "prepare",
+    "approach",
+    "descend",
+    "close",
+    "lift",
+    "failed"
+  ],
+  "phase_first_sim_s": {
+    "idle": null,
+    "prepare": 0.0,
+    "approach": 0.06000000000000005,
+    "descend": 5.905999999999461,
+    "close": 8.907999999999978,
+    "lift": 9.150000000000059,
+    "failed": 10.88800000000064
+  },
+  "execution_sim_s": 10.88800000000064,
+  "verified_hold_s": 0.0,
+  "initial_state_fingerprint": "e7332355fb79fca6279eae441fbdf5d0ae978901aa93fe28b30b5b762c7d4a21",
+  "initial_pose": {
+    "name": "bowl_object",
+    "position_m": [
+      0.4872233651693268,
+      -0.07282423505728357,
+      0.7180889384786999
+    ],
+    "quaternion_wxyz": [
+      0.999990070899623,
+      -4.394512667309138e-06,
+      2.767090505382522e-06,
+      -0.004456240029463369
+    ]
+  },
+  "final_pose": {
+    "name": "bowl_object",
+    "position_m": [
+      0.4939736855390177,
+      -0.1500615509931067,
+      0.727310233685583
+    ],
+    "quaternion_wxyz": [
+      0.9832011791802007,
+      -0.18217464520323837,
+      -0.002039040174379579,
+      0.011121250779696104
+    ]
+  },
+  "postconditions": {
+    "bilateral_grip": false,
+    "clear_of_table": false,
+    "target_lifted": false,
+    "relative_pose_stable": false,
+    "verified_hold": false
+  },
+  "actual_finger_target_sliding_frictions": [
+    0.8
+  ],
+  "collisions": {
+    "episodes": 3,
+    "duration_s": 0.18400000000000014,
+    "peak_force_n": 12.993384210065765,
+    "pairs": [
+      {
+        "body_a": "bowl_object",
+        "body_b": "table",
+        "episodes": 2,
+        "duration_s": 0.18200000000000013,
+        "peak_force_n": 12.993384210065765
+      },
+      {
+        "body_a": "robot_left_finger",
+        "body_b": "robot_right_finger",
+        "episodes": 1,
+        "duration_s": 0.1500000000000001,
+        "peak_force_n": 2.167267733543966
+      }
+    ],
+    "force_threshold_n": 0.1
+  },
+  "warnings": [],
+  "wall_s": 1.5229652500129305
+}

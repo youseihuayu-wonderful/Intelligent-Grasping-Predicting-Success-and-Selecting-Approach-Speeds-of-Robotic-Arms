@@ -1,0 +1,39 @@
+{
+  "seed": 5644,
+  "n_iter_per_search": 12,
+  "cv_folds": 3,
+  "cv_metric": "negative log loss",
+  "model_selection": "validation log loss",
+  "test_policy": "All models frozen and validation winner saved before final test evaluation",
+  "probability_calibration": "Not fitted; raw probability calibration is evaluated",
+  "partitions": {
+    "train": {
+      "rows": 422,
+      "groups": 75,
+      "successes": 194,
+      "failures": 228
+    },
+    "validation": {
+      "rows": 64,
+      "groups": 8,
+      "successes": 17,
+      "failures": 47
+    },
+    "test": {
+      "rows": 64,
+      "groups": 8,
+      "successes": 18,
+      "failures": 46
+    }
+  },
+  "source_sha256": {
+    "run_grasp_classifiers.py": "e2f47f32f3e231d81bf949820158c2d01b2d06dd091d8aad44774ad53d5dd21b",
+    "collect_grasp_classifiers.py": "06fc8a76f5b00532385b159000d71e9c7ca4b6a026a3623c6677382559a349a8",
+    "grasp_classifier_data.py": "c818bebb11fef43004e216aaee27e464b7c3fb4743beb6dcead06001c271d9c3",
+    "grasp_classifier_linear.py": "37cd3d47fae3afde8c2e7d0c4e81789dde01f4eb660f0d79ee17d823c1a21eea",
+    "grasp_classifier_forest.py": "0605634a7dd951285a64307b6b9e10c472e26d19e97fed71dfec9c90865723b8",
+    "grasp_classifier_xgboost.py": "c05d9188365a8cc08b03febc97508697b99a6bd864c730c7a4e6c864a5771e0e",
+    "pyproject.toml": "e0130221f2393660b153c65aba7741933264ff9fafcc4ff3a2cbec12d902c329",
+    "uv.lock": "54cf2762e700ed196f7017e0e7fa79e3f449cb77566ff4bb799c1ae42b900e54"
+  }
+}

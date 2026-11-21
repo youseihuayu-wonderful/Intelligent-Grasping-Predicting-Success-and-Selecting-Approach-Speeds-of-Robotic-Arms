@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/Users/shihuayu/Projects/robot-grasp-simulation/results/grasp_feature_poc_01/screening/trials.json",
+    "sha256": "ea342738bf1da0b284624e0b5036e89e65278d3644ed66da90c6102911bf008b",
+    "rows": 58,
+    "historical_train_only": true
+  },
+  {
+    "path": "/Users/shihuayu/Projects/robot-grasp-simulation/results/grasp_feature_poc_01/interactions/trials.json",
+    "sha256": "a3132b19118a35acad8e102a0fe9d771afd64cbe8284c87237d9667112d1a8d3",
+    "rows": 36,
+    "historical_train_only": true
+  },
+  {
+    "path": "/Users/shihuayu/Projects/robot-grasp-simulation/results/grasp_feature_poc_01/followups/trials.json",
+    "sha256": "244df80404db4057bc403d80ae020b698b5658b4392765be7f32ce91d3331d36",
+    "rows": 84,
+    "historical_train_only": true
+  },
+  {
+    "path": "/Users/shihuayu/Projects/robot-grasp-simulation/results/grasp_classifier_comparison_20261115/collection/trials.json",
+    "sha256": "3e8439a29866468bc2cb1ebcdd3db76989493d5c66fbea7fdf5346a70ec012e2",
+    "rows": 384,
+    "historical_train_only": false
+  }
+]

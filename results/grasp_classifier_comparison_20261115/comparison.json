@@ -1,0 +1,1388 @@
+{
+  "models": {
+    "logistic": {
+      "name": "logistic",
+      "model_file": "models/logistic.joblib",
+      "model_sha256": "a02452cc1a9b8ec8792726c011a512a4b253c546ddc7c82dca7b1e16f4c820e5",
+      "fit_wall_s": 0.13175804098136723,
+      "best_params": {
+        "classifier__C": 0.1
+      },
+      "best_cv_log_loss": 0.5381547843599637,
+      "validation": {
+        "n_samples": 64,
+        "class_counts": {
+          "0": 47,
+          "1": 17
+        },
+        "decision_threshold": 0.5,
+        "log_loss": 0.3528167404065557,
+        "brier_score": 0.10764315499028829,
+        "balanced_accuracy": 0.8078848560700875,
+        "failure_recall": 0.851063829787234,
+        "failure_precision": 0.9090909090909091,
+        "roc_auc": 0.9367959949937421,
+        "undefined_reasons": {},
+        "limitations": [
+          "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+        ],
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "upper_inclusive": false,
+            "count": 24,
+            "mean_predicted_probability": 0.11064622047223294,
+            "observed_success_rate": 0.0,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "upper_inclusive": false,
+            "count": 14,
+            "mean_predicted_probability": 0.26659207444579175,
+            "observed_success_rate": 0.14285714285714285,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "upper_inclusive": false,
+            "count": 10,
+            "mean_predicted_probability": 0.49310166102840214,
+            "observed_success_rate": 0.2,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "upper_inclusive": false,
+            "count": 6,
+            "mean_predicted_probability": 0.743169628299848,
+            "observed_success_rate": 0.6666666666666666,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "upper_inclusive": true,
+            "count": 10,
+            "mean_predicted_probability": 0.8763730953629534,
+            "observed_success_rate": 0.9,
+            "undefined_reason": null
+          }
+        ]
+      },
+      "feature_selection": {
+        "selection_method": "none",
+        "encoded_feature_names": [
+          "close_trigger_m",
+          "closing_force_n",
+          "descent_speed_m_s",
+          "mass_kg",
+          "opening_m",
+          "scale",
+          "sliding_friction",
+          "target=bottle",
+          "target=bowl",
+          "x_m",
+          "y_m",
+          "yaw_rad"
+        ],
+        "support_mask": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "selected_feature_names": [
+          "close_trigger_m",
+          "closing_force_n",
+          "descent_speed_m_s",
+          "mass_kg",
+          "opening_m",
+          "scale",
+          "sliding_friction",
+          "target=bottle",
+          "target=bowl",
+          "x_m",
+          "y_m",
+          "yaw_rad"
+        ],
+        "n_features_selected": 12,
+        "intercept_only": false,
+        "lasso_alpha": null,
+        "logistic_penalty": "l2",
+        "logistic_C": 0.1
+      },
+      "candidates": [
+        {
+          "parameters": {
+            "classifier__C": 0.001
+          },
+          "mean_cv_log_loss": 0.6702464051972511,
+          "std_cv_score": 0.010713570343432913,
+          "rank": 12
+        },
+        {
+          "parameters": {
+            "classifier__C": 0.003
+          },
+          "mean_cv_log_loss": 0.6391218296964519,
+          "std_cv_score": 0.016682965346159446,
+          "rank": 11
+        },
+        {
+          "parameters": {
+            "classifier__C": 0.01
+          },
+          "mean_cv_log_loss": 0.5867387508382926,
+          "std_cv_score": 0.028541214349043158,
+          "rank": 10
+        },
+        {
+          "parameters": {
+            "classifier__C": 0.03
+          },
+          "mean_cv_log_loss": 0.5473570734175978,
+          "std_cv_score": 0.04044113653972256,
+          "rank": 2
+        },
+        {
+          "parameters": {
+            "classifier__C": 0.1
+          },
+          "mean_cv_log_loss": 0.5381547843599637,
+          "std_cv_score": 0.04945459801009439,
+          "rank": 1
+        },
+        {
+          "parameters": {
+            "classifier__C": 0.3
+          },
+          "mean_cv_log_loss": 0.5513666707758347,
+          "std_cv_score": 0.05623582585558748,
+          "rank": 3
+        },
+        {
+          "parameters": {
+            "classifier__C": 1.0
+          },
+          "mean_cv_log_loss": 0.5663190205812599,
+          "std_cv_score": 0.06218060795925805,
+          "rank": 4
+        },
+        {
+          "parameters": {
+            "classifier__C": 3.0
+          },
+          "mean_cv_log_loss": 0.5732740873237682,
+          "std_cv_score": 0.06500028272608817,
+          "rank": 5
+        },
+        {
+          "parameters": {
+            "classifier__C": 10.0
+          },
+          "mean_cv_log_loss": 0.5761716103378894,
+          "std_cv_score": 0.06619848413086782,
+          "rank": 6
+        },
+        {
+          "parameters": {
+            "classifier__C": 30.0
+          },
+          "mean_cv_log_loss": 0.5770526016682522,
+          "std_cv_score": 0.0665658485556685,
+          "rank": 7
+        },
+        {
+          "parameters": {
+            "classifier__C": 100.0
+          },
+          "mean_cv_log_loss": 0.577366911519858,
+          "std_cv_score": 0.06669726756867175,
+          "rank": 8
+        },
+        {
+          "parameters": {
+            "classifier__C": 300.0
+          },
+          "mean_cv_log_loss": 0.5774572948971483,
+          "std_cv_score": 0.06673509334219743,
+          "rank": 9
+        }
+      ],
+      "test": {
+        "n_samples": 64,
+        "class_counts": {
+          "0": 46,
+          "1": 18
+        },
+        "decision_threshold": 0.5,
+        "log_loss": 0.40407273851276504,
+        "brier_score": 0.13079627685985762,
+        "balanced_accuracy": 0.8019323671497585,
+        "failure_recall": 0.8260869565217391,
+        "failure_precision": 0.9047619047619048,
+        "roc_auc": 0.8695652173913044,
+        "undefined_reasons": {},
+        "limitations": [
+          "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+        ],
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "upper_inclusive": false,
+            "count": 32,
+            "mean_predicted_probability": 0.10015568834558392,
+            "observed_success_rate": 0.03125,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "upper_inclusive": false,
+            "count": 6,
+            "mean_predicted_probability": 0.2646993606815697,
+            "observed_success_rate": 0.16666666666666666,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "upper_inclusive": false,
+            "count": 14,
+            "mean_predicted_probability": 0.5176131535595939,
+            "observed_success_rate": 0.5714285714285714,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "upper_inclusive": false,
+            "count": 10,
+            "mean_predicted_probability": 0.7085928990349954,
+            "observed_success_rate": 0.7,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "upper_inclusive": true,
+            "count": 2,
+            "mean_predicted_probability": 0.8203006828253387,
+            "observed_success_rate": 0.5,
+            "undefined_reason": null
+          }
+        ]
+      }
+    },
+    "lasso_logistic": {
+      "name": "lasso_logistic",
+      "model_file": "models/lasso_logistic.joblib",
+      "model_sha256": "772ebc9ecd3e47dc3d7ee5f5cad134a70a039f1a17e33fb74b14a8d3b4f36318",
+      "fit_wall_s": 0.14202879194635898,
+      "best_params": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 0.1
+      },
+      "best_cv_log_loss": 0.5202022304721557,
+      "validation": {
+        "n_samples": 64,
+        "class_counts": {
+          "0": 47,
+          "1": 17
+        },
+        "decision_threshold": 0.5,
+        "log_loss": 0.3496494968246061,
+        "brier_score": 0.10209721080001818,
+        "balanced_accuracy": 0.9067584480600751,
+        "failure_recall": 0.8723404255319149,
+        "failure_precision": 0.9761904761904762,
+        "roc_auc": 0.9518147684605757,
+        "undefined_reasons": {},
+        "limitations": [
+          "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+        ],
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "upper_inclusive": false,
+            "count": 22,
+            "mean_predicted_probability": 0.12842968729106685,
+            "observed_success_rate": 0.0,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "upper_inclusive": false,
+            "count": 18,
+            "mean_predicted_probability": 0.2960270525374564,
+            "observed_success_rate": 0.05555555555555555,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "upper_inclusive": false,
+            "count": 6,
+            "mean_predicted_probability": 0.5090808173402143,
+            "observed_success_rate": 0.5,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "upper_inclusive": false,
+            "count": 10,
+            "mean_predicted_probability": 0.7182995150505687,
+            "observed_success_rate": 0.6,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "upper_inclusive": true,
+            "count": 8,
+            "mean_predicted_probability": 0.8989283660103126,
+            "observed_success_rate": 0.875,
+            "undefined_reason": null
+          }
+        ]
+      },
+      "feature_selection": {
+        "selection_method": "squared_loss_lasso",
+        "encoded_feature_names": [
+          "close_trigger_m",
+          "closing_force_n",
+          "descent_speed_m_s",
+          "mass_kg",
+          "opening_m",
+          "scale",
+          "sliding_friction",
+          "target=bottle",
+          "target=bowl",
+          "x_m",
+          "y_m",
+          "yaw_rad"
+        ],
+        "support_mask": [
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "selected_feature_names": [
+          "close_trigger_m",
+          "mass_kg",
+          "sliding_friction"
+        ],
+        "n_features_selected": 3,
+        "intercept_only": false,
+        "lasso_alpha": 0.1,
+        "logistic_penalty": "l2",
+        "logistic_C": 0.1
+      },
+      "candidates": [
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.001,
+            "classifier__C": 0.1
+          },
+          "mean_cv_log_loss": 0.5383474102265774,
+          "std_cv_score": 0.049715587283070246,
+          "rank": 3
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.3,
+            "classifier__C": 30.0
+          },
+          "mean_cv_log_loss": 0.6923390038989754,
+          "std_cv_score": 0.006805757952523858,
+          "rank": 10
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.001,
+            "classifier__C": 3.0
+          },
+          "mean_cv_log_loss": 0.5728810859101365,
+          "std_cv_score": 0.06457439253856884,
+          "rank": 7
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.003,
+            "classifier__C": 1.0
+          },
+          "mean_cv_log_loss": 0.5671793331380609,
+          "std_cv_score": 0.0631080232065552,
+          "rank": 6
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.1,
+            "classifier__C": 0.01
+          },
+          "mean_cv_log_loss": 0.583041136882673,
+          "std_cv_score": 0.03825971836430018,
+          "rank": 8
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.1,
+            "classifier__C": 0.03
+          },
+          "mean_cv_log_loss": 0.5383327464148137,
+          "std_cv_score": 0.05735026733799622,
+          "rank": 2
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.003,
+            "classifier__C": 0.3
+          },
+          "mean_cv_log_loss": 0.55222573787283,
+          "std_cv_score": 0.05712448291654148,
+          "rank": 4
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.01,
+            "classifier__C": 0.01
+          },
+          "mean_cv_log_loss": 0.5875024185406926,
+          "std_cv_score": 0.025860926008904953,
+          "rank": 9
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 1.0,
+            "classifier__C": 0.03
+          },
+          "mean_cv_log_loss": 0.6923390038989754,
+          "std_cv_score": 0.006805757952523858,
+          "rank": 10
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.01,
+            "classifier__C": 0.3
+          },
+          "mean_cv_log_loss": 0.5549687727646556,
+          "std_cv_score": 0.053882923628974115,
+          "rank": 5
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 0.1,
+            "classifier__C": 0.1
+          },
+          "mean_cv_log_loss": 0.5202022304721557,
+          "std_cv_score": 0.0749135334688554,
+          "rank": 1
+        },
+        {
+          "parameters": {
+            "selector__estimator__alpha": 1.0,
+            "classifier__C": 3.0
+          },
+          "mean_cv_log_loss": 0.6923390038989754,
+          "std_cv_score": 0.006805757952523858,
+          "rank": 10
+        }
+      ],
+      "test": {
+        "n_samples": 64,
+        "class_counts": {
+          "0": 46,
+          "1": 18
+        },
+        "decision_threshold": 0.5,
+        "log_loss": 0.4432032914854082,
+        "brier_score": 0.1454311260026015,
+        "balanced_accuracy": 0.7632850241545894,
+        "failure_recall": 0.8043478260869565,
+        "failure_precision": 0.8809523809523809,
+        "roc_auc": 0.8538647342995169,
+        "undefined_reasons": {},
+        "limitations": [
+          "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+        ],
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "upper_inclusive": false,
+            "count": 26,
+            "mean_predicted_probability": 0.10838373165228504,
+            "observed_success_rate": 0.0,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "upper_inclusive": false,
+            "count": 10,
+            "mean_predicted_probability": 0.2745266240455541,
+            "observed_success_rate": 0.2,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "upper_inclusive": false,
+            "count": 6,
+            "mean_predicted_probability": 0.4561971553235287,
+            "observed_success_rate": 0.5,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "upper_inclusive": false,
+            "count": 22,
+            "mean_predicted_probability": 0.6776244206178311,
+            "observed_success_rate": 0.5909090909090909,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "upper_inclusive": true,
+            "count": 0,
+            "mean_predicted_probability": null,
+            "observed_success_rate": null,
+            "undefined_reason": "No observations in this fixed uniform bin"
+          }
+        ]
+      }
+    },
+    "xgboost": {
+      "name": "xgboost",
+      "model_file": "models/xgboost.joblib",
+      "model_sha256": "c0818a020ca00d6ff19f61877efafa3d5ae7e79a93322b180f27c71b193ad1a9",
+      "fit_wall_s": 0.28920429199934006,
+      "best_params": {
+        "classifier__subsample": 1.0,
+        "classifier__reg_lambda": 3.0,
+        "classifier__reg_alpha": 1.0,
+        "classifier__n_estimators": 200,
+        "classifier__min_child_weight": 3,
+        "classifier__max_depth": 3,
+        "classifier__learning_rate": 0.03,
+        "classifier__colsample_bytree": 1.0
+      },
+      "best_cv_log_loss": 0.5226110517978668,
+      "validation": {
+        "n_samples": 64,
+        "class_counts": {
+          "0": 47,
+          "1": 17
+        },
+        "decision_threshold": 0.5,
+        "log_loss": 0.3208888146402918,
+        "brier_score": 0.09557247244865774,
+        "balanced_accuracy": 0.8504380475594493,
+        "failure_recall": 0.9361702127659575,
+        "failure_precision": 0.9166666666666666,
+        "roc_auc": 0.9468085106382979,
+        "undefined_reasons": {},
+        "limitations": [
+          "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+        ],
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "upper_inclusive": false,
+            "count": 34,
+            "mean_predicted_probability": 0.09678010839749784,
+            "observed_success_rate": 0.0,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "upper_inclusive": false,
+            "count": 8,
+            "mean_predicted_probability": 0.31903958320617676,
+            "observed_success_rate": 0.375,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "upper_inclusive": false,
+            "count": 16,
+            "mean_predicted_probability": 0.519952803850174,
+            "observed_success_rate": 0.5,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "upper_inclusive": false,
+            "count": 6,
+            "mean_predicted_probability": 0.7372446457544962,
+            "observed_success_rate": 1.0,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "upper_inclusive": true,
+            "count": 0,
+            "mean_predicted_probability": null,
+            "observed_success_rate": null,
+            "undefined_reason": "No observations in this fixed uniform bin"
+          }
+        ]
+      },
+      "feature_selection": {
+        "selected_feature_names": [
+          "close_trigger_m",
+          "closing_force_n",
+          "descent_speed_m_s",
+          "mass_kg",
+          "opening_m",
+          "scale",
+          "sliding_friction",
+          "target=bottle",
+          "target=bowl",
+          "x_m",
+          "y_m",
+          "yaw_rad"
+        ],
+        "intercept_only": false
+      },
+      "candidates": [
+        {
+          "parameters": {
+            "classifier__subsample": 0.75,
+            "classifier__reg_lambda": 3.0,
+            "classifier__reg_alpha": 0.0,
+            "classifier__n_estimators": 60,
+            "classifier__min_child_weight": 1,
+            "classifier__max_depth": 4,
+            "classifier__learning_rate": 0.03,
+            "classifier__colsample_bytree": 0.75
+          },
+          "mean_cv_log_loss": 0.5507418314615885,
+          "std_cv_score": 0.04412878336279165,
+          "rank": 7
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 0.75,
+            "classifier__reg_lambda": 1.0,
+            "classifier__reg_alpha": 0.1,
+            "classifier__n_estimators": 200,
+            "classifier__min_child_weight": 1,
+            "classifier__max_depth": 3,
+            "classifier__learning_rate": 0.08,
+            "classifier__colsample_bytree": 1.0
+          },
+          "mean_cv_log_loss": 0.5960942506790161,
+          "std_cv_score": 0.05666653473406656,
+          "rank": 12
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 0.75,
+            "classifier__reg_lambda": 1.0,
+            "classifier__reg_alpha": 0.0,
+            "classifier__n_estimators": 120,
+            "classifier__min_child_weight": 3,
+            "classifier__max_depth": 2,
+            "classifier__learning_rate": 0.15,
+            "classifier__colsample_bytree": 0.75
+          },
+          "mean_cv_log_loss": 0.5797344247500101,
+          "std_cv_score": 0.05567763459420645,
+          "rank": 11
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 0.75,
+            "classifier__reg_lambda": 1.0,
+            "classifier__reg_alpha": 0.1,
+            "classifier__n_estimators": 120,
+            "classifier__min_child_weight": 1,
+            "classifier__max_depth": 2,
+            "classifier__learning_rate": 0.03,
+            "classifier__colsample_bytree": 1.0
+          },
+          "mean_cv_log_loss": 0.5420618156592051,
+          "std_cv_score": 0.05912300999677812,
+          "rank": 6
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 0.75,
+            "classifier__reg_lambda": 3.0,
+            "classifier__reg_alpha": 1.0,
+            "classifier__n_estimators": 120,
+            "classifier__min_child_weight": 1,
+            "classifier__max_depth": 4,
+            "classifier__learning_rate": 0.15,
+            "classifier__colsample_bytree": 1.0
+          },
+          "mean_cv_log_loss": 0.5663085579872131,
+          "std_cv_score": 0.053453012695387804,
+          "rank": 10
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 0.75,
+            "classifier__reg_lambda": 10.0,
+            "classifier__reg_alpha": 0.1,
+            "classifier__n_estimators": 120,
+            "classifier__min_child_weight": 1,
+            "classifier__max_depth": 3,
+            "classifier__learning_rate": 0.15,
+            "classifier__colsample_bytree": 1.0
+          },
+          "mean_cv_log_loss": 0.5635815262794495,
+          "std_cv_score": 0.052899194711380326,
+          "rank": 9
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 1.0,
+            "classifier__reg_lambda": 3.0,
+            "classifier__reg_alpha": 0.0,
+            "classifier__n_estimators": 120,
+            "classifier__min_child_weight": 3,
+            "classifier__max_depth": 3,
+            "classifier__learning_rate": 0.08,
+            "classifier__colsample_bytree": 0.75
+          },
+          "mean_cv_log_loss": 0.5285448233286539,
+          "std_cv_score": 0.05854898306318326,
+          "rank": 3
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 0.75,
+            "classifier__reg_lambda": 10.0,
+            "classifier__reg_alpha": 0.1,
+            "classifier__n_estimators": 200,
+            "classifier__min_child_weight": 5,
+            "classifier__max_depth": 3,
+            "classifier__learning_rate": 0.08,
+            "classifier__colsample_bytree": 0.75
+          },
+          "mean_cv_log_loss": 0.537476102511088,
+          "std_cv_score": 0.08249707919629311,
+          "rank": 5
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 1.0,
+            "classifier__reg_lambda": 3.0,
+            "classifier__reg_alpha": 0.1,
+            "classifier__n_estimators": 200,
+            "classifier__min_child_weight": 1,
+            "classifier__max_depth": 2,
+            "classifier__learning_rate": 0.03,
+            "classifier__colsample_bytree": 0.75
+          },
+          "mean_cv_log_loss": 0.5332255363464355,
+          "std_cv_score": 0.06521587570212259,
+          "rank": 4
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 0.75,
+            "classifier__reg_lambda": 1.0,
+            "classifier__reg_alpha": 0.0,
+            "classifier__n_estimators": 200,
+            "classifier__min_child_weight": 5,
+            "classifier__max_depth": 4,
+            "classifier__learning_rate": 0.08,
+            "classifier__colsample_bytree": 1.0
+          },
+          "mean_cv_log_loss": 0.5524223844210306,
+          "std_cv_score": 0.07312701409211057,
+          "rank": 8
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 1.0,
+            "classifier__reg_lambda": 3.0,
+            "classifier__reg_alpha": 1.0,
+            "classifier__n_estimators": 200,
+            "classifier__min_child_weight": 1,
+            "classifier__max_depth": 4,
+            "classifier__learning_rate": 0.03,
+            "classifier__colsample_bytree": 1.0
+          },
+          "mean_cv_log_loss": 0.5264945725599924,
+          "std_cv_score": 0.03719263899807219,
+          "rank": 2
+        },
+        {
+          "parameters": {
+            "classifier__subsample": 1.0,
+            "classifier__reg_lambda": 3.0,
+            "classifier__reg_alpha": 1.0,
+            "classifier__n_estimators": 200,
+            "classifier__min_child_weight": 3,
+            "classifier__max_depth": 3,
+            "classifier__learning_rate": 0.03,
+            "classifier__colsample_bytree": 1.0
+          },
+          "mean_cv_log_loss": 0.5226110517978668,
+          "std_cv_score": 0.048810786898613207,
+          "rank": 1
+        }
+      ],
+      "test": {
+        "n_samples": 64,
+        "class_counts": {
+          "0": 46,
+          "1": 18
+        },
+        "decision_threshold": 0.5,
+        "log_loss": 0.36391283310380773,
+        "brier_score": 0.11712339415771647,
+        "balanced_accuracy": 0.7850241545893719,
+        "failure_recall": 0.8478260869565217,
+        "failure_precision": 0.8863636363636364,
+        "roc_auc": 0.9202898550724637,
+        "undefined_reasons": {},
+        "limitations": [
+          "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+        ],
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "upper_inclusive": false,
+            "count": 32,
+            "mean_predicted_probability": 0.07134910486638546,
+            "observed_success_rate": 0.03125,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "upper_inclusive": false,
+            "count": 8,
+            "mean_predicted_probability": 0.29467396438121796,
+            "observed_success_rate": 0.375,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "upper_inclusive": false,
+            "count": 8,
+            "mean_predicted_probability": 0.4956533834338188,
+            "observed_success_rate": 0.25,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "upper_inclusive": false,
+            "count": 16,
+            "mean_predicted_probability": 0.6754599660634995,
+            "observed_success_rate": 0.75,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "upper_inclusive": true,
+            "count": 0,
+            "mean_predicted_probability": null,
+            "observed_success_rate": null,
+            "undefined_reason": "No observations in this fixed uniform bin"
+          }
+        ]
+      }
+    },
+    "random_forest": {
+      "name": "random_forest",
+      "model_file": "models/random_forest.joblib",
+      "model_sha256": "202771240240b0afd42964d40090dcf081f14937aa44b68550e17e172421e18e",
+      "fit_wall_s": 1.9922074999776669,
+      "best_params": {
+        "classifier__n_estimators": 64,
+        "classifier__min_samples_leaf": 4,
+        "classifier__max_features": 0.75,
+        "classifier__max_depth": null
+      },
+      "best_cv_log_loss": 0.5174375034923999,
+      "validation": {
+        "n_samples": 64,
+        "class_counts": {
+          "0": 47,
+          "1": 17
+        },
+        "decision_threshold": 0.5,
+        "log_loss": 0.37054017835577263,
+        "brier_score": 0.11544479315192141,
+        "balanced_accuracy": 0.6176470588235294,
+        "failure_recall": 1.0,
+        "failure_precision": 0.7833333333333333,
+        "roc_auc": 0.9643304130162703,
+        "undefined_reasons": {},
+        "limitations": [
+          "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+        ],
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "upper_inclusive": false,
+            "count": 30,
+            "mean_predicted_probability": 0.10585096870487634,
+            "observed_success_rate": 0.0,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "upper_inclusive": false,
+            "count": 18,
+            "mean_predicted_probability": 0.2995956358665176,
+            "observed_success_rate": 0.16666666666666666,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "upper_inclusive": false,
+            "count": 16,
+            "mean_predicted_probability": 0.4653136935419169,
+            "observed_success_rate": 0.875,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "upper_inclusive": false,
+            "count": 0,
+            "mean_predicted_probability": null,
+            "observed_success_rate": null,
+            "undefined_reason": "No observations in this fixed uniform bin"
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "upper_inclusive": true,
+            "count": 0,
+            "mean_predicted_probability": null,
+            "observed_success_rate": null,
+            "undefined_reason": "No observations in this fixed uniform bin"
+          }
+        ]
+      },
+      "feature_selection": {
+        "selected_feature_names": [
+          "close_trigger_m",
+          "closing_force_n",
+          "descent_speed_m_s",
+          "mass_kg",
+          "opening_m",
+          "scale",
+          "sliding_friction",
+          "target=bottle",
+          "target=bowl",
+          "x_m",
+          "y_m",
+          "yaw_rad"
+        ],
+        "intercept_only": false
+      },
+      "candidates": [
+        {
+          "parameters": {
+            "classifier__n_estimators": 256,
+            "classifier__min_samples_leaf": 2,
+            "classifier__max_features": "sqrt",
+            "classifier__max_depth": 6
+          },
+          "mean_cv_log_loss": 0.5304293384858464,
+          "std_cv_score": 0.040414063482017225,
+          "rank": 3
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 64,
+            "classifier__min_samples_leaf": 1,
+            "classifier__max_features": "sqrt",
+            "classifier__max_depth": null
+          },
+          "mean_cv_log_loss": 0.7033895289454719,
+          "std_cv_score": 0.2831690518431852,
+          "rank": 12
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 128,
+            "classifier__min_samples_leaf": 2,
+            "classifier__max_features": 0.75,
+            "classifier__max_depth": null
+          },
+          "mean_cv_log_loss": 0.6511710556303764,
+          "std_cv_score": 0.2666346940299375,
+          "rank": 11
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 128,
+            "classifier__min_samples_leaf": 1,
+            "classifier__max_features": null,
+            "classifier__max_depth": 6
+          },
+          "mean_cv_log_loss": 0.538936982224778,
+          "std_cv_score": 0.06337100634443489,
+          "rank": 8
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 128,
+            "classifier__min_samples_leaf": 4,
+            "classifier__max_features": 0.75,
+            "classifier__max_depth": 3
+          },
+          "mean_cv_log_loss": 0.5507642403481552,
+          "std_cv_score": 0.08259505763599402,
+          "rank": 9
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 256,
+            "classifier__min_samples_leaf": 1,
+            "classifier__max_features": null,
+            "classifier__max_depth": 6
+          },
+          "mean_cv_log_loss": 0.5388011202525109,
+          "std_cv_score": 0.07650573284365522,
+          "rank": 7
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 128,
+            "classifier__min_samples_leaf": 4,
+            "classifier__max_features": null,
+            "classifier__max_depth": 3
+          },
+          "mean_cv_log_loss": 0.5656821195114161,
+          "std_cv_score": 0.10114448856112075,
+          "rank": 10
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 256,
+            "classifier__min_samples_leaf": 4,
+            "classifier__max_features": null,
+            "classifier__max_depth": null
+          },
+          "mean_cv_log_loss": 0.5253720019070051,
+          "std_cv_score": 0.09021392922898944,
+          "rank": 2
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 64,
+            "classifier__min_samples_leaf": 2,
+            "classifier__max_features": "sqrt",
+            "classifier__max_depth": 6
+          },
+          "mean_cv_log_loss": 0.5309569341853025,
+          "std_cv_score": 0.033901254007701324,
+          "rank": 5
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 64,
+            "classifier__min_samples_leaf": 4,
+            "classifier__max_features": 0.75,
+            "classifier__max_depth": null
+          },
+          "mean_cv_log_loss": 0.5174375034923999,
+          "std_cv_score": 0.0777405133476363,
+          "rank": 1
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 128,
+            "classifier__min_samples_leaf": 1,
+            "classifier__max_features": "sqrt",
+            "classifier__max_depth": 6
+          },
+          "mean_cv_log_loss": 0.5309377355710662,
+          "std_cv_score": 0.04564538326998034,
+          "rank": 4
+        },
+        {
+          "parameters": {
+            "classifier__n_estimators": 64,
+            "classifier__min_samples_leaf": 1,
+            "classifier__max_features": "sqrt",
+            "classifier__max_depth": 6
+          },
+          "mean_cv_log_loss": 0.5352842326642487,
+          "std_cv_score": 0.04778322154335369,
+          "rank": 6
+        }
+      ],
+      "test": {
+        "n_samples": 64,
+        "class_counts": {
+          "0": 46,
+          "1": 18
+        },
+        "decision_threshold": 0.5,
+        "log_loss": 0.3211613937616335,
+        "brier_score": 0.10494371445066981,
+        "balanced_accuracy": 0.7898550724637681,
+        "failure_recall": 0.9130434782608695,
+        "failure_precision": 0.875,
+        "roc_auc": 0.9251207729468599,
+        "undefined_reasons": {},
+        "limitations": [
+          "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+        ],
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "upper_inclusive": false,
+            "count": 36,
+            "mean_predicted_probability": 0.0548083619698203,
+            "observed_success_rate": 0.05555555555555555,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "upper_inclusive": false,
+            "count": 6,
+            "mean_predicted_probability": 0.34465717792198053,
+            "observed_success_rate": 0.16666666666666666,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "upper_inclusive": false,
+            "count": 8,
+            "mean_predicted_probability": 0.4583649505211582,
+            "observed_success_rate": 0.625,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "upper_inclusive": false,
+            "count": 12,
+            "mean_predicted_probability": 0.7347429439146489,
+            "observed_success_rate": 0.6666666666666666,
+            "undefined_reason": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "upper_inclusive": true,
+            "count": 2,
+            "mean_predicted_probability": 0.8542933268068199,
+            "observed_success_rate": 1.0,
+            "undefined_reason": null
+          }
+        ]
+      }
+    }
+  },
+  "constant_predictor": {
+    "training_success_prevalence": 0.4597156398104265,
+    "validation": {
+      "n_samples": 64,
+      "class_counts": {
+        "0": 47,
+        "1": 17
+      },
+      "decision_threshold": 0.5,
+      "log_loss": 0.6585547942713978,
+      "brier_score": 0.23273953583702073,
+      "balanced_accuracy": 0.5,
+      "failure_recall": 1.0,
+      "failure_precision": 0.734375,
+      "roc_auc": 0.5,
+      "undefined_reasons": {},
+      "limitations": [
+        "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "upper_inclusive": false,
+          "count": 64,
+          "mean_predicted_probability": 0.4597156398104265,
+          "observed_success_rate": 0.265625,
+          "undefined_reason": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "upper_inclusive": true,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        }
+      ]
+    },
+    "test": {
+      "n_samples": 64,
+      "class_counts": {
+        "0": 46,
+        "1": 18
+      },
+      "decision_threshold": 0.5,
+      "log_loss": 0.6610780359884465,
+      "brier_score": 0.2339984220929449,
+      "balanced_accuracy": 0.5,
+      "failure_recall": 1.0,
+      "failure_precision": 0.71875,
+      "roc_auc": 0.5,
+      "undefined_reasons": {},
+      "limitations": [
+        "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "upper_inclusive": false,
+          "count": 64,
+          "mean_predicted_probability": 0.4597156398104265,
+          "observed_success_rate": 0.28125,
+          "undefined_reason": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "upper_inclusive": true,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        }
+      ]
+    }
+  },
+  "selection": {
+    "selected_model": "xgboost",
+    "criterion": "minimum validation log loss, model-name tie break",
+    "test_used_for_selection": false
+  },
+  "partitions": {
+    "train": {
+      "rows": 422,
+      "groups": 75,
+      "successes": 194,
+      "failures": 228
+    },
+    "validation": {
+      "rows": 64,
+      "groups": 8,
+      "successes": 17,
+      "failures": 47
+    },
+    "test": {
+      "rows": 64,
+      "groups": 8,
+      "successes": 18,
+      "failures": 46
+    }
+  },
+  "limits": [
+    "Two existing geometry families with rim/neck-specific profiles; not unseen-object or real-robot generalization",
+    "Strict contact labels can count contact loss without a verified object drop",
+    "The trial budget establishes a runnable comparison, not guaranteed sample sufficiency or model improvement",
+    "No probability calibration is fitted in this first comparison; calibration is measured and reported"
+  ]
+}

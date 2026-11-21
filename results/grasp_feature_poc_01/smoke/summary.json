@@ -1,0 +1,16 @@
+{
+  "attempted": 2,
+  "labelled": 2,
+  "successes": 1,
+  "failures": 1,
+  "invalid_initial_states": 0,
+  "failure_kinds": {
+    "grasp_contact_or_retention": 1
+  },
+  "failure_reasons": {
+    "酒瓶掉落、滑移或未达到要求的离桌高度": 1
+  },
+  "numerical_warning_trials": 0,
+  "unexpected_contact_trials": 0,
+  "wall_s": 3.3323036250076257
+}

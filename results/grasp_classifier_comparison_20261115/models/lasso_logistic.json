@@ -1,0 +1,227 @@
+{
+  "name": "lasso_logistic",
+  "model_file": "models/lasso_logistic.joblib",
+  "model_sha256": "772ebc9ecd3e47dc3d7ee5f5cad134a70a039f1a17e33fb74b14a8d3b4f36318",
+  "fit_wall_s": 0.14202879194635898,
+  "best_params": {
+    "selector__estimator__alpha": 0.1,
+    "classifier__C": 0.1
+  },
+  "best_cv_log_loss": 0.5202022304721557,
+  "validation": {
+    "n_samples": 64,
+    "class_counts": {
+      "0": 47,
+      "1": 17
+    },
+    "decision_threshold": 0.5,
+    "log_loss": 0.3496494968246061,
+    "brier_score": 0.10209721080001818,
+    "balanced_accuracy": 0.9067584480600751,
+    "failure_recall": 0.8723404255319149,
+    "failure_precision": 0.9761904761904762,
+    "roc_auc": 0.9518147684605757,
+    "undefined_reasons": {},
+    "limitations": [
+      "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+    ],
+    "calibration_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "upper_inclusive": false,
+        "count": 22,
+        "mean_predicted_probability": 0.12842968729106685,
+        "observed_success_rate": 0.0,
+        "undefined_reason": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "upper_inclusive": false,
+        "count": 18,
+        "mean_predicted_probability": 0.2960270525374564,
+        "observed_success_rate": 0.05555555555555555,
+        "undefined_reason": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "upper_inclusive": false,
+        "count": 6,
+        "mean_predicted_probability": 0.5090808173402143,
+        "observed_success_rate": 0.5,
+        "undefined_reason": null
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "upper_inclusive": false,
+        "count": 10,
+        "mean_predicted_probability": 0.7182995150505687,
+        "observed_success_rate": 0.6,
+        "undefined_reason": null
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "upper_inclusive": true,
+        "count": 8,
+        "mean_predicted_probability": 0.8989283660103126,
+        "observed_success_rate": 0.875,
+        "undefined_reason": null
+      }
+    ]
+  },
+  "feature_selection": {
+    "selection_method": "squared_loss_lasso",
+    "encoded_feature_names": [
+      "close_trigger_m",
+      "closing_force_n",
+      "descent_speed_m_s",
+      "mass_kg",
+      "opening_m",
+      "scale",
+      "sliding_friction",
+      "target=bottle",
+      "target=bowl",
+      "x_m",
+      "y_m",
+      "yaw_rad"
+    ],
+    "support_mask": [
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "selected_feature_names": [
+      "close_trigger_m",
+      "mass_kg",
+      "sliding_friction"
+    ],
+    "n_features_selected": 3,
+    "intercept_only": false,
+    "lasso_alpha": 0.1,
+    "logistic_penalty": "l2",
+    "logistic_C": 0.1
+  },
+  "candidates": [
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.001,
+        "classifier__C": 0.1
+      },
+      "mean_cv_log_loss": 0.5383474102265774,
+      "std_cv_score": 0.049715587283070246,
+      "rank": 3
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.3,
+        "classifier__C": 30.0
+      },
+      "mean_cv_log_loss": 0.6923390038989754,
+      "std_cv_score": 0.006805757952523858,
+      "rank": 10
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.001,
+        "classifier__C": 3.0
+      },
+      "mean_cv_log_loss": 0.5728810859101365,
+      "std_cv_score": 0.06457439253856884,
+      "rank": 7
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.003,
+        "classifier__C": 1.0
+      },
+      "mean_cv_log_loss": 0.5671793331380609,
+      "std_cv_score": 0.0631080232065552,
+      "rank": 6
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 0.01
+      },
+      "mean_cv_log_loss": 0.583041136882673,
+      "std_cv_score": 0.03825971836430018,
+      "rank": 8
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 0.03
+      },
+      "mean_cv_log_loss": 0.5383327464148137,
+      "std_cv_score": 0.05735026733799622,
+      "rank": 2
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.003,
+        "classifier__C": 0.3
+      },
+      "mean_cv_log_loss": 0.55222573787283,
+      "std_cv_score": 0.05712448291654148,
+      "rank": 4
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.01,
+        "classifier__C": 0.01
+      },
+      "mean_cv_log_loss": 0.5875024185406926,
+      "std_cv_score": 0.025860926008904953,
+      "rank": 9
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 1.0,
+        "classifier__C": 0.03
+      },
+      "mean_cv_log_loss": 0.6923390038989754,
+      "std_cv_score": 0.006805757952523858,
+      "rank": 10
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.01,
+        "classifier__C": 0.3
+      },
+      "mean_cv_log_loss": 0.5549687727646556,
+      "std_cv_score": 0.053882923628974115,
+      "rank": 5
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 0.1,
+        "classifier__C": 0.1
+      },
+      "mean_cv_log_loss": 0.5202022304721557,
+      "std_cv_score": 0.0749135334688554,
+      "rank": 1
+    },
+    {
+      "parameters": {
+        "selector__estimator__alpha": 1.0,
+        "classifier__C": 3.0
+      },
+      "mean_cv_log_loss": 0.6923390038989754,
+      "std_cv_score": 0.006805757952523858,
+      "rank": 10
+    }
+  ]
+}

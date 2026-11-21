@@ -1,0 +1,183 @@
+{
+  "trial_id": "bowl_10.control_3.draw_0",
+  "settings": {
+    "target": "bowl",
+    "scale": 0.8,
+    "mass_kg": 0.45,
+    "sliding_friction": 0.8,
+    "x_m": 0.5141926311604796,
+    "y_m": -0.08065364594525559,
+    "yaw_rad": -0.0535545107202238,
+    "opening_m": 0.04,
+    "closing_force_n": 4.0,
+    "close_trigger_m": 0.02,
+    "descent_speed_m_s": 0.04,
+    "bias_x_m": -0.001620027790915155,
+    "bias_y_m": 0.0025974517748176247,
+    "bias_z_m": -0.0034516794014561
+  },
+  "metadata": {
+    "design": "prospective_classifier_comparison",
+    "condition_id": "bowl_10",
+    "split": "train",
+    "control_id": 3,
+    "nuisance_seed": 6664,
+    "error_observability": "Latent execution uncertainty; excluded from predictive inputs"
+  },
+  "variant_features": {
+    "compiled_pre_mass_override_kg": 0.023500688210901406,
+    "actual_mass_kg": 0.45,
+    "actual_principal_inertia_kg_m2": [
+      0.00034466479805995553,
+      0.0002131326076214112,
+      0.00021081238608502
+    ],
+    "collision_world_aabb_size_m": [
+      0.0857460523919969,
+      0.08582803964742958,
+      0.04043354281879019
+    ],
+    "object_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "finger_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "grasp_offset_body_m": [
+      -0.001620027790915155,
+      -0.035002548225182374,
+      0.030148320598543905
+    ]
+  },
+  "trial_status": "completed",
+  "success": false,
+  "failure_kind": "unplanned_contact",
+  "failure_reason": "抬升过程中失去双侧夹持接触",
+  "last_active_phase": "lift",
+  "phase_order": [
+    "idle",
+    "prepare",
+    "approach",
+    "descend",
+    "close",
+    "lift",
+    "failed"
+  ],
+  "phase_first_sim_s": {
+    "idle": null,
+    "prepare": 0.0,
+    "approach": 0.37800000000000034,
+    "descend": 6.515999999999393,
+    "close": 14.014000000001683,
+    "lift": 14.114000000001717,
+    "failed": 14.266000000001767
+  },
+  "execution_sim_s": 14.266000000001767,
+  "verified_hold_s": 0.0,
+  "initial_state_fingerprint": "d5e9382c4b71115db6e6f32c7f65448c62cf4105ccd3880eb096896156143752",
+  "initial_pose": {
+    "name": "bowl_object",
+    "position_m": [
+      0.5141926163492582,
+      -0.08065366709264535,
+      0.7187249384772653
+    ],
+    "quaternion_wxyz": [
+      0.999641510688405,
+      -6.4982511725071165e-06,
+      4.297204042154704e-06,
+      -0.026774055499890703
+    ]
+  },
+  "final_pose": {
+    "name": "bowl_object",
+    "position_m": [
+      0.5146560674656299,
+      -0.07945321112693227,
+      0.7294566394891836
+    ],
+    "quaternion_wxyz": [
+      0.9590692277311864,
+      0.27996705756816237,
+      -0.011956330667460508,
+      -0.04076406815692221
+    ]
+  },
+  "postconditions": {
+    "bilateral_grip": false,
+    "clear_of_table": false,
+    "target_lifted": false,
+    "relative_pose_stable": false,
+    "verified_hold": false
+  },
+  "actual_finger_target_sliding_frictions": [
+    0.8
+  ],
+  "collisions": {
+    "episodes": 1,
+    "duration_s": 0.5000000000000003,
+    "peak_force_n": 3.7175998464959727,
+    "pairs": [
+      {
+        "body_a": "bowl_object",
+        "body_b": "robot_hand",
+        "episodes": 1,
+        "duration_s": 0.5000000000000003,
+        "peak_force_n": 3.7175998464959727
+      }
+    ],
+    "force_threshold_n": 0.1
+  },
+  "warnings": [],
+  "wall_s": 1.9861909170285799
+}

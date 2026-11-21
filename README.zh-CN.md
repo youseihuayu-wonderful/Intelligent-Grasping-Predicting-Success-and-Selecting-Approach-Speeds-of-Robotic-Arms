@@ -4,6 +4,64 @@
 
 历史实验名称、GPT 模型引用与录像保留原貌以供追溯；改名不改变已有实验结果。
 
+## 从这里开始：共享仿真数据与基础分类器
+
+已有带标签的数据可以直接用于模型开发，同学不需要先运行仿真器。
+
+- **[下载 CSV](https://raw.githubusercontent.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms/main/results/grasp_classifier_comparison_20261115/dataset.csv)** · [浏览数据表](results/grasp_classifier_comparison_20261115/dataset.csv)
+- [固定数据划分](results/grasp_classifier_comparison_20261115/split_manifest.json) · [共享交叉验证折](results/grasp_classifier_comparison_20261115/cv_manifest.json)
+- [新采集的原始物理试验](results/grasp_classifier_comparison_20261115/collection/trials.json) · [历史训练数据来源](results/grasp_classifier_comparison_20261115/data_sources.json) · [数据审计](results/grasp_classifier_comparison_20261115/data_audit.json)
+
+### 数据与特征约定
+
+每行是一次实际执行的 MuJoCo 抓取试验，不是视频帧，也不是人工编造的标签。预测标签为 **`success`**：`1` 表示通过抓取验收，`0` 表示失败。成功需满足已有双侧接触、净空、抬升、稳定与连续保持两秒的判据；精确重复及数值警告试验不进入建模表。**`target` 是物体几何类别，不是预测标签。**
+
+| 划分 | 记录数 | 条件组数 | 成功 | 失败 |
+| --- | ---: | ---: | ---: | ---: |
+| 训练集 | 422 | 75 | 194 | 228 |
+| 验证集 | 64 | 8 | 17 | 47 |
+| 历史测试集 | 64 | 8 | 18 | 46 |
+
+十一项输入字段：
+
+| CSV 字段 | 含义与单位 |
+| --- | --- |
+| `target` | 几何类别：`bowl` 或 `bottle` |
+| `scale` | 物体整体尺寸缩放倍数，无量纲 |
+| `mass_kg` | 仿真中的物体质量，kg |
+| `sliding_friction` | 仿真中的滑动摩擦系数，无量纲 |
+| `x_m`, `y_m`, `yaw_rad` | 物体初始位置与朝向，m、m、弧度 |
+| `opening_m` | 夹爪初始开口设置，m |
+| `closing_force_n` | 腱驱动力指令，不是每指实测法向力，N |
+| `close_trigger_m` | 开始闭合夹爪的剩余距离阈值，m |
+| `descent_speed_m_s` | 下降轨迹速度设置，不是恒定实测 TCP 速度，m/s |
+
+有记录时使用静置后的初始位姿，缺少该记录的历史行使用明确的名义设置。质量和摩擦为仿真真值，不是视觉估计。两种几何类别分别使用现有碗沿／瓶颈抓取配置，不代表任意未见物体。
+
+**不要**把 `row_index`、`trial_id`、`group_id`、`split`、`success`、`execution_sim_s` 或 `evidence_source` 输入分类器。使用已有划分与分组交叉验证，不要按行随机重分；同一条件内的配对试验相互关联。归档中的 `evidence_source` 路径指向原采集电脑，CSV 训练不会打开这些路径。
+
+### 用现有 CSV 运行 Logistic Regression
+
+使用 Python 3.12 与 [uv](https://docs.astral.sh/uv/)，从新克隆的仓库开始：
+
+```sh
+git clone https://github.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms.git intelligent-grasping
+cd intelligent-grasping
+uv sync --locked
+uv run --locked python run_grasp_classifiers.py \
+  --phase fit-csv --model logistic \
+  --dataset results/grasp_classifier_comparison_20261115/dataset.csv \
+  --output results/team_logistic
+```
+
+输出目录必须尚不存在。该命令**不启动仿真、渲染、GPT 请求或付费服务**。预处理在共享的三折分组交叉验证内拟合，搜索 12 组超参数；保存完整模型、交叉验证清单、原 CSV 校验值，以及包含常数概率基线的 `validation_report.json`，**不生成测试分数**。
+
+分别研究其他路线时，把 `--model logistic` 改为 `lasso_logistic`、`random_forest` 或 `xgboost`，并使用不同输出目录。这里 LASSO 是平方损失的特征选择，之后接 L2 Logistic Regression，不是独立分类器。统一数据版本、折划分、随机种子、指标和搜索预算。
+
+**已验证的基础运行：**[CSV 版 Logistic Regression 输出](results/grasp_classifier_csv_baseline_20261121/) · [验证记录](results/grasp_classifier_csv_baseline_20261121/verification.json)。44 项分类器回归测试通过，包含修改测试特征和标签不能影响模型验证预测的检查。当前 Apple Silicon 环境训练时仍出现 NumPy 矩阵运算警告，没有隐藏；保存的系数与验证概率均有限，独立标量点积计算的概率差异不超过 1.12e-16。这不证明优化器每个中间步骤均不受影响，警告仍作为已知限制记录。
+
+**评价边界：**下方历史测试结果已经被查看，并用于后续诊断。保留它们作为历史结果；若修改方法或候选配置，需要新采集的独立留出条件进行最终验证。分类器能训练运行，不等于已经改善物理抓取成功率或耗时。
+
 ## 中英文阅读与界面切换
 
 仓库首页默认显示[完整英文说明](README.md)，本文件保留完整中文版；GitHub 文档通过上方链接切换，不运行页面脚本。实时页面提供全局“English / 中文”切换，覆盖收纳和分拣界面；首次打开默认英语，偏好仅保存在当前浏览器的本地存储（`gpt-ui-language`），不上传到服务端。
@@ -92,6 +150,65 @@ uv run --locked python run_grasp_learning.py --output results/grasp_level1_repro
 输出目录必须不存在。入口为 [`run_grasp_learning.py`](run_grasp_learning.py)，物理标签采集器为 [`grasp_trial.py`](grasp_trial.py)，模型与选速规则为 [`grasp_speed_model.py`](grasp_speed_model.py)。每批保留协议、源码／资产指纹、模型、逐次物理轨迹、预测与真实结果；无效初态不当作失败，内部／数值异常中止并保留当前尝试信息，不覆盖旧证据。
 
 原实时页面仍由 `server.py` 提供，可显示黑碗／抽屉工位；页面不会自动加载这些随机森林建议。本轮模型执行走上述无画面批量入口，不把旧演示视频当作学习实验。
+
+## 多特征分类器对比：Logistic Regression、LASSO、Random Forest 与 XGBoost
+
+这是独立的监督学习实验，不是 GPT／VLA 控制器，也不是演示录像回放。四个并行智能体分别实现公共数据协议、线性模型、随机森林与提升树模型。集成入口为 [`run_grasp_classifiers.py`](run_grasp_classifiers.py)，[`collect_grasp_classifiers.py`](collect_grasp_classifiers.py) 在观察标签前冻结物理试验条件。
+
+[本批记录](results/grasp_classifier_comparison_20261115/)新增 **384 次真实 MuJoCo 试验：123 次成功、261 次失败**。三进程并行采集耗时 **250.6 墙钟秒**，单个工作进程中的试验平均耗时 **1.93 秒**；并行批次吞吐不能当作单次延迟。全部正标签满足独立连续两秒保持规则，采集没有数值警告。负标签包括接触／保持失败、运动／准备失败和非计划接触，不能全部解释成物体掉落。
+
+### 公共数据与防泄漏措施
+
+- 黑碗与酒瓶各 24 组物体／初态条件，每组四个完整控制配置、两次配对隐含误差。采集前固定 32 组训练、8 组验证、8 组测试。
+- 已经分析过的历史探索数据只补充训练集。审计去除 12 次完全重复试验后，共有 **422 条训练、64 条验证、64 条测试记录**。测试集只有八组条件，不是 64 个独立物体。
+- 输入包括几何类别、尺寸缩放、质量、滑动摩擦、静置后 x/y/yaw、开口、闭合腱力指令、闭合触发高度和下降速度设置。质量／摩擦来自仿真真值。隐含 XYZ 执行误差、编号、种子、最终位姿、耗时、接触诊断及轨迹均不作为预测输入。
+- 所有模型共用三折分组交叉验证，每条路线搜索 12 组超参数，以 log loss 评分。编码、标准化和 LASSO 筛选都在训练折内部拟合。经典平方损失 LASSO 仅用于其 Logistic 分支，不强制树模型使用该子集。
+- 常数基线采用训练集成功比例。四条学习路线为全特征 L2 Logistic Regression、LASSO＋L2 Logistic Regression、Random Forest 和 CPU histogram XGBoost。本批评估原始概率的校准情况，没有拟合校准映射。
+
+### 冻结测试结果
+
+| 模型 | 测试 log loss，越低越好 | 测试 Brier score，越低越好 | Balanced accuracy |
+| --- | --- | --- | --- |
+| 训练成功比例常数基线 | 0.6611 | 0.2340 | 0.5000 |
+| 全特征 Logistic Regression | 0.4041 | 0.1308 | 0.8019 |
+| LASSO＋Logistic Regression | 0.4432 | 0.1454 | 0.7633 |
+| Random Forest | 0.3212 | 0.1049 | 0.7899 |
+| XGBoost | 0.3639 | 0.1171 | 0.7850 |
+
+**在查看测试结果前，按验证集 log loss 选中 XGBoost（0.3209）。** 随后的测试集上随机森林 log loss 最低，但不能据此换模型或继续调参。LASSO 本次保留闭合触发高度、质量、摩擦三个输入，测试表现却不如全特征 Logistic；系数为零不能证明某特征没有物理作用。
+
+### 新误差下的真实物理执行
+
+每种方法均在同样八组留出条件、每组两次新配对误差下评估。因为不同方法可能选择同一配置，80 条方法结果实际关联 **30 次唯一的真实 MuJoCo 执行**，不是 80 次独立物理试验。
+
+| 方法 | 成功／尝试 | 成功任务平均耗时，仿真秒 |
+| --- | --- | --- |
+| 固定基线 | 5 / 16 | 12.345 |
+| 全特征 Logistic Regression | 5 / 16 | 13.218 |
+| LASSO＋Logistic Regression | 5 / 16 | 12.345 |
+| Random Forest | 6 / 16 | 12.300 |
+| 按验证集选中的 XGBoost | 5 / 16 | 13.218 |
+
+**本批选中的 XGBoost 没有提高相对固定基线的成功率。** 随机森林只多成功一次，不足以证明可重复优势。成功任务平均耗时对应的成功尝试可能不同，不能单独当作提速证据。本轮证明数据、训练、预测、执行流程可以运行，不代表已经证明性能提升。集成分类器回归测试共 41 项通过。
+
+
+### 复现与证据
+
+```sh
+uv sync --locked
+uv run --locked python run_grasp_classifiers.py \
+  --output results/grasp_classifier_reproduction \
+  --workers 3 --model-workers 4 --n-iter 12
+```
+
+输出目录必须不存在。该命令采集新物理标签、并行训练四条路线、先保存验证集选型，再评估冻结测试集，最后用新的配对误差实际执行模型建议与固定基线。建议选择的是完整控制配置，不只是速度；执行前先保存预测。不同方法若选择相同动作与误差，只运行一次物理试验并明确关联，不冒充独立重复。入口无画面运行，不修改现有实时页面或录像。macOS 的 XGBoost 另需原生 OpenMP（未安装时执行 `brew install libomp`）。
+
+关键文件：[协议](results/grasp_classifier_comparison_20261115/protocol.json)、[数据审计](results/grasp_classifier_comparison_20261115/data_audit.json)、[数据表](results/grasp_classifier_comparison_20261115/dataset.csv)、[划分清单](results/grasp_classifier_comparison_20261115/split_manifest.json)、[交叉验证分组](results/grasp_classifier_comparison_20261115/cv_manifest.json)、[模型比较](results/grasp_classifier_comparison_20261115/comparison.json)、[执行前预测](results/grasp_classifier_comparison_20261115/recommendations_before_execution.json)、[物理执行比较](results/grasp_classifier_comparison_20261115/execution_comparison.json)。模型、全部调参候选、逐次 JSON 和压缩物理轨迹均保留。
+
+首次训练因为概率和校验错误地假设 float64 精度，误拒绝了合法的 XGBoost float32 输出；现已按来源类型精度校验，没有裁剪或重新归一化概率。失败尝试已归档，[数值诊断](results/grasp_classifier_comparison_20261115/numeric_diagnostics.json)保留实测证据。固定版本的 Apple Silicon NumPy 在并行线性拟合中另有上游同类矩阵警告，未被屏蔽；保存模型输出均有限，独立矩阵运算比对误差不超过 4.45e-16。这些工程现象不与物理负标签混算。
+
+结论仅限现有两类几何、特定抓取配置和少量留出条件；本批不证明未见物体或真机泛化、全局最优配置、安全保证或可重复的提速收益。
+
 
 ## 彩色碗杯分拣：GPT 提案与固定规则对照
 

@@ -1,0 +1,152 @@
+{
+  "trial_id": "bottle_13.control_3.draw_1",
+  "settings": {
+    "target": "bottle",
+    "scale": 1.2,
+    "mass_kg": 0.18,
+    "sliding_friction": 0.2,
+    "x_m": 0.5162246104308215,
+    "y_m": -0.07388874995292943,
+    "yaw_rad": 0.14834592918769265,
+    "opening_m": 0.04,
+    "closing_force_n": 8.0,
+    "close_trigger_m": 0.01,
+    "descent_speed_m_s": 0.1,
+    "bias_x_m": -0.0037787285203207625,
+    "bias_y_m": 0.0005984788416557906,
+    "bias_z_m": 0.003985933736479529
+  },
+  "metadata": {
+    "design": "prospective_classifier_comparison",
+    "condition_id": "bottle_13",
+    "split": "train",
+    "control_id": 3,
+    "nuisance_seed": 6719,
+    "error_observability": "Latent execution uncertainty; excluded from predictive inputs"
+  },
+  "variant_features": {
+    "compiled_pre_mass_override_kg": 0.08798335542383671,
+    "actual_mass_kg": 0.18000000000000002,
+    "actual_principal_inertia_kg_m2": [
+      0.0002939689195546549,
+      0.0002920860724436348,
+      4.803756575899903e-05
+    ],
+    "collision_world_aabb_size_m": [
+      0.05268484012719621,
+      0.05371008409925097,
+      0.18831600000000004
+    ],
+    "object_collision_sliding_friction": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "finger_collision_sliding_friction": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "grasp_offset_body_m": [
+      -0.0037787285203207625,
+      0.0005984788416557906,
+      0.17798593373647953
+    ]
+  },
+  "trial_status": "completed",
+  "success": false,
+  "failure_kind": "motion_or_preparation",
+  "failure_reason": "机械臂未在时限内到达目标位姿",
+  "last_active_phase": "descend",
+  "phase_order": [
+    "idle",
+    "prepare",
+    "approach",
+    "descend",
+    "failed"
+  ],
+  "phase_first_sim_s": {
+    "idle": null,
+    "prepare": 0.0,
+    "approach": 0.37800000000000034,
+    "descend": 3.8799999999996837,
+    "failed": 8.88399999999997
+  },
+  "execution_sim_s": 8.88399999999997,
+  "verified_hold_s": 0.0,
+  "initial_state_fingerprint": "272bffe2e4c560b1cc2461e06bd3cc3f6ff8b05cc7fe2c44abe176a223692f8c",
+  "initial_pose": {
+    "name": "bottle_object",
+    "position_m": [
+      0.5162245978944061,
+      -0.07388870500448701,
+      0.718652754572195
+    ],
+    "quaternion_wxyz": [
+      0.9972504465055779,
+      1.303979709716775e-05,
+      2.613894736557216e-06,
+      0.07410497127424795
+    ]
+  },
+  "final_pose": {
+    "name": "bottle_object",
+    "position_m": [
+      0.5156332063931292,
+      -0.07550949072365588,
+      0.717855883053589
+    ],
+    "quaternion_wxyz": [
+      0.9999457871268714,
+      -0.0040472388025992925,
+      0.005093739973544708,
+      -0.00812997406991635
+    ]
+  },
+  "postconditions": {
+    "bilateral_grip": true,
+    "clear_of_table": false,
+    "target_lifted": false,
+    "relative_pose_stable": false,
+    "verified_hold": false
+  },
+  "actual_finger_target_sliding_frictions": [
+    0.2
+  ],
+  "collisions": {
+    "episodes": 0,
+    "duration_s": 0.0,
+    "peak_force_n": 0.0,
+    "pairs": [],
+    "force_threshold_n": 0.1
+  },
+  "warnings": [],
+  "wall_s": 2.0408907090313733
+}

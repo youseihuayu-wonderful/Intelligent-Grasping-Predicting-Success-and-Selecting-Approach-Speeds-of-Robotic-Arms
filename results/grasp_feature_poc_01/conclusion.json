@@ -1,0 +1,35 @@
+{
+  "research_question": "Can a supervised model predict conditional grasp success from object geometry/properties, initial state and candidate grasp-control settings, under a declared distribution of execution uncertainty?",
+  "decision": "Positive feasibility evidence for a multi-feature grasp-outcome modelling problem, not proof of model generalization or superiority to simple physical rules.",
+  "completed_physical_trials": 180,
+  "successes": 116,
+  "failures": 64,
+  "invalid_initial_states": 0,
+  "numerical_warning_trials": 0,
+  "workspace_obstacle_contact_trials": 0,
+  "manipulated_numeric_factors": ["uniform size scale", "mass", "object/fingertip sliding friction", "world x", "world y", "yaw", "body-frame grasp-point bias x", "body-frame grasp-point bias y", "body-frame grasp-point bias z", "initial opening", "closing tendon-force command", "closure-trigger height", "descent-speed setting"],
+  "geometry_families": ["existing black-bowl collision geometry with rim grasp", "existing wine-bottle collision geometry with neck grasp"],
+  "controlled_setup_changes_from_original_demo": [
+    "Both target assets use the same nominal workspace position; storage furniture moved outside the workspace and the other object relocated.",
+    "Real collision and visual geometry uniformly scaled before compilation. Mass controlled separately, with inertia scaled consistently.",
+    "Sliding friction set on both target and finger contact geometries; torsional/rolling friction fixed to 0.005/0.0001, unlike the original asset settings.",
+    "Controller state machine unchanged; an experiment-local subclass exposes the closing tendon-force command. No original project source edited."
+  ],
+  "strong_evidence": [
+    "Paired XYZ grasp-error draws uniform in [-6,+6] mm, ten draws per configuration and object: bowl 60 g / force command 4 N = 10/10; bowl 450 g / 4 N = 0/10; bowl 450 g / 8 N = 10/10.",
+    "With the SAME error draws: bottle 60 g / 4 N = 9/10; bottle 450 g / 4 N = 1/10; bottle 450 g / 8 N = 8/10.",
+    "Mass-friction-force factorial: at bowl mass 450 g, force command 8 N fails for mu 0.4 but succeeds for mu 0.8 at the nominal grasp pose; force command 4 N fails at both. This is a directly observed interaction, not a learned prediction."
+  ],
+  "preliminary_interaction_examples": [
+    "At bottle mass 180 g and scale 0.7, opening 80 mm fails while 40 mm succeeds; at scale 1.0 and 1.3 both openings succeed. One trial per exact cell.",
+    "At bottle mass 180 g and speed setting 0.20 m/s, closure at arrival fails while triggering closure 10 mm above the grasp point succeeds. One trial per exact cell; sensitive to the strict bilateral-contact criterion."
+  ],
+  "probability_interpretation": "Reported fractions are empirical frequencies over the declared execution-error distribution, with only ten draws each. They are not learned/calibrated probabilities, exact 0/1 probabilities, or universal physical success rates. The paired draws should remain grouped in any later train/test split.",
+  "label_quality_limit": "All labels follow the existing strict controller and independent two-second hold observer. A momentary loss of bilateral contact can terminate a trial even when the object is elevated again at the next physics step. Some negative bottle labels are contact-criterion failures, not verified object drops. Label sensitivity should be audited before training at scale.",
+  "feature_observability_limit": "Mass and friction are simulator ground truth; real deployment requires estimates or known values. The injected grasp-point bias is latent execution uncertainty, not automatically available as an observed input. Geometry class remains coupled to shape-specific rim/neck grasp profiles.",
+  "not_established": ["Classifier prediction accuracy or calibration", "Generalization to unseen physical objects", "ML-based parameter selection improving actual execution", "Benefit over simple friction/holding-force or geometry rules", "Real-robot performance", "Causal effect of semantic category alone"],
+  "unexplored_candidates": ["center-of-mass offset", "object compliance", "initial moving-object velocity", "pitch/roll", "surface heterogeneity", "sensor noise and partial visibility", "gripper wear", "clutter clearance as an explicit feature"],
+  "next_step": "Freeze an audited success label and observable feature list, collect grouped train/test conditions, compare a simple physical/rule baseline with a lightweight supervised model, and evaluate both probability quality and actual execution outcomes.",
+  "artifacts": ["run_exploration.py", "run_followups.py", "analyze_exploration.py", "analysis.json", "smoke/", "screening/", "interactions/", "followups/"],
+  "reproduction": "Copy the three Python scripts to a NEW empty directory under this repository's results/ folder, then use .venv/bin/python to run run_exploration.py --phase smoke, run_exploration.py --phase screening, run_exploration.py --phase interactions, run_followups.py and analyze_exploration.py in that order. Existing phase directories are intentionally never overwritten. Protocols contain source hashes and the input/environment manifests."
+}

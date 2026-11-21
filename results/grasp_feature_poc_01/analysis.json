@@ -1,0 +1,1640 @@
+{
+  "phase_counts": {
+    "smoke": {
+      "attempted": 2,
+      "valid": 2,
+      "successes": 1,
+      "failures": 1,
+      "invalid": 0,
+      "failure_contexts": {
+        "grasp_contact_or_retention": 1
+      },
+      "warnings": 0
+    },
+    "screening": {
+      "attempted": 58,
+      "valid": 58,
+      "successes": 43,
+      "failures": 15,
+      "invalid": 0,
+      "failure_contexts": {
+        "grasp_contact_or_retention": 15
+      },
+      "warnings": 0
+    },
+    "interactions": {
+      "attempted": 36,
+      "valid": 36,
+      "successes": 13,
+      "failures": 23,
+      "invalid": 0,
+      "failure_contexts": {
+        "grasp_contact_or_retention": 23
+      },
+      "warnings": 0
+    },
+    "followups": {
+      "attempted": 84,
+      "valid": 84,
+      "successes": 59,
+      "failures": 25,
+      "invalid": 0,
+      "failure_contexts": {
+        "grasp_contact_or_retention": 25
+      },
+      "warnings": 0
+    }
+  },
+  "scope": "Exploration only; no fitted classifier, no untouched model-evaluation set, no calibrated probabilities or unseen-object claim.",
+  "category_limit": "Only two existing geometry families, with shape-specific rim/neck grasp offsets. Position, mass and opening are controlled, but semantic class is not separable from geometry and grasp strategy.",
+  "label_limit": "Controller fails immediately on loss of a required hold predicate. A brief bilateral-contact loss may count as failure even if the object remains elevated at the next physics step. Do not equate every negative with an actual drop.",
+  "screening_contrasts": [
+    {
+      "target": "bowl",
+      "factor": "mass_kg",
+      "reference_value": 0.06,
+      "changed_value": 0.02,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.mass_kg_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "mass_kg",
+      "reference_value": 0.06,
+      "changed_value": 0.18,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.mass_kg_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "mass_kg",
+      "reference_value": 0.06,
+      "changed_value": 0.45,
+      "reference_success": true,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bowl.mass_kg_2"
+    },
+    {
+      "target": "bowl",
+      "factor": "sliding_friction",
+      "reference_value": 0.8,
+      "changed_value": 0.05,
+      "reference_success": true,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bowl.sliding_friction_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "sliding_friction",
+      "reference_value": 0.8,
+      "changed_value": 0.2,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.sliding_friction_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "sliding_friction",
+      "reference_value": 0.8,
+      "changed_value": 1.2,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.sliding_friction_2"
+    },
+    {
+      "target": "bowl",
+      "factor": "scale",
+      "reference_value": 1.0,
+      "changed_value": 0.7,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.scale_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "scale",
+      "reference_value": 1.0,
+      "changed_value": 1.3,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.scale_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "x_m",
+      "reference_value": 0.5,
+      "changed_value": 0.45,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.x_m_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "x_m",
+      "reference_value": 0.5,
+      "changed_value": 0.55,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.x_m_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "y_m",
+      "reference_value": -0.08,
+      "changed_value": -0.13,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.y_m_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "y_m",
+      "reference_value": -0.08,
+      "changed_value": -0.03,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.y_m_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "yaw_rad",
+      "reference_value": 0.0,
+      "changed_value": -0.2,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.yaw_rad_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "yaw_rad",
+      "reference_value": 0.0,
+      "changed_value": 0.2,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.yaw_rad_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "bias_x_m",
+      "reference_value": 0.0,
+      "changed_value": -0.012,
+      "reference_success": true,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bowl.bias_x_m_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "bias_x_m",
+      "reference_value": 0.0,
+      "changed_value": 0.012,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.bias_x_m_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "bias_y_m",
+      "reference_value": 0.0,
+      "changed_value": -0.012,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.bias_y_m_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "bias_y_m",
+      "reference_value": 0.0,
+      "changed_value": 0.012,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.bias_y_m_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "bias_z_m",
+      "reference_value": 0.0,
+      "changed_value": -0.015,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.bias_z_m_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "bias_z_m",
+      "reference_value": 0.0,
+      "changed_value": 0.015,
+      "reference_success": true,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bowl.bias_z_m_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "opening_m",
+      "reference_value": 0.08,
+      "changed_value": 0.02,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.opening_m_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "opening_m",
+      "reference_value": 0.08,
+      "changed_value": 0.04,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.opening_m_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "closing_force_n",
+      "reference_value": 4.0,
+      "changed_value": 2.0,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.closing_force_n_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "closing_force_n",
+      "reference_value": 4.0,
+      "changed_value": 8.0,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.closing_force_n_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "close_trigger_m",
+      "reference_value": 0.0,
+      "changed_value": 0.004,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.close_trigger_m_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "close_trigger_m",
+      "reference_value": 0.0,
+      "changed_value": 0.02,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.close_trigger_m_1"
+    },
+    {
+      "target": "bowl",
+      "factor": "descent_speed_m_s",
+      "reference_value": 0.1,
+      "changed_value": 0.04,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.descent_speed_m_s_0"
+    },
+    {
+      "target": "bowl",
+      "factor": "descent_speed_m_s",
+      "reference_value": 0.1,
+      "changed_value": 0.2,
+      "reference_success": true,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": null,
+      "trial_id": "bowl.descent_speed_m_s_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "mass_kg",
+      "reference_value": 0.06,
+      "changed_value": 0.02,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.mass_kg_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "mass_kg",
+      "reference_value": 0.06,
+      "changed_value": 0.18,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.mass_kg_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "mass_kg",
+      "reference_value": 0.06,
+      "changed_value": 0.45,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.mass_kg_2"
+    },
+    {
+      "target": "bottle",
+      "factor": "sliding_friction",
+      "reference_value": 0.8,
+      "changed_value": 0.05,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.sliding_friction_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "sliding_friction",
+      "reference_value": 0.8,
+      "changed_value": 0.2,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.sliding_friction_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "sliding_friction",
+      "reference_value": 0.8,
+      "changed_value": 1.2,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.sliding_friction_2"
+    },
+    {
+      "target": "bottle",
+      "factor": "scale",
+      "reference_value": 1.0,
+      "changed_value": 0.7,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.scale_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "scale",
+      "reference_value": 1.0,
+      "changed_value": 1.3,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.scale_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "x_m",
+      "reference_value": 0.5,
+      "changed_value": 0.45,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.x_m_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "x_m",
+      "reference_value": 0.5,
+      "changed_value": 0.55,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.x_m_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "y_m",
+      "reference_value": -0.08,
+      "changed_value": -0.13,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.y_m_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "y_m",
+      "reference_value": -0.08,
+      "changed_value": -0.03,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.y_m_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "yaw_rad",
+      "reference_value": 0.0,
+      "changed_value": -0.2,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.yaw_rad_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "yaw_rad",
+      "reference_value": 0.0,
+      "changed_value": 0.2,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.yaw_rad_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "bias_x_m",
+      "reference_value": 0.0,
+      "changed_value": -0.012,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.bias_x_m_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "bias_x_m",
+      "reference_value": 0.0,
+      "changed_value": 0.012,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.bias_x_m_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "bias_y_m",
+      "reference_value": 0.0,
+      "changed_value": -0.012,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.bias_y_m_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "bias_y_m",
+      "reference_value": 0.0,
+      "changed_value": 0.012,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.bias_y_m_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "bias_z_m",
+      "reference_value": 0.0,
+      "changed_value": -0.015,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.bias_z_m_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "bias_z_m",
+      "reference_value": 0.0,
+      "changed_value": 0.015,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.bias_z_m_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "opening_m",
+      "reference_value": 0.08,
+      "changed_value": 0.02,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.opening_m_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "opening_m",
+      "reference_value": 0.08,
+      "changed_value": 0.04,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.opening_m_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "closing_force_n",
+      "reference_value": 4.0,
+      "changed_value": 2.0,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.closing_force_n_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "closing_force_n",
+      "reference_value": 4.0,
+      "changed_value": 8.0,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.closing_force_n_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "close_trigger_m",
+      "reference_value": 0.0,
+      "changed_value": 0.004,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.close_trigger_m_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "close_trigger_m",
+      "reference_value": 0.0,
+      "changed_value": 0.02,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.close_trigger_m_1"
+    },
+    {
+      "target": "bottle",
+      "factor": "descent_speed_m_s",
+      "reference_value": 0.1,
+      "changed_value": 0.04,
+      "reference_success": false,
+      "changed_success": false,
+      "valid_pair": true,
+      "outcome_changed": false,
+      "failure_context": "grasp_contact_or_retention",
+      "trial_id": "bottle.descent_speed_m_s_0"
+    },
+    {
+      "target": "bottle",
+      "factor": "descent_speed_m_s",
+      "reference_value": 0.1,
+      "changed_value": 0.2,
+      "reference_success": false,
+      "changed_success": true,
+      "valid_pair": true,
+      "outcome_changed": true,
+      "failure_context": null,
+      "trial_id": "bottle.descent_speed_m_s_1"
+    }
+  ],
+  "screening_factors_with_outcome_changes": [
+    "bias_x_m",
+    "bias_y_m",
+    "bias_z_m",
+    "close_trigger_m",
+    "descent_speed_m_s",
+    "mass_kg",
+    "opening_m",
+    "sliding_friction",
+    "x_m",
+    "y_m",
+    "yaw_rad"
+  ],
+  "interaction_force_pairs": [
+    {
+      "target": "bowl",
+      "mass_kg": 0.06,
+      "mu": 0.1,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bowl",
+      "mass_kg": 0.06,
+      "mu": 0.4,
+      "success_by_tendon_force_n": {
+        "4.0": true,
+        "8.0": true
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bowl",
+      "mass_kg": 0.06,
+      "mu": 0.8,
+      "success_by_tendon_force_n": {
+        "4.0": true,
+        "8.0": true
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bowl",
+      "mass_kg": 0.18,
+      "mu": 0.1,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bowl",
+      "mass_kg": 0.18,
+      "mu": 0.4,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bowl",
+      "mass_kg": 0.18,
+      "mu": 0.8,
+      "success_by_tendon_force_n": {
+        "4.0": true,
+        "8.0": true
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bowl",
+      "mass_kg": 0.45,
+      "mu": 0.1,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bowl",
+      "mass_kg": 0.45,
+      "mu": 0.4,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bowl",
+      "mass_kg": 0.45,
+      "mu": 0.8,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": true
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.06,
+      "mu": 0.1,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.06,
+      "mu": 0.4,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.06,
+      "mu": 0.8,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.18,
+      "mu": 0.1,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.18,
+      "mu": 0.4,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.18,
+      "mu": 0.8,
+      "success_by_tendon_force_n": {
+        "4.0": true,
+        "8.0": true
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.45,
+      "mu": 0.1,
+      "success_by_tendon_force_n": {
+        "4.0": false,
+        "8.0": false
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.45,
+      "mu": 0.4,
+      "success_by_tendon_force_n": {
+        "4.0": true,
+        "8.0": true
+      },
+      "initial_fingerprints_match": true
+    },
+    {
+      "target": "bottle",
+      "mass_kg": 0.45,
+      "mu": 0.8,
+      "success_by_tendon_force_n": {
+        "4.0": true,
+        "8.0": true
+      },
+      "initial_fingerprints_match": true
+    }
+  ],
+  "jitter_empirical_frequencies": [
+    {
+      "target": "bowl",
+      "condition": "light_standard",
+      "successes": 10,
+      "n": 10,
+      "empirical_frequency": 1.0,
+      "wilson_95_interval": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "interpretation": "Frequency over declared uniform XYZ grasp-error distribution at this configuration; NOT a learned or calibrated probability, and not a universal real-world success rate."
+    },
+    {
+      "target": "bowl",
+      "condition": "heavy_standard",
+      "successes": 0,
+      "n": 10,
+      "empirical_frequency": 0.0,
+      "wilson_95_interval": [
+        0.0,
+        0.2775327998628892
+      ],
+      "interpretation": "Frequency over declared uniform XYZ grasp-error distribution at this configuration; NOT a learned or calibrated probability, and not a universal real-world success rate."
+    },
+    {
+      "target": "bowl",
+      "condition": "heavy_stronger",
+      "successes": 10,
+      "n": 10,
+      "empirical_frequency": 1.0,
+      "wilson_95_interval": [
+        0.7224672001371107,
+        0.9999999999999999
+      ],
+      "interpretation": "Frequency over declared uniform XYZ grasp-error distribution at this configuration; NOT a learned or calibrated probability, and not a universal real-world success rate."
+    },
+    {
+      "target": "bottle",
+      "condition": "light_standard",
+      "successes": 9,
+      "n": 10,
+      "empirical_frequency": 0.9,
+      "wilson_95_interval": [
+        0.5958499732047615,
+        0.9821237869049271
+      ],
+      "interpretation": "Frequency over declared uniform XYZ grasp-error distribution at this configuration; NOT a learned or calibrated probability, and not a universal real-world success rate."
+    },
+    {
+      "target": "bottle",
+      "condition": "heavy_standard",
+      "successes": 1,
+      "n": 10,
+      "empirical_frequency": 0.1,
+      "wilson_95_interval": [
+        0.017876213095072896,
+        0.4041500267952385
+      ],
+      "interpretation": "Frequency over declared uniform XYZ grasp-error distribution at this configuration; NOT a learned or calibrated probability, and not a universal real-world success rate."
+    },
+    {
+      "target": "bottle",
+      "condition": "heavy_stronger",
+      "successes": 8,
+      "n": 10,
+      "empirical_frequency": 0.8,
+      "wilson_95_interval": [
+        0.49016247153664183,
+        0.9433178485456247
+      ],
+      "interpretation": "Frequency over declared uniform XYZ grasp-error distribution at this configuration; NOT a learned or calibrated probability, and not a universal real-world success rate."
+    }
+  ],
+  "size_opening_factorial": [
+    {
+      "trial_id": "bowl.geometry.scale_0.70.opening_0.04",
+      "settings": {
+        "target": "bowl",
+        "scale": 0.7,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.0750399582268545,
+        0.07490504095899866,
+        0.03537934996644132
+      ]
+    },
+    {
+      "trial_id": "bowl.geometry.scale_0.70.opening_0.08",
+      "settings": {
+        "target": "bowl",
+        "scale": 0.7,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.0750399582268545,
+        0.07490504095899866,
+        0.03537934996644132
+      ]
+    },
+    {
+      "trial_id": "bowl.geometry.scale_1.00.opening_0.04",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.10719994032407792,
+        0.10700720136999808,
+        0.05054192852348782
+      ]
+    },
+    {
+      "trial_id": "bowl.geometry.scale_1.00.opening_0.08",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.10719994032407792,
+        0.10700720136999808,
+        0.05054192852348782
+      ]
+    },
+    {
+      "trial_id": "bowl.geometry.scale_1.30.opening_0.04",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.3,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.13935992242130135,
+        0.1391093617809975,
+        0.0657045070805341
+      ]
+    },
+    {
+      "trial_id": "bowl.geometry.scale_1.30.opening_0.08",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.3,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.13935992242130135,
+        0.1391093617809975,
+        0.0657045070805341
+      ]
+    },
+    {
+      "trial_id": "bottle.geometry.scale_0.70.opening_0.04",
+      "settings": {
+        "target": "bottle",
+        "scale": 0.7,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.029814202285036506,
+        0.0309676691464882,
+        0.10985100000000003
+      ]
+    },
+    {
+      "trial_id": "bottle.geometry.scale_0.70.opening_0.08",
+      "settings": {
+        "target": "bottle",
+        "scale": 0.7,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": false,
+      "failure_context": "grasp_contact_or_retention",
+      "aabb_size_m": [
+        0.029814202285036506,
+        0.0309676691464882,
+        0.10985100000000003
+      ]
+    },
+    {
+      "trial_id": "bottle.geometry.scale_1.00.opening_0.04",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.042591717550052255,
+        0.04423952735212599,
+        0.15693000000000001
+      ]
+    },
+    {
+      "trial_id": "bottle.geometry.scale_1.00.opening_0.08",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.042591717550052255,
+        0.04423952735212599,
+        0.15693000000000001
+      ]
+    },
+    {
+      "trial_id": "bottle.geometry.scale_1.30.opening_0.04",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.3,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.05536923281506795,
+        0.05751138555776379,
+        0.204009
+      ]
+    },
+    {
+      "trial_id": "bottle.geometry.scale_1.30.opening_0.08",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.3,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.05536923281506795,
+        0.05751138555776379,
+        0.204009
+      ]
+    }
+  ],
+  "speed_closure_timing_factorial": [
+    {
+      "trial_id": "bowl.timing.speed_0.04.trigger_0.00",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.10719994032407792,
+        0.10700720136999808,
+        0.05054192852348782
+      ]
+    },
+    {
+      "trial_id": "bowl.timing.speed_0.04.trigger_0.01",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.04
+      },
+      "success": false,
+      "failure_context": "grasp_contact_or_retention",
+      "aabb_size_m": [
+        0.10719994032407792,
+        0.10700720136999808,
+        0.05054192852348782
+      ]
+    },
+    {
+      "trial_id": "bowl.timing.speed_0.10.trigger_0.00",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.10719994032407792,
+        0.10700720136999808,
+        0.05054192852348782
+      ]
+    },
+    {
+      "trial_id": "bowl.timing.speed_0.10.trigger_0.01",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.10719994032407792,
+        0.10700720136999808,
+        0.05054192852348782
+      ]
+    },
+    {
+      "trial_id": "bowl.timing.speed_0.20.trigger_0.00",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.2
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.10719994032407792,
+        0.10700720136999808,
+        0.05054192852348782
+      ]
+    },
+    {
+      "trial_id": "bowl.timing.speed_0.20.trigger_0.01",
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.2
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.10719994032407792,
+        0.10700720136999808,
+        0.05054192852348782
+      ]
+    },
+    {
+      "trial_id": "bottle.timing.speed_0.04.trigger_0.00",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.042591717550052255,
+        0.04423952735212599,
+        0.15693000000000001
+      ]
+    },
+    {
+      "trial_id": "bottle.timing.speed_0.04.trigger_0.01",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.04
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.042591717550052255,
+        0.04423952735212599,
+        0.15693000000000001
+      ]
+    },
+    {
+      "trial_id": "bottle.timing.speed_0.10.trigger_0.00",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.042591717550052255,
+        0.04423952735212599,
+        0.15693000000000001
+      ]
+    },
+    {
+      "trial_id": "bottle.timing.speed_0.10.trigger_0.01",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.1
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.042591717550052255,
+        0.04423952735212599,
+        0.15693000000000001
+      ]
+    },
+    {
+      "trial_id": "bottle.timing.speed_0.20.trigger_0.00",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.2
+      },
+      "success": false,
+      "failure_context": "grasp_contact_or_retention",
+      "aabb_size_m": [
+        0.042591717550052255,
+        0.04423952735212599,
+        0.15693000000000001
+      ]
+    },
+    {
+      "trial_id": "bottle.timing.speed_0.20.trigger_0.01",
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.2
+      },
+      "success": true,
+      "failure_context": null,
+      "aabb_size_m": [
+        0.042591717550052255,
+        0.04423952735212599,
+        0.15693000000000001
+      ]
+    }
+  ],
+  "physical_integrity": {
+    "attempted": 180,
+    "workspace_obstacle_contact_trials": 0,
+    "successful_trials_meet_two_second_hold": true,
+    "actual_mass_matches_setting": true,
+    "observed_contact_mu_matches_setting": true,
+    "trials_with_observed_finger_target_contacts": 180,
+    "unplanned_contact_pairs": [
+      [
+        "bowl_object",
+        "table"
+      ],
+      [
+        "robot_left_finger",
+        "robot_right_finger"
+      ]
+    ]
+  }
+}

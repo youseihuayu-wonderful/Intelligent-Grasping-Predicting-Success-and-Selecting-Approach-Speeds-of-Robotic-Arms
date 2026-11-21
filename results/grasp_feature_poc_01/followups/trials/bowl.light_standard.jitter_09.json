@@ -1,0 +1,176 @@
+{
+  "trial_id": "bowl.light_standard.jitter_09",
+  "settings": {
+    "target": "bowl",
+    "scale": 1.0,
+    "mass_kg": 0.06,
+    "sliding_friction": 0.8,
+    "x_m": 0.5,
+    "y_m": -0.08,
+    "yaw_rad": 0.0,
+    "bias_x_m": -0.003956509495631904,
+    "bias_y_m": -0.00039040423153709636,
+    "bias_z_m": -0.0017909199204620809,
+    "opening_m": 0.08,
+    "closing_force_n": 4.0,
+    "close_trigger_m": 0.0,
+    "descent_speed_m_s": 0.1
+  },
+  "metadata": {
+    "design": "paired_execution_error_jitter",
+    "condition": "light_standard",
+    "seed": 7730,
+    "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+    "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+  },
+  "variant_features": {
+    "compiled_pre_mass_override_kg": 0.04589978166191658,
+    "actual_mass_kg": 0.060000000000000005,
+    "actual_principal_inertia_kg_m2": [
+      7.180516626249098e-05,
+      4.4402626587794006e-05,
+      4.391924710104593e-05
+    ],
+    "collision_world_aabb_size_m": [
+      0.10719994032407792,
+      0.10700720136999808,
+      0.05054192852348782
+    ],
+    "object_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "finger_collision_sliding_friction": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "grasp_offset_body_m": [
+      -0.003956509495631904,
+      -0.0473904042315371,
+      0.04020908007953792
+    ]
+  },
+  "trial_status": "completed",
+  "success": true,
+  "failure_kind": null,
+  "failure_reason": null,
+  "last_active_phase": "hold",
+  "phase_order": [
+    "idle",
+    "prepare",
+    "approach",
+    "descend",
+    "close",
+    "lift",
+    "hold",
+    "done"
+  ],
+  "phase_first_sim_s": {
+    "idle": null,
+    "prepare": 0.0,
+    "approach": 0.06000000000000005,
+    "descend": 6.047999999999445,
+    "close": 9.050000000000026,
+    "lift": 9.2740000000001,
+    "hold": 12.08600000000104,
+    "done": 13.086000000001373
+  },
+  "execution_sim_s": 14.086000000001707,
+  "verified_hold_s": 2.000000000000668,
+  "initial_state_fingerprint": "410916275496491d816a08269f97cc8bcc9f1f7b2220a7c3595e4d07600f84c6",
+  "initial_pose": {
+    "name": "bowl_object",
+    "position_m": [
+      0.499999988474579,
+      -0.08000001848925362,
+      0.7184069384781211
+    ],
+    "quaternion_wxyz": [
+      0.999999999980581,
+      -5.288407940416422e-06,
+      3.297122890825585e-06,
+      -2.5751908917126222e-12
+    ]
+  },
+  "final_pose": {
+    "name": "bowl_object",
+    "position_m": [
+      0.49259170373268674,
+      -0.09201220277633086,
+      0.8580701800351744
+    ],
+    "quaternion_wxyz": [
+      0.9883334409024297,
+      -0.1418105404877972,
+      0.033044304079243164,
+      0.04466379035014124
+    ]
+  },
+  "postconditions": {
+    "bilateral_grip": true,
+    "clear_of_table": true,
+    "target_lifted": true,
+    "relative_pose_stable": true,
+    "verified_hold": true
+  },
+  "actual_finger_target_sliding_frictions": [
+    0.8
+  ],
+  "collisions": {
+    "episodes": 0,
+    "duration_s": 0.0,
+    "peak_force_n": 0.0,
+    "pairs": [],
+    "force_threshold_n": 0.1
+  },
+  "warnings": [],
+  "wall_s": 2.0004895419988316
+}

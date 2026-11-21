@@ -1,0 +1,319 @@
+{
+  "model": {
+    "name": "logistic",
+    "model_file": "models/logistic.joblib",
+    "model_sha256": "a02452cc1a9b8ec8792726c011a512a4b253c546ddc7c82dca7b1e16f4c820e5",
+    "fit_wall_s": 0.1099247079109773,
+    "best_params": {
+      "classifier__C": 0.1
+    },
+    "best_cv_log_loss": 0.5381547843599637,
+    "validation": {
+      "n_samples": 64,
+      "class_counts": {
+        "0": 47,
+        "1": 17
+      },
+      "decision_threshold": 0.5,
+      "log_loss": 0.3528167404065557,
+      "brier_score": 0.10764315499028829,
+      "balanced_accuracy": 0.8078848560700875,
+      "failure_recall": 0.851063829787234,
+      "failure_precision": 0.9090909090909091,
+      "roc_auc": 0.9367959949937421,
+      "undefined_reasons": {},
+      "limitations": [
+        "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "upper_inclusive": false,
+          "count": 24,
+          "mean_predicted_probability": 0.11064622047223294,
+          "observed_success_rate": 0.0,
+          "undefined_reason": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "upper_inclusive": false,
+          "count": 14,
+          "mean_predicted_probability": 0.26659207444579175,
+          "observed_success_rate": 0.14285714285714285,
+          "undefined_reason": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "upper_inclusive": false,
+          "count": 10,
+          "mean_predicted_probability": 0.49310166102840214,
+          "observed_success_rate": 0.2,
+          "undefined_reason": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "upper_inclusive": false,
+          "count": 6,
+          "mean_predicted_probability": 0.743169628299848,
+          "observed_success_rate": 0.6666666666666666,
+          "undefined_reason": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "upper_inclusive": true,
+          "count": 10,
+          "mean_predicted_probability": 0.8763730953629534,
+          "observed_success_rate": 0.9,
+          "undefined_reason": null
+        }
+      ]
+    },
+    "feature_selection": {
+      "selection_method": "none",
+      "encoded_feature_names": [
+        "close_trigger_m",
+        "closing_force_n",
+        "descent_speed_m_s",
+        "mass_kg",
+        "opening_m",
+        "scale",
+        "sliding_friction",
+        "target=bottle",
+        "target=bowl",
+        "x_m",
+        "y_m",
+        "yaw_rad"
+      ],
+      "support_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected_feature_names": [
+        "close_trigger_m",
+        "closing_force_n",
+        "descent_speed_m_s",
+        "mass_kg",
+        "opening_m",
+        "scale",
+        "sliding_friction",
+        "target=bottle",
+        "target=bowl",
+        "x_m",
+        "y_m",
+        "yaw_rad"
+      ],
+      "n_features_selected": 12,
+      "intercept_only": false,
+      "lasso_alpha": null,
+      "logistic_penalty": "l2",
+      "logistic_C": 0.1
+    },
+    "candidates": [
+      {
+        "parameters": {
+          "classifier__C": 0.001
+        },
+        "mean_cv_log_loss": 0.6702464051972511,
+        "std_cv_score": 0.010713570343432913,
+        "rank": 12
+      },
+      {
+        "parameters": {
+          "classifier__C": 0.003
+        },
+        "mean_cv_log_loss": 0.6391218296964519,
+        "std_cv_score": 0.016682965346159446,
+        "rank": 11
+      },
+      {
+        "parameters": {
+          "classifier__C": 0.01
+        },
+        "mean_cv_log_loss": 0.5867387508382926,
+        "std_cv_score": 0.028541214349043158,
+        "rank": 10
+      },
+      {
+        "parameters": {
+          "classifier__C": 0.03
+        },
+        "mean_cv_log_loss": 0.5473570734175978,
+        "std_cv_score": 0.04044113653972256,
+        "rank": 2
+      },
+      {
+        "parameters": {
+          "classifier__C": 0.1
+        },
+        "mean_cv_log_loss": 0.5381547843599637,
+        "std_cv_score": 0.04945459801009439,
+        "rank": 1
+      },
+      {
+        "parameters": {
+          "classifier__C": 0.3
+        },
+        "mean_cv_log_loss": 0.5513666707758347,
+        "std_cv_score": 0.05623582585558748,
+        "rank": 3
+      },
+      {
+        "parameters": {
+          "classifier__C": 1.0
+        },
+        "mean_cv_log_loss": 0.5663190205812599,
+        "std_cv_score": 0.06218060795925805,
+        "rank": 4
+      },
+      {
+        "parameters": {
+          "classifier__C": 3.0
+        },
+        "mean_cv_log_loss": 0.5732740873237682,
+        "std_cv_score": 0.06500028272608817,
+        "rank": 5
+      },
+      {
+        "parameters": {
+          "classifier__C": 10.0
+        },
+        "mean_cv_log_loss": 0.5761716103378894,
+        "std_cv_score": 0.06619848413086782,
+        "rank": 6
+      },
+      {
+        "parameters": {
+          "classifier__C": 30.0
+        },
+        "mean_cv_log_loss": 0.5770526016682522,
+        "std_cv_score": 0.0665658485556685,
+        "rank": 7
+      },
+      {
+        "parameters": {
+          "classifier__C": 100.0
+        },
+        "mean_cv_log_loss": 0.577366911519858,
+        "std_cv_score": 0.06669726756867175,
+        "rank": 8
+      },
+      {
+        "parameters": {
+          "classifier__C": 300.0
+        },
+        "mean_cv_log_loss": 0.5774572948971483,
+        "std_cv_score": 0.06673509334219743,
+        "rank": 9
+      }
+    ]
+  },
+  "partitions": {
+    "train": {
+      "rows": 422,
+      "groups": 75,
+      "successes": 194,
+      "failures": 228
+    },
+    "validation": {
+      "rows": 64,
+      "groups": 8,
+      "successes": 17,
+      "failures": 47
+    },
+    "test": {
+      "rows": 64,
+      "groups": 8,
+      "successes": 18,
+      "failures": 46
+    }
+  },
+  "test_rows_evaluated": 0,
+  "constant_predictor": {
+    "training_success_prevalence": 0.4597156398104265,
+    "validation": {
+      "n_samples": 64,
+      "class_counts": {
+        "0": 47,
+        "1": 17
+      },
+      "decision_threshold": 0.5,
+      "log_loss": 0.6585547942713978,
+      "brier_score": 0.23273953583702073,
+      "balanced_accuracy": 0.5,
+      "failure_recall": 1.0,
+      "failure_precision": 0.734375,
+      "roc_auc": 0.5,
+      "undefined_reasons": {},
+      "limitations": [
+        "Metrics treat supplied rows as observations; grouping and frozen partition integrity must be audited separately."
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "upper_inclusive": false,
+          "count": 64,
+          "mean_predicted_probability": 0.4597156398104265,
+          "observed_success_rate": 0.265625,
+          "undefined_reason": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "upper_inclusive": false,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "upper_inclusive": true,
+          "count": 0,
+          "mean_predicted_probability": null,
+          "observed_success_rate": null,
+          "undefined_reason": "No observations in this fixed uniform bin"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "The published historical test results have already been inspected.",
+    "Revised methods need new held-out conditions for a fresh final evaluation.",
+    "A probability prediction does not establish better physical grasp performance."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "methods": {
+    "logistic": {
+      "attempted": 16,
+      "labelled": 16,
+      "successes": 5,
+      "failures": 11,
+      "success_rate": 0.3125,
+      "mean_success_execution_sim_s": 13.21800000000114,
+      "total_attempt_sim_s_per_success": 38.16960000000288,
+      "excluded_statuses": {}
+    },
+    "lasso_logistic": {
+      "attempted": 16,
+      "labelled": 16,
+      "successes": 5,
+      "failures": 11,
+      "success_rate": 0.3125,
+      "mean_success_execution_sim_s": 12.345200000001125,
+      "total_attempt_sim_s_per_success": 34.35800000000189,
+      "excluded_statuses": {}
+    },
+    "random_forest": {
+      "attempted": 16,
+      "labelled": 16,
+      "successes": 6,
+      "failures": 10,
+      "success_rate": 0.375,
+      "mean_success_execution_sim_s": 12.300000000001111,
+      "total_attempt_sim_s_per_success": 29.094333333335058,
+      "excluded_statuses": {}
+    },
+    "xgboost": {
+      "attempted": 16,
+      "labelled": 16,
+      "successes": 5,
+      "failures": 11,
+      "success_rate": 0.3125,
+      "mean_success_execution_sim_s": 13.21800000000114,
+      "total_attempt_sim_s_per_success": 36.57040000000235,
+      "excluded_statuses": {}
+    },
+    "fixed_baseline": {
+      "attempted": 16,
+      "labelled": 16,
+      "successes": 5,
+      "failures": 11,
+      "success_rate": 0.3125,
+      "mean_success_execution_sim_s": 12.345200000001125,
+      "total_attempt_sim_s_per_success": 34.35800000000189,
+      "excluded_statuses": {}
+    }
+  },
+  "unique_physical_execution": {
+    "attempted": 30,
+    "labelled": 30,
+    "successes": 8,
+    "failures": 22,
+    "statuses": {
+      "completed": 30
+    },
+    "numerical_warning_trials": 0,
+    "wall_s": 21.004573208047077
+  },
+  "primary_model": "xgboost",
+  "limitations": [
+    "Only eight held-out object/state conditions and two new draws each",
+    "Method outcomes share matched physics; rows are not independent between methods",
+    "No advantage or safety guarantee follows from a prediction score"
+  ]
+}

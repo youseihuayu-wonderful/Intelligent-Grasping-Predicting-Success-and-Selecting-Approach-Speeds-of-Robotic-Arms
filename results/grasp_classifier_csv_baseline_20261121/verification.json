@@ -1,0 +1,21 @@
+{
+  "purpose": "Share an existing simulation dataset and a reproducible CSV-only classifier starter, without collecting new labels or evaluating the historical test set.",
+  "command": "uv run --locked python run_grasp_classifiers.py --phase fit-csv --model logistic --dataset results/grasp_classifier_comparison_20261115/dataset.csv --output results/grasp_classifier_csv_baseline_20261121",
+  "command_exit_code": 0,
+  "regression_command": "uv run --locked python -m unittest discover -s tests -p 'test_grasp_classifier_*.py' -v",
+  "regression_tests_passed": 44,
+  "regression_exit_code": 0,
+  "validation_predictions": 64,
+  "test_rows_evaluated": 0,
+  "cv_identical_to_original_manifest": true,
+  "saved_coefficients_and_validation_predictions_finite": true,
+  "max_validation_probability_difference_vs_independent_scalar_dot": 1.1102230246251565e-16,
+  "observed_training_warnings": [
+    "NumPy RuntimeWarning: divide by zero encountered in matmul",
+    "NumPy RuntimeWarning: overflow encountered in matmul",
+    "NumPy RuntimeWarning: invalid value encountered in matmul"
+  ],
+  "warning_policy": "Warnings were not suppressed. They occurred in the existing Apple-Silicon NumPy/scikit-learn environment during fitting; finite saved-model predictions were separately checked against scalar dot products. This check does not prove every optimizer intermediate was unaffected.",
+  "test_warning_note": "The zero-feature LASSO regression also emitted the expected no-features-selected UserWarning.",
+  "scope": "CSV classifier execution on the current macOS environment; not a new physical experiment or a cross-platform guarantee."
+}

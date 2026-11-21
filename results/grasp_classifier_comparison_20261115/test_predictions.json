@@ -1,0 +1,1794 @@
+[
+  {
+    "model": "logistic",
+    "trial_id": "bowl_00.control_0.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.19811748421033162,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_00.control_1.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.06837551627048101,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_00.control_2.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.06351951300178414,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_00.control_3.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.09090065614171515,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_00.control_0.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.19811748421033162,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_00.control_1.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.06837551627048101,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_00.control_2.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.06351951300178414,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_00.control_3.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.09090065614171515,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_08.control_0.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.12806864309070207,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_08.control_1.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.014902268018837721,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_08.control_2.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.028913782070116436,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_08.control_3.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.12421824038062808,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_08.control_0.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.12806864309070207,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_08.control_1.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.014902268018837721,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_08.control_2.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.028913782070116436,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_08.control_3.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.12421824038062808,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_22.control_0.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.8203006828253387,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_22.control_1.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.741076000428598,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_22.control_2.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.584070386913789,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_22.control_3.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.7174578270197747,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_22.control_0.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.8203006828253387,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_22.control_1.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.741076000428598,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_22.control_2.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.584070386913789,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_22.control_3.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.7174578270197747,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_23.control_0.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.11285484608357088,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_23.control_1.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.05716126438595781,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_23.control_2.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.05453861440221553,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_23.control_3.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.06828089199642505,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_23.control_0.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.11285484608357088,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_23.control_1.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.05716126438595781,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_23.control_2.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.05453861440221553,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bowl_23.control_3.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.06828089199642505,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_06.control_0.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.19610976242796171,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_06.control_1.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.2216453889491547,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_06.control_2.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.09960276347583584,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_06.control_3.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.11949552638393497,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_06.control_0.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.19610976242796171,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_06.control_1.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.2216453889491547,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_06.control_2.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.09960276347583584,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_06.control_3.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.11949552638393497,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_14.control_0.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.5468889740617984,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_14.control_1.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.2424246912624277,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_14.control_2.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.7097744035543109,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_14.control_3.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.5185867488404907,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_14.control_0.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.5468889740617984,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_14.control_1.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.2424246912624277,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_14.control_2.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.7097744035543109,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_14.control_3.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.5185867488404907,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_21.control_0.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.595354152297653,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_21.control_1.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.33002800183312675,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_21.control_2.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.17743124118884462,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_21.control_3.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.4587383459882354,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_21.control_0.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.595354152297653,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_21.control_1.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.33002800183312675,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_21.control_2.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.17743124118884462,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_21.control_3.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.4587383459882354,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_23.control_0.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6243229683188137,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_23.control_1.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7503332958534799,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_23.control_2.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.4021181367828446,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_23.control_3.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.5175353300323472,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_23.control_0.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6243229683188137,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_23.control_1.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7503332958534799,
+    "actual_success": true
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_23.control_2.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.4021181367828446,
+    "actual_success": false
+  },
+  {
+    "model": "logistic",
+    "trial_id": "bottle_23.control_3.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.5175353300323472,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_00.control_0.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.17645185758175247,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_00.control_1.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.040059148344577404,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_00.control_2.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.040059148344577404,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_00.control_3.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.17645185758175247,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_00.control_0.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.17645185758175247,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_00.control_1.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.040059148344577404,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_00.control_2.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.040059148344577404,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_00.control_3.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.17645185758175247,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_08.control_0.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.15361343205314237,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_08.control_1.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.03414236053822625,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_08.control_2.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.03414236053822625,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_08.control_3.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.07415788886219293,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_08.control_0.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.15361343205314237,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_08.control_1.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.03414236053822625,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_08.control_2.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.03414236053822625,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_08.control_3.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.07415788886219293,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_22.control_0.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.7818177122577938,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_22.control_1.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.7818177122577938,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_22.control_2.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.6126156478172091,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_22.control_3.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.4110443046107696,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_22.control_0.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.7818177122577938,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_22.control_1.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.7818177122577938,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_22.control_2.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.6126156478172091,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_22.control_3.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.4110443046107696,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_23.control_0.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.15361343205314237,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_23.control_1.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.07415788886219293,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_23.control_2.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.15361343205314237,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_23.control_3.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.15361343205314237,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_23.control_0.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.15361343205314237,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_23.control_1.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.07415788886219293,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_23.control_2.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.15361343205314237,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bowl_23.control_3.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.15361343205314237,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_06.control_0.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.2774581578809425,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_06.control_1.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.2774581578809425,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_06.control_2.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.2774581578809425,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_06.control_3.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.14491227261363787,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_06.control_0.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.2774581578809425,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_06.control_1.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.2774581578809425,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_06.control_2.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.2774581578809425,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_06.control_3.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.14491227261363787,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_14.control_0.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6334287906622518,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_14.control_1.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.25180929209512026,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_14.control_2.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6334287906622518,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_14.control_3.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6334287906622518,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_14.control_0.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6334287906622518,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_14.control_1.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.25180929209512026,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_14.control_2.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6334287906622518,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_14.control_3.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6334287906622518,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_21.control_0.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_21.control_1.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.47877358067990833,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_21.control_2.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.28844935448982295,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_21.control_3.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.47877358067990833,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_21.control_0.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_21.control_1.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.47877358067990833,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_21.control_2.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.28844935448982295,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_21.control_3.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.47877358067990833,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_23.control_0.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_23.control_1.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_23.control_2.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_23.control_3.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_23.control_0.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_23.control_1.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": true
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_23.control_2.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": false
+  },
+  {
+    "model": "lasso_logistic",
+    "trial_id": "bottle_23.control_3.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6754662364953183,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_00.control_0.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.0203125,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_00.control_1.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.040017924783549784,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_00.control_2.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.024107142857142855,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_00.control_3.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.012053571428571427,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_00.control_0.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.0203125,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_00.control_1.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.040017924783549784,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_00.control_2.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.024107142857142855,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_00.control_3.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.012053571428571427,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_08.control_0.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.10318175747863248,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_08.control_1.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.030275106837606838,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_08.control_2.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.035082799145299146,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_08.control_3.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.09797541867854367,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_08.control_0.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.10318175747863248,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_08.control_1.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.030275106837606838,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_08.control_2.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.035082799145299146,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_08.control_3.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.09797541867854367,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_22.control_0.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.4124136535441683,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_22.control_1.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.3582216216177614,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_22.control_2.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.3007583817326465,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_22.control_3.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.19450081168831165,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_22.control_0.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.4124136535441683,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_22.control_1.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.3582216216177614,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_22.control_2.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.3007583817326465,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_22.control_3.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.19450081168831165,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_23.control_0.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.03432158119658119,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_23.control_1.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.036925747863247864,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_23.control_2.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.029513888888888888,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_23.control_3.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.029513888888888888,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_23.control_0.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.03432158119658119,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_23.control_1.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.036925747863247864,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_23.control_2.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.029513888888888888,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bowl_23.control_3.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.029513888888888888,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_06.control_0.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.025669642857142856,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_06.control_1.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.025657805735930732,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_06.control_2.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.044680059523809525,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_06.control_3.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.020300662878787876,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_06.control_0.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.025669642857142856,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_06.control_1.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.025657805735930732,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_06.control_2.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.044680059523809525,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_06.control_3.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.020300662878787876,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_14.control_0.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.41089859210384555,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_14.control_1.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.18246020472582972,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_14.control_2.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6806009432751523,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_14.control_3.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.3749915304155339,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_14.control_0.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.41089859210384555,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_14.control_1.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.18246020472582972,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_14.control_2.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6806009432751523,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_14.control_3.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.3749915304155339,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_21.control_0.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.8542933268068199,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_21.control_1.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.667043828567266,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_21.control_2.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.4240338437604063,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_21.control_3.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.5861137126762126,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_21.control_0.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.8542933268068199,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_21.control_1.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.667043828567266,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_21.control_2.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.4240338437604063,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_21.control_3.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.5861137126762126,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_23.control_0.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7963315311527563,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_23.control_1.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7853094705684651,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_23.control_2.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.705008759994317,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_23.control_3.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.774163129929937,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_23.control_0.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7963315311527563,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_23.control_1.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7853094705684651,
+    "actual_success": true
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_23.control_2.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.705008759994317,
+    "actual_success": false
+  },
+  {
+    "model": "random_forest",
+    "trial_id": "bottle_23.control_3.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.774163129929937,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_00.control_0.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.02420097030699253,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_00.control_1.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.04243851080536842,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_00.control_2.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.021984271705150604,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_00.control_3.draw_0",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.02420097030699253,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_00.control_0.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.02420097030699253,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_00.control_1.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.04243851080536842,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_00.control_2.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.021984271705150604,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_00.control_3.draw_1",
+    "condition_id": "bowl_00",
+    "predicted_success_probability": 0.02420097030699253,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_08.control_0.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.1263297200202942,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_08.control_1.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.02389983832836151,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_08.control_2.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.028133463114500046,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_08.control_3.draw_0",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.26382893323898315,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_08.control_0.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.1263297200202942,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_08.control_1.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.02389983832836151,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_08.control_2.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.028133463114500046,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_08.control_3.draw_1",
+    "condition_id": "bowl_08",
+    "predicted_success_probability": 0.26382893323898315,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_22.control_0.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.5942423343658447,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_22.control_1.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.5436458587646484,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_22.control_2.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.4273127019405365,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_22.control_3.draw_0",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.25655287504196167,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_22.control_0.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.5942423343658447,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_22.control_1.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.5436458587646484,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_22.control_2.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.4273127019405365,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_22.control_3.draw_1",
+    "condition_id": "bowl_22",
+    "predicted_success_probability": 0.25655287504196167,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_23.control_0.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.12038195878267288,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_23.control_1.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.1131415143609047,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_23.control_2.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.10791269689798355,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_23.control_3.draw_0",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.11379968374967575,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_23.control_0.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.12038195878267288,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_23.control_1.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.1131415143609047,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_23.control_2.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.10791269689798355,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bowl_23.control_3.draw_1",
+    "condition_id": "bowl_23",
+    "predicted_success_probability": 0.11379968374967575,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_06.control_0.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.07045876234769821,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_06.control_1.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.05685758590698242,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_06.control_2.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.053303565829992294,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_06.control_3.draw_0",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.05978681147098541,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_06.control_0.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.07045876234769821,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_06.control_1.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.05685758590698242,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_06.control_2.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.053303565829992294,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_06.control_3.draw_1",
+    "condition_id": "bottle_06",
+    "predicted_success_probability": 0.05978681147098541,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_14.control_0.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.4174126386642456,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_14.control_1.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.1547553539276123,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_14.control_2.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6945000290870667,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_14.control_3.draw_0",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.3830376863479614,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_14.control_0.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.4174126386642456,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_14.control_1.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.1547553539276123,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_14.control_2.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.6945000290870667,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_14.control_3.draw_1",
+    "condition_id": "bottle_14",
+    "predicted_success_probability": 0.3830376863479614,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_21.control_0.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.7317889332771301,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_21.control_1.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.621381938457489,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_21.control_2.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.2752763628959656,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_21.control_3.draw_0",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.6361400485038757,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_21.control_0.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.7317889332771301,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_21.control_1.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.621381938457489,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_21.control_2.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.2752763628959656,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_21.control_3.draw_1",
+    "condition_id": "bottle_21",
+    "predicted_success_probability": 0.6361400485038757,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_23.control_0.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7019257545471191,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_23.control_1.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7232071161270142,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_23.control_2.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6279401779174805,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_23.control_3.draw_0",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6667957305908203,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_23.control_0.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7019257545471191,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_23.control_1.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.7232071161270142,
+    "actual_success": true
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_23.control_2.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6279401779174805,
+    "actual_success": false
+  },
+  {
+    "model": "xgboost",
+    "trial_id": "bottle_23.control_3.draw_1",
+    "condition_id": "bottle_23",
+    "predicted_success_probability": 0.6667957305908203,
+    "actual_success": true
+  }
+]

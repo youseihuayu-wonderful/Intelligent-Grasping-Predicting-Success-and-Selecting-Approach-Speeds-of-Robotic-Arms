@@ -4,6 +4,64 @@
 
 Historical experiment names, GPT model references, and recorded videos are retained for provenance; the rename does not change their results.
 
+## Start here: shared simulation data and a basic classifier
+
+The existing labeled data is available now; teammates do not need to run the simulator before starting model development.
+
+- **[Download the CSV](https://raw.githubusercontent.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms/main/results/grasp_classifier_comparison_20261115/dataset.csv)** · [Browse the dataset](results/grasp_classifier_comparison_20261115/dataset.csv)
+- [Frozen partition manifest](results/grasp_classifier_comparison_20261115/split_manifest.json) · [Shared CV folds](results/grasp_classifier_comparison_20261115/cv_manifest.json)
+- [Raw physical collection](results/grasp_classifier_comparison_20261115/collection/trials.json) · [Historical training sources](results/grasp_classifier_comparison_20261115/data_sources.json) · [Audit](results/grasp_classifier_comparison_20261115/data_audit.json)
+
+### Dataset and feature contract
+
+Each row is a physically executed MuJoCo grasp attempt, not a video frame or a synthetic success label. The label is **`success`** (`1` = accepted grasp, `0` = failed attempt). Positive acceptance requires the existing bilateral-contact, clearance, lift, stability and continuous two-second hold checks. Exact repeats and numerical-warning attempts are excluded. **`target` is the object geometry family, not the prediction label.**
+
+| Partition | Rows | Condition groups | Successes | Failures |
+| --- | ---: | ---: | ---: | ---: |
+| Training | 422 | 75 | 194 | 228 |
+| Validation | 64 | 8 | 17 | 47 |
+| Historical test | 64 | 8 | 18 | 46 |
+
+The eleven input fields are:
+
+| CSV field | Meaning and unit |
+| --- | --- |
+| `target` | Geometry family: `bowl` or `bottle`; categorical |
+| `scale` | Uniform object-size multiplier; dimensionless |
+| `mass_kg` | Simulator object mass; kg |
+| `sliding_friction` | Simulator sliding-friction coefficient; dimensionless |
+| `x_m`, `y_m`, `yaw_rad` | Initial object position and yaw; m, m, radians |
+| `opening_m` | Initial gripper opening setting; m |
+| `closing_force_n` | Tendon-force command, not measured per-finger normal force; N |
+| `close_trigger_m` | Remaining-distance threshold for starting closure; m |
+| `descent_speed_m_s` | Descent trajectory speed setting, not constant measured TCP speed; m/s |
+
+Initial pose uses settled observations when recorded and explicit nominal settings for historical rows without them. Mass and friction are simulator ground truth, not visual estimates. The two geometry families use existing rim/neck grasp profiles; this is not a dataset of arbitrary unseen objects.
+
+Do **not** train on `row_index`, `trial_id`, `group_id`, `split`, `success`, `execution_sim_s` or `evidence_source`. Use the provided partitions and grouped CV instead of randomly splitting rows. Paired trials within a condition are related observations. Archival `evidence_source` paths identify the collecting machine; CSV training does not open those paths.
+
+### Run Logistic Regression on the existing CSV
+
+Use Python 3.12 and [uv](https://docs.astral.sh/uv/). From a fresh clone:
+
+```sh
+git clone https://github.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms.git intelligent-grasping
+cd intelligent-grasping
+uv sync --locked
+uv run --locked python run_grasp_classifiers.py \
+  --phase fit-csv --model logistic \
+  --dataset results/grasp_classifier_comparison_20261115/dataset.csv \
+  --output results/team_logistic
+```
+
+The output directory must not already exist. This command starts **no simulation, rendering, GPT request or paid service**. It fits preprocessing inside the shared three-fold grouped CV, searches 12 hyperparameter candidates, and saves the fitted pipeline, CV manifest, source-CSV checksum and `validation_report.json`, including a constant-probability baseline. It deliberately generates **no test scores**.
+
+For independent model work, replace `--model logistic` with `lasso_logistic`, `random_forest` or `xgboost`, and give each run a different output directory. LASSO here is squared-loss feature selection followed by L2 Logistic Regression, not a standalone classifier. Keep the data version, folds, seed, metrics and search budget shared.
+
+**Recorded starter run:** [CSV-only Logistic Regression output](results/grasp_classifier_csv_baseline_20261121/) · [Verification](results/grasp_classifier_csv_baseline_20261121/verification.json). The 44 classifier regression tests passed, including a check that changing test features and labels cannot alter fitted validation predictions. Fitting in the current Apple-Silicon environment still emitted NumPy matrix-operation warnings; they were not suppressed. Saved coefficients and validation predictions were finite, and independently computed scalar-dot probabilities agreed within 1.12e-16. This is not proof that every optimizer intermediate was unaffected; the warning remains documented.
+
+**Evaluation boundary:** the original test results below have already been inspected and used for subsequent diagnosis. Preserve them as historical results; if methods or candidate configurations are revised, collect new held-out conditions for a fresh final evaluation. A successful classifier fit does not establish a physical success-rate or speed improvement.
+
 ## Reading and switching between Chinese and English
 
 English is the default for this GitHub landing page and for first-time visits to the live simulation. The complete [Chinese edition](README.zh-CN.md) remains available through the button above. GitHub documents switch through links, not page scripts. The live page provides a global **English / 中文** switch for both storage and sorting. The preference is stored only in the current browser's local storage (`gpt-ui-language`) and is not uploaded to the server.
@@ -92,6 +150,65 @@ uv run --locked python run_grasp_learning.py --output results/grasp_level1_repro
 The output directory must not already exist. The entry point is [`run_grasp_learning.py`](run_grasp_learning.py), the physical-label collector is [`grasp_trial.py`](grasp_trial.py), and the model and speed-selection rules are in [`grasp_speed_model.py`](grasp_speed_model.py). Each batch preserves the protocol, source/asset fingerprints, model, per-trial physical traces, predictions, and actual outcomes. Invalid initial states are not treated as failures. Internal/numerical exceptions abort the run and retain the current attempt's information; old evidence is not overwritten.
 
 The original live page is still served by `server.py` and can display the black-bowl/drawer workstation; it does not automatically load these random-forest recommendations. This round's model execution uses the headless batch entry point above. Old demonstration videos are not presented as learning experiments.
+
+## Multi-feature classifier comparison: Logistic Regression, LASSO, Random Forest and XGBoost
+
+This is a separate supervised-learning experiment, not a GPT/VLA controller or a replay of the demonstration videos. Four parallel implementation agents contributed the shared data protocol, linear models, forest model and boosted-tree model. The integrated entry point is [`run_grasp_classifiers.py`](run_grasp_classifiers.py); [`collect_grasp_classifiers.py`](collect_grasp_classifiers.py) freezes conditions before physical collection.
+
+The [recorded batch](results/grasp_classifier_comparison_20261115/) contains **384 new physical trials: 123 successes and 261 failures**, collected in **250.6 wall seconds with three workers**. Mean worker time was **1.93 seconds per trial**; the parallel batch throughput is not single-trial latency. Every positive label satisfied the independent continuous two-second hold rule, and this collection had no numerical warnings. Negative labels include contact/retention failures, motion/preparation failures and unplanned contacts; they are not all verified object drops.
+
+### Shared data and leakage controls
+
+- Forty-eight object/state conditions, balanced between the existing bowl and bottle, each have four joint control configurations and two paired latent-error draws. Before observing outcomes, 32 conditions were assigned to training, eight to validation and eight to test.
+- Historical screening, interaction and follow-up evidence supplements **training only**. Audit removes 12 exact repeats: the final dataset has **422 training rows, 64 validation rows and 64 test rows**. The 64 test rows represent only eight condition groups, not 64 independent objects.
+- Inputs are geometry family, size scale, mass, sliding friction, settled x/y/yaw, opening, closing tendon-force command, closure trigger and descent-speed setting. Mass/friction are simulator ground truth. Latent XYZ execution bias, IDs, seeds, final poses, runtime, contacts and trajectories are not predictors.
+- Every model uses the same three grouped CV folds and a 12-candidate hyperparameter search, scored by log loss. Encoding, scaling and LASSO selection are fitted inside each training fold. Classic squared-loss LASSO selects features for its logistic branch; neither tree model is forced to use that subset.
+- A constant-probability baseline uses training prevalence. The four learned routes are full-feature L2 Logistic Regression, LASSO followed by L2 Logistic Regression, Random Forest and CPU histogram XGBoost. Raw probabilities are evaluated for calibration; no calibration mapping was fitted in this batch.
+
+### Frozen test results
+
+| Model | Test log loss, lower is better | Test Brier score, lower is better | Balanced accuracy |
+| --- | --- | --- | --- |
+| Constant training prevalence | 0.6611 | 0.2340 | 0.5000 |
+| Full-feature Logistic Regression | 0.4041 | 0.1308 | 0.8019 |
+| LASSO + Logistic Regression | 0.4432 | 0.1454 | 0.7633 |
+| Random Forest | 0.3212 | 0.1049 | 0.7899 |
+| XGBoost | 0.3639 | 0.1171 | 0.7850 |
+
+**XGBoost was selected on validation log loss (0.3209), before test evaluation.** Random Forest subsequently had the lowest test log loss; that observation does not authorize switching the selected model or retuning on the test set. LASSO retained closure trigger, mass and friction in its fitted model, but its test performance was worse than full-feature logistic regression. A zero coefficient is not evidence that a feature has no physical effect.
+
+### Fresh physical execution
+
+Each method was evaluated on the same eight held-out conditions with two new paired error draws. The 80 method outcomes link to **30 unique actual MuJoCo executions** because identical selected configurations share one physical run.
+
+| Method | Successful / attempted | Mean successful-task time, simulation seconds |
+| --- | --- | --- |
+| Fixed baseline | 5 / 16 | 12.345 |
+| Full-feature Logistic Regression | 5 / 16 | 13.218 |
+| LASSO + Logistic Regression | 5 / 16 | 12.345 |
+| Random Forest | 6 / 16 | 12.300 |
+| XGBoost, validation-selected | 5 / 16 | 13.218 |
+
+**The selected XGBoost policy did not improve success over the fixed baseline in this batch.** Random Forest's one extra success is not sufficient evidence of a repeatable advantage. Conditional successful-task times involve different successful attempts and are not a standalone speedup claim. This establishes the functioning data/training/prediction/execution pipeline, not a completed performance-improvement claim. The integrated classifier regression suite passed 41 tests.
+
+
+### Reproduce and inspect
+
+```sh
+uv sync --locked
+uv run --locked python run_grasp_classifiers.py \
+  --output results/grasp_classifier_reproduction \
+  --workers 3 --model-workers 4 --n-iter 12
+```
+
+The output directory must not exist. This command collects new physical labels, fits all four searches in parallel, saves the validation-based model choice, evaluates frozen test predictions, and physically executes recommendations against a fixed baseline under fresh paired nuisance draws. Selection compares complete candidate configurations, not speed alone. Predictions are saved before execution; identical action/error trials shared by methods are executed once and explicitly linked rather than treated as independent evidence. The experiment is headless and does not change the existing live-page controls or videos. On macOS, XGBoost additionally needs the native OpenMP runtime (`brew install libomp` if missing).
+
+Key evidence: [protocol](results/grasp_classifier_comparison_20261115/protocol.json), [data audit](results/grasp_classifier_comparison_20261115/data_audit.json), [dataset](results/grasp_classifier_comparison_20261115/dataset.csv), [split manifest](results/grasp_classifier_comparison_20261115/split_manifest.json), [CV folds](results/grasp_classifier_comparison_20261115/cv_manifest.json), [model comparison](results/grasp_classifier_comparison_20261115/comparison.json), [predictions before physical execution](results/grasp_classifier_comparison_20261115/recommendations_before_execution.json), and [physical execution comparison](results/grasp_classifier_comparison_20261115/execution_comparison.json). Models, all search candidates, raw per-trial JSON and compressed physics traces are retained.
+
+The first training attempt rejected valid float32 XGBoost probabilities because a probability-sum check assumed float64 precision. The corrected check uses the originating dtype's precision without clipping or renormalization. The failed attempt is preserved in an archive, and [numerical diagnostics](results/grasp_classifier_comparison_20261115/numeric_diagnostics.json) record the evidence. The pinned Apple-Silicon NumPy environment also emitted upstream-style matrix warnings during parallel linear fitting; warnings were not suppressed, fitted outputs were finite, and an independent matrix-product check agreed within 4.45e-16. These engineering observations are separate from physical trial labels.
+
+Scope remains two existing geometry families, specific grasp profiles and a small number of held-out conditions. This batch does not establish unseen-object or real-robot generalization, a globally optimal configuration, a safety guarantee, or a repeatable speed advantage.
+
 
 ## Colored bowl/cup sorting: GPT proposals and fixed-rule controls
 

@@ -1,0 +1,64 @@
+{
+  "group_partitions_disjoint": true,
+  "grouped_cv_folds": 3,
+  "cv_uses_training_only": true,
+  "frozen_training_sources_match": true,
+  "raw_data_source_hashes_match": true,
+  "model_selected_before_test": "xgboost",
+  "predictions_saved_before_physical_execution": true,
+  "positive_physical_labels_checked": 131,
+  "test_predictions": 256,
+  "partition_counts": {
+    "train": {
+      "rows": 422,
+      "groups": 75,
+      "successes": 194,
+      "failures": 228
+    },
+    "validation": {
+      "rows": 64,
+      "groups": 8,
+      "successes": 17,
+      "failures": 47
+    },
+    "test": {
+      "rows": 64,
+      "groups": 8,
+      "successes": 18,
+      "failures": 46
+    }
+  },
+  "new_collection": {
+    "attempted": 384,
+    "labelled": 384,
+    "successes": 123,
+    "failures": 261,
+    "statuses": {
+      "completed": 384
+    },
+    "numerical_warning_trials": 0,
+    "wall_s": 250.5720119579928
+  },
+  "fresh_execution": {
+    "attempted": 30,
+    "labelled": 30,
+    "successes": 8,
+    "failures": 22,
+    "statuses": {
+      "completed": 30
+    },
+    "numerical_warning_trials": 0,
+    "wall_s": 21.004573208047077
+  },
+  "method_attempts": 80,
+  "regression_suite": {
+    "command": "uv run --locked python -m unittest discover -s tests -p 'test_grasp_classifier_*.py' -v",
+    "tests": 41,
+    "result": "OK",
+    "observed_exit_code": 0
+  },
+  "publication": {
+    "git_commit_created": false,
+    "github_push_performed": false
+  }
+}

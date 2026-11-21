@@ -1,0 +1,5625 @@
+{
+  "plan": [
+    {
+      "method": "logistic",
+      "condition_id": "bowl_00",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_00.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.19811748421033162
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.06837551627048101
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.06351951300178414
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.09090065614171515
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bowl_00",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_00.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.17645185758175247
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.040059148344577404
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.040059148344577404
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.17645185758175247
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bowl_00",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_00.control_1.draw_0",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.04,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.02,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.0203125
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.040017924783549784
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.024107142857142855
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.012053571428571427
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bowl_00",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_00.control_1.draw_0",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.04,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.02,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.02420097030699253
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.04243851080536842
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.021984271705150604
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.02420097030699253
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bowl_00",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_00.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bowl_00",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_00.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.19811748421033162
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.06837551627048101
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.06351951300178414
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.09090065614171515
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bowl_00",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_00.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.17645185758175247
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.040059148344577404
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.040059148344577404
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.17645185758175247
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bowl_00",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_00.control_1.draw_1",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.04,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.02,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.0203125
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.040017924783549784
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.024107142857142855
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.012053571428571427
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bowl_00",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_00.control_1.draw_1",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.04,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.02,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.02420097030699253
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.04243851080536842
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.021984271705150604
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 0.2,
+            "x_m": 0.5238278092584041,
+            "y_m": -0.08163347211844599,
+            "yaw_rad": -0.017662037053686366,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.02420097030699253
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bowl_00",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_00.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bowl_08",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_08.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.12806864309070207
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.014902268018837721
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.028913782070116436
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.12421824038062808
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bowl_08",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_08.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.15361343205314237
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.03414236053822625
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.03414236053822625
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.07415788886219293
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bowl_08",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_08.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.10318175747863248
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.030275106837606838
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.035082799145299146
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.09797541867854367
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bowl_08",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_08.control_3.draw_0",
+      "selected_control_id": 3,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.1263297200202942
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.02389983832836151
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.028133463114500046
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.26382893323898315
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bowl_08",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_08.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bowl_08",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_08.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.12806864309070207
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.014902268018837721
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.028913782070116436
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.12421824038062808
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bowl_08",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_08.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.15361343205314237
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.03414236053822625
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.03414236053822625
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.07415788886219293
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bowl_08",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_08.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.10318175747863248
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.030275106837606838
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.035082799145299146
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.09797541867854367
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bowl_08",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_08.control_3.draw_1",
+      "selected_control_id": 3,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.1263297200202942
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.02389983832836151
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.028133463114500046
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.0,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.48976278382310334,
+            "y_m": -0.06353890069712213,
+            "yaw_rad": -0.10324784108929981,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.26382893323898315
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bowl_08",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_08.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bowl_22",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.8203006828253387
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.741076000428598
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.584070386913789
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.7174578270197747
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bowl_22",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7818177122577938
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.7818177122577938
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6126156478172091
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.4110443046107696
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bowl_22",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.4124136535441683
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.3582216216177614
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.3007583817326465
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.19450081168831165
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bowl_22",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.5942423343658447
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.5436458587646484
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.4273127019405365
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.25655287504196167
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bowl_22",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bowl_22",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.8203006828253387
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.741076000428598
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.584070386913789
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.7174578270197747
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bowl_22",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7818177122577938
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.7818177122577938
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6126156478172091
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.4110443046107696
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bowl_22",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.4124136535441683
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.3582216216177614
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.3007583817326465
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.19450081168831165
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bowl_22",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.5942423343658447
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.5436458587646484
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.4273127019405365
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.3,
+            "sliding_friction": 1.2,
+            "x_m": 0.5055665845233728,
+            "y_m": -0.08967629390822116,
+            "yaw_rad": 0.12223819282641753,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.25655287504196167
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bowl_22",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_22.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bowl_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_23.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.11285484608357088
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.05716126438595781
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.05453861440221553
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.06828089199642505
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bowl_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_23.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.15361343205314237
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.07415788886219293
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.15361343205314237
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.15361343205314237
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bowl_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_23.control_1.draw_0",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.03432158119658119
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.036925747863247864
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.029513888888888888
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.029513888888888888
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bowl_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_23.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.12038195878267288
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.1131415143609047
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.10791269689798355
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.11379968374967575
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bowl_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bowl_23.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bowl_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_23.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.11285484608357088
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.05716126438595781
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.05453861440221553
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.06828089199642505
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bowl_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_23.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.15361343205314237
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.07415788886219293
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.15361343205314237
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.15361343205314237
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bowl_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_23.control_1.draw_1",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.03432158119658119
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.036925747863247864
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.029513888888888888
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.029513888888888888
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bowl_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_23.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.12038195878267288
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.1131415143609047
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.10791269689798355
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bowl",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 0.4,
+            "x_m": 0.4838541683287827,
+            "y_m": -0.06307788808996155,
+            "yaw_rad": 0.026269141432456067,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.11379968374967575
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bowl_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bowl_23.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bottle_06",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_06.control_1.draw_0",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.04,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.19610976242796171
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.2216453889491547
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.09960276347583584
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.11949552638393497
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bottle_06",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_06.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.2774581578809425
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.2774581578809425
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.2774581578809425
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.14491227261363787
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bottle_06",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_06.control_2.draw_0",
+      "selected_control_id": 2,
+      "selected_control": {
+        "opening_m": 0.04,
+        "closing_force_n": 2.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.025669642857142856
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.025657805735930732
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.044680059523809525
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.020300662878787876
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bottle_06",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_06.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.07045876234769821
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.05685758590698242
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.053303565829992294
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.05978681147098541
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bottle_06",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_06.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bottle_06",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_06.control_1.draw_1",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.04,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.19610976242796171
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.2216453889491547
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.09960276347583584
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.11949552638393497
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bottle_06",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_06.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.2774581578809425
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.2774581578809425
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.2774581578809425
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.14491227261363787
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bottle_06",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_06.control_2.draw_1",
+      "selected_control_id": 2,
+      "selected_control": {
+        "opening_m": 0.04,
+        "closing_force_n": 2.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.025669642857142856
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.025657805735930732
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.044680059523809525
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.020300662878787876
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bottle_06",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_06.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.07045876234769821
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.05685758590698242
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.053303565829992294
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.2,
+            "x_m": 0.49288264216241234,
+            "y_m": -0.07062316423547539,
+            "yaw_rad": -0.0047575309036122886,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.05978681147098541
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bottle_06",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_06.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bottle_14",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_14.control_2.draw_0",
+      "selected_control_id": 2,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.5468889740617984
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.2424246912624277
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7097744035543109
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.5185867488404907
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bottle_14",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_14.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6334287906622518
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.25180929209512026
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6334287906622518
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.6334287906622518
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bottle_14",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_14.control_2.draw_0",
+      "selected_control_id": 2,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.41089859210384555
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.18246020472582972
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6806009432751523
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.3749915304155339
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bottle_14",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_14.control_2.draw_0",
+      "selected_control_id": 2,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.4174126386642456
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.1547553539276123
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6945000290870667
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.3830376863479614
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bottle_14",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_14.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bottle_14",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_14.control_2.draw_1",
+      "selected_control_id": 2,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.5468889740617984
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.2424246912624277
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7097744035543109
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.5185867488404907
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bottle_14",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_14.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6334287906622518
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.25180929209512026
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6334287906622518
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.6334287906622518
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bottle_14",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_14.control_2.draw_1",
+      "selected_control_id": 2,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.41089859210384555
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.18246020472582972
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6806009432751523
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.3749915304155339
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bottle_14",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_14.control_2.draw_1",
+      "selected_control_id": 2,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.4174126386642456
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.04,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.1547553539276123
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6945000290870667
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.45,
+            "sliding_friction": 1.2,
+            "x_m": 0.513861044185008,
+            "y_m": -0.08070824577962354,
+            "yaw_rad": 0.13459838259609125,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.3830376863479614
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bottle_14",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_14.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bottle_21",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.595354152297653
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.33002800183312675
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.17743124118884462
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.4587383459882354
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bottle_21",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6754662364953183
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.47877358067990833
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.28844935448982295
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.47877358067990833
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bottle_21",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.8542933268068199
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.667043828567266
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.4240338437604063
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.5861137126762126
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bottle_21",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7317889332771301
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.621381938457489
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.2752763628959656
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.6361400485038757
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bottle_21",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bottle_21",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.595354152297653
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.33002800183312675
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.17743124118884462
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.4587383459882354
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bottle_21",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6754662364953183
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.47877358067990833
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.28844935448982295
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.47877358067990833
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bottle_21",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.8542933268068199
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.667043828567266
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.4240338437604063
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.5861137126762126
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bottle_21",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7317889332771301
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.621381938457489
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.02,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.2752763628959656
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.2,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.49399881188083034,
+            "y_m": -0.08572363605541015,
+            "yaw_rad": 0.1241681893502864,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.01,
+            "descent_speed_m_s": 0.2
+          },
+          "predicted_success_probability": 0.6361400485038757
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bottle_21",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_21.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bottle_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_23.control_1.draw_0",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6243229683188137
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.7503332958534799
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.4021181367828446
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.5175353300323472
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bottle_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_23.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6754662364953183
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.6754662364953183
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.6754662364953183
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6754662364953183
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bottle_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_23.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7963315311527563
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.7853094705684651
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.705008759994317
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.774163129929937
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bottle_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_23.control_1.draw_0",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7019257545471191
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.7232071161270142
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.6279401779174805
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6667957305908203
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bottle_23",
+      "draw": 0,
+      "physical_trial_id": "execution.bottle_23.control_0.draw_0",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "logistic",
+      "condition_id": "bottle_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_23.control_1.draw_1",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6243229683188137
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.7503332958534799
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.4021181367828446
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.5175353300323472
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "lasso_logistic",
+      "condition_id": "bottle_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_23.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6754662364953183
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.6754662364953183
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.6754662364953183
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6754662364953183
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "random_forest",
+      "condition_id": "bottle_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_23.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7963315311527563
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.7853094705684651
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.705008759994317
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.774163129929937
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "xgboost",
+      "condition_id": "bottle_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_23.control_1.draw_1",
+      "selected_control_id": 1,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      "candidate_predictions": [
+        {
+          "control_id": 0,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.7019257545471191
+        },
+        {
+          "control_id": 1,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.08,
+            "closing_force_n": 8.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.7232071161270142
+        },
+        {
+          "control_id": 2,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 2.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.04
+          },
+          "predicted_success_probability": 0.6279401779174805
+        },
+        {
+          "control_id": 3,
+          "features": {
+            "target": "bottle",
+            "scale": 1.0,
+            "mass_kg": 0.18,
+            "sliding_friction": 0.8,
+            "x_m": 0.517551738924474,
+            "y_m": -0.07706743920174484,
+            "yaw_rad": -0.13296715679407065,
+            "opening_m": 0.04,
+            "closing_force_n": 4.0,
+            "close_trigger_m": 0.0,
+            "descent_speed_m_s": 0.1
+          },
+          "predicted_success_probability": 0.6667957305908203
+        }
+      ],
+      "selection_used_observed_outcomes": false
+    },
+    {
+      "method": "fixed_baseline",
+      "condition_id": "bottle_23",
+      "draw": 1,
+      "physical_trial_id": "execution.bottle_23.control_0.draw_1",
+      "selected_control_id": 0,
+      "selected_control": {
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      "candidate_predictions": null,
+      "selection_used_observed_outcomes": false
+    }
+  ],
+  "unique_physical_attempts": 30,
+  "method_attempts": 80,
+  "reused_physics": "Identical action/nuisance trials are executed once and linked across methods, not counted as independent repeats",
+  "nuisance_policy": "Fresh draws, paired across methods, disjoint from collection seeds",
+  "primary_model_selected_on_validation": "xgboost"
+}

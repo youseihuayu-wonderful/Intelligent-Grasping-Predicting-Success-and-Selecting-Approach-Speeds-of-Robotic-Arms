@@ -1,0 +1,2124 @@
+{
+  "stage": "Post-screening targeted verification",
+  "trials": [
+    [
+      "bowl.light_standard.jitter_00",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.003745842910840935,
+        "bias_y_m": -0.005530558173913158,
+        "bias_z_m": 0.004189512272204536,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7721,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_00",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.003745842910840935,
+        "bias_y_m": -0.005530558173913158,
+        "bias_z_m": 0.004189512272204536,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7721,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_00",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.003745842910840935,
+        "bias_y_m": -0.005530558173913158,
+        "bias_z_m": 0.004189512272204536,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7721,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_01",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0027003084620217856,
+        "bias_y_m": -0.0031374033629823776,
+        "bias_z_m": -0.005031162483162131,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7722,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_01",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0027003084620217856,
+        "bias_y_m": -0.0031374033629823776,
+        "bias_z_m": -0.005031162483162131,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7722,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_01",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0027003084620217856,
+        "bias_y_m": -0.0031374033629823776,
+        "bias_z_m": -0.005031162483162131,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7722,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_02",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.004747698818810415,
+        "bias_y_m": -0.0015654508533261696,
+        "bias_z_m": 0.004979905833712186,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7723,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_02",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.004747698818810415,
+        "bias_y_m": -0.0015654508533261696,
+        "bias_z_m": 0.004979905833712186,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7723,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_02",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.004747698818810415,
+        "bias_y_m": -0.0015654508533261696,
+        "bias_z_m": 0.004979905833712186,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7723,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_03",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.00580114587010145,
+        "bias_y_m": -0.0018248613419279136,
+        "bias_z_m": 0.0020229000602821345,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7724,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_03",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.00580114587010145,
+        "bias_y_m": -0.0018248613419279136,
+        "bias_z_m": 0.0020229000602821345,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7724,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_03",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.00580114587010145,
+        "bias_y_m": -0.0018248613419279136,
+        "bias_z_m": 0.0020229000602821345,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7724,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_04",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0031250024720618067,
+        "bias_y_m": -0.0023775355814518555,
+        "bias_z_m": 0.0002997255829276374,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7725,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_04",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0031250024720618067,
+        "bias_y_m": -0.0023775355814518555,
+        "bias_z_m": 0.0002997255829276374,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7725,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_04",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0031250024720618067,
+        "bias_y_m": -0.0023775355814518555,
+        "bias_z_m": 0.0002997255829276374,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7725,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_05",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003933431609728831,
+        "bias_y_m": -0.001277946430422749,
+        "bias_z_m": 0.0001512172088579903,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7726,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_05",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003933431609728831,
+        "bias_y_m": -0.001277946430422749,
+        "bias_z_m": 0.0001512172088579903,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7726,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_05",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003933431609728831,
+        "bias_y_m": -0.001277946430422749,
+        "bias_z_m": 0.0001512172088579903,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7726,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_06",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0015542083704527289,
+        "bias_y_m": -0.000694817485319129,
+        "bias_z_m": 0.003521939098312072,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7727,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_06",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0015542083704527289,
+        "bias_y_m": -0.000694817485319129,
+        "bias_z_m": 0.003521939098312072,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7727,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_06",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0015542083704527289,
+        "bias_y_m": -0.000694817485319129,
+        "bias_z_m": 0.003521939098312072,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7727,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_07",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.002396547896323018,
+        "bias_y_m": 0.004045063695499911,
+        "bias_z_m": 0.003381677950961946,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7728,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_07",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.002396547896323018,
+        "bias_y_m": 0.004045063695499911,
+        "bias_z_m": 0.003381677950961946,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7728,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_07",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.002396547896323018,
+        "bias_y_m": 0.004045063695499911,
+        "bias_z_m": 0.003381677950961946,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7728,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_08",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0033133888606660463,
+        "bias_y_m": 0.002903355745290598,
+        "bias_z_m": -0.0013131439516463478,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7729,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_08",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0033133888606660463,
+        "bias_y_m": 0.002903355745290598,
+        "bias_z_m": -0.0013131439516463478,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7729,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_08",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0033133888606660463,
+        "bias_y_m": 0.002903355745290598,
+        "bias_z_m": -0.0013131439516463478,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7729,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.light_standard.jitter_09",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003956509495631904,
+        "bias_y_m": -0.00039040423153709636,
+        "bias_z_m": -0.0017909199204620809,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7730,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_standard.jitter_09",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003956509495631904,
+        "bias_y_m": -0.00039040423153709636,
+        "bias_z_m": -0.0017909199204620809,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7730,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.heavy_stronger.jitter_09",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003956509495631904,
+        "bias_y_m": -0.00039040423153709636,
+        "bias_z_m": -0.0017909199204620809,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7730,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_00",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.003745842910840935,
+        "bias_y_m": -0.005530558173913158,
+        "bias_z_m": 0.004189512272204536,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7721,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_00",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.003745842910840935,
+        "bias_y_m": -0.005530558173913158,
+        "bias_z_m": 0.004189512272204536,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7721,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_00",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.003745842910840935,
+        "bias_y_m": -0.005530558173913158,
+        "bias_z_m": 0.004189512272204536,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7721,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_01",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0027003084620217856,
+        "bias_y_m": -0.0031374033629823776,
+        "bias_z_m": -0.005031162483162131,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7722,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_01",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0027003084620217856,
+        "bias_y_m": -0.0031374033629823776,
+        "bias_z_m": -0.005031162483162131,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7722,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_01",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0027003084620217856,
+        "bias_y_m": -0.0031374033629823776,
+        "bias_z_m": -0.005031162483162131,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7722,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_02",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.004747698818810415,
+        "bias_y_m": -0.0015654508533261696,
+        "bias_z_m": 0.004979905833712186,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7723,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_02",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.004747698818810415,
+        "bias_y_m": -0.0015654508533261696,
+        "bias_z_m": 0.004979905833712186,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7723,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_02",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.004747698818810415,
+        "bias_y_m": -0.0015654508533261696,
+        "bias_z_m": 0.004979905833712186,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7723,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_03",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.00580114587010145,
+        "bias_y_m": -0.0018248613419279136,
+        "bias_z_m": 0.0020229000602821345,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7724,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_03",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.00580114587010145,
+        "bias_y_m": -0.0018248613419279136,
+        "bias_z_m": 0.0020229000602821345,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7724,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_03",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.00580114587010145,
+        "bias_y_m": -0.0018248613419279136,
+        "bias_z_m": 0.0020229000602821345,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7724,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_04",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0031250024720618067,
+        "bias_y_m": -0.0023775355814518555,
+        "bias_z_m": 0.0002997255829276374,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7725,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_04",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0031250024720618067,
+        "bias_y_m": -0.0023775355814518555,
+        "bias_z_m": 0.0002997255829276374,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7725,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_04",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0031250024720618067,
+        "bias_y_m": -0.0023775355814518555,
+        "bias_z_m": 0.0002997255829276374,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7725,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_05",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003933431609728831,
+        "bias_y_m": -0.001277946430422749,
+        "bias_z_m": 0.0001512172088579903,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7726,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_05",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003933431609728831,
+        "bias_y_m": -0.001277946430422749,
+        "bias_z_m": 0.0001512172088579903,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7726,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_05",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003933431609728831,
+        "bias_y_m": -0.001277946430422749,
+        "bias_z_m": 0.0001512172088579903,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7726,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_06",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0015542083704527289,
+        "bias_y_m": -0.000694817485319129,
+        "bias_z_m": 0.003521939098312072,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7727,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_06",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0015542083704527289,
+        "bias_y_m": -0.000694817485319129,
+        "bias_z_m": 0.003521939098312072,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7727,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_06",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0015542083704527289,
+        "bias_y_m": -0.000694817485319129,
+        "bias_z_m": 0.003521939098312072,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7727,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_07",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.002396547896323018,
+        "bias_y_m": 0.004045063695499911,
+        "bias_z_m": 0.003381677950961946,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7728,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_07",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.002396547896323018,
+        "bias_y_m": 0.004045063695499911,
+        "bias_z_m": 0.003381677950961946,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7728,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_07",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.002396547896323018,
+        "bias_y_m": 0.004045063695499911,
+        "bias_z_m": 0.003381677950961946,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7728,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_08",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0033133888606660463,
+        "bias_y_m": 0.002903355745290598,
+        "bias_z_m": -0.0013131439516463478,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7729,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_08",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0033133888606660463,
+        "bias_y_m": 0.002903355745290598,
+        "bias_z_m": -0.0013131439516463478,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7729,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_08",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.0033133888606660463,
+        "bias_y_m": 0.002903355745290598,
+        "bias_z_m": -0.0013131439516463478,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7729,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.light_standard.jitter_09",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003956509495631904,
+        "bias_y_m": -0.00039040423153709636,
+        "bias_z_m": -0.0017909199204620809,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "light_standard",
+        "seed": 7730,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_standard.jitter_09",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003956509495631904,
+        "bias_y_m": -0.00039040423153709636,
+        "bias_z_m": -0.0017909199204620809,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_standard",
+        "seed": 7730,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bottle.heavy_stronger.jitter_09",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.45,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": -0.003956509495631904,
+        "bias_y_m": -0.00039040423153709636,
+        "bias_z_m": -0.0017909199204620809,
+        "opening_m": 0.08,
+        "closing_force_n": 8.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "paired_execution_error_jitter",
+        "condition": "heavy_stronger",
+        "seed": 7730,
+        "error_distribution": "Independent uniform [-6,+6] mm for body-frame XYZ grasp-point error; shared draws across configurations",
+        "error_observability": "Latent nuisance for a possible future nominal-feature predictor; saved here for reproducibility, not observed by vision"
+      }
+    ],
+    [
+      "bowl.geometry.scale_0.70.opening_0.04",
+      {
+        "target": "bowl",
+        "scale": 0.7,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bowl.geometry.scale_0.70.opening_0.08",
+      {
+        "target": "bowl",
+        "scale": 0.7,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bowl.geometry.scale_1.00.opening_0.04",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bowl.geometry.scale_1.00.opening_0.08",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bowl.geometry.scale_1.30.opening_0.04",
+      {
+        "target": "bowl",
+        "scale": 1.3,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bowl.geometry.scale_1.30.opening_0.08",
+      {
+        "target": "bowl",
+        "scale": 1.3,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bowl.timing.speed_0.04.trigger_0.00",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bowl.timing.speed_0.04.trigger_0.01",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.04
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bowl.timing.speed_0.10.trigger_0.00",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bowl.timing.speed_0.10.trigger_0.01",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bowl.timing.speed_0.20.trigger_0.00",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.2
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bowl.timing.speed_0.20.trigger_0.01",
+      {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.2
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bottle.geometry.scale_0.70.opening_0.04",
+      {
+        "target": "bottle",
+        "scale": 0.7,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bottle.geometry.scale_0.70.opening_0.08",
+      {
+        "target": "bottle",
+        "scale": 0.7,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bottle.geometry.scale_1.00.opening_0.04",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bottle.geometry.scale_1.00.opening_0.08",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bottle.geometry.scale_1.30.opening_0.04",
+      {
+        "target": "bottle",
+        "scale": 1.3,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.04,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bottle.geometry.scale_1.30.opening_0.08",
+      {
+        "target": "bottle",
+        "scale": 1.3,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "size_opening_factorial",
+        "selection": "Use a mass whose reference succeeds for both assets, to avoid size contrasts against a failed reference."
+      }
+    ],
+    [
+      "bottle.timing.speed_0.04.trigger_0.00",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.04
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bottle.timing.speed_0.04.trigger_0.01",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.04
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bottle.timing.speed_0.10.trigger_0.00",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bottle.timing.speed_0.10.trigger_0.01",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.1
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bottle.timing.speed_0.20.trigger_0.00",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.2
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ],
+    [
+      "bottle.timing.speed_0.20.trigger_0.01",
+      {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.01,
+        "descent_speed_m_s": 0.2
+      },
+      {
+        "design": "speed_closure_timing_factorial",
+        "selection": "Use successful nominal-mass references and separate timing from the speed setting."
+      }
+    ]
+  ],
+  "source_sha256": {
+    "run_followups.py": "ad2b4bc1f4fa022e0595e99a223d5046fc9232bcb20ae81855f2e6c2d09a1876",
+    "run_exploration.py": "b38099f61959c3ad397cb51b9de269c6de0608f384aa346cdfca876add0f1ee6"
+  },
+  "jitter_scope": "Ten independently generated XYZ grasp errors per object, shared across three configurations; an exploratory conditional frequency over this specific error distribution, not a calibrated learned probability.",
+  "label_rule": "Same strict contact/clearance/lift/relative stability plus continuous two-second hold as screening; initial invalid states unlabelled; numerical errors abort.",
+  "physics_and_control": "Same declared compiled scene and contact settings as screening, not the original demo settings."
+}
