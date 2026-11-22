@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>同桌五物体抓取 · Live MuJoCo</title>
+  <link rel="stylesheet" href="/study.css">
+  <script defer src="/study.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">FRANKA PANDA · MUJOCO · LIVE PHYSICS</div>
+    <h1>同桌五物体抓取 <span>Shared-table grasping</span></h1>
+    <p>碗、瓶、勺子、玻璃杯和笔同时放在同一张桌上。下方按钮只选择抓取目标，不会用一个物体替换其他物体。</p>
+    <div class="connection"><span id="connection">正在连接本地物理仿真…</span><span id="frame-count">—</span></div>
+  </header>
+  <nav aria-label="选择抓取目标（其他物体保留）" id="objects">
+    <button data-target="bowl">碗 <small>Bowl</small></button>
+    <button data-target="bottle">瓶 <small>Bottle</small></button>
+    <button data-target="spoon">勺子 <small>Spoon</small></button>
+    <button data-target="glass">玻璃杯 <small>Glass</small></button>
+    <button data-target="pen">笔 <small>Pen</small></button>
+  </nav>
+  <p id="selection-note" role="status">等待实时场景状态；选择目标时，全场五个物体会重置到原始桌面布局。</p>
+  <section class="viewport" aria-label="实时 MuJoCo 画面">
+    <img id="frame" alt="等待 MuJoCo 实时渲染的机械臂画面" width="800" height="600">
+    <div class="overlay"><strong id="object-name">等待目标</strong><span id="phase">—</span></div>
+    <div id="outcome" class="outcome">等待真实执行</div>
+  </section>
+  <div id="error" role="alert" hidden></div>
+  <section class="controls" aria-label="仿真控制">
+    <button id="pause">暂停</button><button id="restart">重置全场再抓取</button><button id="next">下一个目标</button>
+    <label>镜头 <select id="view"><option value="workspace">机械臂全景</option><option value="close">抓取近景</option></select></label>
+    <label><input type="checkbox" id="auto" checked> 自动切换目标（全场重置）</label>
+  </section>
+  <ol class="steps" aria-label="实际执行阶段">
+    <li data-phase="prepare">准备</li><li data-phase="approach">接近</li><li data-phase="descend">下降</li><li data-phase="close">闭合</li><li data-phase="lift">抬升</li><li data-phase="hold">保持</li><li data-phase="done">结束</li>
+  </ol>
+  <section class="metrics" aria-label="实时测量">
+    <div><span>仿真时间</span><strong id="time">—</strong></div>
+    <div><span>连续保持 / 需 2 s</span><strong id="hold">—</strong></div>
+    <div><span>目标抬升 / 需 0.10 m</span><strong id="lift">—</strong></div>
+    <div><span>实测夹爪开口</span><strong id="opening">—</strong></div>
+  </section>
+  <section class="scene-objects" aria-labelledby="scene-heading">
+    <h2 id="scene-heading">同桌物体 <span id="object-count">等待物理状态</span></h2>
+    <p class="note">以下为服务端动态物体的实测位置；离桌间隙为碰撞包围盒底面至桌面的距离。抓取时目标可能升起，其他物体仍在场。</p>
+    <ul id="object-states" aria-label="场景物体与实测位置"></ul>
+  </section>
+  <section class="evidence">
+    <h2>实时物理验收 <span>Live outcome</span></h2>
+    <dl><dt>本次抓取</dt><dd id="current-outcome">—</dd><dt>目标参数</dt><dd id="parameters">—</dd></dl>
+    <div class="predicates" id="predicates"></div>
+    <p class="note">这是使用相同机械臂、控制器和资产的新多物体场景，不是旧单物体数据集的回放，也不是成功率估计；旧数据集统计不评价此场景。结果来自本次真实物理执行，不预设成功。</p>
+    <p class="note">每次切换目标或重新执行，五个物体均重置到原始桌面布局；结束后保留终态 3 秒，再按自动切换设置重置全场并抓取下一目标。这不是连续分拣、放置或归位任务；物体不会因切换目标而消失。</p>
+    <p class="note">速度为下降轨迹设置，力为闭合指令；不是恒定实测 TCP 速度或实测夹持力。物体为刚体近似，玻璃杯不模拟碎裂。</p>
+  </section>
+</main>
+</body>
+</html>

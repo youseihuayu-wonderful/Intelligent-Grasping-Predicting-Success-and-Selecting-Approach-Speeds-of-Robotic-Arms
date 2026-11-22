@@ -1,0 +1,1505 @@
+{
+  "archive": {
+    "path": "runtime.tar.gz",
+    "sha256": "4d1b887068b2739fb9c575da3c1c2e3ca945127474634ccd76786d6b3d710758",
+    "size_bytes": 22914119
+  },
+  "files": {
+    "assets/grasp_study/glass.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "b8441416c44548fc628d5eddb38d9c19a142820fbe10b15b00c6ce77f7d42a6d",
+      "size_bytes": 2776
+    },
+    "assets/grasp_study/pen.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "b3a9a81d2834508c72e17027a7c746e26f2b0e57e584199bb5d4594e2071e693",
+      "size_bytes": 750
+    },
+    "assets/grasp_study/spoon.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "9d4c425a8a8a8b47f1e571d74034d72afb6d7035be0b2a3169b43bea9ff48120",
+      "size_bytes": 1098
+    },
+    "assets/grasp_study/tabletop_cabinet.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256"
+      ],
+      "sha256": "bdaa8b16559dea438dfc58ec6ca7ca1cecd1b0dab4448783a9da715987c5bfcd",
+      "size_bytes": 2396
+    },
+    "benchmark.py": {
+      "basis": [
+        "import:grasp_study_physics.py",
+        "import:grasp_trial.py",
+        "import:run_grasp_learning.py",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "2d284802ab5f0bfa82c4ac2f8db5f5c19c0cb1adfab78a4ad855bf554281cc43",
+      "size_bytes": 14448
+    },
+    "collisions.py": {
+      "basis": [
+        "import:drawer_storage_checks.py",
+        "import:grasp_study_physics.py",
+        "import:grasp_tabletop.py",
+        "import:simulation.py",
+        "import:sorting.py",
+        "import:tabletop_storage.py",
+        "import:tests/test_grasp_tabletop.py",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "263e7cbf4ee7ec2dad5479723d7433a3a621edd73ee6b8897fde2db9d9dbc445",
+      "size_bytes": 6545
+    },
+    "compare_sorting.py": {
+      "basis": [
+        "import:evaluate_sorting.py"
+      ],
+      "sha256": "41be651f924810e9b5332b172fae8e607e9daacbfac1d0383e1f11a37da06808",
+      "size_bytes": 13424
+    },
+    "drawer_storage_checks.py": {
+      "basis": [
+        "import:tabletop_storage.py",
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256"
+      ],
+      "sha256": "7072b79249f6737ada4b6b9193d2c76c25a45c625103ece9e8dfc8ba3966ff25",
+      "size_bytes": 8090
+    },
+    "evaluate_sorting.py": {
+      "basis": [
+        "import:server.py"
+      ],
+      "sha256": "26ba5a44c621f20a6d5823bc7ad7a2e31bcbcc2ec79e0de11a88e2720a2de792",
+      "size_bytes": 28435
+    },
+    "experiments.py": {
+      "basis": [
+        "import:benchmark.py"
+      ],
+      "sha256": "971ee89aec7e20b79514366adcfe515a6b7bef2b86aba20caf6fd65a742ccd57",
+      "size_bytes": 4133
+    },
+    "grasp.py": {
+      "basis": [
+        "import:benchmark.py",
+        "import:experiments.py",
+        "import:grasp_study_physics.py",
+        "import:grasp_trial.py",
+        "import:planner.py",
+        "import:run_tabletop_grasps.py",
+        "import:server.py",
+        "import:simulation.py",
+        "import:sorting.py",
+        "import:tabletop_storage.py",
+        "import:tests/test_grasp_tabletop.py",
+        "import:verify_skills.py",
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "4ddc10acf904456661c89fbcb595e2677f5e1a8029abd0cb3ad059c4bfc75114",
+      "size_bytes": 27257
+    },
+    "grasp_speed_model.py": {
+      "basis": [
+        "import:run_grasp_learning.py",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "d34a84d2790e98210801249caf60bd4504fd5f3ad1db44ebadcada5cdd3d558d",
+      "size_bytes": 6510
+    },
+    "grasp_study_objects.py": {
+      "basis": [
+        "import:grasp_study_physics.py",
+        "import:grasp_tabletop.py",
+        "import:run_tabletop_grasps.py",
+        "import:tabletop_storage.py",
+        "import:tests/test_grasp_tabletop.py",
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "a1a7a76f01b282710cc95384735cc9fe0303d4bee3ea9a4357314a55208e63eb",
+      "size_bytes": 2212
+    },
+    "grasp_study_physics.py": {
+      "basis": [
+        "import:grasp_tabletop.py",
+        "import:run_tabletop_grasps.py",
+        "import:tabletop_storage.py",
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "b6f1907750c681d987547e4dfdb0d404ed6131453975057c5f2294f302fbd92b",
+      "size_bytes": 15450
+    },
+    "grasp_tabletop.py": {
+      "basis": [
+        "import:run_tabletop_grasps.py",
+        "import:tabletop_storage.py",
+        "import:tests/test_grasp_tabletop.py",
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256"
+      ],
+      "sha256": "6d7b6fe2dd368481e06900496904df6519eea5e1117c78d7475651a452874415",
+      "size_bytes": 9214
+    },
+    "grasp_trial.py": {
+      "basis": [
+        "import:run_grasp_learning.py",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "77bda1c2e7193e631b68c73ad5d0e17bf2aa3d65cdec25f8161218094855066c",
+      "size_bytes": 10138
+    },
+    "planner.py": {
+      "basis": [
+        "import:benchmark.py",
+        "import:planning.py",
+        "import:server.py",
+        "import:sorting_evaluation.py",
+        "import:sorting_planning.py"
+      ],
+      "sha256": "97cf3117bb0a18931b18f86c5e6141efed30b525961632ead2b9b88443cbea37",
+      "size_bytes": 22156
+    },
+    "planning.py": {
+      "basis": [
+        "import:server.py"
+      ],
+      "sha256": "d2288890e7190f8170eb0e05fb20dcfa50ec194a283e18bf3b4028385134ee7d",
+      "size_bytes": 15822
+    },
+    "pyproject.toml": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "e0130221f2393660b153c65aba7741933264ff9fafcc4ff3a2cbec12d902c329",
+      "size_bytes": 375
+    },
+    "results/experiment_02_five_object_storage/COMPARISON.md": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "65b73241f81c3903a3f09fac6dcbb76df790cf2b2be2d7f4d378d38b947493ef",
+      "size_bytes": 3627
+    },
+    "results/experiment_02_five_object_storage/final/verification.json": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "4d6c222d017392fa354b5296d1c8ef8c77b91017c9aaad63d153aacd572022dc",
+      "size_bytes": 31201
+    },
+    "results/five_object_cabinet_20261122/verification.json": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "ddba9fc29d0c59a93ed638f9ee5303886af40256df58e176cb5f4eae686224bb",
+      "size_bytes": 4176
+    },
+    "results/five_object_tabletop/initial_layout_verification.json": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "c6ab2253a524549be0e3640b7e19286bfc60843ecb70dd74a4ccd043e440d385",
+      "size_bytes": 29586
+    },
+    "results/five_object_tabletop/verification.json": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "a627af3f20c1ed03438923372661106dc151dd49f49186475eeaed16d41fa562",
+      "size_bytes": 16509
+    },
+    "results/grasp_classifier_five_objects_20261121/environment.json": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "9034867a74742c9b6bb03cff1b245962baf76b1bbb6827240a1f53801f40ec5b",
+      "size_bytes": 17215
+    },
+    "run_grasp_learning.py": {
+      "basis": [
+        "import:grasp_study_physics.py",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "5098292f7124e53618ca265d50f1ee2e77ac1415959ecb55ebfd260fd0901481",
+      "size_bytes": 20586
+    },
+    "run_tabletop_grasps.py": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "25fb6fbb27e2b9fcd00856f6e649de3eb02846bffd70996fe632e6b21fbf477d",
+      "size_bytes": 7778
+    },
+    "scenarios.py": {
+      "basis": [
+        "import:benchmark.py",
+        "import:grasp_speed_model.py",
+        "import:grasp_study_objects.py",
+        "import:grasp_study_physics.py",
+        "import:grasp_trial.py",
+        "import:run_grasp_learning.py",
+        "import:server.py",
+        "import:simulation.py",
+        "import:task_specs.py",
+        "import:verify_skills.py",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "b1333a1fda3028434289013ec9ef7f56850769ff1f8880cbac481e7031cff146",
+      "size_bytes": 3330
+    },
+    "scene.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "7ca71b6a86f587f0f1ab1758f7722b92aebdfbf0973262b238591407d0190b32",
+      "size_bytes": 2121
+    },
+    "serve_grasp_study.py": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "5fad727f90a63b62f42a9148b440812801a40308e0c9db92b820d06ac9d2fc22",
+      "size_bytes": 6877
+    },
+    "server.py": {
+      "basis": [
+        "import:serve_grasp_study.py"
+      ],
+      "sha256": "c6ef6a8e635b93247c0a6474a3c9c8302cd8b5bafd34ea0192a2e7f2c008d998",
+      "size_bytes": 19758
+    },
+    "simulation.py": {
+      "basis": [
+        "import:benchmark.py",
+        "import:experiments.py",
+        "import:grasp_study_physics.py",
+        "import:grasp_tabletop.py",
+        "import:grasp_trial.py",
+        "import:planning.py",
+        "import:server.py",
+        "import:sorting.py",
+        "import:sorting_evaluation.py",
+        "import:verify_skills.py",
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "b7a24a6a6cb304b80322e6b2f089cbe7ade29dec99cbf0051173c494134a0ef2",
+      "size_bytes": 13340
+    },
+    "simulation_delivery.py": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "cb12d22deeecb1ac4c5be4426976f9905692602b260013a4475200d603105572",
+      "size_bytes": 14122
+    },
+    "sorting.py": {
+      "basis": [
+        "import:compare_sorting.py",
+        "import:server.py",
+        "import:sorting_evaluation.py",
+        "import:sorting_planning.py",
+        "import:verify_sorting.py"
+      ],
+      "sha256": "d82736de65f6504530cd6407e67aa8d24a7fd07bc4c8f907fd4c32446f58a8a7",
+      "size_bytes": 39268
+    },
+    "sorting_contract.py": {
+      "basis": [
+        "import:compare_sorting.py",
+        "import:evaluate_sorting.py",
+        "import:sorting.py",
+        "import:sorting_evaluation.py",
+        "import:sorting_planning.py",
+        "import:verify_sorting.py"
+      ],
+      "sha256": "3061f56e6b5426945311368e1ecf72524f024f890d40c6475e13e3f60f1b06bf",
+      "size_bytes": 4388
+    },
+    "sorting_evaluation.py": {
+      "basis": [
+        "import:evaluate_sorting.py",
+        "import:server.py"
+      ],
+      "sha256": "2384975346f0acaa3802baca5a9300dc5522ee472c16f49292f68495c9f9e1a4",
+      "size_bytes": 11854
+    },
+    "sorting_planning.py": {
+      "basis": [
+        "import:compare_sorting.py",
+        "import:server.py"
+      ],
+      "sha256": "f1638bffe9961c23923c4f8c363ff99af79158c63b398567b06ddd9dbb898170",
+      "size_bytes": 22439
+    },
+    "storage.py": {
+      "basis": [
+        "import:grasp.py",
+        "import:tabletop_storage.py",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "79b37a34279c65cbdf2ef5aab294f549034a1660530b31807177f576ecc5ec37",
+      "size_bytes": 23371
+    },
+    "tabletop_storage.py": {
+      "basis": [
+        "import:serve_grasp_study.py",
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256"
+      ],
+      "sha256": "0bafe29c2fc1e1c989601329684fcf077c72e2d2c6078aec8769fde9dceb78de",
+      "size_bytes": 26767
+    },
+    "task_specs.py": {
+      "basis": [
+        "import:benchmark.py",
+        "import:experiments.py",
+        "import:grasp.py",
+        "import:grasp_trial.py",
+        "import:planner.py",
+        "import:simulation.py",
+        "import:storage.py",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "89e4893d6e7e781d47f4d32fabe5c9e22f0f93667584124f1e091258f4b6f100",
+      "size_bytes": 4077
+    },
+    "tests/test_grasp_tabletop.py": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "b012fb1a7c26c5f9ae3b20452ab6201d810dfa3663ff6a673d56cb33ac3d01ea",
+      "size_bytes": 11474
+    },
+    "uv.lock": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "54cf2762e700ed196f7017e0e7fa79e3f449cb77566ff4bb799c1ae42b900e54",
+      "size_bytes": 65494
+    },
+    "vendor/libero/LICENSE": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "e2885fd30a08381b799c4a33385522b23d637b4051b8f9a7f9f2519944b68ff6",
+      "size_bytes": 1080
+    },
+    "vendor/libero/articulated_objects/white_cabinet.xml": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "b8ebf670ad0d5533d9fedbfdd7909d263792fc6725d4ca5d4df987660cee264a",
+      "size_bytes": 14365
+    },
+    "vendor/libero/articulated_objects/white_cabinet/metal.png": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "93784216a66b52be9c8ccc3732e50f511815291e32f34f97bd139ed7229061fa",
+      "size_bytes": 196878
+    },
+    "vendor/libero/articulated_objects/white_cabinet/white_cabinet_base/visual/white_cabinet_base_vis.msh": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "8bcf371361562de9ac8ac2fe06db6b6b695dde3cbe50e86de5a6e272d21e1f9c",
+      "size_bytes": 21400
+    },
+    "vendor/libero/articulated_objects/white_cabinet/white_cabinet_bottom/visual/white_cabinet_bottom_vis.msh": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "23181bdeb6ce44e3634318e6c946fa00f568eb25256b8546558775eda691700c",
+      "size_bytes": 9088
+    },
+    "vendor/libero/articulated_objects/white_cabinet/white_cabinet_bottom_handle/visual/white_cabinet_bottom_handle_vis.msh": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "a61587cbcebb8a8ad5dc0d8c60e6db4747a5a118397485a0a5eb5e171c2d397e",
+      "size_bytes": 40192
+    },
+    "vendor/libero/articulated_objects/white_cabinet/white_cabinet_middle/visual/white_cabinet_middle_vis.msh": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "580eead06792affbd91c1b5c17e3d1c94082fcb247eb4812d1a8ac4c120253c5",
+      "size_bytes": 9088
+    },
+    "vendor/libero/articulated_objects/white_cabinet/white_cabinet_middle_handle/visual/white_cabinet_middle_handle_vis.msh": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "1688f375dde79450d9e5cfcb5dc17a16c27018c9dbf74513577588d54e62e0a8",
+      "size_bytes": 40192
+    },
+    "vendor/libero/articulated_objects/white_cabinet/white_cabinet_top/visual/white_cabinet_top_vis.msh": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "2b7c08ad3740ad45965eaedd9cf07f64ea12dd4044cac7e71fa5b601b4cbb481",
+      "size_bytes": 9088
+    },
+    "vendor/libero/articulated_objects/white_cabinet/white_cabinet_top_handle/visual/white_cabinet_top_handle_vis.msh": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "58924271007a30a14eda7111e7eefd7be3f8b04a1d31bbf4964d7da419282df6",
+      "size_bytes": 40192
+    },
+    "vendor/libero/articulated_objects/white_cabinet/white_wood.png": {
+      "basis": [
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/articulated_objects/white_cabinet.xml"
+      ],
+      "sha256": "43524d6bca8df5042d5b45d0b0e458f34ea7f2d6445d026c5b204ee32acd8bea",
+      "size_bytes": 2209978
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.mtl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "00c6007476fbec0bf87390e24ab9e029369a5d8a3dfa8caf4fa1c8b17aa66367",
+      "size_bytes": 244
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "026d7a302a831a595cf011580ff8fbe6f4c0234c478af96d6f42344822bc18a5",
+      "size_bytes": 4232879
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "18c1074cfa09baea739bb75928f9bd2bd80e22ac18655f6a27f005dbf77ccfda",
+      "size_bytes": 10343
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl_col.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "ac0a7aff7543aa32c65cf64d39191ca5127763a39b3ab25329b9fa828224cc39",
+      "size_bytes": 40089
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/texture.png": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.xml"
+      ],
+      "sha256": "8a646d98b084b7400dd91beed9c83e10b4a4dca572896b3974356b7937a4bd85",
+      "size_bytes": 12751242
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/visual/akita_black_bowl_vis.msh": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.xml"
+      ],
+      "sha256": "6474d536a740e995c3a2eaeb74c61e14da94131b0b222c250b61b30b13d11229",
+      "size_bytes": 4592392
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/Cork_Texture_by_faycop.jpg": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "a59f0b4204a858367bb7d41c94b2d4b5f27b2b30859637a6c8d072d3122a53d9",
+      "size_bytes": 277008
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/cork_texture.png": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml"
+      ],
+      "sha256": "93a9c1d22c7256e423a1473b2bf9107b4e120cd249423f7e01289f9c6fd63feb",
+      "size_bytes": 1322298
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/label_wine.png": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml"
+      ],
+      "sha256": "a8caed4b3414dcf4b72558e339ce1cad1b90b4f159d0d293f06ed04a1f473241",
+      "size_bytes": 158360
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_cork_vis.msh": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml"
+      ],
+      "sha256": "2b993448e727c8abf8c25a5ed28699e4594dc692e3eaad76a957627f0afcc474",
+      "size_bytes": 96352
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_logo_vis.msh": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml"
+      ],
+      "sha256": "99e4f2bec9c76a5277dc40efe774f47e9f079ced13b4197f0ac79bb36bc54e47",
+      "size_bytes": 3472
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_main_vis.msh": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml"
+      ],
+      "sha256": "92a7a897bdac34f47161cb418fbe6f7fc9056d2f0e93647beb8139cffeed270a",
+      "size_bytes": 487096
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "9bdae6cb59f9260544cb802d4babe32c23b9dd66e0a5fb2bdb4662b468ce1a17",
+      "size_bytes": 6827
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_cork.mtl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "41f70e38e3baaa87ccf3355baace8c5cad3ba5c56d3ecf2761e959adf562a067",
+      "size_bytes": 263
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_cork.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "15bee8cd7d34ac18c24ed4463e167120a5cea18d85977539645d22839394ca0c",
+      "size_bytes": 59786
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_logo.mtl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "840f57e0ed5a46824e63be68e0bf8b6ee997f5c46dd7960839fe5478bd7e1c47",
+      "size_bytes": 251
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_logo.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "52637c8f1247ab63414a5d8238f3f160dccab55d4890f5fa54177a4bd106a2aa",
+      "size_bytes": 2768
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main.mtl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "a0757c429b887630a1380b61a85fa01aaaba31a8f489c512883c26eb510df024",
+      "size_bytes": 606
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "2bf2c1ff42873ccf923c8eeacff782839ca2383d4b866f486f51ee28d4a6fdc6",
+      "size_bytes": 304055
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "460636a34ffe0ececda20fa00f27591b6999861c8f4cdf3d410f605ca2320bda",
+      "size_bytes": 5875
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main_col.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "07b00931aa9bf469db23062a556c5608786ce4bdfc1b9028017fc8fff37e2049",
+      "size_bytes": 20286
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/light-wood.png": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_rack/wine_rack.xml"
+      ],
+      "sha256": "967be64bdb170d36283bc43c2ae5d525ec88f78bc837dc7d0efc9a28d68caad1",
+      "size_bytes": 801173
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/light_yellow_metal.png": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "b8d8abf32b1940b938c097e6955ef7c5e0b84ab97296e53aa65315efbf1f1359",
+      "size_bytes": 1729294
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/mahogany.png": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_rack/wine_rack.xml"
+      ],
+      "sha256": "702a734fef1bf0df4e446f98f571628f81e423caba64b5fcfd683bae42135c3b",
+      "size_bytes": 66375
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/metal.png": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "93784216a66b52be9c8ccc3732e50f511815291e32f34f97bd139ed7229061fa",
+      "size_bytes": 196878
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_planes_vis.msh": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_rack/wine_rack.xml"
+      ],
+      "sha256": "f3daf4c20ed4b513b0d3b19d5580aa6f9c677ab6935a138f316b00852714d936",
+      "size_bytes": 65140
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_stand_vis.msh": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_rack/wine_rack.xml"
+      ],
+      "sha256": "6b4cf3bd2a65f93f41563e86b55b4789965001f78473268b592e59abad9c64fd",
+      "size_bytes": 41488
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_stoppers_vis.msh": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/libero/turbosquid_objects/wine_rack/wine_rack.xml"
+      ],
+      "sha256": "8647657c858c45b6a55e507689888dffaf80d68d9395f9c7eb5a40eb64e17c62",
+      "size_bytes": 20752
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "18f97cd8bb76ed18b2f11d047c5abbe0a2d9490d53ac167e0657c596dd450c3e",
+      "size_bytes": 4121
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes.mtl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "5e2d9bf426ad5322b4600057cc8bbf81d08a08e09f65f180b94d811591f54ced",
+      "size_bytes": 321
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "7036695e41b2217c478947fd2255a3c0319668ff25dc36de757ce3fe60610678",
+      "size_bytes": 45151
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "d1e664d1aebb10264f71acae4acf5cc5f3b38a4b81d5900f0f53371e43cce3d9",
+      "size_bytes": 1372
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes_col.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "882f02cbada03748eeb37570cfd7c6dd0713bd696c49767f8ecdcd0a47ab110d",
+      "size_bytes": 1900
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand.mtl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "a0b3318177e43bec62eed04780a6b3f5bc743b4552b6c07f62356bf3962e2154",
+      "size_bytes": 343
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "7dc7631e3a266e808b45c57429eae08187ccff9c21232377d43ed4a0da289412",
+      "size_bytes": 28554
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "6d5bf2f0056fcd8867f507302d78567bec7dad28521aa2ecb9e07b313d04f53d",
+      "size_bytes": 2071
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand_col.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "4baf8eb03f738303a2ac193eadb477534c953279027361b1798a0539fef470da",
+      "size_bytes": 4719
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers.mtl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "4f3c4cacb1f063dfe973a772612d6c6a7ba1532010ec05c49be904c347505521",
+      "size_bytes": 1714
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "426683bd92d0782c89aab0cab2194e235f35fe9fed9cbab6f9c93fc67b167779",
+      "size_bytes": 17925
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "f3dd125a83f55535044d9e7d6b9db7b5aebf5c6a403f17e269596d2c31526a27",
+      "size_bytes": 1388
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers_col.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "5635e8414ff7539ee310d00e274d9d0bd5906a190e711870c45d35c7706ab829",
+      "size_bytes": 1918
+    },
+    "vendor/panda/LICENSE": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "size_bytes": 10173
+    },
+    "vendor/panda/assets/finger_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "215098c0fcdf7192f6c503a37cf49e3efecf8a9e1320f02b17c5584d89cc5b2c",
+      "size_bytes": 87872
+    },
+    "vendor/panda/assets/finger_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "cf239e9aca26bba09dbbf1c544c47d87cfc9a2f0637c8bb786af750b6d4eca44",
+      "size_bytes": 64651
+    },
+    "vendor/panda/assets/hand.stl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "94493e94f30fe940f2c8ca2f155c3bbe67bbff406d3edf5e261670d2f0f6e2ed",
+      "size_bytes": 10084
+    },
+    "vendor/panda/assets/hand_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "b94aab901086f85df04c019b30f43bf9aa23a7ad0443ec80a8c14662a41cabd2",
+      "size_bytes": 9091
+    },
+    "vendor/panda/assets/hand_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "cd76f7494bb314406a1819c46eb826ee254894f87235714f604a470653d9badb",
+      "size_bytes": 121863
+    },
+    "vendor/panda/assets/hand_2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "e0f44a71712afa5b98eb20355eff17763d3e2e19f459b2bef19abed3727e64b3",
+      "size_bytes": 596001
+    },
+    "vendor/panda/assets/hand_3.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "a431a06d99e88a1b322b3122a01424ee7704daeaad0bc343b90b9604f014ad0c",
+      "size_bytes": 902145
+    },
+    "vendor/panda/assets/hand_4.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "21f96ef6a8de082e41b1ea9834f1043de359e5d60305541bcb63539581f53bff",
+      "size_bytes": 151988
+    },
+    "vendor/panda/assets/link0.stl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "dfc6d94330de8ddb005b311bfdba9f3b8e1aa7c256b71592ee7ff32cb9a9a5aa",
+      "size_bytes": 10084
+    },
+    "vendor/panda/assets/link0_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "6b9f41a4c203540daaeb7a33cc3d0d6c6a32dc8bba187074eeaf97b3e36b3f9c",
+      "size_bytes": 296497
+    },
+    "vendor/panda/assets/link0_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "57673d2ee2a9db2e10c8986ae57c56a7c39c012b60fd26d7d8549553b664a5ed",
+      "size_bytes": 103978
+    },
+    "vendor/panda/assets/link0_10.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "c9198b9d8534d628d097b0f2b239bb30343353182df098ce0d9db6bc13326848",
+      "size_bytes": 343308
+    },
+    "vendor/panda/assets/link0_11.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "f0adec78d6677b7799d25121981270e8bfe119b5c18d08a91ee37a54ad75f65c",
+      "size_bytes": 22295
+    },
+    "vendor/panda/assets/link0_2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "1ca435a2a87a9608a146a47955724d43dd7ce10fc3dd3018800aa98f8ba86e05",
+      "size_bytes": 590892
+    },
+    "vendor/panda/assets/link0_3.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "3e9c6334d2b3b47944af3458ee5f20519abc20fe7ee23063bb53405ccab28046",
+      "size_bytes": 47588
+    },
+    "vendor/panda/assets/link0_4.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "215d25789704936120f119c0bc1cc7f68516dd3f8f1df61457b71acac3873f26",
+      "size_bytes": 211200
+    },
+    "vendor/panda/assets/link0_5.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "9361b104e93743045107aa5b15fb1a0835ba9c1f355aae71f56403cf6a9c33f6",
+      "size_bytes": 17023
+    },
+    "vendor/panda/assets/link0_7.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "2dc0b8ebbbc80e4c065d71e195adbc384f673438641fac82b07b801b4d2837cb",
+      "size_bytes": 30699
+    },
+    "vendor/panda/assets/link0_8.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "3b8c436999db5586b8eb47bed2b0aa7de6993868b2681b4c04246eeac42fdb7a",
+      "size_bytes": 3263194
+    },
+    "vendor/panda/assets/link0_9.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "45178f97d2b5da6bce11f610212c4ef7d08c73db33a4fc38e1b7f66b93d023f5",
+      "size_bytes": 105629
+    },
+    "vendor/panda/assets/link1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "51091e776b16babdbe2f3849b5c041f921d1f11dd94ac19a0f1c81abf496fbae",
+      "size_bytes": 3274995
+    },
+    "vendor/panda/assets/link1.stl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "e41a39a94108fcf56aacff603fc91ec80541f4c1af17b51a0de5617f5566e6d2",
+      "size_bytes": 15084
+    },
+    "vendor/panda/assets/link2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "5c9f8e715de52c3eb71b475de35993b3b96081e02abea9f28c414768877fc59b",
+      "size_bytes": 3295608
+    },
+    "vendor/panda/assets/link2.stl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "370f7605a0fae3529db169ded50f52f171024aa792d4d773bc84197301f6a039",
+      "size_bytes": 15084
+    },
+    "vendor/panda/assets/link3.stl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "0a8d638b9349c6c0eefc4e888636ac4838c4b27170f18a51699321118af709c1",
+      "size_bytes": 15084
+    },
+    "vendor/panda/assets/link3_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "ce2da87f51708e11b189249d41401065dabe89a06e251185a06cef4d5ff27178",
+      "size_bytes": 3046804
+    },
+    "vendor/panda/assets/link3_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "2880b7753a7173f38fa87ee21da4dfc7fa7be46fbe07bac5aef9e128513cb118",
+      "size_bytes": 65260
+    },
+    "vendor/panda/assets/link3_2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "670cff81ae84693769ca4ae658c154cf909d81167e7c8d22b70ea977f2504efa",
+      "size_bytes": 83591
+    },
+    "vendor/panda/assets/link3_3.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "30ede0c812efd0e0b767d134a4eae0b84e0fa407bb6325a5a555e0569b3a3ffd",
+      "size_bytes": 457684
+    },
+    "vendor/panda/assets/link4.stl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "0180ebb5772ec9840cb049750cffb29a9ddc90311752a16ea34757782ef9e48d",
+      "size_bytes": 15084
+    },
+    "vendor/panda/assets/link4_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "443bf6d178177cf347951ecf107ccd10ca444e605e375b67304579e5f948806f",
+      "size_bytes": 83486
+    },
+    "vendor/panda/assets/link4_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "ca935ec7cc8b3f0e86aa079c76b0b3bf593b1e9830bab0fa7131ac51577c74f0",
+      "size_bytes": 3148001
+    },
+    "vendor/panda/assets/link4_2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "c89caf26d379c35bb9e191ee2d91d09ab29ecc792b48d8bc10b39e5b38222175",
+      "size_bytes": 455522
+    },
+    "vendor/panda/assets/link4_3.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "1495d17f45bdb230cf58b0beef9da4e8c9cfe76a3d2d38da89017efe5e093136",
+      "size_bytes": 67497
+    },
+    "vendor/panda/assets/link5_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "a3238b8f2af0f2eb66d9fe63dc5d41ac52d5d38507241b5ed10e3cb019ab3e71",
+      "size_bytes": 824158
+    },
+    "vendor/panda/assets/link5_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "9d994bbf83ec241e301b5197a6846da13f2a4a0582edb2c0f76962c5549649d6",
+      "size_bytes": 63174
+    },
+    "vendor/panda/assets/link5_2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "83b4ffe9f772cd7fe182e98640650eebc899aaf01842656574b0416c90dd40a4",
+      "size_bytes": 3856621
+    },
+    "vendor/panda/assets/link5_collision_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "3e5aa75fb13f193555c3dfb999df91d81df25006a5c3af5338297d78137c129b",
+      "size_bytes": 3861
+    },
+    "vendor/panda/assets/link5_collision_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "87cd8f621071df010f774cbde789282b8463840dfe704f8bdfa2e29be0142e15",
+      "size_bytes": 2412
+    },
+    "vendor/panda/assets/link5_collision_2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "823ab6c8f7b1d79e0844fa071d82a03499ff68e34fddb1ba3451032c22736040",
+      "size_bytes": 3786
+    },
+    "vendor/panda/assets/link6.stl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "20b768e99a0e0440b5754dcca108016434e57937cc356acd9c352ccd3cb27f77",
+      "size_bytes": 10084
+    },
+    "vendor/panda/assets/link6_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "0504c70ebf1b284ee8faae7dcb896b8830bc672a6552015dd5dbd121fa031fb9",
+      "size_bytes": 157563
+    },
+    "vendor/panda/assets/link6_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "45f7ca77695198b6d86ec2417ad4e42e6275044f0f96266699ee8e1057757ac1",
+      "size_bytes": 27106
+    },
+    "vendor/panda/assets/link6_10.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "365f26c21d10332cab8d8704645cb46930c30b3085956f2d097498c793f24db4",
+      "size_bytes": 368502
+    },
+    "vendor/panda/assets/link6_11.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "8ae61e08b3ad064f25bbf03b22e59cc15d65883b5a7ce92711aff29df2493901",
+      "size_bytes": 32653
+    },
+    "vendor/panda/assets/link6_12.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "f28d1bfd62b0244ffd19fb35fe9edefdf583d3c9167db944e87185d919e1d021",
+      "size_bytes": 3894
+    },
+    "vendor/panda/assets/link6_13.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "0a55fa92dccb261d07200e6565fca4c850fd17f0c1ecf38821c0b97d51796c7d",
+      "size_bytes": 3798
+    },
+    "vendor/panda/assets/link6_14.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "750ae3ee4781e62e3a045c662195247b03f6642b05aa93104f08258e5f6eba26",
+      "size_bytes": 444469
+    },
+    "vendor/panda/assets/link6_15.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "5999c1c2497a004a7c4bbe034cdf13744f839d85ae7a11b1bc386c48a3e642e6",
+      "size_bytes": 668552
+    },
+    "vendor/panda/assets/link6_16.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "551d7a8b37c53e7a152d008b4e36992e5b5abe74a4be18b57ee6319c27def09f",
+      "size_bytes": 3675358
+    },
+    "vendor/panda/assets/link6_2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "e54eee4d8232947ee8af65afd5a067e09dac2da6e7e585cb1dccb65496457da0",
+      "size_bytes": 9916
+    },
+    "vendor/panda/assets/link6_3.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "d4f6a25ef32fa1fa4734146981994ee760232cb077c80fea6487d78a077c7f27",
+      "size_bytes": 11943
+    },
+    "vendor/panda/assets/link6_4.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "be353480fe71d46f7a96f0a3cbb7e112caaf8d88368826f321a36a253c8749b2",
+      "size_bytes": 13846
+    },
+    "vendor/panda/assets/link6_5.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "7c87664623c3e1a6cb330db273227a69626dc5e53b4caff1d4ee7911eb3340c6",
+      "size_bytes": 11841
+    },
+    "vendor/panda/assets/link6_6.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "8fbc031e0d07b795ebf99115c75223141caaba317cab569159f3d477a7821681",
+      "size_bytes": 12597
+    },
+    "vendor/panda/assets/link6_7.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "7dc5ebb799fe281aab27d6e84e7a4efa0a8e42da2369ec83de3ea3f206f62d73",
+      "size_bytes": 4382
+    },
+    "vendor/panda/assets/link6_8.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "e3f77381817a341030f9dcc4c4aa7c559f80411b453fd87eb0fefecca82151bf",
+      "size_bytes": 9131
+    },
+    "vendor/panda/assets/link6_9.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "25a56ea9b02a03b6cb5a81f31c54f54d0185e1a0b3937c37e4289d896e50215a",
+      "size_bytes": 17616
+    },
+    "vendor/panda/assets/link7.stl": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "92ac6afcf7574c034d3170d8a68e95ac9048ab9d0dd5bbd8311b86e551b9ab1c",
+      "size_bytes": 10084
+    },
+    "vendor/panda/assets/link7_0.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "04586b0bde011715cfc22072ac72fe0717eb4d4817bcf665987ce6cd88eb2b93",
+      "size_bytes": 1362355
+    },
+    "vendor/panda/assets/link7_1.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "c3f72289f394c9d6749a4a327fb11f05b203c37c95032c92f28019b40ebe7e00",
+      "size_bytes": 121358
+    },
+    "vendor/panda/assets/link7_2.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "d2faecedb304d0989040d082410378dc949dbbda23bd18c05134f08aae984db5",
+      "size_bytes": 208907
+    },
+    "vendor/panda/assets/link7_3.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "b62d87c4d4bdb7b281ed341d347c39dad0e50bf36aed8ac11d050073701d5f70",
+      "size_bytes": 123684
+    },
+    "vendor/panda/assets/link7_4.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "cb78ccb61fd4ad6c7bff4c4d2e6cb41e1964a5a3e1a28e67c0c6202371cfc018",
+      "size_bytes": 85732
+    },
+    "vendor/panda/assets/link7_5.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "099071d3090b51471ba52f4f90814fd3089f4975d196e4d488117073d0bfe491",
+      "size_bytes": 226402
+    },
+    "vendor/panda/assets/link7_6.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "99469e2d95ab74ce0292f2f16954c87a8a7dc16652e62e970fe37c94330a81bb",
+      "size_bytes": 99900
+    },
+    "vendor/panda/assets/link7_7.obj": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256",
+        "xml:vendor/panda/panda.xml"
+      ],
+      "sha256": "426c3db8a19373f3dc73d4bec672e948121b2914c10e2e7b9c7ea80643a19e54",
+      "size_bytes": 792162
+    },
+    "vendor/panda/panda.xml": {
+      "basis": [
+        "results/experiment_02_five_object_storage/final/verification.json#source_sha256",
+        "results/grasp_classifier_five_objects_20261121/environment.json#input_sha256"
+      ],
+      "sha256": "96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273",
+      "size_bytes": 14438
+    },
+    "verify_skills.py": {
+      "basis": [
+        "import:compare_sorting.py",
+        "import:evaluate_sorting.py",
+        "import:verify_sorting.py"
+      ],
+      "sha256": "f9dda62fc45b5eaa7462d5eb266cfcb32b8f21cd8b6a0c72ac3d0f5aecaec89d",
+      "size_bytes": 32708
+    },
+    "verify_sorting.py": {
+      "basis": [
+        "import:compare_sorting.py",
+        "import:evaluate_sorting.py"
+      ],
+      "sha256": "b3562d0665f8f588f0747d0417ad69918db37211cdb120ae9f0029a1624714e0",
+      "size_bytes": 18371
+    },
+    "web/study.css": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "a7c6ea18c321ac0850eeef0da0455559c1fd24525b646cd6e24a08904a433dd7",
+      "size_bytes": 4381
+    },
+    "web/study.html": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "847f44259747aca0e3362cdecbc642d67d46d7ffa1ccc46d1387af64c3e66918",
+      "size_bytes": 4396
+    },
+    "web/study.js": {
+      "basis": [
+        "delivery supplement"
+      ],
+      "sha256": "7c5029ffa7c6b8c19fef555d8550b08693bb904bff273baca40c9f9b1a843792",
+      "size_bytes": 10509
+    }
+  },
+  "licenses": {
+    "vendor/libero/LICENSE": "LIBERO bundled MIT license",
+    "vendor/panda/LICENSE": "MuJoCo Menagerie Panda bundled Apache-2.0 license"
+  },
+  "limits": [
+    "Generated source capsule, not the recorded compiled model snapshot.",
+    "Logical source bytes are unchanged; tar/gzip metadata is normalized.",
+    "Recorded verifications are provenance, not results of building this capsule.",
+    "Additional imported modules/XML references are hashed delivery supplements.",
+    "Unused recorded XML variants are preserved as provenance, not treated as task model roots.",
+    "Dependencies are installed separately from the unchanged pyproject.toml and uv.lock."
+  ],
+  "model_dependency_roots": [
+    "scene.xml",
+    "vendor/panda/panda.xml",
+    "assets/grasp_study/tabletop_cabinet.xml",
+    "assets/grasp_study/spoon.xml",
+    "assets/grasp_study/glass.xml",
+    "assets/grasp_study/pen.xml",
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.xml",
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml",
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack.xml",
+    "vendor/libero/articulated_objects/white_cabinet.xml"
+  ],
+  "recorded_experiment02_commit": "7a2c5642113d0d3b9c5b5d5205feda843b2c043a",
+  "recorded_experiment02_tag": "experiment-02-five-object-storage",
+  "repository": "https://github.com/youseihuayu-wonderful/Intelligent-Grasping-Predicting-Success-and-Selecting-Approach-Speeds-of-Robotic-Arms",
+  "schema": "simulation-delivery-v1",
+  "scope": "Current independent grasp reproduction and recorded Experiment02 storage runtime; not historical Experiment01 exact source."
+}

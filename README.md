@@ -4,6 +4,13 @@
 
 Historical experiment names, GPT model references, and recorded videos are retained for provenance; the rename does not change their results.
 
+## Course project and both simulations
+
+- [Course repository: frozen data, shared Logistic Regression baseline and team protocol](https://github.com/youseihuayu-wonderful/intelligent-grasping-course-project).
+- [Experiment 1 and Experiment 2: simulation sources, runtime assets, commands and recorded evidence](docs/SIMULATIONS.md).
+
+The course repository is CSV-only. Simulation code, assets and videos remain here; the historical grasp dataset and continuous drawer-storage mission have different labels and must not be treated as interchangeable experiments.
+
 ## Five-object study: bowl, bottle, spoon, glass and pen
 
 This version expands the supervised grasp study, not the historical drawer/sorting demonstration. Each attempt grasps one selected target using simulator ground truth; it does not add visual recognition, a learned motion policy, or multi-object sorting.

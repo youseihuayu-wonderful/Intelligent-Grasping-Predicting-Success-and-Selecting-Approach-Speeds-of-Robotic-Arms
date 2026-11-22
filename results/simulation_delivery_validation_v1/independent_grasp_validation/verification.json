@@ -1,0 +1,1042 @@
+{
+  "task": "current_scene_independent_five_object_grasp_and_hold",
+  "historical_exact_replay": false,
+  "mujoco_version": "3.3.7",
+  "required_continuous_hold_s": 2.0,
+  "success_unit": "One independent target grasp, continuous physical hold and undisturbed neighbors",
+  "neighbor_checks_sample_period_s": 0.02,
+  "neighbor_xy_drift_limit_m": 0.015,
+  "neighbor_abs_table_clearance_limit_m": 0.001,
+  "hold_predicates": [
+    "bilateral_grip",
+    "clear_of_table",
+    "target_lifted",
+    "relative_pose_stable"
+  ],
+  "hold_observer_period": "Every physics timestep",
+  "scene_policy": "Fresh complete five-object scene before every target; no mid-attempt resets",
+  "source_sha256": {
+    "run_tabletop_grasps.py": "25fb6fbb27e2b9fcd00856f6e649de3eb02846bffd70996fe632e6b21fbf477d",
+    "grasp_tabletop.py": "6d7b6fe2dd368481e06900496904df6519eea5e1117c78d7475651a452874415",
+    "grasp.py": "4ddc10acf904456661c89fbcb595e2677f5e1a8029abd0cb3ad059c4bfc75114",
+    "simulation.py": "b7a24a6a6cb304b80322e6b2f089cbe7ade29dec99cbf0051173c494134a0ef2",
+    "grasp_study_physics.py": "b6f1907750c681d987547e4dfdb0d404ed6131453975057c5f2294f302fbd92b",
+    "grasp_study_objects.py": "a1a7a76f01b282710cc95384735cc9fe0303d4bee3ea9a4357314a55208e63eb",
+    "collisions.py": "263e7cbf4ee7ec2dad5479723d7433a3a621edd73ee6b8897fde2db9d9dbc445",
+    "assets/grasp_study/tabletop_cabinet.xml": "bdaa8b16559dea438dfc58ec6ca7ca1cecd1b0dab4448783a9da715987c5bfcd",
+    "scene.xml": "7ca71b6a86f587f0f1ab1758f7722b92aebdfbf0973262b238591407d0190b32"
+  },
+  "runs": [
+    {
+      "target": "bowl",
+      "success": true,
+      "grasp_success": true,
+      "neighbors_undisturbed": true,
+      "controller_status": "succeeded",
+      "failure_reason": null,
+      "verified_hold_s": 2.0000000000000195,
+      "execution_sim_s": 16.128000000001606,
+      "postconditions": {
+        "bilateral_grip": true,
+        "clear_of_table": true,
+        "target_lifted": true,
+        "relative_pose_stable": true,
+        "verified_hold": true
+      },
+      "initial_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.2884063094943496e-06,
+            3.297121873626e-06,
+            2.0975396717143213e-12
+          ],
+          "table_clearance_m": -3.4042265318889875e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198982,
+            -0.17999996153653194,
+            0.7188747544692867
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.5845962998117052e-05,
+            1.9695649479334063e-06,
+            2.1156000716965878e-11
+          ],
+          "table_clearance_m": -1.5781066049269654e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.3099990282115889,
+            0.1,
+            0.7201680451967506
+          ],
+          "quaternion_wxyz": [
+            0.9999875576453641,
+            3.959630121856547e-16,
+            0.00498844208736528,
+            3.8829174936249095e-17
+          ],
+          "table_clearance_m": -8.137380421935347e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999498747403,
+            -0.21999944759415477,
+            0.7199974793809525
+          ],
+          "quaternion_wxyz": [
+            0.9999999999639844,
+            9.814311953711588e-07,
+            8.430147294380883e-06,
+            -8.42664425007524e-09
+          ],
+          "table_clearance_m": -3.0637935034549812e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.3799999989965575,
+            -0.08000205585934037,
+            0.7199979739072483
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -1.4069055249526252e-15,
+            -1.059250873421879e-06,
+            8.449618640290694e-10
+          ],
+          "table_clearance_m": -2.1532028564585914e-06
+        }
+      ],
+      "final_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.48087804163391235,
+            -0.2810196632869109,
+            0.8583090910138891
+          ],
+          "quaternion_wxyz": [
+            0.990545296125902,
+            -0.1368155576602835,
+            -0.005984825151325696,
+            0.008105638337729074
+          ],
+          "table_clearance_m": 0.1336344408188802
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198973,
+            -0.17999996153652228,
+            0.7188747545726193
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.5845967404645342e-05,
+            1.9695654959000263e-06,
+            2.1154884915055115e-11
+          ],
+          "table_clearance_m": -1.5780962865696857e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.3099992421256561,
+            0.1,
+            0.7201684869959536
+          ],
+          "quaternion_wxyz": [
+            0.9999875461234515,
+            -1.9261424473397918e-17,
+            0.0049907512458874275,
+            -7.28350256821813e-16
+          ],
+          "table_clearance_m": -8.104745863080076e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999474975898,
+            -0.2199922085400753,
+            0.7199974769528504
+          ],
+          "quaternion_wxyz": [
+            0.9999999999631823,
+            7.145066512398594e-07,
+            8.551267283073166e-06,
+            -7.817648064480813e-09
+          ],
+          "table_clearance_m": -3.0722362602819686e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.3800000005290735,
+            -0.08004924748151152,
+            0.719997973738305
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -5.931789125936071e-15,
+            -1.059245588609717e-06,
+            -3.4558182592777397e-09
+          ],
+          "table_clearance_m": -2.153371165714013e-06
+        }
+      ],
+      "max_non_target_xy_drift_m": 4.719162219603362e-05,
+      "max_non_target_abs_table_clearance_m": 8.137380421935347e-05,
+      "warnings": [],
+      "physics_timestep_s": 0.002,
+      "settings": {
+        "target": "bowl",
+        "scale": 1.0,
+        "mass_kg": 0.06,
+        "sliding_friction": 0.8,
+        "x_m": 0.48,
+        "y_m": -0.27,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      }
+    },
+    {
+      "target": "bottle",
+      "success": true,
+      "grasp_success": true,
+      "neighbors_undisturbed": true,
+      "controller_status": "succeeded",
+      "failure_reason": null,
+      "verified_hold_s": 2.000000000000668,
+      "execution_sim_s": 13.060000000001232,
+      "postconditions": {
+        "bilateral_grip": true,
+        "clear_of_table": true,
+        "target_lifted": true,
+        "relative_pose_stable": true,
+        "verified_hold": true
+      },
+      "initial_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.2884063094943496e-06,
+            3.297121873626e-06,
+            2.0975396717143213e-12
+          ],
+          "table_clearance_m": -3.4042265318889875e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198982,
+            -0.17999996153653194,
+            0.7188747544692867
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.5845962998117052e-05,
+            1.9695649479334063e-06,
+            2.1156000716965878e-11
+          ],
+          "table_clearance_m": -1.5781066049269654e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.3099990282115889,
+            0.1,
+            0.7201680451967506
+          ],
+          "quaternion_wxyz": [
+            0.9999875576453641,
+            3.959630121856547e-16,
+            0.00498844208736528,
+            3.8829174936249095e-17
+          ],
+          "table_clearance_m": -8.137380421935347e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999498747403,
+            -0.21999944759415477,
+            0.7199974793809525
+          ],
+          "quaternion_wxyz": [
+            0.9999999999639844,
+            9.814311953711588e-07,
+            8.430147294380883e-06,
+            -8.42664425007524e-09
+          ],
+          "table_clearance_m": -3.0637935034549812e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.3799999989965575,
+            -0.08000205585934037,
+            0.7199979739072483
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -1.4069055249526252e-15,
+            -1.059250873421879e-06,
+            8.449618640290694e-10
+          ],
+          "table_clearance_m": -2.1532028564585914e-06
+        }
+      ],
+      "final_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.4799999888624355,
+            -0.27000001786413985,
+            0.7184069384784377
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.288407944087458e-06,
+            3.2971228927439293e-06,
+            2.0978779646405253e-12
+          ],
+          "table_clearance_m": -3.4041194024725385e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.49994166458909084,
+            -0.17946006457895128,
+            0.8685662622011096
+          ],
+          "quaternion_wxyz": [
+            0.9994878710221848,
+            0.00010886567153314017,
+            0.0008512522088895758,
+            -0.0319884228664525
+          ],
+          "table_clearance_m": 0.14964812806136296
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.30999906294127344,
+            0.1,
+            0.7201693354627613
+          ],
+          "quaternion_wxyz": [
+            0.9999874523257665,
+            -3.1735183836075057e-16,
+            0.005009510058293592,
+            -1.4135582848280537e-17
+          ],
+          "table_clearance_m": -8.113689726829687e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999477786867,
+            -0.2199940053241324,
+            0.7199974651373735
+          ],
+          "quaternion_wxyz": [
+            0.9999999999617869,
+            7.144124410393292e-07,
+            8.712956002892083e-06,
+            -8.161112225797558e-09
+          ],
+          "table_clearance_m": -3.09436332157631e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.38000000015599505,
+            -0.08003777250280412,
+            0.7199979737805157
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -5.3187328297808046e-15,
+            -1.0592484728031315e-06,
+            -2.410055392998468e-09
+          ],
+          "table_clearance_m": -2.1533293010911336e-06
+        }
+      ],
+      "max_non_target_xy_drift_m": 3.5716643482578476e-05,
+      "max_non_target_abs_table_clearance_m": 8.137380421935347e-05,
+      "warnings": [],
+      "physics_timestep_s": 0.002,
+      "settings": {
+        "target": "bottle",
+        "scale": 1.0,
+        "mass_kg": 0.18,
+        "sliding_friction": 0.8,
+        "x_m": 0.5,
+        "y_m": -0.18,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      }
+    },
+    {
+      "target": "spoon",
+      "success": true,
+      "grasp_success": true,
+      "neighbors_undisturbed": true,
+      "controller_status": "succeeded",
+      "failure_reason": null,
+      "verified_hold_s": 2.000000000000668,
+      "execution_sim_s": 14.246000000001628,
+      "postconditions": {
+        "bilateral_grip": true,
+        "clear_of_table": true,
+        "target_lifted": true,
+        "relative_pose_stable": true,
+        "verified_hold": true
+      },
+      "initial_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.2884063094943496e-06,
+            3.297121873626e-06,
+            2.0975396717143213e-12
+          ],
+          "table_clearance_m": -3.4042265318889875e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198982,
+            -0.17999996153653194,
+            0.7188747544692867
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.5845962998117052e-05,
+            1.9695649479334063e-06,
+            2.1156000716965878e-11
+          ],
+          "table_clearance_m": -1.5781066049269654e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.3099990282115889,
+            0.1,
+            0.7201680451967506
+          ],
+          "quaternion_wxyz": [
+            0.9999875576453641,
+            3.959630121856547e-16,
+            0.00498844208736528,
+            3.8829174936249095e-17
+          ],
+          "table_clearance_m": -8.137380421935347e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999498747403,
+            -0.21999944759415477,
+            0.7199974793809525
+          ],
+          "quaternion_wxyz": [
+            0.9999999999639844,
+            9.814311953711588e-07,
+            8.430147294380883e-06,
+            -8.42664425007524e-09
+          ],
+          "table_clearance_m": -3.0637935034549812e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.3799999989965575,
+            -0.08000205585934037,
+            0.7199979739072483
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -1.4069055249526252e-15,
+            -1.059250873421879e-06,
+            8.449618640290694e-10
+          ],
+          "table_clearance_m": -2.1532028564585914e-06
+        }
+      ],
+      "final_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.4799999888624355,
+            -0.27000001786413985,
+            0.7184069384784377
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.288407944085379e-06,
+            3.2971228927365923e-06,
+            2.09786685234846e-12
+          ],
+          "table_clearance_m": -3.4041194024725385e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198973,
+            -0.17999996153652228,
+            0.7188747545726193
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.5845967404644095e-05,
+            1.9695654959007654e-06,
+            2.1155057635708458e-11
+          ],
+          "table_clearance_m": -1.5780962865696857e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.31080297734309087,
+            0.10004840653323155,
+            0.869436853124483
+          ],
+          "quaternion_wxyz": [
+            0.9999942166132894,
+            0.0033065688931200295,
+            -0.0007259307207361725,
+            0.0003261391085562277
+          ],
+          "table_clearance_m": 0.14928812662972202
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999492242417,
+            -0.21999386983762292,
+            0.7199974908102449
+          ],
+          "quaternion_wxyz": [
+            0.9999999999649987,
+            7.144811718414965e-07,
+            8.33616379514678e-06,
+            -7.770932956794789e-09
+          ],
+          "table_clearance_m": -3.0446611113399413e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.38000000008208007,
+            -0.08003549767382828,
+            0.71999797386967
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -4.868979401781943e-15,
+            -1.05924892739098e-06,
+            -2.2027401159218402e-09
+          ],
+          "table_clearance_m": -2.1532402012525154e-06
+        }
+      ],
+      "max_non_target_xy_drift_m": 3.344181450553477e-05,
+      "max_non_target_abs_table_clearance_m": 1.5781066049269654e-05,
+      "warnings": [],
+      "physics_timestep_s": 0.002,
+      "settings": {
+        "target": "spoon",
+        "scale": 1.0,
+        "mass_kg": 0.025,
+        "sliding_friction": 0.8,
+        "x_m": 0.31,
+        "y_m": 0.1,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      }
+    },
+    {
+      "target": "glass",
+      "success": true,
+      "grasp_success": true,
+      "neighbors_undisturbed": true,
+      "controller_status": "succeeded",
+      "failure_reason": null,
+      "verified_hold_s": 2.000000000000668,
+      "execution_sim_s": 15.368000000002002,
+      "postconditions": {
+        "bilateral_grip": true,
+        "clear_of_table": true,
+        "target_lifted": true,
+        "relative_pose_stable": true,
+        "verified_hold": true
+      },
+      "initial_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.2884063094943496e-06,
+            3.297121873626e-06,
+            2.0975396717143213e-12
+          ],
+          "table_clearance_m": -3.4042265318889875e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198982,
+            -0.17999996153653194,
+            0.7188747544692867
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.5845962998117052e-05,
+            1.9695649479334063e-06,
+            2.1156000716965878e-11
+          ],
+          "table_clearance_m": -1.5781066049269654e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.3099990282115889,
+            0.1,
+            0.7201680451967506
+          ],
+          "quaternion_wxyz": [
+            0.9999875576453641,
+            3.959630121856547e-16,
+            0.00498844208736528,
+            3.8829174936249095e-17
+          ],
+          "table_clearance_m": -8.137380421935347e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999498747403,
+            -0.21999944759415477,
+            0.7199974793809525
+          ],
+          "quaternion_wxyz": [
+            0.9999999999639844,
+            9.814311953711588e-07,
+            8.430147294380883e-06,
+            -8.42664425007524e-09
+          ],
+          "table_clearance_m": -3.0637935034549812e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.3799999989965575,
+            -0.08000205585934037,
+            0.7199979739072483
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -1.4069055249526252e-15,
+            -1.059250873421879e-06,
+            8.449618640290694e-10
+          ],
+          "table_clearance_m": -2.1532028564585914e-06
+        }
+      ],
+      "final_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.4799999888624355,
+            -0.27000001786413985,
+            0.7184069384784377
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.288407944091888e-06,
+            3.2971228927438544e-06,
+            2.0978849141040215e-12
+          ],
+          "table_clearance_m": -3.404119402583561e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198973,
+            -0.17999996153652228,
+            0.7188747545726193
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.5845967404645843e-05,
+            1.9695654958992843e-06,
+            2.1154956869217926e-11
+          ],
+          "table_clearance_m": -1.5780962865696857e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.3099991924985623,
+            0.1,
+            0.7201689372595466
+          ],
+          "quaternion_wxyz": [
+            0.9999874963696141,
+            2.0835264173827642e-15,
+            0.005000710392757323,
+            6.373143748102495e-16
+          ],
+          "table_clearance_m": -8.109513373966148e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199631378768921,
+            -0.2199497898641096,
+            0.8681592350133562
+          ],
+          "quaternion_wxyz": [
+            0.9999999564264876,
+            6.887998849566622e-05,
+            0.0002851130182591016,
+            3.3363706158645995e-05
+          ],
+          "table_clearance_m": 0.14814046283270144
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.3800000007401361,
+            -0.08005573880589106,
+            0.7199979737151146
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -6.7263875155700905e-15,
+            -1.059243481750906e-06,
+            -4.047395910202126e-09
+          ],
+          "table_clearance_m": -2.1533941031437465e-06
+        }
+      ],
+      "max_non_target_xy_drift_m": 5.3682946579013284e-05,
+      "max_non_target_abs_table_clearance_m": 8.137380421935347e-05,
+      "warnings": [],
+      "physics_timestep_s": 0.002,
+      "settings": {
+        "target": "glass",
+        "scale": 1.0,
+        "mass_kg": 0.15,
+        "sliding_friction": 0.8,
+        "x_m": 0.62,
+        "y_m": -0.22,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      }
+    },
+    {
+      "target": "pen",
+      "success": true,
+      "grasp_success": true,
+      "neighbors_undisturbed": true,
+      "controller_status": "succeeded",
+      "failure_reason": null,
+      "verified_hold_s": 2.000000000000668,
+      "execution_sim_s": 14.174000000001604,
+      "postconditions": {
+        "bilateral_grip": true,
+        "clear_of_table": true,
+        "target_lifted": true,
+        "relative_pose_stable": true,
+        "verified_hold": true
+      },
+      "initial_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.2884063094943496e-06,
+            3.297121873626e-06,
+            2.0975396717143213e-12
+          ],
+          "table_clearance_m": -3.4042265318889875e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198982,
+            -0.17999996153653194,
+            0.7188747544692867
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.5845962998117052e-05,
+            1.9695649479334063e-06,
+            2.1156000716965878e-11
+          ],
+          "table_clearance_m": -1.5781066049269654e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.3099990282115889,
+            0.1,
+            0.7201680451967506
+          ],
+          "quaternion_wxyz": [
+            0.9999875576453641,
+            3.959630121856547e-16,
+            0.00498844208736528,
+            3.8829174936249095e-17
+          ],
+          "table_clearance_m": -8.137380421935347e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999498747403,
+            -0.21999944759415477,
+            0.7199974793809525
+          ],
+          "quaternion_wxyz": [
+            0.9999999999639844,
+            9.814311953711588e-07,
+            8.430147294380883e-06,
+            -8.42664425007524e-09
+          ],
+          "table_clearance_m": -3.0637935034549812e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.3799999989965575,
+            -0.08000205585934037,
+            0.7199979739072483
+          ],
+          "quaternion_wxyz": [
+            0.9999999999994392,
+            -1.4069055249526252e-15,
+            -1.059250873421879e-06,
+            8.449618640290694e-10
+          ],
+          "table_clearance_m": -2.1532028564585914e-06
+        }
+      ],
+      "final_objects": [
+        {
+          "target": "bowl",
+          "name": "bowl_object",
+          "position_m": [
+            0.4799999888624355,
+            -0.27000001786413985,
+            0.7184069384784377
+          ],
+          "quaternion_wxyz": [
+            0.9999999999805813,
+            -5.288407944086106e-06,
+            3.2971228927268853e-06,
+            2.097866637838578e-12
+          ],
+          "table_clearance_m": -3.4041194024725385e-06
+        },
+        {
+          "target": "bottle",
+          "name": "bottle_object",
+          "position_m": [
+            0.4999999952198973,
+            -0.17999996153652228,
+            0.7188747545726193
+          ],
+          "quaternion_wxyz": [
+            0.999999999872514,
+            1.584596740464733e-05,
+            1.9695654959006485e-06,
+            2.1155039112602478e-11
+          ],
+          "table_clearance_m": -1.5780962865696857e-05
+        },
+        {
+          "target": "spoon",
+          "name": "spoon_object",
+          "position_m": [
+            0.3099991405480665,
+            0.1,
+            0.7201689372595502
+          ],
+          "quaternion_wxyz": [
+            0.999987496369614,
+            -6.29522411565526e-16,
+            0.0050007103927612664,
+            8.016284217505702e-16
+          ],
+          "table_clearance_m": -8.109513373610877e-05
+        },
+        {
+          "target": "glass",
+          "name": "glass_object",
+          "position_m": [
+            0.6199999461761769,
+            -0.21999230517639287,
+            0.7199974728462281
+          ],
+          "quaternion_wxyz": [
+            0.9999999999626727,
+            7.757274054774453e-07,
+            8.605397013519692e-06,
+            -7.880302030484599e-09
+          ],
+          "table_clearance_m": -3.0801319376161373e-06
+        },
+        {
+          "target": "pen",
+          "name": "pen_object",
+          "position_m": [
+            0.380243513337906,
+            -0.07999902313818782,
+            0.8699732738067855
+          ],
+          "quaternion_wxyz": [
+            0.9999999647113731,
+            0.0002335693159994239,
+            0.00010862649938745816,
+            6.498393925063399e-05
+          ],
+          "table_clearance_m": 0.14995806756766838
+        }
+      ],
+      "max_non_target_xy_drift_m": 7.142418719510968e-06,
+      "max_non_target_abs_table_clearance_m": 8.137380421935347e-05,
+      "warnings": [],
+      "physics_timestep_s": 0.002,
+      "settings": {
+        "target": "pen",
+        "scale": 1.0,
+        "mass_kg": 0.01,
+        "sliding_friction": 0.8,
+        "x_m": 0.38,
+        "y_m": -0.08,
+        "yaw_rad": 0.0,
+        "bias_x_m": 0.0,
+        "bias_y_m": 0.0,
+        "bias_z_m": 0.0,
+        "opening_m": 0.08,
+        "closing_force_n": 4.0,
+        "close_trigger_m": 0.0,
+        "descent_speed_m_s": 0.1
+      }
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Current Experiment02-era cabinet/layout, not the original Experiment01 exact source.",
+    "Nominal demonstrations, not a statistical success-rate estimate.",
+    "Not storage completion and not classifier labels or a new training batch."
+  ]
+}

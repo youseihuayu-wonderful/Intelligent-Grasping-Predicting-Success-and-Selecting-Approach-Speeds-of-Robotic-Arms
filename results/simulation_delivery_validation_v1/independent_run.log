@@ -1,0 +1,5 @@
+bowl: success=True, hold=2.000 simulation s
+bottle: success=True, hold=2.000 simulation s
+spoon: success=True, hold=2.000 simulation s
+glass: success=True, hold=2.000 simulation s
+pen: success=True, hold=2.000 simulation s
