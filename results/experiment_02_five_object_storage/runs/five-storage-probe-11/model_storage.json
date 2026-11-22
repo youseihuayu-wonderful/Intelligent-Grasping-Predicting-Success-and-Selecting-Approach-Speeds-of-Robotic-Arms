@@ -1,0 +1,9 @@
+{
+  "encoding": "gzip",
+  "logical_path": "model.mjb",
+  "logical_sha256": "c377219fb4fb24beae39724c9cbca2bec5108d1c22ffc048b47e0774e3c496d7",
+  "stored_bytes": 41039268,
+  "stored_path": "model.mjb.gz",
+  "stored_sha256": "50fdcc3af35342f1e69872ff8d469c4a0541b108dc78dec2835850037709dbd4",
+  "uncompressed_bytes": 122913099
+}

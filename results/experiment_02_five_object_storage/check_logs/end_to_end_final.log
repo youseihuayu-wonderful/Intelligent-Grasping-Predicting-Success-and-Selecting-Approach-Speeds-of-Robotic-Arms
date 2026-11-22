@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_all_five_are_released_then_physically_closed_without_scene_reset (test_tabletop_storage.ContinuousStorageTests.test_all_five_are_released_then_physically_closed_without_scene_reset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/shihuayu/Projects/robot-grasp-simulation/tests/test_tabletop_storage.py", line 46, in test_all_five_are_released_then_physically_closed_without_scene_reset
+    self.assertTrue(state['outcome'], state['failure_reason'])
+AssertionError: False is not true : glass/verify: Final contained/support/empty-hand/closed/home verification failed
+
+----------------------------------------------------------------------
+Ran 1 test in 190.426s
+
+FAILED (failures=1)

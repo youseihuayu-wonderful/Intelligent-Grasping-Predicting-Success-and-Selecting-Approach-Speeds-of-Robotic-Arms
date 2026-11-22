@@ -1,0 +1,11 @@
+{
+  "connection": "已暂停 · Physics paused",
+  "drawer": "已关闭 · 0.0 mm",
+  "imageWidth": 800,
+  "outcome": "完成 · 五物体实测收纳、抽屉关闭、手爪空置 · 保留终态，不自动重启",
+  "outcomeKind": "success",
+  "pauseButton": "继续",
+  "phase": "任务结束，保留终态",
+  "stored": "5 / 5",
+  "title": "Experiment 02 · 五物体连续收纳 · Live MuJoCo"
+}

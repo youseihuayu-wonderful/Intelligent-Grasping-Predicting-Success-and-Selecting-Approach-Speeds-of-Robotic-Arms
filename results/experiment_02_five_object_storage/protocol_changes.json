@@ -1,0 +1,48 @@
+{
+  "experiment_label": "Experiment 02",
+  "scope": "Continuous five-object physical storage and drawer closure. Development attempts below are not independent statistical success-rate trials.",
+  "direct_baseline": "results/five_object_cabinet_20261122/verification.json",
+  "task_changes": {
+    "previous": "Five separate grasp-and-hold checks, resetting the whole scene between targets; no object placement or drawer closure.",
+    "current": "One persistent world: spoon, pen, bowl, bottle, glass; verified grasp, transfer, release, open-hand withdrawal, then physical handle pushing and home.",
+    "scene_resets_during_accepted_mission": 0,
+    "new_classifier_training_data_collected_here": false
+  },
+  "configuration_changes": {
+    "housing_dimensions_mm": {"previous": [300, 230, 240], "current": [400, 230, 240]},
+    "conservative_cavity_dimensions_mm": {"previous": [254, 200, 200], "current": [354, 200, 200]},
+    "drawer_travel_mm": {"previous": 160, "current": 240},
+    "nominal_initial_xy_m": {
+      "previous": {"bowl": [0.48, -0.27], "bottle": [0.50, -0.08], "spoon": [0.40, 0.10], "glass": [0.62, -0.10], "pen": [0.38, -0.08]},
+      "current": {"bowl": [0.48, -0.27], "bottle": [0.50, -0.18], "spoon": [0.31, 0.10], "glass": [0.62, -0.22], "pen": [0.38, -0.08]},
+      "meaning": "Initialization settings, not measured poses or new classifier features."
+    },
+    "physics_timestep_s": 0.002,
+    "descent_speed_command_m_s": 0.10,
+    "closing_force_command_n": 4.0,
+    "low_profile_release_above_floor_m": 0.06,
+    "speed_and_force_note": "Commands, not constant measured TCP speed or measured finger force. Spoon and pen settle through real gravity; other objects touch the floor before opening."
+  },
+  "control_corrections_retained_in_development_records": [
+    "Widened/opened the drawer and adjusted source spacing to provide real hand and forearm clearance.",
+    "Selected object-appropriate grasp orientation; bottle grasps in the validated original orientation before wrist rotation.",
+    "Full physical detachment is verified after open-hand withdrawal. A floor-support transition is remembered while opening can briefly unload the floor; final support and all other success predicates remain strictly measured.",
+    "A 0.10 N opening-force cap was tried in failed development run09 and removed; it is not the accepted controller.",
+    "Pre-positioned the arm physically at home before the handle approach to avoid an unreachable IK branch.",
+    "Replaced the bowed joint-interpolated handle push with constant-orientation Cartesian IK knots spaced at most 5 mm, checked for at most 1 mm planned midpoint interpolation error. The handle centre is pushed through actual contact."
+  ],
+  "final_verification_deadline_change": {
+    "previous_development_deadline_s": 8.0,
+    "accepted_deadline_s": 20.0,
+    "required_continuous_physical_hold_s_unchanged": 3.0,
+    "evidence": "runs/experiment02_closed_stability_diagnostic/verification.json",
+    "observation": "The actual closed state from failed run12 continued for 3.002 simulation seconds with zero failed physics intervals. The earlier 8-second settling deadline was too short; the quiet-hold success criteria were not relaxed.",
+    "solver_parameters_not_changed_by_this_correction": {"iterations": 100, "tolerance": 1e-8, "solver_type": 2, "timestep_s": 0.002}
+  },
+  "accepted_recording": "final/verification.json",
+  "accepted_recorded_final_simulation_time_s": 281.30000000061506,
+  "accepted_continuous_hold_s": 3.001999999999891,
+  "accepted_handle_contact_peak_n": 7.591155733123365,
+  "accepted_drawer_joint_position_m": 3.604782546323508e-8,
+  "limits": "One nominal configuration, not a success-rate or speed-improvement estimate. Raw failed attempts remain failed. Existing 550-row and 3840-row classifier CSVs are described separately and are unchanged."
+}

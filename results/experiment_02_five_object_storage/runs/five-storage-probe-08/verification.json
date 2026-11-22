@@ -1,0 +1,617 @@
+{
+  "objects": [
+    {
+      "target": "spoon",
+      "name": "spoon_object",
+      "position_m": [
+        0.6103461222885767,
+        0.10801678186016436,
+        0.7421104184228141
+      ],
+      "quaternion_wxyz": [
+        0.9999967989185462,
+        2.1820902812864385e-05,
+        0.002426192070487759,
+        0.0007178220846922731
+      ],
+      "bounds_min_m": [
+        0.5353384693379107,
+        0.09006204150754808,
+        0.7419888272419014
+      ],
+      "bounds_max_m": [
+        0.6854501765076307,
+        0.12612123136433082,
+        0.7594557858355362
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": true,
+      "stored": true,
+      "support_force_n": 0.24525000008740366,
+      "linear_speed_m_s": 1.4654666057312095e-06,
+      "angular_speed_rad_s": 7.179572627056306e-07
+    },
+    {
+      "target": "pen",
+      "name": "pen_object",
+      "position_m": [
+        0.7039734132625923,
+        0.05494310337683529,
+        0.7420217565405851
+      ],
+      "quaternion_wxyz": [
+        0.7070760971262608,
+        0.0011790632784762808,
+        0.0009226541485383305,
+        0.7071358790160488
+      ],
+      "bounds_min_m": [
+        0.6979853666439222,
+        -0.015059066856743727,
+        0.7419999654871413
+      ],
+      "bounds_max_m": [
+        0.7099962872990253,
+        0.12494315763292506,
+        0.7540471212235573
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": true,
+      "stored": true,
+      "support_force_n": 0.09810000150392713,
+      "linear_speed_m_s": 8.320095020006049e-06,
+      "angular_speed_rad_s": 4.525868080755338e-07
+    },
+    {
+      "target": "bowl",
+      "name": "bowl_object",
+      "position_m": [
+        0.6034826147981057,
+        0.04030199414720859,
+        0.7404099189914821
+      ],
+      "quaternion_wxyz": [
+        0.6981324253598251,
+        8.264758550207265e-07,
+        -9.621775205872173e-07,
+        0.7159686561991379
+      ],
+      "bounds_min_m": [
+        0.550152920003134,
+        -0.013361625319798672,
+        0.741999858336244
+      ],
+      "bounds_max_m": [
+        0.6574155480154852,
+        0.09388402696343412,
+        0.7925418811531836
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": true,
+      "stored": true,
+      "support_force_n": 0.5885833559613207,
+      "linear_speed_m_s": 4.554460972662801e-06,
+      "angular_speed_rad_s": 0.00029220136387726926
+    },
+    {
+      "target": "glass",
+      "name": "glass_object",
+      "position_m": [
+        0.6199998502181836,
+        -0.2199472336876081,
+        0.7199974956728847
+      ],
+      "quaternion_wxyz": [
+        0.9999999999656569,
+        7.135532792216398e-07,
+        8.256881372251719e-06,
+        -2.932200811067386e-09
+      ],
+      "bounds_min_m": [
+        0.5879998502225469,
+        -0.25194736216476965,
+        0.7199969652610404
+      ],
+      "bounds_max_m": [
+        0.6520013364902202,
+        -0.1879472336876407,
+        0.8099980331847416
+      ],
+      "inside": false,
+      "supported": false,
+      "stable": true,
+      "detached": true,
+      "stored": false,
+      "support_force_n": 0.0,
+      "linear_speed_m_s": 2.4630316077219774e-06,
+      "angular_speed_rad_s": 8.637355304141774e-05
+    },
+    {
+      "target": "bottle",
+      "name": "bottle_object",
+      "position_m": [
+        0.7413588764759707,
+        0.08610878477057708,
+        0.7429695166578467
+      ],
+      "quaternion_wxyz": [
+        0.7146355764525345,
+        -0.0435355478710556,
+        -0.048278153502969795,
+        0.6964695749523191
+      ],
+      "bounds_min_m": [
+        0.7110958136480894,
+        0.06490854566028743,
+        0.741998507139326
+      ],
+      "bounds_max_m": [
+        0.7626511524663542,
+        0.10788905467285714,
+        0.9006492144988436
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": false,
+      "stored": false,
+      "support_force_n": 1.6564602318129071,
+      "linear_speed_m_s": 0.0002524712854880332,
+      "angular_speed_rad_s": 0.010871992352437425
+    }
+  ],
+  "all_stored": false,
+  "hand_empty": false,
+  "drawer_closed": false,
+  "scene_mode": "continuous_drawer_storage",
+  "target": "bottle",
+  "targets": [
+    "spoon",
+    "pen",
+    "bowl",
+    "bottle",
+    "glass"
+  ],
+  "phase": "failed",
+  "controller_status": "failed",
+  "current_index": 3,
+  "completed_targets": [
+    "spoon",
+    "pen",
+    "bowl"
+  ],
+  "stored_count": 3,
+  "cabinet": {
+    "position_m": [
+      0.69,
+      0.32,
+      0.72
+    ],
+    "bounds_min_m": [
+      0.48999999999999994,
+      -0.07300328225398098,
+      0.72
+    ],
+    "bounds_max_m": [
+      0.89,
+      0.435,
+      0.96
+    ],
+    "drawer_position_m": -0.240003282253981,
+    "drawer_velocity_m_s": 1.4794612757829098e-06,
+    "fully_open": true,
+    "interior_min_m": [
+      0.5129999999999999,
+      -0.02500328225398099,
+      0.742
+    ],
+    "interior_max_m": [
+      0.867,
+      0.17499671774601902,
+      0.942
+    ],
+    "interior_size_m": [
+      0.354,
+      0.2,
+      0.2
+    ]
+  },
+  "time_s": 175.20000000010845,
+  "failure_reason": "bottle/release: Release did not yield actual floor support, containment and detachment",
+  "finished": true,
+  "outcome": false,
+  "grasp_hold_s": 2.0000000000095497,
+  "verified_hold_s": 0.0,
+  "settings": {
+    "target": "bottle",
+    "scale": 1.0,
+    "mass_kg": 0.18,
+    "sliding_friction": 0.8,
+    "x_m": 0.4999999952198973,
+    "y_m": -0.17999996153652228,
+    "yaw_rad": 0.0,
+    "bias_x_m": 0.0,
+    "bias_y_m": 0.0,
+    "bias_z_m": 0.0,
+    "opening_m": 0.08,
+    "closing_force_n": 4.0,
+    "close_trigger_m": 0.0,
+    "descent_speed_m_s": 0.1
+  },
+  "push_contact_peak_n": 0.0,
+  "joint_positions_rad": [
+    0.490040286298595,
+    0.9477221705366535,
+    -0.6022191681406045,
+    -1.1785905099120138,
+    0.5244389737805041,
+    1.9765697350682065,
+    -0.9017163004349064
+  ],
+  "gripper_opening_m": 0.07723498029412502,
+  "lift_m": 0.024094762085227428,
+  "warnings": [],
+  "scene_resets_during_mission": 0,
+  "events": [
+    {
+      "time_s": 1.0000000000000007,
+      "target": "spoon",
+      "phase": "prepare"
+    },
+    {
+      "time_s": 1.0600000000000007,
+      "target": "spoon",
+      "phase": "approach"
+    },
+    {
+      "time_s": 7.3319999999994145,
+      "target": "spoon",
+      "phase": "descend"
+    },
+    {
+      "time_s": 10.33400000000012,
+      "target": "spoon",
+      "phase": "close"
+    },
+    {
+      "time_s": 10.518000000000182,
+      "target": "spoon",
+      "phase": "lift"
+    },
+    {
+      "time_s": 13.330000000001121,
+      "target": "spoon",
+      "phase": "hold"
+    },
+    {
+      "time_s": 14.330000000001455,
+      "target": "spoon",
+      "phase": "done"
+    },
+    {
+      "time_s": 15.330000000001789,
+      "target": "spoon",
+      "phase": "raise"
+    },
+    {
+      "time_s": 18.47200000000064,
+      "target": "spoon",
+      "phase": "rotate"
+    },
+    {
+      "time_s": 19.276000000000195,
+      "target": "spoon",
+      "phase": "transfer"
+    },
+    {
+      "time_s": 24.963999999997043,
+      "target": "spoon",
+      "phase": "entry"
+    },
+    {
+      "time_s": 33.39799999999485,
+      "target": "spoon",
+      "phase": "insert"
+    },
+    {
+      "time_s": 35.63799999999759,
+      "target": "spoon",
+      "phase": "release"
+    },
+    {
+      "time_s": 37.0399999999993,
+      "target": "spoon",
+      "phase": "withdraw"
+    },
+    {
+      "time_s": 40.89000000000401,
+      "target": "spoon",
+      "phase": "clear"
+    },
+    {
+      "time_s": 45.854000000010075,
+      "target": "pen",
+      "phase": "prepare"
+    },
+    {
+      "time_s": 45.91400000001015,
+      "target": "pen",
+      "phase": "approach"
+    },
+    {
+      "time_s": 49.684000000014755,
+      "target": "pen",
+      "phase": "descend"
+    },
+    {
+      "time_s": 52.68800000001843,
+      "target": "pen",
+      "phase": "close"
+    },
+    {
+      "time_s": 52.90600000001869,
+      "target": "pen",
+      "phase": "lift"
+    },
+    {
+      "time_s": 55.71800000002213,
+      "target": "pen",
+      "phase": "hold"
+    },
+    {
+      "time_s": 56.71800000002335,
+      "target": "pen",
+      "phase": "done"
+    },
+    {
+      "time_s": 57.718000000024574,
+      "target": "pen",
+      "phase": "raise"
+    },
+    {
+      "time_s": 60.90800000002847,
+      "target": "pen",
+      "phase": "rotate"
+    },
+    {
+      "time_s": 64.25000000003166,
+      "target": "pen",
+      "phase": "transfer"
+    },
+    {
+      "time_s": 70.8860000000162,
+      "target": "pen",
+      "phase": "entry"
+    },
+    {
+      "time_s": 79.8079999999954,
+      "target": "pen",
+      "phase": "insert"
+    },
+    {
+      "time_s": 80.61199999999353,
+      "target": "pen",
+      "phase": "release"
+    },
+    {
+      "time_s": 81.16399999999224,
+      "target": "pen",
+      "phase": "withdraw"
+    },
+    {
+      "time_s": 85.2599999999827,
+      "target": "pen",
+      "phase": "clear"
+    },
+    {
+      "time_s": 90.09799999997142,
+      "target": "bowl",
+      "phase": "prepare"
+    },
+    {
+      "time_s": 90.15799999997128,
+      "target": "bowl",
+      "phase": "approach"
+    },
+    {
+      "time_s": 94.9139999999602,
+      "target": "bowl",
+      "phase": "descend"
+    },
+    {
+      "time_s": 97.9159999999532,
+      "target": "bowl",
+      "phase": "close"
+    },
+    {
+      "time_s": 98.14399999995267,
+      "target": "bowl",
+      "phase": "lift"
+    },
+    {
+      "time_s": 100.95799999994611,
+      "target": "bowl",
+      "phase": "hold"
+    },
+    {
+      "time_s": 101.95799999994378,
+      "target": "bowl",
+      "phase": "done"
+    },
+    {
+      "time_s": 102.95999999994145,
+      "target": "bowl",
+      "phase": "raise"
+    },
+    {
+      "time_s": 105.58199999993533,
+      "target": "bowl",
+      "phase": "rotate"
+    },
+    {
+      "time_s": 109.21399999992687,
+      "target": "bowl",
+      "phase": "transfer"
+    },
+    {
+      "time_s": 116.54399999990979,
+      "target": "bowl",
+      "phase": "entry"
+    },
+    {
+      "time_s": 125.21799999988957,
+      "target": "bowl",
+      "phase": "insert"
+    },
+    {
+      "time_s": 126.0219999998877,
+      "target": "bowl",
+      "phase": "lower"
+    },
+    {
+      "time_s": 127.45399999988436,
+      "target": "bowl",
+      "phase": "release"
+    },
+    {
+      "time_s": 128.0239999998832,
+      "target": "bowl",
+      "phase": "withdraw"
+    },
+    {
+      "time_s": 132.37199999990395,
+      "target": "bowl",
+      "phase": "clear"
+    },
+    {
+      "time_s": 136.09599999992173,
+      "target": "bottle",
+      "phase": "prepare"
+    },
+    {
+      "time_s": 136.15599999992202,
+      "target": "bottle",
+      "phase": "approach"
+    },
+    {
+      "time_s": 139.3359999999372,
+      "target": "bottle",
+      "phase": "descend"
+    },
+    {
+      "time_s": 142.33799999995153,
+      "target": "bottle",
+      "phase": "close"
+    },
+    {
+      "time_s": 142.55399999995257,
+      "target": "bottle",
+      "phase": "lift"
+    },
+    {
+      "time_s": 145.365999999966,
+      "target": "bottle",
+      "phase": "hold"
+    },
+    {
+      "time_s": 146.36599999997077,
+      "target": "bottle",
+      "phase": "done"
+    },
+    {
+      "time_s": 147.36599999997554,
+      "target": "bottle",
+      "phase": "raise"
+    },
+    {
+      "time_s": 149.24799999998453,
+      "target": "bottle",
+      "phase": "rotate"
+    },
+    {
+      "time_s": 152.89200000000193,
+      "target": "bottle",
+      "phase": "transfer"
+    },
+    {
+      "time_s": 158.95200000003086,
+      "target": "bottle",
+      "phase": "entry"
+    },
+    {
+      "time_s": 166.730000000068,
+      "target": "bottle",
+      "phase": "insert"
+    },
+    {
+      "time_s": 169.7900000000826,
+      "target": "bottle",
+      "phase": "lower"
+    },
+    {
+      "time_s": 171.128000000089,
+      "target": "bottle",
+      "phase": "release"
+    },
+    {
+      "time_s": 175.1280000001081,
+      "target": "bottle",
+      "phase": "failed"
+    }
+  ],
+  "contact_reports": [
+    {
+      "target": "spoon",
+      "contacts": {
+        "episodes": 0,
+        "duration_s": 0.0,
+        "peak_force_n": 0.0,
+        "pairs": [],
+        "force_threshold_n": 0.1
+      }
+    },
+    {
+      "target": "pen",
+      "contacts": {
+        "episodes": 0,
+        "duration_s": 0.0,
+        "peak_force_n": 0.0,
+        "pairs": [],
+        "force_threshold_n": 0.1
+      }
+    },
+    {
+      "target": "bowl",
+      "contacts": {
+        "episodes": 0,
+        "duration_s": 0.0,
+        "peak_force_n": 0.0,
+        "pairs": [],
+        "force_threshold_n": 0.1
+      }
+    }
+  ],
+  "physics_timestep_s": 0.002,
+  "mujoco_version": "3.3.7",
+  "source_sha256": {
+    "tabletop_storage.py": "8401d5f6d4d6a7d69f48cfb917f0de418a335aba63e54b00c601de6cf4793c85",
+    "drawer_storage_checks.py": "7072b79249f6737ada4b6b9193d2c76c25a45c625103ece9e8dfc8ba3966ff25",
+    "grasp_tabletop.py": "6d7b6fe2dd368481e06900496904df6519eea5e1117c78d7475651a452874415",
+    "grasp.py": "4ddc10acf904456661c89fbcb595e2677f5e1a8029abd0cb3ad059c4bfc75114",
+    "simulation.py": "b7a24a6a6cb304b80322e6b2f089cbe7ade29dec99cbf0051173c494134a0ef2",
+    "grasp_study_physics.py": "b6f1907750c681d987547e4dfdb0d404ed6131453975057c5f2294f302fbd92b",
+    "grasp_study_objects.py": "a1a7a76f01b282710cc95384735cc9fe0303d4bee3ea9a4357314a55208e63eb",
+    "assets/grasp_study/tabletop_cabinet.xml": "bdaa8b16559dea438dfc58ec6ca7ca1cecd1b0dab4448783a9da715987c5bfcd",
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.xml": "18c1074cfa09baea739bb75928f9bd2bd80e22ac18655f6a27f005dbf77ccfda",
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml": "9bdae6cb59f9260544cb802d4babe32c23b9dd66e0a5fb2bdb4662b468ce1a17",
+    "assets/grasp_study/spoon.xml": "9d4c425a8a8a8b47f1e571d74034d72afb6d7035be0b2a3169b43bea9ff48120",
+    "assets/grasp_study/glass.xml": "b8441416c44548fc628d5eddb38d9c19a142820fbe10b15b00c6ce77f7d42a6d",
+    "assets/grasp_study/pen.xml": "b3a9a81d2834508c72e17027a7c746e26f2b0e57e584199bb5d4594e2071e693"
+  }
+}

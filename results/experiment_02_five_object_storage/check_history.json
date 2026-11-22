@@ -1,0 +1,84 @@
+{
+  "experiment_label": "Experiment 02",
+  "scope": "Observed check history. Entries without a raw log are summaries of actual tool results, not reconstructed console output.",
+  "checks": [
+    {
+      "command": "uv run --locked python -m unittest discover -s tests -p test_drawer_storage_checks.py",
+      "observed_result": "passed",
+      "tests": 10,
+      "reported_seconds": 3.425,
+      "raw_console_file": null,
+      "limitation": "Original stdout was not redirected to a file; the completed job row has expired. Source hashes at check time were not separately captured."
+    },
+    {
+      "command": "uv run --locked python -m unittest discover -s tests -p test_grasp_tabletop.py",
+      "observed_result": "passed",
+      "tests": 8,
+      "reported_seconds": 7.478,
+      "raw_console_file": null,
+      "limitation": "Original stdout was not redirected to a file; this is the observed summary, not a raw log."
+    },
+    {
+      "command": "uv run --locked python -m unittest discover -s tests -p test_tabletop_storage.py",
+      "observed_result": "failed",
+      "tests": 1,
+      "reported_seconds": 63.199,
+      "failure_reason": "bottle/release: Release did not yield actual floor support, containment and detachment",
+      "raw_console_file": null,
+      "limitation": "Historical failed check before the open-hand withdrawal correction. No raw console file was captured."
+    },
+    {
+      "command": "uv run --locked python -m unittest discover -s tests -p test_tabletop_storage.py && node --check web/study.js",
+      "observed_result": "failed",
+      "tests": 1,
+      "reported_seconds": 190.426,
+      "failure_reason": "glass/verify: Final contained/support/empty-hand/closed/home verification failed",
+      "raw_console_source": "/tmp/experiment02_checks/end_to_end_final.log",
+      "limitation": "The historical filename contains final, but this check FAILED. The node command did not run because the preceding unittest failed."
+    }
+  ],
+  "final_acceptance_check": {
+    "command": "uv run --locked python -m unittest discover -s tests -p test_tabletop_storage.py && node --check web/study.js",
+    "observed_result": "passed",
+    "end_to_end_tests": 1,
+    "reported_seconds": 151.549,
+    "post_completion_persistence_simulation_seconds": 2.0,
+    "node_syntax_check": "passed",
+    "raw_console_source": "/tmp/experiment02_checks/end_to_end_attempt_03.log",
+    "archive_log": "check_logs/end_to_end_attempt_03.log",
+    "total_targeted_tests_observed_passing_across_the_recorded_checks": 19
+  },
+  "derived_media_history": {
+    "scope": "Display-file generation only; these are not additional physical trials or classifier labels.",
+    "attempts": [
+      {
+        "attempt": 1,
+        "renderer_result": "failed",
+        "reason": "The installed FFmpeg does not provide libwebp_anim. No final media outputs were published by this attempt.",
+        "archive_log": "video_render.log"
+      },
+      {
+        "attempt": 2,
+        "renderer_result": "passed",
+        "archive_log": "check_logs/video_render_attempt_02.log",
+        "numeric_media_check": "passed",
+        "numeric_check_record": "check_logs/media_smoke.json",
+        "release_acceptance": "superseded after visual endpoint inspection",
+        "visual_finding": "The actual final preview frame shows simulation time 281.000 s and phase verify; it omits the final recorded done frame at 281.300 s.",
+        "preserved_outputs": "derived_media_attempt_02/",
+        "correction": "Retain the actual source endpoint during resampling and trim only the final frame duration to match the MP4 exactly. Do not insert a synthetic completion frame."
+      },
+      {
+        "attempt": 3,
+        "renderer_result": "passed",
+        "archive_log": "check_logs/video_render_attempt_03.log",
+        "media_check_record": "check_logs/media_smoke_final.json",
+        "release_acceptance": "passed",
+        "visual_endpoint_check": "The actual decoded final preview frame shows simulation time 281.300 s, phase done and Mission complete.",
+        "duration_check": "Both the MP4 and animated preview retain exactly 140.350 seconds at 2x playback. The actual final preview frame lasts 150 ms; no synthetic completion frame or terminal dwell was added.",
+        "physics_scope": "Rendering restores the recorded state; no controller re-execution or new physical acceptance labels."
+      }
+    ]
+  },
+  "acceptance_rule": "Only a subsequent explicitly successful complete run and its actual passing regression log count as final acceptance. Earlier failures are retained and not relabelled."
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experiment 02 · 五物体连续收纳 · Live MuJoCo</title>
+  <link rel="stylesheet" href="/study.css">
+  <script defer src="/study.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">FRANKA PANDA · MUJOCO · LIVE PHYSICS</div>
+    <h1>Experiment 02 · 五物体连续收纳 <span>Continuous drawer storage</span></h1>
+    <p>同一桌面的五物体按下方服务端顺序连续放入右侧打开的抽屉，随后由机械臂接触把手、物理推闭抽屉。</p>
+    <div class="connection"><span id="connection">正在连接本地物理仿真…</span><span id="frame-count">—</span></div>
+  </header>
+  <ol id="mission-order" class="mission-order" aria-label="服务端连续收纳顺序"></ol>
+  <p id="mission-note" role="status">等待实时状态。物体稳定后自动开始；物体之间不重置，结束后不自动重启。</p>
+  <section class="controls" aria-label="仿真控制">
+    <button id="pause" disabled>暂停</button>
+    <button id="restart" disabled>重新开始整个任务</button>
+    <label>镜头 <select id="view" disabled><option value="workspace">工作区全景</option><option value="close">机械臂近景</option></select></label>
+  </section>
+  <section class="viewport" aria-label="实时 MuJoCo 画面">
+    <img id="frame" alt="等待 MuJoCo 实时渲染的连续收纳画面" width="800" height="600">
+    <div class="overlay"><strong id="object-name">等待当前目标</strong><span id="phase">—</span></div>
+    <div id="outcome" class="outcome" role="status">等待真实执行</div>
+  </section>
+  <div id="error" role="alert" hidden></div>
+  <section class="metrics" aria-label="实时物理测量">
+    <div><span>实测已收纳</span><strong id="stored-count">—</strong></div>
+    <div><span>抽屉关合 / 实测位置</span><strong id="drawer-position">—</strong></div>
+    <div><span>抓取保持</span><strong id="grasp-hold">—</strong></div>
+    <div><span>最终连续验收</span><strong id="verified-hold">—</strong></div>
+    <div><span>仿真时间</span><strong id="time">—</strong></div>
+    <div><span>当前目标抬升</span><strong id="lift">—</strong></div>
+  </section>
+  <section class="scene-objects" aria-labelledby="scene-heading">
+    <h2 id="scene-heading">五物体实测状态 <span id="object-count">等待物理状态</span></h2>
+    <p class="note">收纳通过须同时满足：整个碰撞包围盒在抽屉内、抽屉底板有真实支撑力、与手爪无承力接触、实际线速度和角速度稳定。不是按动画阶段计数。</p>
+    <ul id="object-states" aria-label="物体位置与四项收纳判据"></ul>
+    <p id="cabinet-info" class="note">等待右侧抽屉的实测位置。</p>
+  </section>
+  <section class="evidence">
+    <h2>完整任务物理验收 <span>Measured outcome</span></h2>
+    <dl>
+      <dt>任务结果</dt><dd id="current-outcome">—</dd>
+      <dt>控制器状态</dt><dd id="controller-status">—</dd>
+      <dt>当前目标设置</dt><dd id="parameters">—</dd>
+    </dl>
+    <div class="predicates" id="predicates" aria-label="最终任务判据"></div>
+    <p class="note">只有服务端报告任务成功，且五物体均实测收纳、抽屉关闭、手爪空置，才显示绿色完成。最终连续验收时长来自服务端，不由页面计时。</p>
+    <p class="note">物体之间不重置、不传送、不附着到手爪；最后由机械臂真实接触推闭抽屉。任务结束后保留最终画面，不循环、不自动重启；只有点击“重新开始整个任务”才重置全场。</p>
+    <p class="note">这是新的物理收纳演示，不是冻结分类器或旧训练数据的证据，不是模型生成的动作，也不是成功率估计。结果来自本次物理执行，不预设成功。</p>
+    <p class="note">设置中的下降速度和闭合力是控制指令，不是恒定实测 TCP 速度或实测夹持力。物体为刚体近似，玻璃杯不模拟碎裂。</p>
+    <p class="note">目标为 2× 仿真显示；实际速度受渲染和计算负载影响，并非控制器提速。抓取保持、最终验收及所有时长均以仿真秒计，真实物理控制步长不变。</p>
+  </section>
+</main>
+</body>
+</html>

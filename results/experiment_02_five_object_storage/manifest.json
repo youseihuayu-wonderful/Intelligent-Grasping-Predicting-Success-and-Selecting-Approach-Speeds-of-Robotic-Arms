@@ -1,0 +1,1936 @@
+{
+  "baselines": {
+    "five_object_cabinet_20261122": {
+      "bytes": 4176,
+      "sha256": "ddba9fc29d0c59a93ed638f9ee5303886af40256df58e176cb5f4eae686224bb"
+    },
+    "five_object_tabletop": {
+      "bytes": 16509,
+      "sha256": "a627af3f20c1ed03438923372661106dc151dd49f49186475eeaed16d41fa562"
+    }
+  },
+  "check_logs": [
+    {
+      "archive": "check_logs/end_to_end_final.log",
+      "bytes": 839,
+      "interpretation": "Verbatim supplied log; no pass/fail status inferred by archiver",
+      "sha256": "5893fd56af1052e2b11d16ba30569fc8ebaebe5e8d0160690934b2d59e5a5bef",
+      "source": "/private/tmp/experiment02_checks/end_to_end_final.log"
+    },
+    {
+      "archive": "check_logs/end_to_end_attempt_03.log",
+      "bytes": 100,
+      "interpretation": "Verbatim supplied log; no pass/fail status inferred by archiver",
+      "sha256": "3f1873517a7f0899d350b8cdfb51aeba8f0ccd6bceee3a3c16ef1541134ccf0e",
+      "source": "/private/tmp/experiment02_checks/end_to_end_attempt_03.log"
+    },
+    {
+      "archive": "check_logs/experiment02_push_ik.log",
+      "bytes": 95,
+      "interpretation": "Verbatim supplied log; no pass/fail status inferred by archiver",
+      "sha256": "8aea176ff8ab43ef322c3ddefb15979502c23c6bc3bf2f5326082ac1ab6bab5e",
+      "source": "/private/tmp/experiment02_push_ik.log"
+    },
+    {
+      "archive": "check_logs/experiment02_final_verification_diagnostics.log",
+      "bytes": 1858,
+      "interpretation": "Verbatim supplied log; no pass/fail status inferred by archiver",
+      "sha256": "910163f69a31cf37b1d46f8094e01f4ef545c5d505efbcba1f7fa109dd9af118",
+      "source": "/private/tmp/experiment02_final_verification_diagnostics.log"
+    }
+  ],
+  "experiment": 2,
+  "final": {
+    "archive": "final",
+    "compiled_model": {
+      "path": "model.mjb",
+      "sha256": "c377219fb4fb24beae39724c9cbca2bec5108d1c22ffc048b47e0774e3c496d7"
+    },
+    "files": {
+      "console.log": {
+        "bytes": 33106,
+        "sha256": "2f6c617fd873844a9f94da4283cb4b5d297d7626d7694dd0947f7c99f5e66a36"
+      },
+      "model.mjb.gz": {
+        "bytes": 41039268,
+        "encoding": "gzip",
+        "logical_original": {
+          "bytes": 122913099,
+          "path": "model.mjb",
+          "sha256": "c377219fb4fb24beae39724c9cbca2bec5108d1c22ffc048b47e0774e3c496d7"
+        },
+        "sha256": "50fdcc3af35342f1e69872ff8d469c4a0541b108dc78dec2835850037709dbd4"
+      },
+      "model_storage.json": {
+        "bytes": 327,
+        "sha256": "46afd6cd93b7b3bf55979531a7f430d8df3e6e7b7d863c311d7be8766d8ebe6e"
+      },
+      "trajectory.npz": {
+        "bytes": 1780224,
+        "npz": {
+          "fields": {
+            "ctrl": {
+              "dtype": "float64",
+              "shape": [
+                2807,
+                8
+              ]
+            },
+            "object_order": {
+              "dtype": "<U6",
+              "shape": [
+                5
+              ]
+            },
+            "predicate_names": {
+              "dtype": "<U9",
+              "shape": [
+                4
+              ]
+            },
+            "predicates": {
+              "dtype": "bool",
+              "shape": [
+                2807,
+                5,
+                4
+              ]
+            },
+            "qpos": {
+              "dtype": "float64",
+              "shape": [
+                2807,
+                45
+              ]
+            },
+            "qvel": {
+              "dtype": "float64",
+              "shape": [
+                2807,
+                40
+              ]
+            },
+            "support_force_n": {
+              "dtype": "float64",
+              "shape": [
+                2807,
+                5
+              ]
+            },
+            "time_s": {
+              "dtype": "float64",
+              "shape": [
+                2807
+              ]
+            }
+          },
+          "simulation_samples": {
+            "first_s": 0.7000000000000005,
+            "last_s": 281.30000000061506,
+            "sample_count": 2807,
+            "span_s": 280.60000000061507
+          }
+        },
+        "sha256": "5248c064d9ec564accd2497564fc71ae9bee727bdf063d63f6c2e2694221900c"
+      },
+      "verification.json": {
+        "bytes": 31201,
+        "sha256": "4d6c222d017392fa354b5296d1c8ef8c77b91017c9aaad63d153aacd572022dc"
+      }
+    },
+    "recording_limits": "Replay covers only recorded simulation samples, not any unrecorded initialization. See original events and NPZ first/last simulation timestamps; no missing samples are synthesized. Exact replay decodes final/model.mjb.gz using model_storage.json; never reconstructs a model fallback.",
+    "source": "/private/tmp/five-storage-probe-13",
+    "strict_acceptance_verified": true
+  },
+  "reproduction": "Partial source snapshot only. Reproduce from the repository checkout with uv.lock; this snapshot is not standalone.",
+  "runs": [
+    {
+      "archive": "runs/five-storage-probe-01",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 64619,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  286,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  286
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 29.199999999994695,
+              "sample_count": 286,
+              "span_s": 28.499999999994696
+            }
+          },
+          "sha256": "fd444c011218ec9395966c45ef50924b7f2a314fd3fd2eb38c71dcfb2d0c6aa4"
+        },
+        "verification.json": {
+          "bytes": 7209,
+          "sha256": "4f082b6e0e3f47fd58a38c412c36f0aa93f548acaa9f40670d249eef7e66c10f"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-01"
+    },
+    {
+      "archive": "runs/five-storage-probe-02",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 67251,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  297,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  297
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 30.299999999994085,
+              "sample_count": 297,
+              "span_s": 29.599999999994086
+            }
+          },
+          "sha256": "1d57630aab1ee84769d936b8064ab2e2b7cfe20da7fb7de230cd60ba500c06b9"
+        },
+        "verification.json": {
+          "bytes": 7204,
+          "sha256": "749120ec03d406bd04881601a3f84b593c09d9f471fe7c0990e4340466684e33"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-02"
+    },
+    {
+      "archive": "runs/five-storage-probe-03",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 87955,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  384,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  384
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 39.0000000000017,
+              "sample_count": 384,
+              "span_s": 38.300000000001695
+            }
+          },
+          "sha256": "6a16710099c87cc7f9f18e73d5e7cdf90c68645a8e2002bf57b173320647c84c"
+        },
+        "verification.json": {
+          "bytes": 7347,
+          "sha256": "578d17ba239861aa7b28adf0d497612f74b106ef0f2a381bb88c6282b41d7054"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-03"
+    },
+    {
+      "archive": "runs/five-storage-probe-04",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 82019,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  358,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  358
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 36.39999999999852,
+              "sample_count": 358,
+              "span_s": 35.69999999999852
+            }
+          },
+          "sha256": "39b230e897aef36786c57d4aea7694f9c07e42749d38a2009d76aac16adb5ab8"
+        },
+        "verification.json": {
+          "bytes": 7390,
+          "sha256": "a8ba02bfd69d2212613128e24a306b142f873fc1afbbf59722761b578a2b0930"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-04"
+    },
+    {
+      "archive": "runs/five-storage-probe-05",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 85261,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  372,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  372
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 37.80000000000023,
+              "sample_count": 372,
+              "span_s": 37.10000000000023
+            }
+          },
+          "sha256": "dcb64524c28ad07ae06db076b2fa7c10278f6649925d43e71cde83bb23e1f1af"
+        },
+        "verification.json": {
+          "bytes": 7439,
+          "sha256": "0683bc85f683d8f95bf6957bf08f58385076d44f657a7def4c6ac8de011ff0fa"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-05"
+    },
+    {
+      "archive": "runs/five-storage-probe-06",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 345122,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  1428,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  1428
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 143.3999999999566,
+              "sample_count": 1428,
+              "span_s": 142.69999999995662
+            }
+          },
+          "sha256": "d3f89f1e5e59e8fb71155361f1aacb3d1170b770f9f020c6ff81ff7e53dd6345"
+        },
+        "verification.json": {
+          "bytes": 13905,
+          "sha256": "0cb685117ea495ff046881b2b872888418f8405bdcace09152528c68cd7de6d9"
+        }
+      },
+      "metadata_limitations": [
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-06"
+    },
+    {
+      "archive": "runs/five-storage-probe-07",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 432846,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  1748,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  1748
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 175.4000000001094,
+              "sample_count": 1748,
+              "span_s": 174.7000000001094
+            }
+          },
+          "sha256": "003864342fa08bfde4bb1db53527e3eafcb28f5d43850e217eaa19d1339d9e23"
+        },
+        "verification.json": {
+          "bytes": 14140,
+          "sha256": "cccfceeab9b4ac14b1e5ff4139ecf3af0a83d596373afdc829589e86570f7122"
+        }
+      },
+      "metadata_limitations": [
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-07"
+    },
+    {
+      "archive": "runs/five-storage-probe-08",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 432246,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  1746,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  1746
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 175.20000000010845,
+              "sample_count": 1746,
+              "span_s": 174.50000000010846
+            }
+          },
+          "sha256": "3164c12bfbf7427245d546569acf8c2c97733ce7f414b3265f59e761997fb445"
+        },
+        "verification.json": {
+          "bytes": 14129,
+          "sha256": "21bde67243ca4d257ebc35749ad84416af62890a4a1b1386966c06b343884ac2"
+        }
+      },
+      "metadata_limitations": [
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-08"
+    },
+    {
+      "archive": "runs/five-storage-probe-09",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 1107519,
+          "npz": {
+            "fields": {
+              "ctrl": {
+                "dtype": "float64",
+                "shape": [
+                  1771,
+                  8
+                ]
+              },
+              "object_order": {
+                "dtype": "<U6",
+                "shape": [
+                  5
+                ]
+              },
+              "predicate_names": {
+                "dtype": "<U9",
+                "shape": [
+                  4
+                ]
+              },
+              "predicates": {
+                "dtype": "bool",
+                "shape": [
+                  1771,
+                  5,
+                  4
+                ]
+              },
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  1771,
+                  45
+                ]
+              },
+              "qvel": {
+                "dtype": "float64",
+                "shape": [
+                  1771,
+                  40
+                ]
+              },
+              "support_force_n": {
+                "dtype": "float64",
+                "shape": [
+                  1771,
+                  5
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  1771
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 177.70000000012038,
+              "sample_count": 1771,
+              "span_s": 177.0000000001204
+            }
+          },
+          "sha256": "7a3a2a351d43f09e296615da3de24e4433bb92ffd13a8d220a382adf67c561b1"
+        },
+        "verification.json": {
+          "bytes": 14634,
+          "sha256": "e4004e00b39b733e70376310f71de1f4659a032df1c497845e93180eddfe3aa4"
+        }
+      },
+      "metadata_limitations": [
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-09"
+    },
+    {
+      "archive": "runs/five-storage-probe-10",
+      "files": {
+        "model.mjb.gz": {
+          "bytes": 41039268,
+          "encoding": "gzip",
+          "logical_original": {
+            "bytes": 122913099,
+            "path": "model.mjb",
+            "sha256": "c377219fb4fb24beae39724c9cbca2bec5108d1c22ffc048b47e0774e3c496d7"
+          },
+          "sha256": "50fdcc3af35342f1e69872ff8d469c4a0541b108dc78dec2835850037709dbd4"
+        },
+        "model_storage.json": {
+          "bytes": 327,
+          "sha256": "46afd6cd93b7b3bf55979531a7f430d8df3e6e7b7d863c311d7be8766d8ebe6e"
+        },
+        "trajectory.npz": {
+          "bytes": 1074395,
+          "npz": {
+            "fields": {
+              "ctrl": {
+                "dtype": "float64",
+                "shape": [
+                  1741,
+                  8
+                ]
+              },
+              "object_order": {
+                "dtype": "<U6",
+                "shape": [
+                  5
+                ]
+              },
+              "predicate_names": {
+                "dtype": "<U9",
+                "shape": [
+                  4
+                ]
+              },
+              "predicates": {
+                "dtype": "bool",
+                "shape": [
+                  1741,
+                  5,
+                  4
+                ]
+              },
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  1741,
+                  45
+                ]
+              },
+              "qvel": {
+                "dtype": "float64",
+                "shape": [
+                  1741,
+                  40
+                ]
+              },
+              "support_force_n": {
+                "dtype": "float64",
+                "shape": [
+                  1741,
+                  5
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  1741
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 174.70000000010606,
+              "sample_count": 1741,
+              "span_s": 174.00000000010607
+            }
+          },
+          "sha256": "83c81e57decf65201e8b40a1afb2337ff9e02f8fbcdbc6283b7913a48b648955"
+        },
+        "verification.json": {
+          "bytes": 27980,
+          "sha256": "e3bc706d497a5bc05f9283963f4680fea67025b13d0b7f1339e84cb69bbf846b"
+        }
+      },
+      "metadata_limitations": [],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-10"
+    },
+    {
+      "archive": "runs/five-storage-probe-11",
+      "files": {
+        "model.mjb.gz": {
+          "bytes": 41039268,
+          "encoding": "gzip",
+          "logical_original": {
+            "bytes": 122913099,
+            "path": "model.mjb",
+            "sha256": "c377219fb4fb24beae39724c9cbca2bec5108d1c22ffc048b47e0774e3c496d7"
+          },
+          "sha256": "50fdcc3af35342f1e69872ff8d469c4a0541b108dc78dec2835850037709dbd4"
+        },
+        "model_storage.json": {
+          "bytes": 327,
+          "sha256": "46afd6cd93b7b3bf55979531a7f430d8df3e6e7b7d863c311d7be8766d8ebe6e"
+        },
+        "trajectory.npz": {
+          "bytes": 1536666,
+          "npz": {
+            "fields": {
+              "ctrl": {
+                "dtype": "float64",
+                "shape": [
+                  2442,
+                  8
+                ]
+              },
+              "object_order": {
+                "dtype": "<U6",
+                "shape": [
+                  5
+                ]
+              },
+              "predicate_names": {
+                "dtype": "<U9",
+                "shape": [
+                  4
+                ]
+              },
+              "predicates": {
+                "dtype": "bool",
+                "shape": [
+                  2442,
+                  5,
+                  4
+                ]
+              },
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  2442,
+                  45
+                ]
+              },
+              "qvel": {
+                "dtype": "float64",
+                "shape": [
+                  2442,
+                  40
+                ]
+              },
+              "support_force_n": {
+                "dtype": "float64",
+                "shape": [
+                  2442,
+                  5
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  2442
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 244.80000000044078,
+              "sample_count": 2442,
+              "span_s": 244.1000000004408
+            }
+          },
+          "sha256": "6014fab8b1ff30f7e245186196849fd7a59ddaa81ee0456301718bb4c707325c"
+        },
+        "verification.json": {
+          "bytes": 30947,
+          "sha256": "b264fd2888e01344b37bb9fdd6786dea6a35fb00c050c75cb515459cadd5e203"
+        }
+      },
+      "metadata_limitations": [],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-11"
+    },
+    {
+      "archive": "runs/five-storage-probe-12",
+      "files": {
+        "model.mjb.gz": {
+          "bytes": 41039268,
+          "encoding": "gzip",
+          "logical_original": {
+            "bytes": 122913099,
+            "path": "model.mjb",
+            "sha256": "c377219fb4fb24beae39724c9cbca2bec5108d1c22ffc048b47e0774e3c496d7"
+          },
+          "sha256": "50fdcc3af35342f1e69872ff8d469c4a0541b108dc78dec2835850037709dbd4"
+        },
+        "model_storage.json": {
+          "bytes": 327,
+          "sha256": "46afd6cd93b7b3bf55979531a7f430d8df3e6e7b7d863c311d7be8766d8ebe6e"
+        },
+        "trajectory.npz": {
+          "bytes": 1771008,
+          "npz": {
+            "fields": {
+              "ctrl": {
+                "dtype": "float64",
+                "shape": [
+                  2791,
+                  8
+                ]
+              },
+              "object_order": {
+                "dtype": "<U6",
+                "shape": [
+                  5
+                ]
+              },
+              "predicate_names": {
+                "dtype": "<U9",
+                "shape": [
+                  4
+                ]
+              },
+              "predicates": {
+                "dtype": "bool",
+                "shape": [
+                  2791,
+                  5,
+                  4
+                ]
+              },
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  2791,
+                  45
+                ]
+              },
+              "qvel": {
+                "dtype": "float64",
+                "shape": [
+                  2791,
+                  40
+                ]
+              },
+              "support_force_n": {
+                "dtype": "float64",
+                "shape": [
+                  2791,
+                  5
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  2791
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 0.7000000000000005,
+              "last_s": 279.7000000006074,
+              "sample_count": 2791,
+              "span_s": 279.00000000060743
+            }
+          },
+          "sha256": "ab272046a23bacf73af0565574a3294c086ef3615eb5bfac90cfbab1a89447f6"
+        },
+        "verification.json": {
+          "bytes": 31248,
+          "sha256": "0b13aad004ac726d3063332997e6879e56dc0adf8807f9e812d497448e5a9bae"
+        }
+      },
+      "metadata_limitations": [],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-probe-12"
+    },
+    {
+      "archive": "runs/five-storage-push-fixture",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 755,
+          "npz": {
+            "fields": {
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  1,
+                  45
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  1
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 1.7000000000000013,
+              "last_s": 1.7000000000000013,
+              "sample_count": 1,
+              "span_s": 0.0
+            }
+          },
+          "sha256": "003600c068278ddbd1e6826039d22cab4cc65b15ed18efc7ca71eba24af9b149"
+        },
+        "verification.json": {
+          "bytes": 6494,
+          "sha256": "83fd100d336e7971fc75a20c2377008385a498a7635064ea69285fb01257cb37"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-push-fixture"
+    },
+    {
+      "archive": "runs/five-storage-push-fixture-02",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 35613,
+          "npz": {
+            "fields": {
+              "ctrl": {
+                "dtype": "float64",
+                "shape": [
+                  59,
+                  8
+                ]
+              },
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  59,
+                  45
+                ]
+              },
+              "qvel": {
+                "dtype": "float64",
+                "shape": [
+                  59,
+                  40
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  59
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 1.7000000000000013,
+              "last_s": 7.499999999999396,
+              "sample_count": 59,
+              "span_s": 5.799999999999395
+            }
+          },
+          "sha256": "e4e4146d56981b24f1b5d23d170e913b77ddd83cbfb096132a66f68157a430f5"
+        },
+        "verification.json": {
+          "bytes": 6735,
+          "sha256": "d8b5d256c84ea76541160655a3b145d698004fb10c4c86f2b55e28a0bf276b54"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-push-fixture-02"
+    },
+    {
+      "archive": "runs/five-storage-push-fixture-03",
+      "files": {
+        "trajectory.npz": {
+          "bytes": 135496,
+          "npz": {
+            "fields": {
+              "ctrl": {
+                "dtype": "float64",
+                "shape": [
+                  226,
+                  8
+                ]
+              },
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  226,
+                  45
+                ]
+              },
+              "qvel": {
+                "dtype": "float64",
+                "shape": [
+                  226,
+                  40
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  226
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 1.7000000000000013,
+              "last_s": 24.199999999997466,
+              "sample_count": 226,
+              "span_s": 22.499999999997463
+            }
+          },
+          "sha256": "492c589974ce9a3ba2443645b306cbaa55d25058a0d326e9a30aa25b645053bb"
+        },
+        "verification.json": {
+          "bytes": 6827,
+          "sha256": "6427b67acd1810f92b0a82f8f2a4bc3d6a64b72f55c6eb0cf54726b02668ef53"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": false,
+      "source": "/private/tmp/five-storage-push-fixture-03"
+    },
+    {
+      "archive": "runs/five-storage-push-fixture-04",
+      "files": {
+        "console.log": {
+          "bytes": 7161,
+          "sha256": "b11e1d9f5e60b6386042661271ddcf484a942bc2500ed717a6c5e35bbc8a148b"
+        },
+        "probe.py": {
+          "bytes": 2548,
+          "sha256": "8dec0b6419e8fda5958d892af71cf8ed602fe8819839a4e04b4a05b6ab52ebc8"
+        },
+        "trajectory.npz": {
+          "bytes": 322058,
+          "npz": {
+            "fields": {
+              "ctrl": {
+                "dtype": "float64",
+                "shape": [
+                  525,
+                  8
+                ]
+              },
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  525,
+                  45
+                ]
+              },
+              "qvel": {
+                "dtype": "float64",
+                "shape": [
+                  525,
+                  40
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  525
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 1.7000000000000013,
+              "last_s": 54.10000000002015,
+              "sample_count": 525,
+              "span_s": 52.40000000002015
+            }
+          },
+          "sha256": "5e71e4cd129a23e85ed4854f8024211a96aafd8a086f38bb6abdc364b1294f0e"
+        },
+        "verification.json": {
+          "bytes": 7051,
+          "sha256": "65cd907ad7ab25a1eb03822d78c981010e69facdacba1cc786d544b4341cc452"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable"
+      ],
+      "recorded_outcome": true,
+      "source": "/private/tmp/five-storage-push-fixture-04"
+    },
+    {
+      "archive": "runs/experiment02_closed_stability_diagnostic",
+      "files": {
+        "console.log": {
+          "bytes": 5617,
+          "sha256": "030a3917a679043f5f353b33d0b9c8c46a39e94e7cb02f4756768fb1237d3fef"
+        },
+        "probe.py": {
+          "bytes": 2709,
+          "sha256": "c46513b490637461b578f6732f9c81d077c50904732c0446640a30dbdcd21147"
+        },
+        "trajectory.npz": {
+          "bytes": 17453,
+          "npz": {
+            "fields": {
+              "ctrl": {
+                "dtype": "float64",
+                "shape": [
+                  30,
+                  8
+                ]
+              },
+              "qpos": {
+                "dtype": "float64",
+                "shape": [
+                  30,
+                  45
+                ]
+              },
+              "qvel": {
+                "dtype": "float64",
+                "shape": [
+                  30,
+                  40
+                ]
+              },
+              "time_s": {
+                "dtype": "float64",
+                "shape": [
+                  30
+                ]
+              }
+            },
+            "simulation_samples": {
+              "first_s": 279.8000000006079,
+              "last_s": 282.70000000062174,
+              "sample_count": 30,
+              "span_s": 2.900000000013847
+            }
+          },
+          "sha256": "41a7e6ea8b207dacb66f341ca4a742adc2724ca4e430c013e48274734c9b4371"
+        },
+        "verification.json": {
+          "bytes": 5617,
+          "sha256": "030a3917a679043f5f353b33d0b9c8c46a39e94e7cb02f4756768fb1237d3fef"
+        }
+      },
+      "metadata_limitations": [
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original compiled model unavailable; exact historical model replay unavailable",
+        "Original initialization/phase event measurements unavailable",
+        "Original verification fields unavailable: controller_status, drawer_closed, events, hand_empty, objects, outcome, scene_resets_during_mission, verified_hold_s, warnings"
+      ],
+      "recorded_outcome": null,
+      "source": "/private/tmp/experiment02_closed_stability_diagnostic"
+    },
+    {
+      "archive": "runs/experiment02_live_01",
+      "files": {
+        "before_closure_frame.jpg": {
+          "bytes": 34869,
+          "sha256": "3b1673995742cedf7defaefacc9a0ab930087d0ecce923d6e16876a57f02f14b"
+        },
+        "before_closure_state.json": {
+          "bytes": 6226,
+          "sha256": "01924909c01183e74b3843759631e64d8b99cfcad6168b1cd6f565e3203d98aa"
+        },
+        "capture.json": {
+          "bytes": 585,
+          "sha256": "167028e887bc3cfc5d1f6768428121ffb4e21b7877747ffd7a28fea619d0ec70"
+        },
+        "final_state.json": {
+          "bytes": 6335,
+          "sha256": "1841c37ff2aad03e4dba411ece9d1f8a2fd55bf428b327fe311ab60d9acc5477"
+        },
+        "last_real_frame.jpg": {
+          "bytes": 33290,
+          "sha256": "f89517dfa5fa0eec4d91484c6e08ef45aff46068e1987714566b236fb61dcd92"
+        },
+        "states.jsonl.gz": {
+          "bytes": 2032483,
+          "sha256": "ae20ef6e9d721fc5fd59add1c8cb2844d122a86740299d1cc475c48e64225948"
+        }
+      },
+      "metadata_limitations": [
+        "Original verification.json unavailable",
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original trajectory.npz unavailable",
+        "Original compiled model unavailable; exact historical model replay unavailable",
+        "Original initialization/phase event measurements unavailable",
+        "Recorded initialization/sample span unavailable",
+        "Original verification fields unavailable: controller_status, drawer_closed, events, hand_empty, objects, outcome, scene_resets_during_mission, verified_hold_s, warnings"
+      ],
+      "recorded_outcome": null,
+      "source": "/private/tmp/experiment02_live_01"
+    },
+    {
+      "archive": "runs/experiment02_live_02",
+      "files": {
+        "before_closure_frame.jpg": {
+          "bytes": 34869,
+          "sha256": "3b1673995742cedf7defaefacc9a0ab930087d0ecce923d6e16876a57f02f14b"
+        },
+        "before_closure_state.json": {
+          "bytes": 6260,
+          "sha256": "728d377c42faa2867e4e729ae160cdaef28d4dab92befdc4662388e8b835d813"
+        },
+        "capture.json": {
+          "bytes": 587,
+          "sha256": "5a43566c2a6989f053bd16670d7ec653168324e3a18b27443c3efeed122a3e71"
+        },
+        "console.log": {
+          "bytes": 6359,
+          "sha256": "4f33b73e2785306d667e445160c72424d7962a8e6b026ac9343303cb68f63067"
+        },
+        "display_final.png": {
+          "bytes": 442170,
+          "sha256": "047f1af2191c247057b02cbc37c7404517e65d28a86cedacf1f0097d8974c6ee"
+        },
+        "display_verification.json": {
+          "bytes": 404,
+          "sha256": "4631955a9ced4b1f97434f989c0cd17e6c107a0a211d1ce7dcf0c3de80c8f2b8"
+        },
+        "final_state.json": {
+          "bytes": 6290,
+          "sha256": "86e0c044fcc6f22c07f095ff73f03b10b225948103bb85173d89f10be0e5141c"
+        },
+        "last_real_frame.jpg": {
+          "bytes": 33290,
+          "sha256": "f89517dfa5fa0eec4d91484c6e08ef45aff46068e1987714566b236fb61dcd92"
+        },
+        "states.jsonl.gz": {
+          "bytes": 2045475,
+          "sha256": "b9f4da6696b8ffa72de48f6ab2961325e2964cb276fae9cb5ab8a542a707dea0"
+        }
+      },
+      "metadata_limitations": [
+        "Original verification.json unavailable",
+        "Original source hashes unavailable; historical source version cannot be reconstructed from this run",
+        "Original trajectory.npz unavailable",
+        "Original compiled model unavailable; exact historical model replay unavailable",
+        "Original initialization/phase event measurements unavailable",
+        "Recorded initialization/sample span unavailable",
+        "Original verification fields unavailable: controller_status, drawer_closed, events, hand_empty, objects, outcome, scene_resets_during_mission, verified_hold_s, warnings"
+      ],
+      "recorded_outcome": null,
+      "source": "/private/tmp/experiment02_live_02"
+    }
+  ],
+  "schema_version": 1,
+  "source_snapshot": {
+    "assets/grasp_study/glass.xml": {
+      "bytes": 2776,
+      "capture": "inspection_text",
+      "sha256": "b8441416c44548fc628d5eddb38d9c19a142820fbe10b15b00c6ce77f7d42a6d"
+    },
+    "assets/grasp_study/pen.xml": {
+      "bytes": 750,
+      "capture": "inspection_text",
+      "sha256": "b3a9a81d2834508c72e17027a7c746e26f2b0e57e584199bb5d4594e2071e693"
+    },
+    "assets/grasp_study/spoon.xml": {
+      "bytes": 1098,
+      "capture": "inspection_text",
+      "sha256": "9d4c425a8a8a8b47f1e571d74034d72afb6d7035be0b2a3169b43bea9ff48120"
+    },
+    "assets/grasp_study/tabletop_cabinet.xml": {
+      "bytes": 2396,
+      "capture": "inspection_text",
+      "sha256": "bdaa8b16559dea438dfc58ec6ca7ca1cecd1b0dab4448783a9da715987c5bfcd"
+    },
+    "drawer_storage_checks.py": {
+      "bytes": 8090,
+      "capture": "inspection_text",
+      "sha256": "7072b79249f6737ada4b6b9193d2c76c25a45c625103ece9e8dfc8ba3966ff25"
+    },
+    "grasp.py": {
+      "bytes": 27257,
+      "capture": "inspection_text",
+      "sha256": "4ddc10acf904456661c89fbcb595e2677f5e1a8029abd0cb3ad059c4bfc75114"
+    },
+    "grasp_study_objects.py": {
+      "bytes": 2212,
+      "capture": "inspection_text",
+      "sha256": "a1a7a76f01b282710cc95384735cc9fe0303d4bee3ea9a4357314a55208e63eb"
+    },
+    "grasp_study_physics.py": {
+      "bytes": 15450,
+      "capture": "inspection_text",
+      "sha256": "b6f1907750c681d987547e4dfdb0d404ed6131453975057c5f2294f302fbd92b"
+    },
+    "grasp_tabletop.py": {
+      "bytes": 9214,
+      "capture": "inspection_text",
+      "sha256": "6d7b6fe2dd368481e06900496904df6519eea5e1117c78d7475651a452874415"
+    },
+    "scene.xml": {
+      "bytes": 2121,
+      "capture": "inspection_text",
+      "sha256": "7ca71b6a86f587f0f1ab1758f7722b92aebdfbf0973262b238591407d0190b32"
+    },
+    "simulation.py": {
+      "bytes": 13340,
+      "capture": "inspection_text",
+      "sha256": "b7a24a6a6cb304b80322e6b2f089cbe7ade29dec99cbf0051173c494134a0ef2"
+    },
+    "tabletop_storage.py": {
+      "bytes": 26767,
+      "capture": "inspection_text",
+      "sha256": "0bafe29c2fc1e1c989601329684fcf077c72e2d2c6078aec8769fde9dceb78de"
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.mtl": {
+      "bytes": 244,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.mtl",
+      "sha256": "00c6007476fbec0bf87390e24ab9e029369a5d8a3dfa8caf4fa1c8b17aa66367"
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.obj": {
+      "bytes": 4232879,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.obj",
+      "sha256": "026d7a302a831a595cf011580ff8fbe6f4c0234c478af96d6f42344822bc18a5"
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl.xml": {
+      "bytes": 10343,
+      "capture": "inspection_text",
+      "sha256": "18c1074cfa09baea739bb75928f9bd2bd80e22ac18655f6a27f005dbf77ccfda"
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl_col.obj": {
+      "bytes": 40089,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/stable_scanned_objects/akita_black_bowl/akita_black_bowl_col.obj",
+      "sha256": "ac0a7aff7543aa32c65cf64d39191ca5127763a39b3ab25329b9fa828224cc39"
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/texture.png": {
+      "bytes": 12751242,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/stable_scanned_objects/akita_black_bowl/texture.png",
+      "sha256": "8a646d98b084b7400dd91beed9c83e10b4a4dca572896b3974356b7937a4bd85"
+    },
+    "vendor/libero/stable_scanned_objects/akita_black_bowl/visual/akita_black_bowl_vis.msh": {
+      "bytes": 4592392,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/stable_scanned_objects/akita_black_bowl/visual/akita_black_bowl_vis.msh",
+      "sha256": "6474d536a740e995c3a2eaeb74c61e14da94131b0b222c250b61b30b13d11229"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/Cork_Texture_by_faycop.jpg": {
+      "bytes": 277008,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/Cork_Texture_by_faycop.jpg",
+      "sha256": "a59f0b4204a858367bb7d41c94b2d4b5f27b2b30859637a6c8d072d3122a53d9"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/cork_texture.png": {
+      "bytes": 1322298,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/cork_texture.png",
+      "sha256": "93a9c1d22c7256e423a1473b2bf9107b4e120cd249423f7e01289f9c6fd63feb"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/label_wine.png": {
+      "bytes": 158360,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/label_wine.png",
+      "sha256": "a8caed4b3414dcf4b72558e339ce1cad1b90b4f159d0d293f06ed04a1f473241"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_cork_vis.msh": {
+      "bytes": 96352,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_cork_vis.msh",
+      "sha256": "2b993448e727c8abf8c25a5ed28699e4594dc692e3eaad76a957627f0afcc474"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_logo_vis.msh": {
+      "bytes": 3472,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_logo_vis.msh",
+      "sha256": "99e4f2bec9c76a5277dc40efe774f47e9f079ced13b4197f0ac79bb36bc54e47"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_main_vis.msh": {
+      "bytes": 487096,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/visual/wine_bottle_red_main_vis.msh",
+      "sha256": "92a7a897bdac34f47161cb418fbe6f7fc9056d2f0e93647beb8139cffeed270a"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle.xml": {
+      "bytes": 6827,
+      "capture": "inspection_text",
+      "sha256": "9bdae6cb59f9260544cb802d4babe32c23b9dd66e0a5fb2bdb4662b468ce1a17"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_cork.mtl": {
+      "bytes": 263,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_cork.mtl",
+      "sha256": "41f70e38e3baaa87ccf3355baace8c5cad3ba5c56d3ecf2761e959adf562a067"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_cork.obj": {
+      "bytes": 59786,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_cork.obj",
+      "sha256": "15bee8cd7d34ac18c24ed4463e167120a5cea18d85977539645d22839394ca0c"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_logo.mtl": {
+      "bytes": 251,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_logo.mtl",
+      "sha256": "840f57e0ed5a46824e63be68e0bf8b6ee997f5c46dd7960839fe5478bd7e1c47"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_logo.obj": {
+      "bytes": 2768,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_logo.obj",
+      "sha256": "52637c8f1247ab63414a5d8238f3f160dccab55d4890f5fa54177a4bd106a2aa"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main.mtl": {
+      "bytes": 606,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main.mtl",
+      "sha256": "a0757c429b887630a1380b61a85fa01aaaba31a8f489c512883c26eb510df024"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main.obj": {
+      "bytes": 304055,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main.obj",
+      "sha256": "2bf2c1ff42873ccf923c8eeacff782839ca2383d4b866f486f51ee28d4a6fdc6"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main.xml": {
+      "bytes": 5875,
+      "capture": "inspection_text",
+      "sha256": "460636a34ffe0ececda20fa00f27591b6999861c8f4cdf3d410f605ca2320bda"
+    },
+    "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main_col.obj": {
+      "bytes": 20286,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_bottle/wine_bottle_red_main_col.obj",
+      "sha256": "07b00931aa9bf469db23062a556c5608786ce4bdfc1b9028017fc8fff37e2049"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/light-wood.png": {
+      "bytes": 801173,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/light-wood.png",
+      "sha256": "967be64bdb170d36283bc43c2ae5d525ec88f78bc837dc7d0efc9a28d68caad1"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/light_yellow_metal.png": {
+      "bytes": 1729294,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/light_yellow_metal.png",
+      "sha256": "b8d8abf32b1940b938c097e6955ef7c5e0b84ab97296e53aa65315efbf1f1359"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/mahogany.png": {
+      "bytes": 66375,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/mahogany.png",
+      "sha256": "702a734fef1bf0df4e446f98f571628f81e423caba64b5fcfd683bae42135c3b"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/metal.png": {
+      "bytes": 196878,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/metal.png",
+      "sha256": "93784216a66b52be9c8ccc3732e50f511815291e32f34f97bd139ed7229061fa"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_planes_vis.msh": {
+      "bytes": 65140,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_planes_vis.msh",
+      "sha256": "f3daf4c20ed4b513b0d3b19d5580aa6f9c677ab6935a138f316b00852714d936"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_stand_vis.msh": {
+      "bytes": 41488,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_stand_vis.msh",
+      "sha256": "6b4cf3bd2a65f93f41563e86b55b4789965001f78473268b592e59abad9c64fd"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_stoppers_vis.msh": {
+      "bytes": 20752,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/visual/wine_rack_stoppers_vis.msh",
+      "sha256": "8647657c858c45b6a55e507689888dffaf80d68d9395f9c7eb5a40eb64e17c62"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack.xml": {
+      "bytes": 4121,
+      "capture": "inspection_text",
+      "sha256": "18f97cd8bb76ed18b2f11d047c5abbe0a2d9490d53ac167e0657c596dd450c3e"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes.mtl": {
+      "bytes": 321,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes.mtl",
+      "sha256": "5e2d9bf426ad5322b4600057cc8bbf81d08a08e09f65f180b94d811591f54ced"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes.obj": {
+      "bytes": 45151,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes.obj",
+      "sha256": "7036695e41b2217c478947fd2255a3c0319668ff25dc36de757ce3fe60610678"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes.xml": {
+      "bytes": 1372,
+      "capture": "inspection_text",
+      "sha256": "d1e664d1aebb10264f71acae4acf5cc5f3b38a4b81d5900f0f53371e43cce3d9"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes_col.obj": {
+      "bytes": 1900,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_planes_col.obj",
+      "sha256": "882f02cbada03748eeb37570cfd7c6dd0713bd696c49767f8ecdcd0a47ab110d"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand.mtl": {
+      "bytes": 343,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand.mtl",
+      "sha256": "a0b3318177e43bec62eed04780a6b3f5bc743b4552b6c07f62356bf3962e2154"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand.obj": {
+      "bytes": 28554,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand.obj",
+      "sha256": "7dc7631e3a266e808b45c57429eae08187ccff9c21232377d43ed4a0da289412"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand.xml": {
+      "bytes": 2071,
+      "capture": "inspection_text",
+      "sha256": "6d5bf2f0056fcd8867f507302d78567bec7dad28521aa2ecb9e07b313d04f53d"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand_col.obj": {
+      "bytes": 4719,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stand_col.obj",
+      "sha256": "4baf8eb03f738303a2ac193eadb477534c953279027361b1798a0539fef470da"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers.mtl": {
+      "bytes": 1714,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers.mtl",
+      "sha256": "4f3c4cacb1f063dfe973a772612d6c6a7ba1532010ec05c49be904c347505521"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers.obj": {
+      "bytes": 17925,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers.obj",
+      "sha256": "426683bd92d0782c89aab0cab2194e235f35fe9fed9cbab6f9c93fc67b167779"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers.xml": {
+      "bytes": 1388,
+      "capture": "inspection_text",
+      "sha256": "f3dd125a83f55535044d9e7d6b9db7b5aebf5c6a403f17e269596d2c31526a27"
+    },
+    "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers_col.obj": {
+      "bytes": 1918,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/libero/turbosquid_objects/wine_rack/wine_rack_stoppers_col.obj",
+      "sha256": "5635e8414ff7539ee310d00e274d9d0bd5906a190e711870c45d35c7706ab829"
+    },
+    "vendor/panda/LICENSE": {
+      "bytes": 10173,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    "vendor/panda/assets/finger_0.obj": {
+      "bytes": 87872,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/finger_0.obj",
+      "sha256": "215098c0fcdf7192f6c503a37cf49e3efecf8a9e1320f02b17c5584d89cc5b2c"
+    },
+    "vendor/panda/assets/finger_1.obj": {
+      "bytes": 64651,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/finger_1.obj",
+      "sha256": "cf239e9aca26bba09dbbf1c544c47d87cfc9a2f0637c8bb786af750b6d4eca44"
+    },
+    "vendor/panda/assets/hand.stl": {
+      "bytes": 10084,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/hand.stl",
+      "sha256": "94493e94f30fe940f2c8ca2f155c3bbe67bbff406d3edf5e261670d2f0f6e2ed"
+    },
+    "vendor/panda/assets/hand_0.obj": {
+      "bytes": 9091,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/hand_0.obj",
+      "sha256": "b94aab901086f85df04c019b30f43bf9aa23a7ad0443ec80a8c14662a41cabd2"
+    },
+    "vendor/panda/assets/hand_1.obj": {
+      "bytes": 121863,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/hand_1.obj",
+      "sha256": "cd76f7494bb314406a1819c46eb826ee254894f87235714f604a470653d9badb"
+    },
+    "vendor/panda/assets/hand_2.obj": {
+      "bytes": 596001,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/hand_2.obj",
+      "sha256": "e0f44a71712afa5b98eb20355eff17763d3e2e19f459b2bef19abed3727e64b3"
+    },
+    "vendor/panda/assets/hand_3.obj": {
+      "bytes": 902145,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/hand_3.obj",
+      "sha256": "a431a06d99e88a1b322b3122a01424ee7704daeaad0bc343b90b9604f014ad0c"
+    },
+    "vendor/panda/assets/hand_4.obj": {
+      "bytes": 151988,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/hand_4.obj",
+      "sha256": "21f96ef6a8de082e41b1ea9834f1043de359e5d60305541bcb63539581f53bff"
+    },
+    "vendor/panda/assets/link0.stl": {
+      "bytes": 10084,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0.stl",
+      "sha256": "dfc6d94330de8ddb005b311bfdba9f3b8e1aa7c256b71592ee7ff32cb9a9a5aa"
+    },
+    "vendor/panda/assets/link0_0.obj": {
+      "bytes": 296497,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_0.obj",
+      "sha256": "6b9f41a4c203540daaeb7a33cc3d0d6c6a32dc8bba187074eeaf97b3e36b3f9c"
+    },
+    "vendor/panda/assets/link0_1.obj": {
+      "bytes": 103978,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_1.obj",
+      "sha256": "57673d2ee2a9db2e10c8986ae57c56a7c39c012b60fd26d7d8549553b664a5ed"
+    },
+    "vendor/panda/assets/link0_10.obj": {
+      "bytes": 343308,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_10.obj",
+      "sha256": "c9198b9d8534d628d097b0f2b239bb30343353182df098ce0d9db6bc13326848"
+    },
+    "vendor/panda/assets/link0_11.obj": {
+      "bytes": 22295,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_11.obj",
+      "sha256": "f0adec78d6677b7799d25121981270e8bfe119b5c18d08a91ee37a54ad75f65c"
+    },
+    "vendor/panda/assets/link0_2.obj": {
+      "bytes": 590892,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_2.obj",
+      "sha256": "1ca435a2a87a9608a146a47955724d43dd7ce10fc3dd3018800aa98f8ba86e05"
+    },
+    "vendor/panda/assets/link0_3.obj": {
+      "bytes": 47588,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_3.obj",
+      "sha256": "3e9c6334d2b3b47944af3458ee5f20519abc20fe7ee23063bb53405ccab28046"
+    },
+    "vendor/panda/assets/link0_4.obj": {
+      "bytes": 211200,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_4.obj",
+      "sha256": "215d25789704936120f119c0bc1cc7f68516dd3f8f1df61457b71acac3873f26"
+    },
+    "vendor/panda/assets/link0_5.obj": {
+      "bytes": 17023,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_5.obj",
+      "sha256": "9361b104e93743045107aa5b15fb1a0835ba9c1f355aae71f56403cf6a9c33f6"
+    },
+    "vendor/panda/assets/link0_7.obj": {
+      "bytes": 30699,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_7.obj",
+      "sha256": "2dc0b8ebbbc80e4c065d71e195adbc384f673438641fac82b07b801b4d2837cb"
+    },
+    "vendor/panda/assets/link0_8.obj": {
+      "bytes": 3263194,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_8.obj",
+      "sha256": "3b8c436999db5586b8eb47bed2b0aa7de6993868b2681b4c04246eeac42fdb7a"
+    },
+    "vendor/panda/assets/link0_9.obj": {
+      "bytes": 105629,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link0_9.obj",
+      "sha256": "45178f97d2b5da6bce11f610212c4ef7d08c73db33a4fc38e1b7f66b93d023f5"
+    },
+    "vendor/panda/assets/link1.obj": {
+      "bytes": 3274995,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link1.obj",
+      "sha256": "51091e776b16babdbe2f3849b5c041f921d1f11dd94ac19a0f1c81abf496fbae"
+    },
+    "vendor/panda/assets/link1.stl": {
+      "bytes": 15084,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link1.stl",
+      "sha256": "e41a39a94108fcf56aacff603fc91ec80541f4c1af17b51a0de5617f5566e6d2"
+    },
+    "vendor/panda/assets/link2.obj": {
+      "bytes": 3295608,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link2.obj",
+      "sha256": "5c9f8e715de52c3eb71b475de35993b3b96081e02abea9f28c414768877fc59b"
+    },
+    "vendor/panda/assets/link2.stl": {
+      "bytes": 15084,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link2.stl",
+      "sha256": "370f7605a0fae3529db169ded50f52f171024aa792d4d773bc84197301f6a039"
+    },
+    "vendor/panda/assets/link3.stl": {
+      "bytes": 15084,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link3.stl",
+      "sha256": "0a8d638b9349c6c0eefc4e888636ac4838c4b27170f18a51699321118af709c1"
+    },
+    "vendor/panda/assets/link3_0.obj": {
+      "bytes": 3046804,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link3_0.obj",
+      "sha256": "ce2da87f51708e11b189249d41401065dabe89a06e251185a06cef4d5ff27178"
+    },
+    "vendor/panda/assets/link3_1.obj": {
+      "bytes": 65260,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link3_1.obj",
+      "sha256": "2880b7753a7173f38fa87ee21da4dfc7fa7be46fbe07bac5aef9e128513cb118"
+    },
+    "vendor/panda/assets/link3_2.obj": {
+      "bytes": 83591,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link3_2.obj",
+      "sha256": "670cff81ae84693769ca4ae658c154cf909d81167e7c8d22b70ea977f2504efa"
+    },
+    "vendor/panda/assets/link3_3.obj": {
+      "bytes": 457684,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link3_3.obj",
+      "sha256": "30ede0c812efd0e0b767d134a4eae0b84e0fa407bb6325a5a555e0569b3a3ffd"
+    },
+    "vendor/panda/assets/link4.stl": {
+      "bytes": 15084,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link4.stl",
+      "sha256": "0180ebb5772ec9840cb049750cffb29a9ddc90311752a16ea34757782ef9e48d"
+    },
+    "vendor/panda/assets/link4_0.obj": {
+      "bytes": 83486,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link4_0.obj",
+      "sha256": "443bf6d178177cf347951ecf107ccd10ca444e605e375b67304579e5f948806f"
+    },
+    "vendor/panda/assets/link4_1.obj": {
+      "bytes": 3148001,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link4_1.obj",
+      "sha256": "ca935ec7cc8b3f0e86aa079c76b0b3bf593b1e9830bab0fa7131ac51577c74f0"
+    },
+    "vendor/panda/assets/link4_2.obj": {
+      "bytes": 455522,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link4_2.obj",
+      "sha256": "c89caf26d379c35bb9e191ee2d91d09ab29ecc792b48d8bc10b39e5b38222175"
+    },
+    "vendor/panda/assets/link4_3.obj": {
+      "bytes": 67497,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link4_3.obj",
+      "sha256": "1495d17f45bdb230cf58b0beef9da4e8c9cfe76a3d2d38da89017efe5e093136"
+    },
+    "vendor/panda/assets/link5_0.obj": {
+      "bytes": 824158,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link5_0.obj",
+      "sha256": "a3238b8f2af0f2eb66d9fe63dc5d41ac52d5d38507241b5ed10e3cb019ab3e71"
+    },
+    "vendor/panda/assets/link5_1.obj": {
+      "bytes": 63174,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link5_1.obj",
+      "sha256": "9d994bbf83ec241e301b5197a6846da13f2a4a0582edb2c0f76962c5549649d6"
+    },
+    "vendor/panda/assets/link5_2.obj": {
+      "bytes": 3856621,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link5_2.obj",
+      "sha256": "83b4ffe9f772cd7fe182e98640650eebc899aaf01842656574b0416c90dd40a4"
+    },
+    "vendor/panda/assets/link5_collision_0.obj": {
+      "bytes": 3861,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link5_collision_0.obj",
+      "sha256": "3e5aa75fb13f193555c3dfb999df91d81df25006a5c3af5338297d78137c129b"
+    },
+    "vendor/panda/assets/link5_collision_1.obj": {
+      "bytes": 2412,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link5_collision_1.obj",
+      "sha256": "87cd8f621071df010f774cbde789282b8463840dfe704f8bdfa2e29be0142e15"
+    },
+    "vendor/panda/assets/link5_collision_2.obj": {
+      "bytes": 3786,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link5_collision_2.obj",
+      "sha256": "823ab6c8f7b1d79e0844fa071d82a03499ff68e34fddb1ba3451032c22736040"
+    },
+    "vendor/panda/assets/link6.stl": {
+      "bytes": 10084,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6.stl",
+      "sha256": "20b768e99a0e0440b5754dcca108016434e57937cc356acd9c352ccd3cb27f77"
+    },
+    "vendor/panda/assets/link6_0.obj": {
+      "bytes": 157563,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_0.obj",
+      "sha256": "0504c70ebf1b284ee8faae7dcb896b8830bc672a6552015dd5dbd121fa031fb9"
+    },
+    "vendor/panda/assets/link6_1.obj": {
+      "bytes": 27106,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_1.obj",
+      "sha256": "45f7ca77695198b6d86ec2417ad4e42e6275044f0f96266699ee8e1057757ac1"
+    },
+    "vendor/panda/assets/link6_10.obj": {
+      "bytes": 368502,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_10.obj",
+      "sha256": "365f26c21d10332cab8d8704645cb46930c30b3085956f2d097498c793f24db4"
+    },
+    "vendor/panda/assets/link6_11.obj": {
+      "bytes": 32653,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_11.obj",
+      "sha256": "8ae61e08b3ad064f25bbf03b22e59cc15d65883b5a7ce92711aff29df2493901"
+    },
+    "vendor/panda/assets/link6_12.obj": {
+      "bytes": 3894,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_12.obj",
+      "sha256": "f28d1bfd62b0244ffd19fb35fe9edefdf583d3c9167db944e87185d919e1d021"
+    },
+    "vendor/panda/assets/link6_13.obj": {
+      "bytes": 3798,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_13.obj",
+      "sha256": "0a55fa92dccb261d07200e6565fca4c850fd17f0c1ecf38821c0b97d51796c7d"
+    },
+    "vendor/panda/assets/link6_14.obj": {
+      "bytes": 444469,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_14.obj",
+      "sha256": "750ae3ee4781e62e3a045c662195247b03f6642b05aa93104f08258e5f6eba26"
+    },
+    "vendor/panda/assets/link6_15.obj": {
+      "bytes": 668552,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_15.obj",
+      "sha256": "5999c1c2497a004a7c4bbe034cdf13744f839d85ae7a11b1bc386c48a3e642e6"
+    },
+    "vendor/panda/assets/link6_16.obj": {
+      "bytes": 3675358,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_16.obj",
+      "sha256": "551d7a8b37c53e7a152d008b4e36992e5b5abe74a4be18b57ee6319c27def09f"
+    },
+    "vendor/panda/assets/link6_2.obj": {
+      "bytes": 9916,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_2.obj",
+      "sha256": "e54eee4d8232947ee8af65afd5a067e09dac2da6e7e585cb1dccb65496457da0"
+    },
+    "vendor/panda/assets/link6_3.obj": {
+      "bytes": 11943,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_3.obj",
+      "sha256": "d4f6a25ef32fa1fa4734146981994ee760232cb077c80fea6487d78a077c7f27"
+    },
+    "vendor/panda/assets/link6_4.obj": {
+      "bytes": 13846,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_4.obj",
+      "sha256": "be353480fe71d46f7a96f0a3cbb7e112caaf8d88368826f321a36a253c8749b2"
+    },
+    "vendor/panda/assets/link6_5.obj": {
+      "bytes": 11841,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_5.obj",
+      "sha256": "7c87664623c3e1a6cb330db273227a69626dc5e53b4caff1d4ee7911eb3340c6"
+    },
+    "vendor/panda/assets/link6_6.obj": {
+      "bytes": 12597,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_6.obj",
+      "sha256": "8fbc031e0d07b795ebf99115c75223141caaba317cab569159f3d477a7821681"
+    },
+    "vendor/panda/assets/link6_7.obj": {
+      "bytes": 4382,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_7.obj",
+      "sha256": "7dc5ebb799fe281aab27d6e84e7a4efa0a8e42da2369ec83de3ea3f206f62d73"
+    },
+    "vendor/panda/assets/link6_8.obj": {
+      "bytes": 9131,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_8.obj",
+      "sha256": "e3f77381817a341030f9dcc4c4aa7c559f80411b453fd87eb0fefecca82151bf"
+    },
+    "vendor/panda/assets/link6_9.obj": {
+      "bytes": 17616,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link6_9.obj",
+      "sha256": "25a56ea9b02a03b6cb5a81f31c54f54d0185e1a0b3937c37e4289d896e50215a"
+    },
+    "vendor/panda/assets/link7.stl": {
+      "bytes": 10084,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7.stl",
+      "sha256": "92ac6afcf7574c034d3170d8a68e95ac9048ab9d0dd5bbd8311b86e551b9ab1c"
+    },
+    "vendor/panda/assets/link7_0.obj": {
+      "bytes": 1362355,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7_0.obj",
+      "sha256": "04586b0bde011715cfc22072ac72fe0717eb4d4817bcf665987ce6cd88eb2b93"
+    },
+    "vendor/panda/assets/link7_1.obj": {
+      "bytes": 121358,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7_1.obj",
+      "sha256": "c3f72289f394c9d6749a4a327fb11f05b203c37c95032c92f28019b40ebe7e00"
+    },
+    "vendor/panda/assets/link7_2.obj": {
+      "bytes": 208907,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7_2.obj",
+      "sha256": "d2faecedb304d0989040d082410378dc949dbbda23bd18c05134f08aae984db5"
+    },
+    "vendor/panda/assets/link7_3.obj": {
+      "bytes": 123684,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7_3.obj",
+      "sha256": "b62d87c4d4bdb7b281ed341d347c39dad0e50bf36aed8ac11d050073701d5f70"
+    },
+    "vendor/panda/assets/link7_4.obj": {
+      "bytes": 85732,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7_4.obj",
+      "sha256": "cb78ccb61fd4ad6c7bff4c4d2e6cb41e1964a5a3e1a28e67c0c6202371cfc018"
+    },
+    "vendor/panda/assets/link7_5.obj": {
+      "bytes": 226402,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7_5.obj",
+      "sha256": "099071d3090b51471ba52f4f90814fd3089f4975d196e4d488117073d0bfe491"
+    },
+    "vendor/panda/assets/link7_6.obj": {
+      "bytes": 99900,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7_6.obj",
+      "sha256": "99469e2d95ab74ce0292f2f16954c87a8a7dc16652e62e970fe37c94330a81bb"
+    },
+    "vendor/panda/assets/link7_7.obj": {
+      "bytes": 792162,
+      "capture": "repository_dependency_reference_only",
+      "repository_path": "vendor/panda/assets/link7_7.obj",
+      "sha256": "426c3db8a19373f3dc73d4bec672e948121b2914c10e2e7b9c7ea80643a19e54"
+    },
+    "vendor/panda/panda.xml": {
+      "bytes": 14438,
+      "capture": "inspection_text",
+      "sha256": "96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273"
+    }
+  }
+}

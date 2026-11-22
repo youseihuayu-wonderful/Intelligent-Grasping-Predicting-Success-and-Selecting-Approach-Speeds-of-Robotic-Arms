@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:8877/",
+  "scope": "Add a real, hollow, initially open drawer cabinet to the right of the unchanged five-object layout. No placement, packing or drawer-closing sequence is executed.",
+  "cabinet": {
+    "position_m": [
+      0.69,
+      0.32,
+      0.72
+    ],
+    "housing_size_m": [
+      0.3,
+      0.23,
+      0.24
+    ],
+    "usable_interior_size_m": [
+      0.254,
+      0.2,
+      0.2
+    ],
+    "initial_drawer_position_m": -0.16,
+    "fully_open": true
+  },
+  "unit_tests": {
+    "command": "uv run --locked python -m unittest discover -s tests -p test_grasp_tabletop.py -v",
+    "passed": 8,
+    "reported_s": 7.1,
+    "checks": [
+      "Cabinet bounds within table and separate from the five objects",
+      "Downward ray hits drawer floor; upward ray confirms open access",
+      "Each current object fits individually inside the conservative cavity",
+      "Drawer responds to physical velocity and resets",
+      "One open-cavity approach pose has a bounded IK solution",
+      "Existing five-object geometry and bottle-grasp regressions"
+    ]
+  },
+  "actual_physics_grasps": [
+    {
+      "target": "bowl",
+      "success": true,
+      "continuous_hold_s": 2.001999999999615,
+      "lift_m": 0.13990364707687786,
+      "failure_reason": null,
+      "recorded_unplanned_collision_episodes": 0
+    },
+    {
+      "target": "bottle",
+      "success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.1496747780237705,
+      "failure_reason": null,
+      "recorded_unplanned_collision_episodes": 0
+    },
+    {
+      "target": "spoon",
+      "success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.14845106140948872,
+      "failure_reason": null,
+      "recorded_unplanned_collision_episodes": 0
+    },
+    {
+      "target": "glass",
+      "success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.14845885956498395,
+      "failure_reason": null,
+      "recorded_unplanned_collision_episodes": 0
+    },
+    {
+      "target": "pen",
+      "success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.14997552401380154,
+      "failure_reason": null,
+      "recorded_unplanned_collision_episodes": 0
+    }
+  ],
+  "neighbors_and_cabinet_during_checks": "All four non-target objects stayed on table within 15mm XY drift; drawer position stayed within 0.1mm of its initial open position; no MuJoCo warnings.",
+  "right_pane": {
+    "actual_render_visually_inspected": true,
+    "five_objects_and_open_cabinet_simultaneously_visible": true,
+    "image_width": 800,
+    "simulation_time_change_s": 0.6000000000000004,
+    "measured_joint_change_rad": 0.00044251695908714694,
+    "auto_advance": true,
+    "paused": false
+  },
+  "unchanged_frozen_study_sha256": {
+    "dataset.csv": "d218aca702d21fcd0bfe55d60b8022939e732a33c5cb81e42cf07f319716064a",
+    "collection/trials.json": "d3d61a18f885c4f66ad92a63840743dd1a73c1d0b24e4966b30cf25fd67c5e56",
+    "protocol.json": "724623b603e3ce4f95c5e1ac69e4aa07a6f3cfe4bf1087ac49137b70ceedba27",
+    "comparison.json": "b9263145440de291a85f5144bf7cac1d4c1126d7c5093da94bb32904f59d1278"
+  },
+  "source_sha256": {
+    "assets/grasp_study/tabletop_cabinet.xml": "5262fd835a1b0680460241b4b000be6bc8c9e0a6aba5cc39c0f601e2aca828c3",
+    "grasp_tabletop.py": "a10b6e12942ea7c71a134654d74daf166422d308ee6179b047645907d0c56509",
+    "serve_grasp_study.py": "dda0de318969030dec18951d83c300e60c761620f3f4168de82cd8c1af867951",
+    "web/study.html": "03dd2296e88a836f50948f869e87e4e40112a03a04ebfede2ec14c9d55e1389d",
+    "web/study.js": "41090355cb889918dbf828fe005da058415e6871ca9f193d9c455fde4838dbbe",
+    "tests/test_grasp_tabletop.py": "9db06a069fcf45d6ad4a71c339dcd9e789241786ed1ab8d230efcc1db7069149"
+  },
+  "limits": [
+    "Geometric individual fit does not prove simultaneous packing of all five objects.",
+    "A reachable approach pose does not prove a collision-free insertion trajectory.",
+    "No object has been physically placed into this cabinet and no robot drawer-closing action has been executed.",
+    "Five nominal grasp checks are not a statistical success-rate estimate."
+  ]
+}

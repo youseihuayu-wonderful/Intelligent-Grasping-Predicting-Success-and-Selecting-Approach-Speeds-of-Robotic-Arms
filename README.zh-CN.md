@@ -102,6 +102,35 @@ LASSO 在 alpha 为 `0.003` 时保留了 15 个编码列中的 13 列。这是�
 
 本批测试结果现已公开；之后依据结果修改模型，需要新的留出批次才能进行全新的确认性评价。
 
+### 第二次实验（Experiment 02）：五物体连续入屉与物理关屉
+
+**第二次实验记录：**[与上一轮的区别](results/experiment_02_five_object_storage/COMPARISON.md) · [全部已记录试跑与哈希清单](results/experiment_02_five_object_storage/manifest.json) · [最终物理验收](results/experiment_02_five_object_storage/final/verification.json) · [已有分类器数据批次对比](results/experiment_02_five_object_storage/dataset_batch_comparison.json)。
+
+![第二次实验：真实物理执行的全流程动态预览](media/experiment-02-five-object-storage.webp)
+
+[完整英文 MP4，2× 播放](media/experiment-02-five-object-storage-en.mp4) · [视频来源记录](media/experiment-02-five-object-storage-en.provenance.json)。动态预览降低了帧率；MP4 保留全部已记录状态采样。这是录像，不是在 GitHub 页面中运行 MuJoCo。
+
+
+```sh
+uv run --locked python serve_grasp_study.py --port 8877
+```
+
+打开 `http://127.0.0.1:8877/`。碗、瓶、勺子、玻璃杯和笔是同一场景中的五个自由动态物体。控制器尝试完成一整轮：逐件抓取保持、搬运入屉、松开撤手，最后通过真实把手接触推关抽屉并归位。物体之间不重置场景、不附着、不写入物体运动位姿。物理条件不满足时显示失败；结束后不会自动重播。
+
+右侧柜体为 400×230×240 mm，预留内腔为 354×200×200 mm，抽屉行程为 240 mm。柜体宽度、开度和初始桌面间距为夹爪及前臂留出通行空间。勺子和笔在抽屉底板上方约 60 mm 处松开，经真实重力落下并稳定，并非接触控制落放；碗、瓶和玻璃杯下降至真实底板支撑后再松开。
+
+每件收纳验收都要求：整个物体在内腔中、底板存在真实正支撑力、与手爪脱离、实际速度稳定。真正松开在张爪撤手后测量，不根据开口指令推定。最终还要求五件全部满足、滑动关节实测关闭、手爪空置、机械臂归位，并在独立的 20 秒安定观察期限内连续保持三个仿真秒。页面以每 50 ms 推进 0.10 仿真秒为目标，即**名义 2× 显示**；实际速度受渲染和计算负载影响，不是控制器提速，速度指令和 2 ms 积分步长不变。支持暂停／继续、手动重新开始整轮和切换镜头。
+
+复现无画面执行并保存实测判据、源码哈希和带时间戳的轨迹：
+
+```sh
+uv run --locked python tabletop_storage.py --output results/my_storage_verification
+```
+
+输出目录必须尚不存在。`verification.json` 保存结果、物理判据、阶段历史、把手接触峰值、源码哈希和实测场景重置计数。`trajectory.npz` 保存实际 10 Hz 的时间、`qpos`、`qvel`、控制指令、逐物体判据和底板支撑力，并非每个 2 ms 积分状态。精确编译场景保存为 `model.mjb`；发布时无损压缩为 `model.mjb.gz`，附明确的存储描述和原始／解压后 SHA-256 校验。失败返回非零退出码，不会改写成成功。
+
+这是新的单组条件多物体演示，**不是冻结单物体分类器数据的回放或评估**，也不代表成功率，不是 GPT／分类器生成的策略。旧数据、统计成绩及原分拣和抽屉演示不变。玻璃杯是刚体近似，不模拟碎裂。
+
 ### 分类器与复现
 
 输入仍为十一项：`target`（几何类别，不是标签）、`scale`、`mass_kg`、`sliding_friction`、`x_m`、`y_m`、`yaw_rad`、`opening_m`、`closing_force_n`、`close_trigger_m`、`descent_speed_m_s`。五类齐全时，类别编码后共 15 列。质量／摩擦是仿真真值；速度与力是控制设置，不是恒定实测 TCP 速度或每指实测法向力。

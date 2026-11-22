@@ -1,0 +1,17 @@
+{
+  "kind": "derived_media_validation_not_a_physical_trial",
+  "observed_result": "passed",
+  "mp4_codec": "h264",
+  "mp4_dimensions": [
+    960,
+    840
+  ],
+  "mp4_frames": 2807,
+  "mp4_fps": "20",
+  "mp4_duration_seconds": 140.35,
+  "animated_preview_frames": 702,
+  "animated_preview_duration_ms": 140350,
+  "animated_preview_last_frame_duration_ms": 150,
+  "preview_last_frame": "results/experiment_02_five_object_storage/media_validation/preview_last.png",
+  "video_last_frame": "results/experiment_02_five_object_storage/media_validation/video_last.png"
+}

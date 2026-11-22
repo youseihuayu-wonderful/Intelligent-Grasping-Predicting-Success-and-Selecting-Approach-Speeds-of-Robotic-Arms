@@ -102,6 +102,35 @@ Verification included 377 passing tests, physical preflights, all 240 initial-st
 
 The test results are now public. Later result-informed model changes require a new held-out batch for a fresh confirmatory evaluation.
 
+### Experiment 02 — continuous five-object drawer storage
+
+**Second-experiment records:** [Comparison with the previous experiment](results/experiment_02_five_object_storage/COMPARISON.md) · [Raw-run inventory and hashes](results/experiment_02_five_object_storage/manifest.json) · [Final physical verification](results/experiment_02_five_object_storage/final/verification.json) · [Existing classifier-data comparison](results/experiment_02_five_object_storage/dataset_batch_comparison.json).
+
+![Experiment 02 — full-task animated preview of recorded physical execution](media/experiment-02-five-object-storage.webp)
+
+[Complete English MP4, 2× playback](media/experiment-02-five-object-storage-en.mp4) · [Video provenance](media/experiment-02-five-object-storage-en.provenance.json). The preview has a reduced frame rate; the MP4 retains every recorded state sample. This is a recording, not MuJoCo executing inside GitHub.
+
+
+```sh
+uv run --locked python serve_grasp_study.py --port 8877
+```
+
+Open `http://127.0.0.1:8877/`. Bowl, bottle, spoon, glass and pen coexist as free dynamic bodies. The controller attempts one continuous mission: grasp and hold each item, transfer it into its assigned drawer location, release and withdraw, then physically push the handle closed and return home. There are no scene resets between items, object attachments or commanded object poses. An unmet physical condition stops the task with a visible failure; completion does not automatically replay.
+
+The right-side cabinet has a 400 × 230 × 240 mm housing, a conservative 354 × 200 × 200 mm cavity and 240 mm drawer travel. Its width, opening and initial tabletop spacing provide clearance for the Panda hand and forearm. Spoon and pen are released approximately 60 mm above the drawer floor and settle under real gravity; they are not contact-controlled set-downs. Bowl, bottle and glass lower until real floor support before release.
+
+Each accepted object must be entirely contained, directly supported by positive drawer-floor contact force, detached from the hand, and physically stable. Detachment is checked after open-hand withdrawal, not inferred from opening. Final acceptance additionally requires all five objects, actual joint-measured closure, an empty hand, home pose and three continuous simulation seconds, within a separate 20-second settling deadline. The viewer targets **2× display** by advancing 0.10 simulation seconds per 50 ms tick; actual throughput depends on rendering and computation. This is not faster physical control: controller settings and the 2 ms integration step remain unchanged. Pause/resume, explicit whole-mission restart and camera switching are available.
+
+For a reproducible headless execution with measured predicates, source hashes and a timestamped joint/object trajectory:
+
+```sh
+uv run --locked python tabletop_storage.py --output results/my_storage_verification
+```
+
+The output directory must not already exist. `verification.json` records the outcome, physical facts, phase history, handle-contact peak, source hashes and measured scene-reset count. `trajectory.npz` stores actual 10 Hz time, `qpos`, `qvel`, control commands, per-object predicates and floor-support forces—not every 2 ms integration state. The exact compiled scene is saved as `model.mjb`; published archives store it losslessly as `model.mjb.gz` with an explicit storage descriptor and original/decompressed SHA-256 verification. Failure exits nonzero and is not relabelled as success.
+
+This is a new nominal multi-object demonstration, **not an evaluation or replay of the frozen single-object classifier dataset**, a success-rate estimate, or a GPT/classifier-generated policy. Existing datasets, scores and older sorting/drawer demonstrations are unchanged. Glass is a rigid approximation without breakage physics.
+
 ### Classifiers and reproduction
 
 Inputs remain the same eleven fields: `target` (geometry family, not the label), `scale`, `mass_kg`, `sliding_friction`, `x_m`, `y_m`, `yaw_rad`, `opening_m`, `closing_force_n`, `close_trigger_m`, and `descent_speed_m_s`. With all five categories present, one-hot encoding produces 15 columns. Mass/friction are simulator ground truth; descent speed and force are commands, not measured constant TCP speed or per-finger force.

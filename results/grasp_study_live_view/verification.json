@@ -1,0 +1,117 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:8877/",
+  "command": "uv run --locked python serve_grasp_study.py --port 8877",
+  "presentation": "Live MuJoCo recomputation from saved collection settings; not the original recording and not a trained policy.",
+  "sampling": "First successful record per family is deliberately selected for the default showcase; not a success-rate estimate. First failed examples are also selectable.",
+  "complete_five_family_stream_wall_s": 101.82531783299055,
+  "success_examples": [
+    {
+      "target": "bowl",
+      "source_trial_id": "five_object_v2.s20261121.bowl_00.control_1.draw_0",
+      "source_success": true,
+      "actual_success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.14012326612006532,
+      "max_joint_excursion_rad": 1.0117392007177968,
+      "mujoco_warnings": []
+    },
+    {
+      "target": "bottle",
+      "source_trial_id": "five_object_v2.s20261121.bottle_00.control_0.draw_0",
+      "source_success": true,
+      "actual_success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.1446244205880054,
+      "max_joint_excursion_rad": 0.8230137891237896,
+      "mujoco_warnings": []
+    },
+    {
+      "target": "spoon",
+      "source_trial_id": "five_object_v2.s20261121.spoon_00.control_0.draw_0",
+      "source_success": true,
+      "actual_success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.14597976763126796,
+      "max_joint_excursion_rad": 1.0971915842108972,
+      "mujoco_warnings": []
+    },
+    {
+      "target": "glass",
+      "source_trial_id": "five_object_v2.s20261121.glass_00.control_7.draw_0",
+      "source_success": true,
+      "actual_success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.14633381978435134,
+      "max_joint_excursion_rad": 0.9956314109393929,
+      "mujoco_warnings": []
+    },
+    {
+      "target": "pen",
+      "source_trial_id": "five_object_v2.s20261121.pen_00.control_0.draw_1",
+      "source_success": true,
+      "actual_success": true,
+      "continuous_hold_s": 2.000000000000668,
+      "lift_m": 0.15076021464073341,
+      "max_joint_excursion_rad": 1.0663230415509852,
+      "mujoco_warnings": []
+    }
+  ],
+  "observed_phases": [
+    "settling",
+    "prepare",
+    "approach",
+    "descend",
+    "close",
+    "lift",
+    "hold",
+    "done"
+  ],
+  "browser_controls": {
+    "image_natural_width": 800,
+    "pause_freezes_actual_simulation_time_and_joints": true,
+    "resume": true,
+    "restart": true,
+    "next_from_pen_selects_bowl": true,
+    "workspace_and_close_camera": true,
+    "auto_advance": true,
+    "success_and_failure_selector": true
+  },
+  "selection_race_regression": {
+    "initial_observation": "Rapid object then example selection used a stale server-confirmed target.",
+    "fix": "Keep pending user selection intent until acknowledged; do not overwrite focused form inputs with stale frames.",
+    "verified_request": {
+      "target": "pen",
+      "mode": "failure"
+    },
+    "observed_source_trial_id": "five_object_v2.s20261121.pen_00.control_0.draw_0",
+    "source_success": false,
+    "actual_success": false,
+    "failure_reason": "夹爪未建立稳定的双侧接触",
+    "mujoco_warnings": []
+  },
+  "final_live_check": {
+    "target": "spoon",
+    "mode": "success",
+    "auto_advance": true,
+    "paused": false,
+    "phase": "approach",
+    "simulation_time_change_s": 0.5000000000000002,
+    "joint_change_rad": 0.012373654058757788,
+    "error_visible": false
+  },
+  "frozen_data_and_reports_unchanged_sha256": {
+    "dataset.csv": "d218aca702d21fcd0bfe55d60b8022939e732a33c5cb81e42cf07f319716064a",
+    "collection/trials.json": "d3d61a18f885c4f66ad92a63840743dd1a73c1d0b24e4966b30cf25fd67c5e56",
+    "protocol.json": "724623b603e3ce4f95c5e1ac69e4aa07a6f3cfe4bf1087ac49137b70ceedba27",
+    "comparison.json": "b9263145440de291a85f5144bf7cac1d4c1126d7c5093da94bb32904f59d1278"
+  },
+  "all_recorded_physical_input_hashes_still_match": true,
+  "viewer_source_sha256": {
+    "serve_grasp_study.py": "43377f56343cebba7cc1151530f4b678ec2d673385ad6369c3d78fb1661b4f80",
+    "web/study.html": "22ea8f6f1a4ac19e91aa31ddc41e0569b099455bb59104e607f71a9d26110102",
+    "web/study.js": "b82251c7e6c38a251d04163f623672dc8b8520f15dbfdba5173dc84c98db94a1",
+    "web/study.css": "6248535416831f4b27c49d4d0310be014c19ac44b0cb5ad9d611cb0e759abca0"
+  },
+  "scope": "One target per attempt, grasp/lift/hold only; no sorting or drawer action; no new rows added to the training data."
+}

@@ -1,0 +1,11 @@
+{
+  "experiment_label": "Experiment 02",
+  "scope": "Read-only actual live WebSocket telemetry",
+  "control_commands_sent": 0,
+  "packets_recorded": 2807,
+  "terminal_observed": true,
+  "first_simulation_time_s": 0.7000000000000005,
+  "last_simulation_time_s": 281.30000000061506,
+  "wall_capture_s": 211.64294100005645,
+  "limits": "Every received state is retained; full physics states are in the separate headless NPZ. JPEGs are only selected actual frames, not a complete live video. Complete published video is explicitly rendered from the separate recorded physical trajectory."
+}

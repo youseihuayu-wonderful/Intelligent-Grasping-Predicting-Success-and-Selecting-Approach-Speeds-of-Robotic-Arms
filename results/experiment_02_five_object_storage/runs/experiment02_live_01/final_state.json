@@ -1,0 +1,269 @@
+{
+  "objects": [
+    {
+      "target": "spoon",
+      "name": "spoon_object",
+      "position_m": [
+        0.6101506860109032,
+        0.3478775901293028,
+        0.7421100557702811
+      ],
+      "quaternion_wxyz": [
+        0.9999942383878065,
+        7.538120376566108e-05,
+        0.002416365211640083,
+        0.0023829997961199896
+      ],
+      "bounds_min_m": [
+        0.5351238199902207,
+        0.33002788074237005,
+        0.7419882735198697
+      ],
+      "bounds_max_m": [
+        0.6853002554765691,
+        0.36622414446760093,
+        0.7594581372295021
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": true,
+      "stored": true,
+      "support_force_n": 0.24406383701222406,
+      "linear_speed_m_s": 3.3169147961728077e-06,
+      "angular_speed_rad_s": 5.186736015993254e-05
+    },
+    {
+      "target": "pen",
+      "name": "pen_object",
+      "position_m": [
+        0.6963384255829397,
+        0.294654459830951,
+        0.742243505336689
+      ],
+      "quaternion_wxyz": [
+        0.6794888303504016,
+        -0.093484508998212,
+        -0.09942612150308931,
+        0.7208814204633509
+      ],
+      "bounds_min_m": [
+        0.6845917342839192,
+        0.22467553481337663,
+        0.7419998835852091
+      ],
+      "bounds_max_m": [
+        0.7042552009303674,
+        0.36478889383418384,
+        0.7540434831861034
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": true,
+      "stored": true,
+      "support_force_n": 0.09927852949340375,
+      "linear_speed_m_s": 1.2050181394594922e-05,
+      "angular_speed_rad_s": 5.342791373605104e-07
+    },
+    {
+      "target": "bowl",
+      "name": "bowl_object",
+      "position_m": [
+        0.6034825191639235,
+        0.2803082055912942,
+        0.7404099434794562
+      ],
+      "quaternion_wxyz": [
+        0.6981331312849848,
+        1.402118646962886e-07,
+        1.0017963908733173e-07,
+        0.7159679678604304
+      ],
+      "bounds_min_m": [
+        0.5501528657166816,
+        0.22664470302211076,
+        0.7419999341769818
+      ],
+      "bounds_max_m": [
+        0.6574154763447196,
+        0.3338903543990459,
+        0.7925418851749598
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": true,
+      "stored": true,
+      "support_force_n": 0.588589442361441,
+      "linear_speed_m_s": 2.786966895178416e-06,
+      "angular_speed_rad_s": 4.647999857313746e-05
+    },
+    {
+      "target": "glass",
+      "name": "glass_object",
+      "position_m": [
+        0.75259428909002,
+        0.26008946994908994,
+        0.742031200809416
+      ],
+      "quaternion_wxyz": [
+        0.9999998679020247,
+        0.0003956901353174789,
+        -0.00028828729510637323,
+        -0.00015657485870238959
+      ],
+      "bounds_min_m": [
+        0.7205404013126955,
+        0.22801627073708436,
+        0.7419998682375829
+      ],
+      "bounds_max_m": [
+        0.7845942837687224,
+        0.2920894599308534,
+        0.8320630779639292
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": true,
+      "stored": true,
+      "support_force_n": 1.471495867801488,
+      "linear_speed_m_s": 2.5400509295872247e-07,
+      "angular_speed_rad_s": 1.2406666688141573e-09
+    },
+    {
+      "target": "bottle",
+      "name": "bottle_object",
+      "position_m": [
+        0.7220369919502093,
+        0.3263044932555393,
+        0.7408899093726669
+      ],
+      "quaternion_wxyz": [
+        0.7257948176348721,
+        2.2878974189105977e-07,
+        -8.679591042963112e-08,
+        0.6879112462333371
+      ],
+      "bounds_min_m": [
+        0.6996951802073843,
+        0.30520189822883403,
+        0.7419998995511754
+      ],
+      "bounds_max_m": [
+        0.7438267939838201,
+        0.34794709315624384,
+        0.8989299130720708
+      ],
+      "inside": true,
+      "supported": true,
+      "stable": true,
+      "detached": true,
+      "stored": true,
+      "support_force_n": 1.7657999982786468,
+      "linear_speed_m_s": 9.084030035380209e-08,
+      "angular_speed_rad_s": 1.2145548651358891e-06
+    }
+  ],
+  "all_stored": true,
+  "hand_empty": true,
+  "drawer_closed": true,
+  "scene_mode": "continuous_drawer_storage",
+  "target": "glass",
+  "targets": [
+    "spoon",
+    "pen",
+    "bowl",
+    "bottle",
+    "glass"
+  ],
+  "phase": "failed",
+  "controller_status": "failed",
+  "current_index": 5,
+  "completed_targets": [
+    "spoon",
+    "pen",
+    "bowl",
+    "bottle",
+    "glass"
+  ],
+  "stored_count": 5,
+  "cabinet": {
+    "position_m": [
+      0.69,
+      0.32,
+      0.72
+    ],
+    "bounds_min_m": [
+      0.48999999999999994,
+      0.16700003362193241,
+      0.72
+    ],
+    "bounds_max_m": [
+      0.89,
+      0.435,
+      0.96
+    ],
+    "drawer_position_m": 3.3621932420565966e-08,
+    "drawer_velocity_m_s": -5.4868265337913663e-08,
+    "fully_open": false,
+    "interior_min_m": [
+      0.5129999999999999,
+      0.2150000336219324,
+      0.742
+    ],
+    "interior_max_m": [
+      0.867,
+      0.4150000336219324,
+      0.942
+    ],
+    "interior_size_m": [
+      0.354,
+      0.2,
+      0.2
+    ]
+  },
+  "time_s": 279.7000000006074,
+  "failure_reason": "glass/verify: Final contained/support/empty-hand/closed/home verification failed",
+  "finished": true,
+  "outcome": false,
+  "grasp_hold_s": 2.0000000000095497,
+  "verified_hold_s": 1.396000000000001,
+  "settings": {
+    "target": "glass",
+    "scale": 1.0,
+    "mass_kg": 0.15,
+    "sliding_friction": 0.8,
+    "x_m": 0.6199998437637522,
+    "y_m": -0.21994482203765092,
+    "yaw_rad": 0.0,
+    "bias_x_m": 0.0,
+    "bias_y_m": 0.0,
+    "bias_z_m": 0.0,
+    "opening_m": 0.08,
+    "closing_force_n": 4.0,
+    "close_trigger_m": 0.0,
+    "descent_speed_m_s": 0.1
+  },
+  "push_contact_peak_n": 7.591155733123365,
+  "joint_positions_rad": [
+    -9.669700201457041e-05,
+    -0.4994875511523532,
+    -8.40203419958982e-05,
+    -2.1995884238038195,
+    0.0003722334444777984,
+    1.7998633265495494,
+    0.7846361564646522
+  ],
+  "gripper_opening_m": 0.014000000000000033,
+  "lift_m": 0.022033715408724786,
+  "warnings": [],
+  "scene_resets_during_mission": 0,
+  "runtime_error": null,
+  "run_serial": 1,
+  "frame_id": 2791,
+  "execution_s": 279.1000000006074,
+  "paused": false,
+  "view": "workspace"
+}

@@ -1,0 +1,574 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:8877/",
+  "scope": "Five real dynamic objects coexist in one MuJoCo scene. Each target attempt resets the whole five-object layout; not a continuous place-back or sorting task and not a replay of frozen single-object data.",
+  "physical_live_cycle": {
+    "status": "passed",
+    "verification": "All five dynamic objects present in every frame; four non-target objects remain supported and undisturbed; real grasp and continuous hold measured.",
+    "wall_s": 88.16567587503232,
+    "runs": [
+      {
+        "target": "bowl",
+        "first_time_s": 0.6500000000000005,
+        "initial_positions": {
+          "bowl": [
+            0.47999998886243606,
+            -0.27000001786413874,
+            0.7184069384491634
+          ],
+          "bottle": [
+            0.4999999952198973,
+            -0.07999996153652508,
+            0.7188747545444503
+          ],
+          "spoon": [
+            0.39999902860303943,
+            0.1,
+            0.7201682608313368
+          ],
+          "glass": [
+            0.6199999483707895,
+            -0.09999887526313024,
+            0.719997488531795
+          ],
+          "pen": [
+            0.37999999900227355,
+            -0.08000223216840775,
+            0.7199979739066159
+          ]
+        },
+        "frames": 391,
+        "phases": [
+          "settling",
+          "prepare",
+          "approach",
+          "descend",
+          "close",
+          "lift",
+          "hold",
+          "done"
+        ],
+        "max_non_target_xy_drift_m": 4.964005729841167e-05,
+        "max_non_target_abs_table_clearance_m": 8.12144162840589e-05,
+        "minimum_joints": [
+          -0.30204661616988787,
+          -0.5029453405602415,
+          -0.3836068778362065,
+          -2.197538408446532,
+          0.00011969294418373463,
+          1.8004550126298,
+          -0.0095845043338612
+        ],
+        "maximum_joints": [
+          -1.4608783591054517e-08,
+          0.588481027808061,
+          -4.7914083315524275e-05,
+          -2.0950711589182625,
+          0.3085634536110549,
+          2.64761012799899,
+          0.7853977784759701
+        ],
+        "outcome": true,
+        "invalid_reason": null,
+        "failure_reason": null,
+        "hold_s": 2.001999999999615,
+        "lift_m": 0.1399038621151738,
+        "postconditions": {
+          "bilateral_grip": true,
+          "clear_of_table": true,
+          "target_lifted": true,
+          "relative_pose_stable": true,
+          "verified_hold": true
+        },
+        "max_joint_excursion_rad": 1.0914263683683025,
+        "final_positions": {
+          "bowl": [
+            0.48087295203209895,
+            -0.2810185268857446,
+            0.8583108005936093
+          ],
+          "bottle": [
+            0.4999999952198973,
+            -0.07999996153652243,
+            0.7188747545726193
+          ],
+          "spoon": [
+            0.3999990786898883,
+            0.1,
+            0.7201693351004962
+          ],
+          "glass": [
+            0.6199999357674284,
+            -0.0999796297643931,
+            0.7199974765871415
+          ],
+          "pen": [
+            0.3800000006144462,
+            -0.08005187222567998,
+            0.7199979737289265
+          ]
+        }
+      },
+      {
+        "target": "bottle",
+        "first_time_s": 0.6000000000000004,
+        "initial_positions": {
+          "bowl": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "bottle": [
+            0.4999999952198982,
+            -0.07999996153653215,
+            0.7188747544692867
+          ],
+          "spoon": [
+            0.39999902821158895,
+            0.1,
+            0.7201680451967506
+          ],
+          "glass": [
+            0.6199999484144335,
+            -0.09999894542699171,
+            0.7199974913842468
+          ],
+          "pen": [
+            0.3799999989965573,
+            -0.0800020558593403,
+            0.7199979739072483
+          ]
+        },
+        "frames": 310,
+        "phases": [
+          "settling",
+          "prepare",
+          "approach",
+          "descend",
+          "close",
+          "lift",
+          "hold",
+          "done"
+        ],
+        "max_non_target_xy_drift_m": 2.776491229277706e-05,
+        "max_non_target_abs_table_clearance_m": 8.137380421935347e-05,
+        "minimum_joints": [
+          -0.0518759794520925,
+          -0.5029453405602415,
+          -0.11131662189353071,
+          -2.3772612246339997,
+          -0.012559047070070144,
+          1.8,
+          0.6025322396555012
+        ],
+        "maximum_joints": [
+          1.9809053061581896e-21,
+          0.18100433171622018,
+          -8.902552078733967e-21,
+          -2.193601756614331,
+          0.03396429558203466,
+          2.5571045627949562,
+          0.7853981634
+        ],
+        "outcome": true,
+        "invalid_reason": null,
+        "failure_reason": null,
+        "hold_s": 2.000000000000668,
+        "lift_m": 0.14967454397932534,
+        "postconditions": {
+          "bilateral_grip": true,
+          "clear_of_table": true,
+          "target_lifted": true,
+          "relative_pose_stable": true,
+          "verified_hold": true
+        },
+        "max_joint_excursion_rad": 0.7571045627949562,
+        "final_positions": {
+          "bowl": [
+            0.4799999888624355,
+            -0.27000001786413985,
+            0.7184069384784377
+          ],
+          "bottle": [
+            0.4998625553504324,
+            -0.0794465067795313,
+            0.8685492985519425
+          ],
+          "spoon": [
+            0.3999991234169855,
+            0.1,
+            0.7201693347422163
+          ],
+          "glass": [
+            0.6199999415909727,
+            -0.09998724111919363,
+            0.7199974914297557
+          ],
+          "pen": [
+            0.3799999998976345,
+            -0.08002982077161845,
+            0.7199979738762868
+          ]
+        }
+      },
+      {
+        "target": "spoon",
+        "first_time_s": 0.6000000000000004,
+        "initial_positions": {
+          "bowl": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "bottle": [
+            0.4999999952198982,
+            -0.07999996153653215,
+            0.7188747544692867
+          ],
+          "spoon": [
+            0.39999902821158895,
+            0.1,
+            0.7201680451967506
+          ],
+          "glass": [
+            0.6199999484144335,
+            -0.09999894542699171,
+            0.7199974913842468
+          ],
+          "pen": [
+            0.3799999989965573,
+            -0.0800020558593403,
+            0.7199979739072483
+          ]
+        },
+        "frames": 354,
+        "phases": [
+          "settling",
+          "prepare",
+          "approach",
+          "descend",
+          "close",
+          "lift",
+          "hold",
+          "done"
+        ],
+        "max_non_target_xy_drift_m": 3.530277541826255e-05,
+        "max_non_target_abs_table_clearance_m": 1.5781066049269654e-05,
+        "minimum_joints": [
+          -2.7251479469182095e-08,
+          -0.5029453405602415,
+          -0.0001228262131842183,
+          -2.517756872711111,
+          -0.14669431300309455,
+          1.8,
+          0.7853965539239939
+        ],
+        "maximum_joints": [
+          0.11832010119923604,
+          0.456986176642947,
+          0.16945272371038206,
+          -2.193601756614331,
+          0.00030942573734017974,
+          2.923106004847847,
+          1.1114734595467972
+        ],
+        "outcome": true,
+        "invalid_reason": null,
+        "failure_reason": null,
+        "hold_s": 2.000000000000668,
+        "lift_m": 0.14837475322636606,
+        "postconditions": {
+          "bilateral_grip": true,
+          "clear_of_table": true,
+          "target_lifted": true,
+          "relative_pose_stable": true,
+          "verified_hold": true
+        },
+        "max_joint_excursion_rad": 1.1231060048478472,
+        "final_positions": {
+          "bowl": [
+            0.4799999888624355,
+            -0.27000001786413985,
+            0.7184069384784377
+          ],
+          "bottle": [
+            0.4999999952198973,
+            -0.07999996153652243,
+            0.7188747545726193
+          ],
+          "spoon": [
+            0.4005329651131014,
+            0.10008566544043809,
+            0.8685432380559832
+          ],
+          "glass": [
+            0.6199999397908108,
+            -0.09998424906507443,
+            0.7199974817153781
+          ],
+          "pen": [
+            0.38000000014254826,
+            -0.08003735863473996,
+            0.7199979738630473
+          ]
+        }
+      },
+      {
+        "target": "glass",
+        "first_time_s": 0.6000000000000004,
+        "initial_positions": {
+          "bowl": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "bottle": [
+            0.4999999952198982,
+            -0.07999996153653215,
+            0.7188747544692867
+          ],
+          "spoon": [
+            0.39999902821158895,
+            0.1,
+            0.7201680451967506
+          ],
+          "glass": [
+            0.6199999484144335,
+            -0.09999894542699171,
+            0.7199974913842468
+          ],
+          "pen": [
+            0.3799999989965573,
+            -0.0800020558593403,
+            0.7199979739072483
+          ]
+        },
+        "frames": 357,
+        "phases": [
+          "settling",
+          "prepare",
+          "approach",
+          "descend",
+          "close",
+          "lift",
+          "hold",
+          "done"
+        ],
+        "max_non_target_xy_drift_m": 5.196605761498339e-05,
+        "max_non_target_abs_table_clearance_m": 8.137380421935347e-05,
+        "minimum_joints": [
+          -0.08726149078328796,
+          -0.5029453405602415,
+          -0.0963004737425594,
+          -2.2,
+          -3.2010935738691453e-20,
+          1.8,
+          0.5768587875185486
+        ],
+        "maximum_joints": [
+          1.9809053061581896e-21,
+          0.6239042747162711,
+          -8.902552078733967e-21,
+          -1.8765317522084812,
+          0.07487961901193059,
+          2.5257462226532037,
+          0.7853981634
+        ],
+        "outcome": true,
+        "invalid_reason": null,
+        "failure_reason": null,
+        "hold_s": 2.000000000000668,
+        "lift_m": 0.14845852489352618,
+        "postconditions": {
+          "bilateral_grip": true,
+          "clear_of_table": true,
+          "target_lifted": true,
+          "relative_pose_stable": true,
+          "verified_hold": true
+        },
+        "max_joint_excursion_rad": 1.1268496152765126,
+        "final_positions": {
+          "bowl": [
+            0.4799999888624355,
+            -0.27000001786413985,
+            0.7184069384784377
+          ],
+          "bottle": [
+            0.4999999952198973,
+            -0.07999996153652243,
+            0.7188747545726193
+          ],
+          "spoon": [
+            0.39999916924109735,
+            0.1,
+            0.7201689372595501
+          ],
+          "glass": [
+            0.6199651976701976,
+            -0.09997637410211205,
+            0.868456026354673
+          ],
+          "pen": [
+            0.3800000006843679,
+            -0.08005402191692787,
+            0.7199979737212471
+          ]
+        }
+      },
+      {
+        "target": "pen",
+        "first_time_s": 0.6000000000000004,
+        "initial_positions": {
+          "bowl": [
+            0.47999998886243833,
+            -0.27000001786413497,
+            0.7184069383712025
+          ],
+          "bottle": [
+            0.4999999952198982,
+            -0.07999996153653215,
+            0.7188747544692867
+          ],
+          "spoon": [
+            0.39999902821158895,
+            0.1,
+            0.7201680451967506
+          ],
+          "glass": [
+            0.6199999484144335,
+            -0.09999894542699171,
+            0.7199974913842468
+          ],
+          "pen": [
+            0.3799999989965573,
+            -0.0800020558593403,
+            0.7199979739072483
+          ]
+        },
+        "frames": 295,
+        "phases": [
+          "settling",
+          "prepare",
+          "approach",
+          "descend",
+          "close",
+          "lift",
+          "hold",
+          "done"
+        ],
+        "max_non_target_xy_drift_m": 1.9612643047448428e-05,
+        "max_non_target_abs_table_clearance_m": 8.137380421935347e-05,
+        "minimum_joints": [
+          -0.13422193198714358,
+          -0.5029453405602415,
+          -0.1836155421401032,
+          -2.758390138178792,
+          -0.05578448885983006,
+          1.8,
+          0.45010728589756466
+        ],
+        "maximum_joints": [
+          1.9809053061581896e-21,
+          0.37145436129916903,
+          -8.902552078733967e-21,
+          -2.193601756614331,
+          0.17006337475590658,
+          3.069051256247894,
+          0.7853981634
+        ],
+        "outcome": true,
+        "invalid_reason": null,
+        "failure_reason": null,
+        "hold_s": 2.000000000000668,
+        "lift_m": 0.14997552416606486,
+        "postconditions": {
+          "bilateral_grip": true,
+          "clear_of_table": true,
+          "target_lifted": true,
+          "relative_pose_stable": true,
+          "verified_hold": true
+        },
+        "max_joint_excursion_rad": 1.269051256247894,
+        "final_positions": {
+          "bowl": [
+            0.4799999888624355,
+            -0.27000001786413985,
+            0.7184069384784377
+          ],
+          "bottle": [
+            0.4999999952198973,
+            -0.07999996153652243,
+            0.7188747545726193
+          ],
+          "spoon": [
+            0.3999991838672102,
+            0.1,
+            0.7201689372595503
+          ],
+          "glass": [
+            0.6199999353177589,
+            -0.09997933278831703,
+            0.7199975001494934
+          ],
+          "pen": [
+            0.3802437844231678,
+            -0.08000043171680635,
+            0.8699734980682547
+          ]
+        }
+      }
+    ]
+  },
+  "tests": {
+    "command": "uv run --locked python -m unittest discover -s tests -p test_grasp_tabletop.py -v",
+    "passed": 5,
+    "reported_s": 6.409
+  },
+  "browser": {
+    "actual_scene_visually_inspected": true,
+    "image_width": 800,
+    "all_five_physical_objects_and_cards_present": true,
+    "rapid_select_spoon_then_next_selects_glass": true,
+    "final_target": "bowl",
+    "auto_advance": true,
+    "paused": false,
+    "measured_simulation_time_change_s": 0.6000000000000004,
+    "measured_joint_change_rad": 0.00044251695908714694,
+    "visible_runtime_error": false
+  },
+  "initial_layout_correction": {
+    "evidence": "initial_layout_verification.json",
+    "initial_bottle_xy_m": [
+      0.62,
+      0.19
+    ],
+    "corrected_bottle_xy_m": [
+      0.5,
+      -0.08
+    ],
+    "initial_bottle_grasp_passed": false,
+    "only_bottle_xy_changed": true,
+    "closing_command_n_unchanged": 4.0,
+    "success_predicates_and_2s_hold_unchanged": true
+  },
+  "frozen_single_object_artifacts_unchanged_sha256": {
+    "dataset.csv": "d218aca702d21fcd0bfe55d60b8022939e732a33c5cb81e42cf07f319716064a",
+    "collection/trials.json": "d3d61a18f885c4f66ad92a63840743dd1a73c1d0b24e4966b30cf25fd67c5e56",
+    "protocol.json": "724623b603e3ce4f95c5e1ac69e4aa07a6f3cfe4bf1087ac49137b70ceedba27",
+    "comparison.json": "b9263145440de291a85f5144bf7cac1d4c1126d7c5093da94bb32904f59d1278"
+  },
+  "viewer_source_sha256": {
+    "grasp_tabletop.py": "b43bc81c9115bd6ad80be6a0bb2a5235e4b0aa8f2a586316c11aa7ba83b91ea6",
+    "serve_grasp_study.py": "9917a9bc2dd3c5fa654bf602d95100018d3fe3c48c3c9f989068d2123e8692cd",
+    "web/study.html": "f3165cd5eb54bc36d6e35342ed139052e1bc0f940b2a205c4073ad263e6d94db",
+    "web/study.js": "daeb373e89e720e659b9a41732a961577d118d46542bb1065885cae7c57073b8",
+    "web/study.css": "6367c6523af975b80d3416e0125610a55aac09fbbc1594cc4c64b8946bc268fa",
+    "tests/test_grasp_tabletop.py": "9a50d8bdc03ff63898765f4b8e90a2867ce33ee8419e6c30b1e313b69f5d0a7f"
+  },
+  "limits": [
+    "These five nominal demonstrations are not a statistical success-rate estimate.",
+    "No classifier/GPT inference, autonomous sorting, placement/release or physical return-home sequence is demonstrated.",
+    "Object poses are reset only between attempts; during each attempt all five evolve under physics.",
+    "New object shapes are rigid approximations; glass does not fracture."
+  ]
+}
